@@ -1,0 +1,99 @@
+%YAML 1.1
+---
+actions:
+- action_query_list
+- action_query_attribute
+- utter_ask_rephrase
+- utter_goodbye
+- utter_greet
+- utter_iamabot
+
+
+entities:
+- attivita
+- cap
+- cognome
+- data_inizio_attivita
+- ambulatorio
+- distretto
+- comune
+- email
+- indirizzo
+- nome
+- civico
+- telefono
+- attribute
+- doctor #entità doctor
+- mention
+- object_type
+
+
+intents:
+- query_knowledge_list
+- query_knowledge_attribute_of
+- greet
+- goodbye
+- bot_challenge
+
+
+slots:
+  attivita:
+    type: unfeaturized
+  cap:
+    type: unfeaturized
+  cognome:
+    type: unfeaturized
+  data_inizio_attivita:
+    type: unfeaturized
+  ambulatorio:
+    type: unfeaturized
+  distretto:
+    type: unfeaturized
+  comune:
+    type: unfeaturized
+  email:
+    type: unfeaturized
+  indirizzo:
+    type: unfeaturized
+  nome:
+    type: unfeaturized
+  civico:
+    type: unfeaturized
+  telefono:
+    type: unfeaturized
+  attribute:
+    type: unfeaturized
+  doctor:
+    type: unfeaturized
+  knowledge_base_last_object:
+    type: unfeaturized
+  knowledge_base_last_object_type:
+    type: unfeaturized
+  knowledge_base_listed_objects:
+    type: unfeaturized
+  knowledge_base_object:
+    type: unfeaturized
+  mention:
+    type: unfeaturized
+  name:
+    type: unfeaturized
+  object_type:
+    initial_value: "doctor"
+    type: unfeaturized
+
+
+templates:
+  utter_ask_rephrase:
+  - text: Scusa non capisco, puoi rifrasare?
+  - text: Scusa, potresti riesprimere il concetto?
+
+  utter_goodbye:
+  - text: Alla prossima
+  - text: Arrivederci
+
+  utter_greet:
+  - text: Ciao!
+  - text: Buongiorno! Come posso aiutarti?
+
+  utter_iamabot:
+  - text: Si, sono un bot
