@@ -10,20 +10,29 @@ actions:
 
 
 entities:
-- attivita
-- cap
+- nome    #medico
 - cognome
+- codice_fiscale
+- attivita
+- codice_distretto
 - data_inizio_attivita
-- ambulatorio
-- distretto
+- posti_disponibili
+- ambulatorio   #ambulatorio
 - comune
-- email
 - indirizzo
-- nome
 - civico
+- cap 
+- descrizione
+- note
 - telefono
+- telefono_secondario
+- email
+- ora_inizio    #orario
+- ora_fine
+- giorno
+- appunto ricevimento
+- medico #entità medico
 - attribute
-- doctor #entità doctor
 - mention
 - object_type
 
@@ -43,11 +52,21 @@ slots:
     type: unfeaturized
   cognome:
     type: unfeaturized
+  codice_fiscale:
+    type: unfeaturized
+  posti_disponibili:
+    type: unfeaturized
+  descrizione:
+    type: unfeaturized
+  note:
+    type: unfeaturized
+  ambulatorio:
+    type: unfeaturized  
   data_inizio_attivita:
     type: unfeaturized
   ambulatorio:
     type: unfeaturized
-  distretto:
+  codice_distretto:
     type: unfeaturized
   comune:
     type: unfeaturized
@@ -61,9 +80,19 @@ slots:
     type: unfeaturized
   telefono:
     type: unfeaturized
+  telefono_secondario:
+    type: unfeaturized
+  ora_inizio:
+    type: unfeaturized
+  ora_fine:
+    type: unfeaturized
+  giorno:
+    type: unfeaturized
+  appunto_ricevimento:
+    type: unfeaturized
   attribute:
     type: unfeaturized
-  doctor:
+  medico:
     type: unfeaturized
   knowledge_base_last_object:
     type: unfeaturized
@@ -78,7 +107,7 @@ slots:
   name:
     type: unfeaturized
   object_type:
-    initial_value: "doctor"
+    initial_value: "medico"
     type: unfeaturized
 
 
