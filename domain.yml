@@ -13,7 +13,6 @@ entities:
 - nome    #medico
 - cognome
 - codice_fiscale
-- attivita
 - codice_distretto
 - data_inizio_attivita
 - posti_disponibili
@@ -46,8 +45,6 @@ intents:
 
 
 slots:
-  attivita:
-    type: unfeaturized
   cap:
     type: unfeaturized
   cognome:
@@ -107,7 +104,7 @@ slots:
   name:
     type: unfeaturized
   object_type:
-    initial_value: "medico"
+    #initial_value: "medico"
     type: unfeaturized
 
 
