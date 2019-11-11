@@ -1,0 +1,74 @@
+[
+	{
+		"search_type" : "query_knowledge_list",
+		"params" : { 
+				"Medici.nome": "nome",
+				"Medici.cognome": "cognome",
+				"Medici.codice_fiscale": "codice_fiscale",
+				"Medici.desc_asr": "desc_asr",
+				"Medici.desc_distretto": "desc_distretto",
+				"Medici.cod_asr": "cod_asr",
+				"Ambulatori.cap": "cap",
+				"Ambulatori.indirizzo": "indirizzo",
+				"Ambulatori.denom_comune": "denom_comune",
+				"Orari.ora_fine": "ora_fine",
+				"Orari.ora_inizio": "ora_inizio",
+				"Orari.giorno": "giorno"
+	  	},
+		"generation-type" : "once-per-instance", 
+		"phrase-templates" : [
+						"<quali|chi|cerco i|cerco le> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio)|[lavora](object_type:doctor)> <sono|lavorano|conosci|elenco|elencami> nel comune di  <e:cap>?",
+                        "<quali|chi|cerco i|cerco le> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio)|[lavora](object_type:doctor)> <sono|lavorano|conosci|elenco|elencami> nel comune di  <e:denom_comune>?",
+                        "<quali|chi|cerco i|cerco le> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio)|[lavora](object_type:doctor)> <è|sono|lavorano|conosci|elenco|elencami> nel distretto <e:desc_distretto>?",
+                        "<quali|chi|cerco i|cerco le> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio)|[lavora](object_type:doctor)> <è|sono|lavorano|conosci|elenco|elencami> all'<indirizzo|via> <e:indirizzo>?",
+                        "<quali|chi|cerco i|cerco le> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio)|[lavora](object_type:doctor)> <si trova|sono|lavorano|conosci|elenco|elencami> nell'ambulatorio <e:ambulatorio>?",
+                        "<quali|chi|cerco i|cerco le> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio)|[lavora](object_type:doctor)> <che> <fanno|lavorano|conosci|elenco|elencami> <attivita|attività|> <e:attivita>?",
+                        "<quali|chi|cerco i|cerco le> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio)|[lavora](object_type:doctor)> <operano|lavorano|sono aperti> fino alle <e:ora_fine>?",
+						"<quali|chi|cerco i|cerco le> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio)|[lavora](object_type:doctor)> <aprono|lavorano|sono aperti> <alle> <e:ora_inizio>?",
+						"<quali|chi|cerco i|cerco le> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio)> <operano|è aperto|lavorano|sono aperti> <il> <e:giorno>?",
+						"<quali|chi|cerco i|cerco le> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio)> sono a <e:denom_comune>?",
+						"<elencami|mostrami|dimmi> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio> a <e:denom_comune>",
+                        "<elencami|mostrami|dimmi> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio> a <e:desc_distretto>",
+                        "<elencami|mostrami|dimmi> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio> in <e:indirizzo>",
+						"<elencami|mostrami|dimmi> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio> a <e:ambulatorio>",
+                        "<elencami|mostrami|dimmi> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio> aperti <di|il> <e:giorno>",
+                        "<elencami|mostrami|dimmi> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio> in <e:cap>",
+                        "<elencami|mostrami|dimmi> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio> che <lavorano|fanno|aprono|iniziano> <dalle|alle> <e:ora_inizio>",						
+						"<elencami|mostrami|dimmi> <[medici](object_type:doctor)|[dottore](object_type:doctor)|[dottoresse](object_type:doctor)|[dottoressa](object_type:doctor)|[dottori](object_type:doctor)|[ambulatori](object_type:ambulatorio> che <lavorano|fanno|chiudono|restano aperti> <alle|fino alle> <e:ora_fine>",
+						"<Qual'e|dimmi|vorrei sapere|cerco> <l'|gli> <[orari](object_type:orario)|[orario](object_type)> <di|del> <e:cognome> a <e:denom_comune>?",
+						"<Qual'e|dimmi|vorrei sapere|cerco> <l'|gli> <[orari](object_type:orario)|[orario](object_type)> <di|del> <e:cognome> <e:indirizzo>?"
+					]
+ 	},
+	{
+		"search_type" : "query_knowledge_attribute_of",
+		"params" : { 
+			"Medici.nome" : "nome",
+			"Medici.cognome" : "cognome",
+			"Ambulatori.denom_comune": "denom_comune",
+			"Ambulatori.indirizzo": "indirizzo"
+
+	  	},
+		"generation-type" : "once-per-instance", 
+		"phrase-templates" : [
+"<Qual'e|in quale|dimmi|vorrei sapere|cerco> il <[telefono](attribute:telefono_primario)|[numero](attribute:telefono_primario)|[cellulare](attribute:telefono_primario)> <di|è> <[primo](mention:1)|[secondo](mention:2)|[terzo](mention:3)|[quello](mention)|[ultimo](mention:LAST)>?",
+"<Qual'e|in quale|dimmi|vorrei sapere|cerco>  <[email](attribute:indirizzo_email)|[e-mail](attribute:indirizzo_email)|[mail](attribute:indirizzo_email)> <di|del dr|del dottor> <e:cognome>?",
+"<Qual'e|in quale|dimmi|vorrei sapere|cerco>  <[comune](attribute:denom_comune)|[località](attribute:denom_comune)|[citta](attribute:denom_comune)> <del|di|è> <[primo](mention:1)|[secondo](mention:2)|[terzo](mention:3)|[quello](mention)|[ultimo](mention:LAST)|[quarto](mention:4)|[quinto](mention:5)|[sesto](mention:6)|[7](mention)|[8](mention)|[1](mention)[5](mention)>?",
+"<Qual'e|in quale|dimmi|vorrei sapere|cerco> il <[codice fiscale](attribute:codice_fiscale)> di  <e:cognome>?",
+"<Qual'e|in quale|dimmi|vorrei sapere|cerco> <il> <[civico](attribute:numero_civico)> di <e:cognome>?",
+"<Qual'e|in quale|dimmi|vorrei sapere|cerco> i <[giorni](attribute:giorno)> di <e:cognome>?",
+"<Qual'e|in quale|dimmi|vorrei sapere|cerco> i <[giorni](attribute:giorno)> dell'ambulatorio a <e:denom_comune>?",
+"<Qual'e|in quale|dimmi|vorrei sapere|cerco> <la|il|l'> <[indirizzo](attribute:indirizzo)|[via](attribute:indirizzo)> <di|del dr|del> <[nome](attribute)> <e:cognome> ?",
+"<Qual'e|in quale|dimmi|vorrei sapere|cerco> <la|il> <[distretto](attribute:desc_distretto)|[zona](attribute:desc_distretto> di <e:cognome> ?",
+"<Qual'e|in quale|dimmi|vorrei sapere|cerco> <la|il> <[telefono](attribute:telefono_primario)|[numero di telefono](attribute:telefono_primario)|[numero](attribute:telefono_primario)> di <e:cognome> ?",
+"<e:cognome> <in quale|dove|quale> <[citta](attribute:denom_comune)|[città](attribute:denom_comune)|[comune](attribute:denom_comune)> <ha|lavora|opera|lo trovo|c'è|è>?",
+"<e:cognome>  <che|quale> <[telefono](attribute:telefono_primario)|[numero](attribute:telefono_primario)> <ha|possiede|è>?",
+"<e:cognome>  <in quale|dove|a quale> <[via](attribute:indirizzo)|[indirizzo](attribute:indirizzo)> <ha|possiede|lo trovo|c'è|è>?",
+"<[primo](mention:1)|[secondo](mention:2)|[terzo](mention:3)|[quello](mention)|[quest'ultimo](mention:LAST)|[quarto](mention:4)|[quinto](mention:5)|[sesto](mention:6)|[settimo](mention:7)|[ottavo](mention:8)|[nono](mention:9)|[decimo](mention:10)|[3](mention)|[7](mention)> <in quale|quale> <[email](attribute)|[distretto](attribute)> <ha|possiede|lo trovo|c'è|è>?",
+"<e|la|il|suo|sua> <[indirizzo](attribute)|[civico](attribute:numero_civico)>?",
+"<e|la|il|suo|sua> <[telefono](attribute)|[numero](attribute:telefono_primario)|[email](attribute:indirizzo_email)>?",
+"<e|la|il|suo|sua> <[comune](attribute:denom_comune)|[distretto](attribute:cod_distretto)>?",
+"quanti sono i <[posti disponibili](attribute:posti_disponibili)|[posti](attribute:posti_disponibili]> di <e:cognome>"
+		]
+	}
+]
+

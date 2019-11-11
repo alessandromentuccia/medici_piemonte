@@ -1,0 +1,17 @@
+[
+    {
+        "name" : "medico",
+        "data" : "medico-data.json",
+        "template" : "medico-template.json"
+    },
+    {
+        "name" : "ambulatorio",
+        "data" : "medico-data.json",
+        "template" : "medico-template.json"
+    },
+    {
+        "name" : "orario",
+        "data" : "medico-data.json",
+        "template" : "medico-template.json"
+    }
+]
