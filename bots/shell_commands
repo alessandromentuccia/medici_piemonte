@@ -1,0 +1,11 @@
+Folder: cd ~/repos/repo-CsiChatBot/CsiChatBot/train-gen/form_action_bot
+
+Running CustomActions (run in dir core_files):
+python -m rasa_core_sdk.endpoint --actions form_actions
+
+Online Training FormAction:
+python -m rasa_core.train -o core_model -s core_files/form_stories.md -d core_files/domain.yml -u nlu_model/_last --endpoints core_files/endpoints.yml
+
+Running FormAction Agent:
+python -m rasa_core.run -d core_model -u nlu_model/_last --endpoints core_files/endpoints.yml
+

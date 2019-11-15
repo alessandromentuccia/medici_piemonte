@@ -1,0 +1,16 @@
+{
+    "enableApi": true,
+    "port": 5011,
+    "nluPath": "/nlu_model/_last",
+    "corePath": "/core_model/core",
+    "endpoints" : true,
+    "endpointsPath": "/core_files/endpoints.yml",
+    "actions": false,
+    "actionFile": "core_files.form_actions",
+    "actionPort": "5071", 
+    "debug": true,
+    "trainCoreOutput": "/core_model/core",
+    "trainCoreStories": "/core_files/stories.md",
+    "trainCoreDomain": "/core_files/domain.yml"
+
+}

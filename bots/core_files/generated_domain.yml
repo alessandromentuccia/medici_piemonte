@@ -1,0 +1,45 @@
+actions:
+- utter_saluto
+- utter_ringraziamento
+- utter_deny
+- utter_affirm
+- utter_affirm+ringraziamento
+- utter_deny+ringraziamento
+entities:
+- posizione_organizzativa
+- nome
+- cognome
+- sede
+- area_ufficio
+- piano
+- direzione
+- vano
+- telefono
+- attivita
+- azienda
+- distretto
+- ambulatorio
+- indirizzo
+- civico
+- comune
+- cap
+- associazione
+intents:
+- query_knowledge_persona_list
+- query_knowledge_attribute_of_persona
+- saluto
+- ringraziamento
+- deny
+- affirm
+- affirm+ringraziamento
+- deny+ringraziamento
+- query_knowledge_list
+- query_knowledge_attribute_of
+slots: {}
+templates:
+  utter_affirm: []
+  utter_affirm+ringraziamento: []
+  utter_deny: []
+  utter_deny+ringraziamento: []
+  utter_ringraziamento: []
+  utter_saluto: []

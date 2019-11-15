@@ -1,0 +1,35 @@
+[
+	{
+		"entity": "medico",
+		"metadata": {
+			"article": "il",
+			"plural": "medici",
+			"plural-article": "i",
+			"attributes": {
+				"id_rapporto_lavorativo": "integer",
+				"massimaleroga": "integer",
+				"cognome": "se_in_dtring",
+				"posti_disponibili": "integer",
+				"nome": "string",
+				"desc_categoria": "string",
+				"inizio_contratto": "string",
+				"codice_fiscale": "string",
+				"id_operatore": "string",
+				"codice_regionale": "string",
+				"desc_asr": "string",
+				"desc_distretto": "integer",
+				"data_nascita": "string",
+				"cod_asr": "integer",
+				"id_ambito": "integer",
+				"sesso": "string",
+				"cod_distretto": "integer",
+				"massimale": "integer",
+				"id_aura": "integer"
+				},
+			"response-heading":"Ecco i risultati"
+		},
+		"data": [
+		]
+	}
+]
+  

@@ -1,0 +1,30 @@
+[
+	{
+		"search_name" : "query_knowledge_list",
+		"search_entity" : "Ambulatori",
+  		"search_type" : "query_knowledge_list",
+  		"params" : { 
+			"Ambulatori.indirizzo": "indirizzo",
+			"Ambulatori.comune": "comune",
+			"Ambulatori.cap": "cap",
+			"Ambulatori.telefono_primario": "telefono_primario",
+			"Medici.cognome": "cognome",
+			"Medici.nome": "nome",
+			"Medici.desc_distretto": "desc_distretto",
+			"Medici.desc_categoria": "desc_categoria",
+			"Medici.desc_asr": "desc_asr",  
+			"Orari.giorno": "giorno",
+			"Orari.ora_fine": "ora_fine",
+			"Orari.ora_inizio": "ora_inizio"
+                 }
+	},
+	{
+		"search_name" : "query_knowledge_attribute_of",
+		"search_entity" : "Ambulatori",
+  		"search_type" : "query_knowledge_attribute_of",
+  		"params" : { 
+			"Ambulatorio.denom_comune" : "comune",
+			"Ambulatorio.indirizzo" : "indirizzo" 
+                 }
+	}
+]

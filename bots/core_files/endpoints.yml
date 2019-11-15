@@ -1,0 +1,7 @@
+tracker_store:
+    store_type: mongod
+    url: mongodb://localhost:27017
+    db: rasatest
+    username: 
+    password: 
+    collection: quickstart

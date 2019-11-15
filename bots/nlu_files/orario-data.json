@@ -1,0 +1,24 @@
+[
+	{
+		"entity": "orario",
+		"metadata": {
+			"article": "l'",
+			"plural": "orari",
+			"plural-article": "gli",
+			"attributes": {
+				"id_rapporto_lavorativo": "integer",
+				"ora_fine": "string",
+				"ora_inizio": "string",
+				"id_operatore": "string",
+				"giorno": "string",
+				"appunto_ricevimento": "string",
+				"id_raplav_ambulatorio": "string",
+				"id_giorno": "integer"
+				},
+			"response-heading":"Ecco i risultati"
+		},
+		"data": [
+		]
+	}
+]
+  
