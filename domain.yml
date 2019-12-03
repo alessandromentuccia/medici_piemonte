@@ -13,23 +13,22 @@ entities:
 - nome    #medico
 - cognome
 - codice_fiscale
-- codice_distretto
-- data_inizio_attivita
+- desc_distretto
 - posti_disponibili
 - ambulatorio   #ambulatorio
-- comune
+- denom_comune
 - indirizzo
-- civico
+- numero_civico
 - cap 
 - descrizione
 - note
 - telefono
 - telefono_secondario
-- email
+- indirizzo_email
 - ora_inizio    #orario
 - ora_fine
 - giorno
-- appunto ricevimento
+- appunto_ricevimento
 - medico #entità medico
 - attribute
 - mention
@@ -58,22 +57,18 @@ slots:
   note:
     type: unfeaturized
   ambulatorio:
-    type: unfeaturized  
-  data_inizio_attivita:
     type: unfeaturized
-  ambulatorio:
+  desc_distretto:
     type: unfeaturized
-  codice_distretto:
+  denom_comune:
     type: unfeaturized
-  comune:
-    type: unfeaturized
-  email:
+  indirizzo_email:
     type: unfeaturized
   indirizzo:
     type: unfeaturized
   nome:
     type: unfeaturized
-  civico:
+  numero_civico:
     type: unfeaturized
   telefono:
     type: unfeaturized

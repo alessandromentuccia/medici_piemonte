@@ -21,7 +21,7 @@
 	{
 		"search_name" : "query_knowledge_attribute_of",
 		"search_entity" : "Ambulatori",
-  		"search_type" : "query_knowledge_attribute_of",
+  		"search_type" : "query_knowledge_attribute_of_ambulatorio",
   		"params" : { 
 			"Ambulatorio.denom_comune" : "comune",
 			"Ambulatorio.indirizzo" : "indirizzo" 

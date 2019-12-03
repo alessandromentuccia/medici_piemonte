@@ -1,33 +1,32 @@
-[
-	{
-		"entity": "ambulatorio",
-		"metadata": {
-			"article": "l'",
-			"plural": "ambulatori",
-			"plural-article": "gli",
-			"attributes": {
-				"id_rapporto_lavorativo": "string",
-				"note": "string",
-				"indirizzo_email": "string",
-				"indirizzo": "string",
-				"id_raplav_ambulatorio": "string",
-				"istat_comune": "integer",
-				"telefono_primario": "string",
-				"descrizione": "string",
-				"id_operatore": "string",
-				"cap": "integer",
-				"latitudine": "string",
-				"denom_comune": "string",
-				"numero_civico": "string",
-				"primario": "integer",
-				"desc_tipo": "integer",
-				"telefono_secondario": "integer",
-				"longitudine": "string"
-				},
-			"response-heading":"Ecco i risultati"
-		},
-		"data": [
-		]
-	}
-]
-  
+
+{
+	"entity": "ambulatorio",
+	"metadata": {
+		"article": "l'",
+		"plural": "ambulatori",
+		"plural-article": "gli",
+		"attributes": {
+			"id_rapporto_lavorativo": "string",
+			"note": "string",
+			"indirizzo_email": "string",
+			"indirizzo": "string",
+			"id_raplav_ambulatorio": "string",
+			"istat_comune": "integer",
+			"telefono_primario": "string",
+			"descrizione": "string",
+			"id_operatore": "string",
+			"cap": "integer",
+			"latitudine": "string",
+			"denom_comune": "string",
+			"numero_civico": "string",
+			"primario": "integer",
+			"desc_tipo": "integer",
+			"telefono_secondario": "integer",
+			"longitudine": "string"
+			},
+		"response-heading":"Ecco i risultati"
+	},
+	"data": [
+	]
+}
+

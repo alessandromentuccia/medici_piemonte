@@ -35,3 +35,14 @@
 ## Query Knowledge Base
 * query_knowledge_attribute_of
   - action_query_attribute
+  - slot{"object_type": "medico"}
+
+## Query Knowledge Base
+* query_knowledge_attribute_of
+  - action_query_attribute
+  - slot{"object_type": "ambulatorio"}
+
+## Query Knowledge Base
+* query_knowledge_attribute_of
+  - action_query_attribute
+  - slot{"object_type": "orario"}

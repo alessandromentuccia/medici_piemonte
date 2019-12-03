@@ -1,74 +1,7243 @@
-## intent:bot_challenge
-- sei un bot?
-- sei un umano?
-- sto parlado con un bot?
-- sto parlado con un umano?
+## intent:affirm
+- si
+- certo
 
-## intent:goodbye
-- arrivederci
-- arrivederla
-- ci si rivede
-- a presto
-- ci si risente
-- ci risentiamo
+## intent:affirm+ringraziamento
+- si grazie
 
-## intent:greet
-- ciao
-- salve
-- buongiorno
-- buonpomeriggio
-- buonasera
+## intent:deny
+- No
+- Assolutamente no
 
+## intent:deny+ringraziamento
+- no grazie
 
 ## intent:query_knowledge_attribute_of
-- mi puoi dare il [numero](telefono) del dottor [FRANCO BONGIANINO](medico) ?
-- conosci l' [indirizzo](attribute:indirizzo) di [questo](mention) ?
-- che [attività](attribute:attivita) fanno [loro](mention) ?
-- sai che [attività](attribute:attivita) fa l' [ultimo](mention:LAST) ?
-- qual'è l' [email](attribute) del dottor [ALESSANDRO FILIPPI](medico) ?
-- mi puoi dire gli [indirizzi](attribute:indirizzo) degli ambulatori a [TORINO](comune) ?
-- mi serve i [numeri](attribute:telefono) dei medici a [GOZZANO](comune)
-- mi puoi dire il [numero](attribute:telefono) di [questo dottore](mention) ?
-- in che [città](attribute:comune) opera [lui](mention) ?
-- per favore elencami alcuni [ambulatori](attribute:ambulatorio) a [NEVIGLIE](comune) per me
-- dimmi il [numero civico](attribute:civico) dello studio del dottor [FRANCO BONGIANINO](medico)
-- dimmi l' [indirizzo](attribute:indirizzo) dello studio del dottor [ROBERTO POLETTI](medico)
-- l' [ultimo](mention:LAST) risiede in quale [via](attribute:indirizzo)?
-- il [secondo](mention:2) sta in quale [via](attribute:indirizzo)?
-- qual'è il [numero](attribute:telefono) del [secondo](mention:2) dottore?
-- mi serve l'[email](attribute) del [primo](mention:1)
-- il [terzo](mention:3) in che [città](attribute:comune) ha l'ambulatorio ?
-- da che [anno])(attribute:Data_inizio_attivita) lavora il dottor [ROBERTO POLETTI](medico)?
-- mi serve il [cap](attribute:cap) dell'ambulatorio [MONTALDO ROERO](ambulatorio)
-- mi diresti il [CAP](attribute:cap) dell'ambulatorio [MONTALDO ROERO](ambulatorio)
-- conosci l'[indirizzo](attribute:indirizzo) di [questo](mention) ?
-- conosci il [numero](attribute:telefono) di [questo](mention) ?
-- mi puoi dare l' [email](attribute) dell'[ultimo](mention:LAST)?
-- mi puoi dire il [telefono](attribute:telefono) del [primo](mention:1)?
-- in che [città](attribute:comune) opera il [primo](mention:1)?
-- dov'è lo [studio](attribute:comune) del dottor [ROBERTO POLETTI](medico)?
-- dimmi il [telefono](attribute:telefono) del dottor [ROBERTO POLETTI](medico)
-- mi puoi dare l'[e-mail](attribute:email) del dottor [FLAVIO POLA](medico) ?
+- Qual'e [email](attribute:indirizzo_email) di [FALLONI](cognome) (medico)? 
+- Qual'e [email](attribute:indirizzo_email) del dr [Brignolo](cognome) (medico)? 
+- Qual'e [email](attribute:indirizzo_email) del dottor [ZERLIA](cognome) (medico)? 
+- Qual'e [email](attribute:indirizzo_email) del dottor [FRIZIERO](cognome) (medico)? 
+- Qual'e [e-mail](attribute:indirizzo_email) di [GATTA MICHELET](cognome) (medico)? 
+- Qual'e [e-mail](attribute:indirizzo_email) del dr [D ALESSANDRO](cognome) (medico)? 
+- Qual'e [e-mail](attribute:indirizzo_email) del dottor [conversano](cognome) (medico)? 
+- Qual'e [mail](attribute:indirizzo_email) di [muccio](cognome) (medico)? 
+- Qual'e [mail](attribute:indirizzo_email) del dr [colombino](cognome) (medico)? 
+- Qual'e [mail](attribute:indirizzo_email) del dottor [Richelmi](cognome) (medico)? 
+- in quale [email](attribute:indirizzo_email) di [Angelini](cognome) (medico)? 
+- in quale [email](attribute:indirizzo_email) del dr [Andretta](cognome) (medico)? 
+- in quale [email](attribute:indirizzo_email) del dr [malfi](cognome) (medico)? 
+- in quale [email](attribute:indirizzo_email) del dottor [Rabbia](cognome) (medico)? 
+- in quale [e-mail](attribute:indirizzo_email) di [cottini](cognome) (medico)? 
+- in quale [e-mail](attribute:indirizzo_email) di [Lo presti costantino](cognome) (medico)? 
+- in quale [e-mail](attribute:indirizzo_email) del dr [graglia](cognome) (medico)? 
+- in quale [e-mail](attribute:indirizzo_email) del dr [SPAGNOLELLO](cognome) (medico)? 
+- in quale [e-mail](attribute:indirizzo_email) del dottor [PASTERIS](cognome) (medico)? 
+- in quale [mail](attribute:indirizzo_email) di [accardo](cognome) (medico)? 
+- in quale [mail](attribute:indirizzo_email) del dr [MEZZASALMA](cognome) (medico)? 
+- in quale [mail](attribute:indirizzo_email) del dottor [Comuniello](cognome) (medico)? 
+- in quale [mail](attribute:indirizzo_email) del dottor [Barge](cognome) (medico)? 
+- dimmi [email](attribute:indirizzo_email) di [ROBINO](cognome) (medico)? 
+- dimmi [email](attribute:indirizzo_email) del dr [Bonagura](cognome) (medico)? 
+- dimmi [email](attribute:indirizzo_email) del dottor [BASSI](cognome) (medico)? 
+- dimmi [email](attribute:indirizzo_email) del dottor [MORICI](cognome) (medico)? 
+- dimmi [e-mail](attribute:indirizzo_email) di [Modaffari](cognome) (medico)? 
+- dimmi [e-mail](attribute:indirizzo_email) del dr [dematteis](cognome) (medico)? 
+- dimmi [e-mail](attribute:indirizzo_email) del dottor [lacchia](cognome) (medico)? 
+- dimmi [mail](attribute:indirizzo_email) di [CARPIGNANO](cognome) (medico)? 
+- dimmi [mail](attribute:indirizzo_email) di [MAURO](cognome) (medico)? 
+- dimmi [mail](attribute:indirizzo_email) del dr [Lunati](cognome) (medico)? 
+- dimmi [mail](attribute:indirizzo_email) del dottor [VARRICCHIO](cognome) (medico)? 
+- vorrei sapere [email](attribute:indirizzo_email) di [Ceratto](cognome) (medico)? 
+- vorrei sapere [email](attribute:indirizzo_email) del dr [BRUSATI](cognome) (medico)? 
+- vorrei sapere [email](attribute:indirizzo_email) del dr [CHIANTIA](cognome) (medico)? 
+- vorrei sapere [email](attribute:indirizzo_email) del dottor [bottieri](cognome) (medico)? 
+- vorrei sapere [email](attribute:indirizzo_email) del dottor [Mercadante](cognome) (medico)? 
+- vorrei sapere [e-mail](attribute:indirizzo_email) di [PLASSIO](cognome) (medico)? 
+- vorrei sapere [e-mail](attribute:indirizzo_email) del dr [PUDDU](cognome) (medico)? 
+- vorrei sapere [e-mail](attribute:indirizzo_email) del dottor [milillo](cognome) (medico)? 
+- vorrei sapere [mail](attribute:indirizzo_email) di [Condemi](cognome) (medico)? 
+- vorrei sapere [mail](attribute:indirizzo_email) del dr [SCORDO](cognome) (medico)? 
+- vorrei sapere [mail](attribute:indirizzo_email) del dr [Devalis](cognome) (medico)? 
+- vorrei sapere [mail](attribute:indirizzo_email) del dottor [DRAPERI](cognome) (medico)? 
+- cerco [email](attribute:indirizzo_email) di [PORASSO](cognome) (medico)? 
+- cerco [email](attribute:indirizzo_email) del dr [carpentieri](cognome) (medico)? 
+- cerco [email](attribute:indirizzo_email) del dottor [berto](cognome) (medico)? 
+- cerco [e-mail](attribute:indirizzo_email) di [Rabito](cognome) (medico)? 
+- cerco [e-mail](attribute:indirizzo_email) del dr [Degrandi](cognome) (medico)? 
+- cerco [e-mail](attribute:indirizzo_email) del dottor [DAGLIO](cognome) (medico)? 
+- cerco [mail](attribute:indirizzo_email) di [Pola](cognome) (medico)? 
+- cerco [mail](attribute:indirizzo_email) del dr [Allemandi](cognome) (medico)? 
+- cerco [mail](attribute:indirizzo_email) del dottor [Roffino](cognome) (medico)? 
+- cerco [mail](attribute:indirizzo_email) del dottor [saraceno](cognome) (medico)? 
+- Qual'e [comune](attribute:denom_comune) del [sesto](mention:6) ? 
+- Qual'e [comune](attribute:denom_comune) del [8](mention) ? 
+- Qual'e [comune](attribute:denom_comune) di [7](mention) ? 
+- Qual'e [comune](attribute:denom_comune) è [ultimo](mention:LAST) ? 
+- Qual'e [località](attribute:denom_comune) del [primo](mention:1) ? 
+- Qual'e [località](attribute:denom_comune) di [ultimo](mention:LAST) ? 
+- Qual'e [località](attribute:denom_comune) di [1](mention)[5](mention) ? 
+- Qual'e [località](attribute:denom_comune) è [quarto](mention:4) ? 
+- Qual'e [citta](attribute:denom_comune) del [quarto](mention:4) ? 
+- Qual'e [citta](attribute:denom_comune) di [secondo](mention:2) ? 
+- Qual'e [citta](attribute:denom_comune) di [sesto](mention:6) ? 
+- Qual'e [citta](attribute:denom_comune) è [primo](mention:1) ? 
+- in quale [comune](attribute:denom_comune) del [secondo](mention:2) ? 
+- in quale [comune](attribute:denom_comune) del [quinto](mention:5) ? 
+- in quale [comune](attribute:denom_comune) di [quello](mention) ? 
+- in quale [comune](attribute:denom_comune) è [primo](mention:1) ? 
+- in quale [località](attribute:denom_comune) del [terzo](mention:3) ? 
+- in quale [località](attribute:denom_comune) di [7](mention) ? 
+- in quale [località](attribute:denom_comune) è [quello](mention) ? 
+- in quale [citta](attribute:denom_comune) del [sesto](mention:6) ? 
+- in quale [citta](attribute:denom_comune) di [ultimo](mention:LAST) ? 
+- in quale [citta](attribute:denom_comune) è [8](mention) ? 
+- dimmi [comune](attribute:denom_comune) del [quello](mention) ? 
+- dimmi [comune](attribute:denom_comune) del [7](mention) ? 
+- dimmi [comune](attribute:denom_comune) di [sesto](mention:6) ? 
+- dimmi [comune](attribute:denom_comune) è [1](mention)[5](mention) ? 
+- dimmi [località](attribute:denom_comune) del [quarto](mention:4) ? 
+- dimmi [località](attribute:denom_comune) di [terzo](mention:3) ? 
+- dimmi [località](attribute:denom_comune) è [terzo](mention:3) ? 
+- dimmi [citta](attribute:denom_comune) del [8](mention) ? 
+- dimmi [citta](attribute:denom_comune) di [8](mention) ? 
+- dimmi [citta](attribute:denom_comune) è [ultimo](mention:LAST) ? 
+- vorrei sapere [comune](attribute:denom_comune) del [terzo](mention:3) ? 
+- vorrei sapere [comune](attribute:denom_comune) del [ultimo](mention:LAST) ? 
+- vorrei sapere [comune](attribute:denom_comune) del [quarto](mention:4) ? 
+- vorrei sapere [comune](attribute:denom_comune) di [primo](mention:1) ? 
+- vorrei sapere [comune](attribute:denom_comune) è [7](mention) ? 
+- vorrei sapere [località](attribute:denom_comune) del [quello](mention) ? 
+- vorrei sapere [località](attribute:denom_comune) di [quinto](mention:5) ? 
+- vorrei sapere [località](attribute:denom_comune) è [primo](mention:1) ? 
+- vorrei sapere [citta](attribute:denom_comune) del [primo](mention:1) ? 
+- vorrei sapere [citta](attribute:denom_comune) di [quarto](mention:4) ? 
+- vorrei sapere [citta](attribute:denom_comune) è [quello](mention) ? 
+- cerco [comune](attribute:denom_comune) del [primo](mention:1) ? 
+- cerco [comune](attribute:denom_comune) di [8](mention) ? 
+- cerco [comune](attribute:denom_comune) è [quello](mention) ? 
+- cerco [comune](attribute:denom_comune) è [quarto](mention:4) ? 
+- cerco [comune](attribute:denom_comune) è [sesto](mention:6) ? 
+- cerco [località](attribute:denom_comune) del [7](mention) ? 
+- cerco [località](attribute:denom_comune) di [sesto](mention:6) ? 
+- cerco [località](attribute:denom_comune) è [quinto](mention:5) ? 
+- cerco [citta](attribute:denom_comune) del [quello](mention) ? 
+- cerco [citta](attribute:denom_comune) di [primo](mention:1) ? 
+- cerco [citta](attribute:denom_comune) è [secondo](mention:2) ? 
+- cerco [citta](attribute:denom_comune) è [terzo](mention:3) ? 
+- Qual'e il [codice fiscale](attribute:codice_fiscale) di [borsati](cognome) (medico)? 
+- in quale il [codice fiscale](attribute:codice_fiscale) di [allora](cognome) (medico)? 
+- dimmi il [codice fiscale](attribute:codice_fiscale) di [losio](cognome) (medico)? 
+- vorrei sapere il [codice fiscale](attribute:codice_fiscale) di [SOLDA](cognome) (medico)? 
+- vorrei sapere il [codice fiscale](attribute:codice_fiscale) di [MIGLIORINI](cognome) (medico)? 
+- cerco il [codice fiscale](attribute:codice_fiscale) di [Capriolo](cognome) (medico)? 
+- Qual'e il [civico](attribute:numero_civico) di [CANTALUPI](cognome) (medico)? 
+- in quale il [civico](attribute:numero_civico) di [PILAN](cognome) (medico)? 
+- dimmi il [civico](attribute:numero_civico) di [resta](cognome) (medico)? 
+- vorrei sapere il [civico](attribute:numero_civico) di [trento](cognome) (medico)? 
+- cerco il [civico](attribute:numero_civico) di [Botto](cognome) (medico)? 
+- Qual'e i [giorni](attribute:giorno) di [cavaglia](cognome) (medico)? 
+- in quale i [giorni](attribute:giorno) di [ponchio](cognome) (medico)? 
+- dimmi i [giorni](attribute:giorno) di [Ravera](cognome) (medico)? 
+- vorrei sapere i [giorni](attribute:giorno) di [Albano](cognome) (medico)? 
+- cerco i [giorni](attribute:giorno) di [di taranto](cognome) (medico)? 
+- cerco i [giorni](attribute:giorno) di [Lorenzati](cognome) (medico)? 
+- Qual'e i [giorni](attribute:giorno) di apertura dell'ambulatorio a [groscavallo](denom_comune) (ambulatorio)? 
+- in quale i [giorni](attribute:giorno) di apertura dell'ambulatorio a [vistrorio](denom_comune) (ambulatorio)? 
+- dimmi i [giorni](attribute:giorno) di apertura dell'ambulatorio a [MOTTALCIATA](denom_comune) (ambulatorio)? 
+- vorrei sapere i [giorni](attribute:giorno) di apertura dell'ambulatorio a [Fabbrica curone](denom_comune) (ambulatorio)? 
+- cerco i [giorni](attribute:giorno) di apertura dell'ambulatorio a [PORTE](denom_comune) (ambulatorio)? 
+- cerco i [giorni](attribute:giorno) di apertura dell'ambulatorio a [Sommariva perno](denom_comune) (ambulatorio)? 
+- cerco i [giorni](attribute:giorno) di apertura dell'ambulatorio a [Ponzano monferrato](denom_comune) (ambulatorio)? 
+- Qual'e la [indirizzo](attribute:indirizzo) di [nome](attribute) [GALLELLO](cognome) (medico) ? 
+- Qual'e la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Yousefi](cognome) (medico) ? 
+- Qual'e la [indirizzo](attribute:indirizzo) del [nome](attribute) [ribetto bruno](cognome) (medico) ? 
+- Qual'e la [via](attribute:indirizzo) di [nome](attribute) [POGNANT GROS](cognome) (medico) ? 
+- Qual'e la [via](attribute:indirizzo) del dr [nome](attribute) [PAGLIARINO](cognome) (medico) ? 
+- Qual'e la [via](attribute:indirizzo) del [nome](attribute) [vallo](cognome) (medico) ? 
+- Qual'e il [indirizzo](attribute:indirizzo) di [nome](attribute) [LUGLIENGO](cognome) (medico) ? 
+- Qual'e il [indirizzo](attribute:indirizzo) del dr [nome](attribute) [DEBERNARDI](cognome) (medico) ? 
+- Qual'e il [indirizzo](attribute:indirizzo) del [nome](attribute) [Faga](cognome) (medico) ? 
+- Qual'e il [via](attribute:indirizzo) di [nome](attribute) [Venza](cognome) (medico) ? 
+- Qual'e il [via](attribute:indirizzo) del dr [nome](attribute) [giuliodori](cognome) (medico) ? 
+- Qual'e il [via](attribute:indirizzo) del [nome](attribute) [Ipucha perez](cognome) (medico) ? 
+- Qual'e l' [indirizzo](attribute:indirizzo) di [nome](attribute) [BORELLO](cognome) (medico) ? 
+- Qual'e l' [indirizzo](attribute:indirizzo) di [nome](attribute) [borsino](cognome) (medico) ? 
+- Qual'e l' [indirizzo](attribute:indirizzo) del dr [nome](attribute) [OMBRA](cognome) (medico) ? 
+- Qual'e l' [indirizzo](attribute:indirizzo) del [nome](attribute) [BAGNO](cognome) (medico) ? 
+- Qual'e l' [via](attribute:indirizzo) di [nome](attribute) [strauss](cognome) (medico) ? 
+- Qual'e l' [via](attribute:indirizzo) del dr [nome](attribute) [BARBUTO](cognome) (medico) ? 
+- Qual'e l' [via](attribute:indirizzo) del [nome](attribute) [Schimenti](cognome) (medico) ? 
+- in quale la [indirizzo](attribute:indirizzo) di [nome](attribute) [Rucli](cognome) (medico) ? 
+- in quale la [indirizzo](attribute:indirizzo) di [nome](attribute) [RUGGIERI](cognome) (medico) ? 
+- in quale la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Zorzi](cognome) (medico) ? 
+- in quale la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [PERONA](cognome) (medico) ? 
+- in quale la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Gianandrea](cognome) (medico) ? 
+- in quale la [indirizzo](attribute:indirizzo) del [nome](attribute) [vittone](cognome) (medico) ? 
+- in quale la [via](attribute:indirizzo) di [nome](attribute) [GRINDATTO](cognome) (medico) ? 
+- in quale la [via](attribute:indirizzo) di [nome](attribute) [PETTINELLI](cognome) (medico) ? 
+- in quale la [via](attribute:indirizzo) del dr [nome](attribute) [bosetto](cognome) (medico) ? 
+- in quale la [via](attribute:indirizzo) del [nome](attribute) [d addato](cognome) (medico) ? 
+- in quale il [indirizzo](attribute:indirizzo) di [nome](attribute) [GIANOLIO](cognome) (medico) ? 
+- in quale il [indirizzo](attribute:indirizzo) del dr [nome](attribute) [bernini](cognome) (medico) ? 
+- in quale il [indirizzo](attribute:indirizzo) del dr [nome](attribute) [demichelis](cognome) (medico) ? 
+- in quale il [indirizzo](attribute:indirizzo) del [nome](attribute) [Pollone](cognome) (medico) ? 
+- in quale il [via](attribute:indirizzo) di [nome](attribute) [Izzillo](cognome) (medico) ? 
+- in quale il [via](attribute:indirizzo) del dr [nome](attribute) [de sario](cognome) (medico) ? 
+- in quale il [via](attribute:indirizzo) del [nome](attribute) [FAVINI](cognome) (medico) ? 
+- in quale l' [indirizzo](attribute:indirizzo) di [nome](attribute) [Bersano](cognome) (medico) ? 
+- in quale l' [indirizzo](attribute:indirizzo) di [nome](attribute) [Rosso](cognome) (medico) ? 
+- in quale l' [indirizzo](attribute:indirizzo) di [nome](attribute) [pepe](cognome) (medico) ? 
+- in quale l' [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Cassano](cognome) (medico) ? 
+- in quale l' [indirizzo](attribute:indirizzo) del dr [nome](attribute) [MENZIO](cognome) (medico) ? 
+- in quale l' [indirizzo](attribute:indirizzo) del [nome](attribute) [Riggio](cognome) (medico) ? 
+- in quale l' [via](attribute:indirizzo) di [nome](attribute) [MAGRASSI](cognome) (medico) ? 
+- in quale l' [via](attribute:indirizzo) del dr [nome](attribute) [Sollini](cognome) (medico) ? 
+- in quale l' [via](attribute:indirizzo) del [nome](attribute) [Turotti](cognome) (medico) ? 
+- dimmi la [indirizzo](attribute:indirizzo) di [nome](attribute) [QUILICO](cognome) (medico) ? 
+- dimmi la [indirizzo](attribute:indirizzo) di [nome](attribute) [tani](cognome) (medico) ? 
+- dimmi la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [bertani](cognome) (medico) ? 
+- dimmi la [indirizzo](attribute:indirizzo) del [nome](attribute) [la mura](cognome) (medico) ? 
+- dimmi la [via](attribute:indirizzo) di [nome](attribute) [CAMPAGNOLI](cognome) (medico) ? 
+- dimmi la [via](attribute:indirizzo) del dr [nome](attribute) [PAGELLA](cognome) (medico) ? 
+- dimmi la [via](attribute:indirizzo) del [nome](attribute) [Zerbinati](cognome) (medico) ? 
+- dimmi il [indirizzo](attribute:indirizzo) di [nome](attribute) [scordo](cognome) (medico) ? 
+- dimmi il [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Gualtieri](cognome) (medico) ? 
+- dimmi il [indirizzo](attribute:indirizzo) del [nome](attribute) [MASINI](cognome) (medico) ? 
+- dimmi il [via](attribute:indirizzo) di [nome](attribute) [Canobbio](cognome) (medico) ? 
+- dimmi il [via](attribute:indirizzo) del dr [nome](attribute) [merlo](cognome) (medico) ? 
+- dimmi il [via](attribute:indirizzo) del dr [nome](attribute) [isaia](cognome) (medico) ? 
+- dimmi il [via](attribute:indirizzo) del [nome](attribute) [PALOMBELLA](cognome) (medico) ? 
+- dimmi l' [indirizzo](attribute:indirizzo) di [nome](attribute) [FIORANO](cognome) (medico) ? 
+- dimmi l' [indirizzo](attribute:indirizzo) del dr [nome](attribute) [napolitano](cognome) (medico) ? 
+- dimmi l' [indirizzo](attribute:indirizzo) del [nome](attribute) [borello](cognome) (medico) ? 
+- dimmi l' [via](attribute:indirizzo) di [nome](attribute) [CERVINI](cognome) (medico) ? 
+- dimmi l' [via](attribute:indirizzo) di [nome](attribute) [VALLATI](cognome) (medico) ? 
+- dimmi l' [via](attribute:indirizzo) del dr [nome](attribute) [demaria](cognome) (medico) ? 
+- dimmi l' [via](attribute:indirizzo) del [nome](attribute) [Lorenzino](cognome) (medico) ? 
+- vorrei sapere la [indirizzo](attribute:indirizzo) di [nome](attribute) [De luigi](cognome) (medico) ? 
+- vorrei sapere la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [ghigo](cognome) (medico) ? 
+- vorrei sapere la [indirizzo](attribute:indirizzo) del [nome](attribute) [Pagani](cognome) (medico) ? 
+- vorrei sapere la [via](attribute:indirizzo) di [nome](attribute) [Magrassi](cognome) (medico) ? 
+- vorrei sapere la [via](attribute:indirizzo) del dr [nome](attribute) [Carafa](cognome) (medico) ? 
+- vorrei sapere la [via](attribute:indirizzo) del [nome](attribute) [Gazzola](cognome) (medico) ? 
+- vorrei sapere il [indirizzo](attribute:indirizzo) di [nome](attribute) [Bracaloni](cognome) (medico) ? 
+- vorrei sapere il [indirizzo](attribute:indirizzo) del dr [nome](attribute) [SILVA](cognome) (medico) ? 
+- vorrei sapere il [indirizzo](attribute:indirizzo) del [nome](attribute) [salamano](cognome) (medico) ? 
+- vorrei sapere il [via](attribute:indirizzo) di [nome](attribute) [PERONI](cognome) (medico) ? 
+- vorrei sapere il [via](attribute:indirizzo) del dr [nome](attribute) [CITERNESI](cognome) (medico) ? 
+- vorrei sapere il [via](attribute:indirizzo) del [nome](attribute) [Porasso](cognome) (medico) ? 
+- vorrei sapere l' [indirizzo](attribute:indirizzo) di [nome](attribute) [MESSINA](cognome) (medico) ? 
+- vorrei sapere l' [indirizzo](attribute:indirizzo) di [nome](attribute) [PIGNOCCHINO](cognome) (medico) ? 
+- vorrei sapere l' [indirizzo](attribute:indirizzo) del dr [nome](attribute) [PERILLO](cognome) (medico) ? 
+- vorrei sapere l' [indirizzo](attribute:indirizzo) del [nome](attribute) [sapellani](cognome) (medico) ? 
+- vorrei sapere l' [indirizzo](attribute:indirizzo) del [nome](attribute) [bottalo](cognome) (medico) ? 
+- vorrei sapere l' [via](attribute:indirizzo) di [nome](attribute) [sabbi](cognome) (medico) ? 
+- vorrei sapere l' [via](attribute:indirizzo) del dr [nome](attribute) [Di dio](cognome) (medico) ? 
+- vorrei sapere l' [via](attribute:indirizzo) del [nome](attribute) [siciliano](cognome) (medico) ? 
+- cerco la [indirizzo](attribute:indirizzo) di [nome](attribute) [Milanese](cognome) (medico) ? 
+- cerco la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [ACETO](cognome) (medico) ? 
+- cerco la [indirizzo](attribute:indirizzo) del [nome](attribute) [ble](cognome) (medico) ? 
+- cerco la [via](attribute:indirizzo) di [nome](attribute) [Andruetto](cognome) (medico) ? 
+- cerco la [via](attribute:indirizzo) del dr [nome](attribute) [fortuna](cognome) (medico) ? 
+- cerco la [via](attribute:indirizzo) del dr [nome](attribute) [rinaudo](cognome) (medico) ? 
+- cerco la [via](attribute:indirizzo) del [nome](attribute) [MASINI](cognome) (medico) ? 
+- cerco il [indirizzo](attribute:indirizzo) di [nome](attribute) [Della penna](cognome) (medico) ? 
+- cerco il [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Santoru](cognome) (medico) ? 
+- cerco il [indirizzo](attribute:indirizzo) del [nome](attribute) [VERSINO](cognome) (medico) ? 
+- cerco il [via](attribute:indirizzo) di [nome](attribute) [versaci](cognome) (medico) ? 
+- cerco il [via](attribute:indirizzo) del dr [nome](attribute) [Sanfilippo ceraso](cognome) (medico) ? 
+- cerco il [via](attribute:indirizzo) del [nome](attribute) [BISCALDI](cognome) (medico) ? 
+- cerco l' [indirizzo](attribute:indirizzo) di [nome](attribute) [zaino](cognome) (medico) ? 
+- cerco l' [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Quaranta](cognome) (medico) ? 
+- cerco l' [indirizzo](attribute:indirizzo) del [nome](attribute) [Lombardo](cognome) (medico) ? 
+- cerco l' [via](attribute:indirizzo) di [nome](attribute) [CARISTO](cognome) (medico) ? 
+- cerco l' [via](attribute:indirizzo) del dr [nome](attribute) [oppedisano](cognome) (medico) ? 
+- cerco l' [via](attribute:indirizzo) del [nome](attribute) [Greggio](cognome) (medico) ? 
+- Qual'e la [distretto](attribute:desc_distretto) di [lunati](cognome) (medico) ? 
+- Qual'e la [zona](attribute:desc_distretto di [CASAZZA](cognome) (medico) ? 
+- Qual'e il [distretto](attribute:desc_distretto) di [BARLOTTA](cognome) (medico) ? 
+- Qual'e il [zona](attribute:desc_distretto di [speroni](cognome) (medico) ? 
+- in quale la [distretto](attribute:desc_distretto) di [breccia](cognome) (medico) ? 
+- in quale la [distretto](attribute:desc_distretto) di [Griffone](cognome) (medico) ? 
+- in quale la [distretto](attribute:desc_distretto) di [pigino](cognome) (medico) ? 
+- in quale la [zona](attribute:desc_distretto di [rabito](cognome) (medico) ? 
+- in quale il [distretto](attribute:desc_distretto) di [zambon](cognome) (medico) ? 
+- in quale il [zona](attribute:desc_distretto di [CARDELLA](cognome) (medico) ? 
+- dimmi la [distretto](attribute:desc_distretto) di [Bubola](cognome) (medico) ? 
+- dimmi la [zona](attribute:desc_distretto di [Sibona](cognome) (medico) ? 
+- dimmi il [distretto](attribute:desc_distretto) di [bodo](cognome) (medico) ? 
+- dimmi il [zona](attribute:desc_distretto di [dresda](cognome) (medico) ? 
+- vorrei sapere la [distretto](attribute:desc_distretto) di [malatesta](cognome) (medico) ? 
+- vorrei sapere la [zona](attribute:desc_distretto di [migheli](cognome) (medico) ? 
+- vorrei sapere il [distretto](attribute:desc_distretto) di [Oddenino](cognome) (medico) ? 
+- vorrei sapere il [distretto](attribute:desc_distretto) di [Bidone](cognome) (medico) ? 
+- vorrei sapere il [zona](attribute:desc_distretto di [PALAZZO](cognome) (medico) ? 
+- cerco la [distretto](attribute:desc_distretto) di [Mazzillo](cognome) (medico) ? 
+- cerco la [zona](attribute:desc_distretto di [Vallati](cognome) (medico) ? 
+- cerco il [distretto](attribute:desc_distretto) di [girardello](cognome) (medico) ? 
+- cerco il [distretto](attribute:desc_distretto) di [MONARI](cognome) (medico) ? 
+- cerco il [zona](attribute:desc_distretto di [Comolli](cognome) (medico) ? 
+- cerco il [zona](attribute:desc_distretto di [CALZATO](cognome) (medico) ? 
+- cerco il [zona](attribute:desc_distretto di [Dalmasso](cognome) (medico) ? 
+- cerco il [zona](attribute:desc_distretto di [Taheri](cognome) (medico) ? 
+- Qual'e il [telefono](attribute:telefono_primario) di [terzo](mention:3) ? 
+- Qual'e il [telefono](attribute:telefono_primario) è [secondo](mention:2) ? 
+- Qual'e il [numero](attribute:telefono_primario) di [ultimo](mention:LAST) ? 
+- Qual'e il [numero](attribute:telefono_primario) è [quello](mention) ? 
+- Qual'e il [cellulare](attribute:telefono_primario) di [quello](mention) ? 
+- Qual'e il [cellulare](attribute:telefono_primario) è [primo](mention:1) ? 
+- in quale il [telefono](attribute:telefono_primario) di [quello](mention) ? 
+- in quale il [telefono](attribute:telefono_primario) è [primo](mention:1) ? 
+- in quale il [numero](attribute:telefono_primario) è [terzo](mention:3) ? 
+- in quale il [numero](attribute:telefono_primario) è [ultimo](mention:LAST) ? 
+- in quale il [cellulare](attribute:telefono_primario) di [terzo](mention:3) ? 
+- in quale il [cellulare](attribute:telefono_primario) è [secondo](mention:2) ? 
+- dimmi il [telefono](attribute:telefono_primario) di [primo](mention:1) ? 
+- dimmi il [telefono](attribute:telefono_primario) è [terzo](mention:3) ? 
+- dimmi il [numero](attribute:telefono_primario) di [terzo](mention:3) ? 
+- dimmi il [numero](attribute:telefono_primario) è [primo](mention:1) ? 
+- dimmi il [cellulare](attribute:telefono_primario) di [ultimo](mention:LAST) ? 
+- dimmi il [cellulare](attribute:telefono_primario) è [quello](mention) ? 
+- vorrei sapere il [telefono](attribute:telefono_primario) di [secondo](mention:2) ? 
+- vorrei sapere il [numero](attribute:telefono_primario) di [primo](mention:1) ? 
+- vorrei sapere il [numero](attribute:telefono_primario) è [secondo](mention:2) ? 
+- vorrei sapere il [cellulare](attribute:telefono_primario) è [terzo](mention:3) ? 
+- cerco il [telefono](attribute:telefono_primario) di [terzo](mention:3) ? 
+- cerco il [telefono](attribute:telefono_primario) è [quello](mention) ? 
+- cerco il [telefono](attribute:telefono_primario) è [ultimo](mention:LAST) ? 
+- cerco il [numero](attribute:telefono_primario) di [secondo](mention:2) ? 
+- cerco il [numero](attribute:telefono_primario) è [primo](mention:1) ? 
+- cerco il [cellulare](attribute:telefono_primario) di [primo](mention:1) ? 
+- Qual'e la [telefono](attribute:telefono_primario) di [Priore](cognome) (medico) ? 
+- Qual'e la [numero di telefono](attribute:telefono_primario) di [GELLONA](cognome) (medico) ? 
+- Qual'e la [numero](attribute:telefono_primario) di [Zanotto](cognome) (medico) ? 
+- Qual'e il [telefono](attribute:telefono_primario) di [Lucantoni](cognome) (medico) ? 
+- Qual'e il [numero di telefono](attribute:telefono_primario) di [Manfre](cognome) (medico) ? 
+- Qual'e il [numero](attribute:telefono_primario) di [Molon](cognome) (medico) ? 
+- in quale la [telefono](attribute:telefono_primario) di [rizza](cognome) (medico) ? 
+- in quale la [numero di telefono](attribute:telefono_primario) di [ripa](cognome) (medico) ? 
+- in quale la [numero](attribute:telefono_primario) di [antonacci](cognome) (medico) ? 
+- in quale il [telefono](attribute:telefono_primario) di [capobianco](cognome) (medico) ? 
+- in quale il [telefono](attribute:telefono_primario) di [GAVEGLIO](cognome) (medico) ? 
+- in quale il [telefono](attribute:telefono_primario) di [Bruna](cognome) (medico) ? 
+- in quale il [telefono](attribute:telefono_primario) di [giaccaria](cognome) (medico) ? 
+- in quale il [numero di telefono](attribute:telefono_primario) di [capellaro](cognome) (medico) ? 
+- in quale il [numero di telefono](attribute:telefono_primario) di [FERRARINI](cognome) (medico) ? 
+- in quale il [numero](attribute:telefono_primario) di [bertoglio bosio](cognome) (medico) ? 
+- dimmi la [telefono](attribute:telefono_primario) di [BRAMINI](cognome) (medico) ? 
+- dimmi la [numero di telefono](attribute:telefono_primario) di [panfani](cognome) (medico) ? 
+- dimmi la [numero](attribute:telefono_primario) di [Conversano](cognome) (medico) ? 
+- dimmi la [numero](attribute:telefono_primario) di [fascio](cognome) (medico) ? 
+- dimmi il [telefono](attribute:telefono_primario) di [Quintavalla](cognome) (medico) ? 
+- dimmi il [telefono](attribute:telefono_primario) di [RISTA](cognome) (medico) ? 
+- dimmi il [telefono](attribute:telefono_primario) di [BRUNELLO](cognome) (medico) ? 
+- dimmi il [numero di telefono](attribute:telefono_primario) di [trucco](cognome) (medico) ? 
+- dimmi il [numero](attribute:telefono_primario) di [Fazio](cognome) (medico) ? 
+- vorrei sapere la [telefono](attribute:telefono_primario) di [Squillaci](cognome) (medico) ? 
+- vorrei sapere la [numero di telefono](attribute:telefono_primario) di [borrione](cognome) (medico) ? 
+- vorrei sapere la [numero](attribute:telefono_primario) di [MARINI](cognome) (medico) ? 
+- vorrei sapere il [telefono](attribute:telefono_primario) di [Vaj](cognome) (medico) ? 
+- vorrei sapere il [numero di telefono](attribute:telefono_primario) di [elena](cognome) (medico) ? 
+- vorrei sapere il [numero](attribute:telefono_primario) di [Cova](cognome) (medico) ? 
+- cerco la [telefono](attribute:telefono_primario) di [rigolone](cognome) (medico) ? 
+- cerco la [telefono](attribute:telefono_primario) di [COMUZIO](cognome) (medico) ? 
+- cerco la [numero di telefono](attribute:telefono_primario) di [FERRI](cognome) (medico) ? 
+- cerco la [numero](attribute:telefono_primario) di [BAGLIERI](cognome) (medico) ? 
+- cerco il [telefono](attribute:telefono_primario) di [BRUNETTI](cognome) (medico) ? 
+- cerco il [numero di telefono](attribute:telefono_primario) di [Gallara](cognome) (medico) ? 
+- cerco il [numero](attribute:telefono_primario) di [boella](cognome) (medico) ? 
+- cerco il [numero](attribute:telefono_primario) di [Bertagna](cognome) (medico) ? 
+- cerco il [numero](attribute:telefono_primario) di [Ronchietto silvano](cognome) (medico) ? 
+- [Masciave](cognome) (medico) dove [comune](attribute:denom_comune) è ? 
+- [Grassino santoro](cognome) (medico) in quale [città](attribute:denom_comune) ha ? 
+- [Costa](cognome) (medico) quale [città](attribute:denom_comune) opera ? 
+- [chelotti](cognome) (medico) dove [citta](attribute:denom_comune) lo trovo ? 
+- [soldano](cognome) (medico) dove [comune](attribute:denom_comune) c'è ? 
+- [kashipazha](cognome) (medico) dove [città](attribute:denom_comune) è ? 
+- [benivegna](cognome) (medico) dove [città](attribute:denom_comune) lavora ? 
+- [borgogno](cognome) (medico) dove [comune](attribute:denom_comune) lavora ? 
+- [De alberti](cognome) (medico) in quale [citta](attribute:denom_comune) opera ? 
+- [Felicioni](cognome) (medico) quale [comune](attribute:denom_comune) c'è ? 
+- [Giorgi](cognome) (medico) in quale [citta](attribute:denom_comune) è ? 
+- [Campra](cognome) (medico) dove [citta](attribute:denom_comune) c'è ? 
+- [Bussone](cognome) (medico) in quale [citta](attribute:denom_comune) ha ? 
+- [DI TODARO](cognome) (medico) quale [comune](attribute:denom_comune) opera ? 
+- [marconi](cognome) (medico) quale [citta](attribute:denom_comune) ha ? 
+- [guidara](cognome) (medico) in quale [città](attribute:denom_comune) lo trovo ? 
+- [Miletto](cognome) (medico) quale [citta](attribute:denom_comune) lavora ? 
+- [DELLACROCE](cognome) (medico) dove [città](attribute:denom_comune) c'è ? 
+- [nardella](cognome) (medico) dove [città](attribute:denom_comune) opera ? 
+- [PASCAL](cognome) (medico) in quale [città](attribute:denom_comune) opera ? 
+- [SORBO](cognome) (medico) quale [città](attribute:denom_comune) lavora ? 
+- [goia](cognome) (medico) in quale [comune](attribute:denom_comune) opera ? 
+- [CHIADES](cognome) (medico) dove [comune](attribute:denom_comune) opera ? 
+- [BORRI BRUNETTO](cognome) (medico) quale [citta](attribute:denom_comune) opera ? 
+- [cattaneo](cognome) (medico) dove [comune](attribute:denom_comune) opera ? 
+- [chiaverina](cognome) (medico) dove [citta](attribute:denom_comune) lavora ? 
+- [RAYNERI](cognome) (medico) quale [comune](attribute:denom_comune) è ? 
+- [Grillo](cognome) (medico) quale [citta](attribute:denom_comune) c'è ? 
+- [miotello](cognome) (medico) in quale [città](attribute:denom_comune) è ? 
+- [Castronuovo](cognome) (medico) dove [citta](attribute:denom_comune) c'è ? 
+- [MARNETTO](cognome) (medico) dove [citta](attribute:denom_comune) ha ? 
+- [FOSSALE](cognome) (medico) in quale [comune](attribute:denom_comune) lavora ? 
+- [marchi](cognome) (medico) dove [città](attribute:denom_comune) lo trovo ? 
+- [masi](cognome) (medico) in quale [comune](attribute:denom_comune) c'è ? 
+- [Sempio](cognome) (medico) quale [città](attribute:denom_comune) è ? 
+- [CONAGIN](cognome) (medico) in quale [citta](attribute:denom_comune) lavora ? 
+- [morellini](cognome) (medico) dove [citta](attribute:denom_comune) è ? 
+- [balconi](cognome) (medico) in quale [città](attribute:denom_comune) c'è ? 
+- [CASELLA](cognome) (medico) quale [città](attribute:denom_comune) lo trovo ? 
+- [bernardelli](cognome) (medico) in quale [comune](attribute:denom_comune) lo trovo ? 
+- [GIRAUDO](cognome) (medico) dove [città](attribute:denom_comune) lo trovo ? 
+- [santoro](cognome) (medico) quale [comune](attribute:denom_comune) ha ? 
+- [Pessino](cognome) (medico) dove [comune](attribute:denom_comune) ha ? 
+- [Ceresa](cognome) (medico) quale [città](attribute:denom_comune) ha ? 
+- [luoni](cognome) (medico) dove [citta](attribute:denom_comune) opera ? 
+- [marzilli](cognome) (medico) quale [comune](attribute:denom_comune) lavora ? 
+- [Ciravegna](cognome) (medico) quale [città](attribute:denom_comune) c'è ? 
+- [la creta](cognome) (medico) quale [città](attribute:denom_comune) opera ? 
+- [Tabacco](cognome) (medico) dove [città](attribute:denom_comune) lo trovo ? 
+- [Timon](cognome) (medico) quale [citta](attribute:denom_comune) è ? 
+- [Mossino](cognome) (medico) quale [citta](attribute:denom_comune) lo trovo ? 
+- [Ricca](cognome) (medico) in quale [comune](attribute:denom_comune) ha ? 
+- [tosto](cognome) (medico) in quale [citta](attribute:denom_comune) c'è ? 
+- [benna](cognome) (medico) in quale [città](attribute:denom_comune) lavora ? 
+- [cardi](cognome) (medico) dove [comune](attribute:denom_comune) ha ? 
+- [vincelli](cognome) (medico) dove [comune](attribute:denom_comune) lo trovo ? 
+- [BISIO](cognome) (medico) dove [citta](attribute:denom_comune) è ? 
+- [SCANDONE](cognome) (medico) in quale [comune](attribute:denom_comune) è ? 
+- [mazzocchio](cognome) (medico) dove [citta](attribute:denom_comune) lavora ? 
+- [Mesturino](cognome) (medico) quale [citta](attribute:denom_comune) lavora ? 
+- [arditi](cognome) (medico) in quale [citta](attribute:denom_comune) ha ? 
+- [turbiglio](cognome) (medico) dove [citta](attribute:denom_comune) c'è ? 
+- [pelissero](cognome) (medico) quale [città](attribute:denom_comune) lo trovo ? 
+- [La maestra](cognome) (medico) quale [comune](attribute:denom_comune) lo trovo ? 
+- [De giorgio](cognome) (medico) dove [città](attribute:denom_comune) ha ? 
+- [Masini](cognome) (medico) in quale [citta](attribute:denom_comune) lo trovo ? 
+- [Graglia](cognome) (medico) quale [telefono](attribute:telefono_primario) è ? 
+- [CATELLA](cognome) (medico) che [telefono](attribute:telefono_primario) ha ? 
+- [AUTILIO](cognome) (medico) che [telefono](attribute:telefono_primario) è ? 
+- [Borsotto](cognome) (medico) che [numero](attribute:telefono_primario) possiede ? 
+- [Enea](cognome) (medico) quale [numero](attribute:telefono_primario) ha ? 
+- [Vienna](cognome) (medico) che [numero](attribute:telefono_primario) è ? 
+- [parisi](cognome) (medico) quale [telefono](attribute:telefono_primario) è ? 
+- [gulinelli](cognome) (medico) quale [telefono](attribute:telefono_primario) è ? 
+- [Reisoli-matthieu](cognome) (medico) che [telefono](attribute:telefono_primario) è ? 
+- [GIE](cognome) (medico) che [numero](attribute:telefono_primario) è ? 
+- [mirabelli](cognome) (medico) che [numero](attribute:telefono_primario) ha ? 
+- [Comparato](cognome) (medico) quale [telefono](attribute:telefono_primario) ha ? 
+- [gabasio](cognome) (medico) quale [numero](attribute:telefono_primario) è ? 
+- [VIVALDA](cognome) (medico) quale [telefono](attribute:telefono_primario) possiede ? 
+- [GIRAUDI](cognome) (medico) che [numero](attribute:telefono_primario) è ? 
+- [raffaghello](cognome) (medico) quale [numero](attribute:telefono_primario) possiede ? 
+- [putero](cognome) (medico) che [telefono](attribute:telefono_primario) possiede ? 
+- [conti](cognome) (medico) in quale [indirizzo](attribute:indirizzo) lo trovo ? 
+- [De carlo](cognome) (medico) in quale [via](attribute:indirizzo) è ? 
+- [MORANDO](cognome) (medico) dove [via](attribute:indirizzo) possiede ? 
+- [SIMONETTI](cognome) (medico) in quale [via](attribute:indirizzo) c'è ? 
+- [maina](cognome) (medico) dove [indirizzo](attribute:indirizzo) ha ? 
+- [amadio](cognome) (medico) a quale [indirizzo](attribute:indirizzo) ha ? 
+- [giommarresi](cognome) (medico) a quale [via](attribute:indirizzo) lo trovo ? 
+- [aimetti](cognome) (medico) a quale [via](attribute:indirizzo) possiede ? 
+- [D ADDINO](cognome) (medico) a quale [indirizzo](attribute:indirizzo) ha ? 
+- [Roberti](cognome) (medico) a quale [indirizzo](attribute:indirizzo) c'è ? 
+- [di carlo](cognome) (medico) in quale [via](attribute:indirizzo) possiede ? 
+- [humbert](cognome) (medico) dove [indirizzo](attribute:indirizzo) lo trovo ? 
+- [TRAPANI](cognome) (medico) dove [via](attribute:indirizzo) c'è ? 
+- [PELLE](cognome) (medico) a quale [indirizzo](attribute:indirizzo) possiede ? 
+- [loiero](cognome) (medico) dove [indirizzo](attribute:indirizzo) ha ? 
+- [Buscaglia](cognome) (medico) in quale [indirizzo](attribute:indirizzo) è ? 
+- [Zanini](cognome) (medico) in quale [indirizzo](attribute:indirizzo) è ? 
+- [strona](cognome) (medico) dove [via](attribute:indirizzo) lo trovo ? 
+- [PETRELLI](cognome) (medico) a quale [via](attribute:indirizzo) c'è ? 
+- [USURINI](cognome) (medico) in quale [via](attribute:indirizzo) è ? 
+- [BALBO](cognome) (medico) dove [via](attribute:indirizzo) ha ? 
+- [donderi](cognome) (medico) dove [via](attribute:indirizzo) lo trovo ? 
+- [villaraggia](cognome) (medico) dove [indirizzo](attribute:indirizzo) possiede ? 
+- [Tramontana](cognome) (medico) in quale [indirizzo](attribute:indirizzo) possiede ? 
+- [Revelli](cognome) (medico) in quale [indirizzo](attribute:indirizzo) ha ? 
+- [FULGOSI](cognome) (medico) in quale [via](attribute:indirizzo) lo trovo ? 
+- [ANGELERI](cognome) (medico) a quale [via](attribute:indirizzo) ha ? 
+- [ZANDRINO](cognome) (medico) dove [via](attribute:indirizzo) è ? 
+- [Lucia](cognome) (medico) in quale [indirizzo](attribute:indirizzo) c'è ? 
+- [bonaventura](cognome) (medico) a quale [indirizzo](attribute:indirizzo) lo trovo ? 
+- [Furst-saracino](cognome) (medico) dove [indirizzo](attribute:indirizzo) è ? 
+- [ANGELINI](cognome) (medico) dove [via](attribute:indirizzo) c'è ? 
+- [PERETTI](cognome) (medico) dove [indirizzo](attribute:indirizzo) c'è ? 
+- [Gilardi](cognome) (medico) dove [indirizzo](attribute:indirizzo) ha ? 
+- [schmidt](cognome) (medico) a quale [via](attribute:indirizzo) è ? 
+- [VIZZOTTO](cognome) (medico) in quale [via](attribute:indirizzo) ha ? 
+- [Salvatore](cognome) (medico) dove [via](attribute:indirizzo) lo trovo ? 
+- [basso](cognome) (medico) a quale [indirizzo](attribute:indirizzo) è ? 
+- [primo](mention:1) in quale [distretto](attribute) ha ? 
+- [primo](mention:1) quale [distretto](attribute) è ? 
+- [secondo](mention:2) in quale [email](attribute) è ? 
+- [secondo](mention:2) quale [distretto](attribute) lo trovo ? 
+- [quello](mention) in quale [email](attribute) ha ? 
+- [quello](mention) quale [email](attribute) possiede ? 
+- [quarto](mention:4) quale [distretto](attribute) c'è ? 
+- [quinto](mention:5) in quale [email](attribute) possiede ? 
+- [quinto](mention:5) in quale [distretto](attribute) possiede ? 
+- [sesto](mention:6) in quale [distretto](attribute) è ? 
+- [sesto](mention:6) quale [email](attribute) lo trovo ? 
+- [settimo](mention:7) in quale [distretto](attribute) lo trovo ? 
+- [settimo](mention:7) quale [email](attribute) c'è ? 
+- [ottavo](mention:8) quale [email](attribute) è ? 
+- [ottavo](mention:8) quale [distretto](attribute) c'è ? 
+- [nono](mention:9) in quale [email](attribute) lo trovo ? 
+- [decimo](mention:10) in quale [email](attribute) c'è ? 
+- [decimo](mention:10) quale [distretto](attribute) ha ? 
+- [decimo](mention:10) quale [distretto](attribute) possiede ? 
+- [3](mention) in quale [email](attribute) possiede ? 
+- [3](mention) in quale [distretto](attribute) c'è ? 
+- [3](mention) quale [email](attribute) lo trovo ? 
+- [7](mention) in quale [distretto](attribute) ha ? 
+- [7](mention) quale [email](attribute) ha ? 
+- e [indirizzo](attribute) ? 
+- la [indirizzo](attribute) ? 
+- il [indirizzo](attribute) ? 
+- sua [civico](attribute:numero_civico) ? 
+- e [numero](attribute:telefono_primario) ? 
+- e [email](attribute:indirizzo_email) ? 
+- la [email](attribute:indirizzo_email) ? 
+- il [telefono](attribute) ? 
+- suo [numero](attribute:telefono_primario) ? 
+- sua [numero](attribute:telefono_primario) ? 
+- la [distretto](attribute:cod_distretto) ? 
+- il [comune](attribute:denom_comune) ? 
+- sua [distretto](attribute:cod_distretto) ? 
+- quanti sono i [posti disponibili](attribute:posti_disponibili) di [BAROLO](cognome) (medico) 
+- quanti sono i [posti](attribute:posti_disponibili] di [busi](cognome) (medico) 
+- Qual'e [email](attribute:indirizzo_email) di [De francesco](cognome) (medico)? 
+- Qual'e [email](attribute:indirizzo_email) del dr [MINONNE](cognome) (medico)? 
+- Qual'e [email](attribute:indirizzo_email) del dottor [Kopp](cognome) (medico)? 
+- Qual'e [email](attribute:indirizzo_email) del dottor [Signorino](cognome) (medico)? 
+- Qual'e [e-mail](attribute:indirizzo_email) di [Massaro](cognome) (medico)? 
+- Qual'e [e-mail](attribute:indirizzo_email) del dr [Varolotti](cognome) (medico)? 
+- Qual'e [e-mail](attribute:indirizzo_email) del dr [loccisano](cognome) (medico)? 
+- Qual'e [e-mail](attribute:indirizzo_email) del dottor [alossa](cognome) (medico)? 
+- Qual'e [e-mail](attribute:indirizzo_email) del dottor [romanelli](cognome) (medico)? 
+- Qual'e [mail](attribute:indirizzo_email) di [parola](cognome) (medico)? 
+- Qual'e [mail](attribute:indirizzo_email) del dr [bracci](cognome) (medico)? 
+- Qual'e [mail](attribute:indirizzo_email) del dottor [perazzi](cognome) (medico)? 
+- in quale [email](attribute:indirizzo_email) di [CALANDRI](cognome) (medico)? 
+- in quale [email](attribute:indirizzo_email) del dr [Minuto](cognome) (medico)? 
+- in quale [email](attribute:indirizzo_email) del dottor [borgini](cognome) (medico)? 
+- in quale [e-mail](attribute:indirizzo_email) di [serratrice](cognome) (medico)? 
+- in quale [e-mail](attribute:indirizzo_email) del dr [Nicolosi](cognome) (medico)? 
+- in quale [e-mail](attribute:indirizzo_email) del dottor [musco](cognome) (medico)? 
+- in quale [e-mail](attribute:indirizzo_email) del dottor [Porzio](cognome) (medico)? 
+- in quale [mail](attribute:indirizzo_email) di [ANDRETTA](cognome) (medico)? 
+- in quale [mail](attribute:indirizzo_email) del dr [berardi](cognome) (medico)? 
+- in quale [mail](attribute:indirizzo_email) del dottor [CAVAGNOLO](cognome) (medico)? 
+- dimmi [email](attribute:indirizzo_email) di [Luni](cognome) (medico)? 
+- dimmi [email](attribute:indirizzo_email) del dr [PEROTTO](cognome) (medico)? 
+- dimmi [email](attribute:indirizzo_email) del dottor [moglia](cognome) (medico)? 
+- dimmi [e-mail](attribute:indirizzo_email) di [bruna](cognome) (medico)? 
+- dimmi [e-mail](attribute:indirizzo_email) del dr [valpreda](cognome) (medico)? 
+- dimmi [e-mail](attribute:indirizzo_email) del dottor [barraja](cognome) (medico)? 
+- dimmi [mail](attribute:indirizzo_email) di [Lorenzino](cognome) (medico)? 
+- dimmi [mail](attribute:indirizzo_email) del dr [Cannici](cognome) (medico)? 
+- dimmi [mail](attribute:indirizzo_email) del dottor [Oliveri](cognome) (medico)? 
+- dimmi [mail](attribute:indirizzo_email) del dottor [Marchisone](cognome) (medico)? 
+- vorrei sapere [email](attribute:indirizzo_email) di [garnero](cognome) (medico)? 
+- vorrei sapere [email](attribute:indirizzo_email) di [pero](cognome) (medico)? 
+- vorrei sapere [email](attribute:indirizzo_email) del dr [mandolesi](cognome) (medico)? 
+- vorrei sapere [email](attribute:indirizzo_email) del dottor [bretto](cognome) (medico)? 
+- vorrei sapere [e-mail](attribute:indirizzo_email) di [ALOSSA](cognome) (medico)? 
+- vorrei sapere [e-mail](attribute:indirizzo_email) di [pietrandrea](cognome) (medico)? 
+- vorrei sapere [e-mail](attribute:indirizzo_email) del dr [panero](cognome) (medico)? 
+- vorrei sapere [e-mail](attribute:indirizzo_email) del dottor [pol](cognome) (medico)? 
+- vorrei sapere [e-mail](attribute:indirizzo_email) del dottor [Astesano](cognome) (medico)? 
+- vorrei sapere [mail](attribute:indirizzo_email) di [Gaveglio](cognome) (medico)? 
+- vorrei sapere [mail](attribute:indirizzo_email) del dr [CAPALBO](cognome) (medico)? 
+- vorrei sapere [mail](attribute:indirizzo_email) del dottor [AVOLIO](cognome) (medico)? 
+- cerco [email](attribute:indirizzo_email) di [GERMANI](cognome) (medico)? 
+- cerco [email](attribute:indirizzo_email) del dr [perfetto](cognome) (medico)? 
+- cerco [email](attribute:indirizzo_email) del dottor [maschio](cognome) (medico)? 
+- cerco [e-mail](attribute:indirizzo_email) di [ZUCCOLIN](cognome) (medico)? 
+- cerco [e-mail](attribute:indirizzo_email) di [Bardesono](cognome) (medico)? 
+- cerco [e-mail](attribute:indirizzo_email) del dr [borghino](cognome) (medico)? 
+- cerco [e-mail](attribute:indirizzo_email) del dr [arbuffi](cognome) (medico)? 
+- cerco [e-mail](attribute:indirizzo_email) del dottor [Devito](cognome) (medico)? 
+- cerco [mail](attribute:indirizzo_email) di [palmero](cognome) (medico)? 
+- cerco [mail](attribute:indirizzo_email) del dr [rutigliano](cognome) (medico)? 
+- cerco [mail](attribute:indirizzo_email) del dottor [sesca](cognome) (medico)? 
+- cerco [mail](attribute:indirizzo_email) del dottor [Colombano](cognome) (medico)? 
+- Qual'e [comune](attribute:denom_comune) del [ultimo](mention:LAST) ? 
+- Qual'e [comune](attribute:denom_comune) del [quarto](mention:4) ? 
+- Qual'e [comune](attribute:denom_comune) del [sesto](mention:6) ? 
+- Qual'e [comune](attribute:denom_comune) di [8](mention) ? 
+- Qual'e [comune](attribute:denom_comune) è [secondo](mention:2) ? 
+- Qual'e [località](attribute:denom_comune) del [primo](mention:1) ? 
+- Qual'e [località](attribute:denom_comune) di [7](mention) ? 
+- Qual'e [località](attribute:denom_comune) è [quello](mention) ? 
+- Qual'e [citta](attribute:denom_comune) del [1](mention)[5](mention) ? 
+- Qual'e [citta](attribute:denom_comune) di [primo](mention:1) ? 
+- Qual'e [citta](attribute:denom_comune) di [quello](mention) ? 
+- Qual'e [citta](attribute:denom_comune) è [quinto](mention:5) ? 
+- Qual'e [citta](attribute:denom_comune) è [7](mention) ? 
+- in quale [comune](attribute:denom_comune) del [7](mention) ? 
+- in quale [comune](attribute:denom_comune) di [1](mention)[5](mention) ? 
+- in quale [comune](attribute:denom_comune) è [primo](mention:1) ? 
+- in quale [località](attribute:denom_comune) del [terzo](mention:3) ? 
+- in quale [località](attribute:denom_comune) di [quarto](mention:4) ? 
+- in quale [località](attribute:denom_comune) è [secondo](mention:2) ? 
+- in quale [citta](attribute:denom_comune) del [quarto](mention:4) ? 
+- in quale [citta](attribute:denom_comune) del [8](mention) ? 
+- in quale [citta](attribute:denom_comune) di [secondo](mention:2) ? 
+- in quale [citta](attribute:denom_comune) è [1](mention)[5](mention) ? 
+- dimmi [comune](attribute:denom_comune) del [quinto](mention:5) ? 
+- dimmi [comune](attribute:denom_comune) di [sesto](mention:6) ? 
+- dimmi [comune](attribute:denom_comune) è [quello](mention) ? 
+- dimmi [località](attribute:denom_comune) del [1](mention)[5](mention) ? 
+- dimmi [località](attribute:denom_comune) di [primo](mention:1) ? 
+- dimmi [località](attribute:denom_comune) di [quello](mention) ? 
+- dimmi [località](attribute:denom_comune) è [quarto](mention:4) ? 
+- dimmi [località](attribute:denom_comune) è [quinto](mention:5) ? 
+- dimmi [citta](attribute:denom_comune) del [secondo](mention:2) ? 
+- dimmi [citta](attribute:denom_comune) di [sesto](mention:6) ? 
+- dimmi [citta](attribute:denom_comune) è [8](mention) ? 
+- vorrei sapere [comune](attribute:denom_comune) del [quello](mention) ? 
+- vorrei sapere [comune](attribute:denom_comune) di [primo](mention:1) ? 
+- vorrei sapere [comune](attribute:denom_comune) di [terzo](mention:3) ? 
+- vorrei sapere [comune](attribute:denom_comune) è [7](mention) ? 
+- vorrei sapere [località](attribute:denom_comune) del [sesto](mention:6) ? 
+- vorrei sapere [località](attribute:denom_comune) di [ultimo](mention:LAST) ? 
+- vorrei sapere [località](attribute:denom_comune) è [sesto](mention:6) ? 
+- vorrei sapere [citta](attribute:denom_comune) del [sesto](mention:6) ? 
+- vorrei sapere [citta](attribute:denom_comune) di [quinto](mention:5) ? 
+- vorrei sapere [citta](attribute:denom_comune) è [terzo](mention:3) ? 
+- cerco [comune](attribute:denom_comune) del [primo](mention:1) ? 
+- cerco [comune](attribute:denom_comune) di [secondo](mention:2) ? 
+- cerco [comune](attribute:denom_comune) è [quarto](mention:4) ? 
+- cerco [comune](attribute:denom_comune) è [sesto](mention:6) ? 
+- cerco [località](attribute:denom_comune) del [quinto](mention:5) ? 
+- cerco [località](attribute:denom_comune) del [1](mention)[5](mention) ? 
+- cerco [località](attribute:denom_comune) di [8](mention) ? 
+- cerco [località](attribute:denom_comune) è [7](mention) ? 
+- cerco [citta](attribute:denom_comune) del [ultimo](mention:LAST) ? 
+- cerco [citta](attribute:denom_comune) di [quarto](mention:4) ? 
+- cerco [citta](attribute:denom_comune) è [primo](mention:1) ? 
+- Qual'e il [codice fiscale](attribute:codice_fiscale) di [IRICO](cognome) (medico)? 
+- in quale il [codice fiscale](attribute:codice_fiscale) di [Elia](cognome) (medico)? 
+- dimmi il [codice fiscale](attribute:codice_fiscale) di [Seghezzi](cognome) (medico)? 
+- vorrei sapere il [codice fiscale](attribute:codice_fiscale) di [Pistone](cognome) (medico)? 
+- cerco il [codice fiscale](attribute:codice_fiscale) di [brusa](cognome) (medico)? 
+- Qual'e il [civico](attribute:numero_civico) di [roseto](cognome) (medico)? 
+- in quale il [civico](attribute:numero_civico) di [riggio](cognome) (medico)? 
+- dimmi il [civico](attribute:numero_civico) di [Muscas](cognome) (medico)? 
+- vorrei sapere il [civico](attribute:numero_civico) di [Angeleri](cognome) (medico)? 
+- cerco il [civico](attribute:numero_civico) di [Gabella](cognome) (medico)? 
+- cerco il [civico](attribute:numero_civico) di [Gandini](cognome) (medico)? 
+- Qual'e i [giorni](attribute:giorno) di [BENINTENDE](cognome) (medico)? 
+- in quale i [giorni](attribute:giorno) di [Garista](cognome) (medico)? 
+- dimmi i [giorni](attribute:giorno) di [Candoli](cognome) (medico)? 
+- vorrei sapere i [giorni](attribute:giorno) di [MACCARIO](cognome) (medico)? 
+- cerco i [giorni](attribute:giorno) di [foglio](cognome) (medico)? 
+- Qual'e i [giorni](attribute:giorno) di apertura dell'ambulatorio a [Zimone](denom_comune) (ambulatorio)? 
+- Qual'e i [giorni](attribute:giorno) di apertura dell'ambulatorio a [Vottignasco](denom_comune) (ambulatorio)? 
+- in quale i [giorni](attribute:giorno) di apertura dell'ambulatorio a [Carentino](denom_comune) (ambulatorio)? 
+- dimmi i [giorni](attribute:giorno) di apertura dell'ambulatorio a [VALLE SAN NICOLAO](denom_comune) (ambulatorio)? 
+- vorrei sapere i [giorni](attribute:giorno) di apertura dell'ambulatorio a [BUTTIGLIERA ALTA](denom_comune) (ambulatorio)? 
+- cerco i [giorni](attribute:giorno) di apertura dell'ambulatorio a [Orio canavese](denom_comune) (ambulatorio)? 
+- cerco i [giorni](attribute:giorno) di apertura dell'ambulatorio a [Gambasca](denom_comune) (ambulatorio)? 
+- Qual'e la [indirizzo](attribute:indirizzo) di [nome](attribute) [Pescarolo](cognome) (medico) ? 
+- Qual'e la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [MIRABELLI](cognome) (medico) ? 
+- Qual'e la [indirizzo](attribute:indirizzo) del [nome](attribute) [marinuzzi](cognome) (medico) ? 
+- Qual'e la [via](attribute:indirizzo) di [nome](attribute) [LO MONACO](cognome) (medico) ? 
+- Qual'e la [via](attribute:indirizzo) del dr [nome](attribute) [LETO](cognome) (medico) ? 
+- Qual'e la [via](attribute:indirizzo) del [nome](attribute) [gazzola](cognome) (medico) ? 
+- Qual'e il [indirizzo](attribute:indirizzo) di [nome](attribute) [nizzia](cognome) (medico) ? 
+- Qual'e il [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Cagliero](cognome) (medico) ? 
+- Qual'e il [indirizzo](attribute:indirizzo) del dr [nome](attribute) [NOVARESE](cognome) (medico) ? 
+- Qual'e il [indirizzo](attribute:indirizzo) del [nome](attribute) [Cavallaro](cognome) (medico) ? 
+- Qual'e il [indirizzo](attribute:indirizzo) del [nome](attribute) [ODISIO](cognome) (medico) ? 
+- Qual'e il [via](attribute:indirizzo) di [nome](attribute) [dacomo](cognome) (medico) ? 
+- Qual'e il [via](attribute:indirizzo) del dr [nome](attribute) [TIMPANO](cognome) (medico) ? 
+- Qual'e il [via](attribute:indirizzo) del dr [nome](attribute) [GALLIZZI](cognome) (medico) ? 
+- Qual'e il [via](attribute:indirizzo) del [nome](attribute) [manganaro](cognome) (medico) ? 
+- Qual'e l' [indirizzo](attribute:indirizzo) di [nome](attribute) [CALANDRI](cognome) (medico) ? 
+- Qual'e l' [indirizzo](attribute:indirizzo) del dr [nome](attribute) [PISCITELLO](cognome) (medico) ? 
+- Qual'e l' [indirizzo](attribute:indirizzo) del [nome](attribute) [Dresco](cognome) (medico) ? 
+- Qual'e l' [via](attribute:indirizzo) di [nome](attribute) [CESCO](cognome) (medico) ? 
+- Qual'e l' [via](attribute:indirizzo) del dr [nome](attribute) [marchisone](cognome) (medico) ? 
+- Qual'e l' [via](attribute:indirizzo) del [nome](attribute) [Giovannelli](cognome) (medico) ? 
+- in quale la [indirizzo](attribute:indirizzo) di [nome](attribute) [benna](cognome) (medico) ? 
+- in quale la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [DE MAIO](cognome) (medico) ? 
+- in quale la [indirizzo](attribute:indirizzo) del [nome](attribute) [Grosso ciponte](cognome) (medico) ? 
+- in quale la [via](attribute:indirizzo) di [nome](attribute) [Barbero](cognome) (medico) ? 
+- in quale la [via](attribute:indirizzo) di [nome](attribute) [GALLETTO](cognome) (medico) ? 
+- in quale la [via](attribute:indirizzo) del dr [nome](attribute) [Narzisi](cognome) (medico) ? 
+- in quale la [via](attribute:indirizzo) del [nome](attribute) [CIRAVEGNA](cognome) (medico) ? 
+- in quale il [indirizzo](attribute:indirizzo) di [nome](attribute) [randone](cognome) (medico) ? 
+- in quale il [indirizzo](attribute:indirizzo) del dr [nome](attribute) [SARMENGHI](cognome) (medico) ? 
+- in quale il [indirizzo](attribute:indirizzo) del [nome](attribute) [Baldon](cognome) (medico) ? 
+- in quale il [via](attribute:indirizzo) di [nome](attribute) [Soligo](cognome) (medico) ? 
+- in quale il [via](attribute:indirizzo) del dr [nome](attribute) [besse](cognome) (medico) ? 
+- in quale il [via](attribute:indirizzo) del [nome](attribute) [mauro](cognome) (medico) ? 
+- in quale l' [indirizzo](attribute:indirizzo) di [nome](attribute) [invernizzi](cognome) (medico) ? 
+- in quale l' [indirizzo](attribute:indirizzo) del dr [nome](attribute) [PLASSIO](cognome) (medico) ? 
+- in quale l' [indirizzo](attribute:indirizzo) del [nome](attribute) [Brignolo](cognome) (medico) ? 
+- in quale l' [via](attribute:indirizzo) di [nome](attribute) [bonato](cognome) (medico) ? 
+- in quale l' [via](attribute:indirizzo) del dr [nome](attribute) [persico](cognome) (medico) ? 
+- in quale l' [via](attribute:indirizzo) del [nome](attribute) [morato](cognome) (medico) ? 
+- dimmi la [indirizzo](attribute:indirizzo) di [nome](attribute) [GUARAGLIA](cognome) (medico) ? 
+- dimmi la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Francia di celle](cognome) (medico) ? 
+- dimmi la [indirizzo](attribute:indirizzo) del [nome](attribute) [fissore](cognome) (medico) ? 
+- dimmi la [indirizzo](attribute:indirizzo) del [nome](attribute) [rottura](cognome) (medico) ? 
+- dimmi la [via](attribute:indirizzo) di [nome](attribute) [Sassone](cognome) (medico) ? 
+- dimmi la [via](attribute:indirizzo) del dr [nome](attribute) [Chiecchio](cognome) (medico) ? 
+- dimmi la [via](attribute:indirizzo) del dr [nome](attribute) [bonanno](cognome) (medico) ? 
+- dimmi la [via](attribute:indirizzo) del [nome](attribute) [rosso](cognome) (medico) ? 
+- dimmi il [indirizzo](attribute:indirizzo) di [nome](attribute) [Terenzi](cognome) (medico) ? 
+- dimmi il [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Valente](cognome) (medico) ? 
+- dimmi il [indirizzo](attribute:indirizzo) del [nome](attribute) [BARILLA](cognome) (medico) ? 
+- dimmi il [via](attribute:indirizzo) di [nome](attribute) [Vigliermo brusso](cognome) (medico) ? 
+- dimmi il [via](attribute:indirizzo) del dr [nome](attribute) [Macchia](cognome) (medico) ? 
+- dimmi il [via](attribute:indirizzo) del [nome](attribute) [incastrone](cognome) (medico) ? 
+- dimmi l' [indirizzo](attribute:indirizzo) di [nome](attribute) [Monteu](cognome) (medico) ? 
+- dimmi l' [indirizzo](attribute:indirizzo) del dr [nome](attribute) [andretta](cognome) (medico) ? 
+- dimmi l' [indirizzo](attribute:indirizzo) del [nome](attribute) [Vianzone](cognome) (medico) ? 
+- dimmi l' [via](attribute:indirizzo) di [nome](attribute) [BRUSTIA](cognome) (medico) ? 
+- dimmi l' [via](attribute:indirizzo) di [nome](attribute) [BAGAGLI](cognome) (medico) ? 
+- dimmi l' [via](attribute:indirizzo) del dr [nome](attribute) [borri](cognome) (medico) ? 
+- dimmi l' [via](attribute:indirizzo) del [nome](attribute) [vassigh](cognome) (medico) ? 
+- vorrei sapere la [indirizzo](attribute:indirizzo) di [nome](attribute) [zoppi](cognome) (medico) ? 
+- vorrei sapere la [indirizzo](attribute:indirizzo) di [nome](attribute) [Tornoni](cognome) (medico) ? 
+- vorrei sapere la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [colli](cognome) (medico) ? 
+- vorrei sapere la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [CANTALUPI](cognome) (medico) ? 
+- vorrei sapere la [indirizzo](attribute:indirizzo) del [nome](attribute) [Roggio](cognome) (medico) ? 
+- vorrei sapere la [via](attribute:indirizzo) di [nome](attribute) [ghislandi](cognome) (medico) ? 
+- vorrei sapere la [via](attribute:indirizzo) del dr [nome](attribute) [Vergano](cognome) (medico) ? 
+- vorrei sapere la [via](attribute:indirizzo) del [nome](attribute) [varenni](cognome) (medico) ? 
+- vorrei sapere il [indirizzo](attribute:indirizzo) di [nome](attribute) [galantini](cognome) (medico) ? 
+- vorrei sapere il [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Cisotto](cognome) (medico) ? 
+- vorrei sapere il [indirizzo](attribute:indirizzo) del [nome](attribute) [marinello](cognome) (medico) ? 
+- vorrei sapere il [via](attribute:indirizzo) di [nome](attribute) [incarnato](cognome) (medico) ? 
+- vorrei sapere il [via](attribute:indirizzo) del dr [nome](attribute) [GIANOTTI](cognome) (medico) ? 
+- vorrei sapere il [via](attribute:indirizzo) del dr [nome](attribute) [grisot](cognome) (medico) ? 
+- vorrei sapere il [via](attribute:indirizzo) del [nome](attribute) [chelotti](cognome) (medico) ? 
+- vorrei sapere l' [indirizzo](attribute:indirizzo) di [nome](attribute) [cultraro](cognome) (medico) ? 
+- vorrei sapere l' [indirizzo](attribute:indirizzo) di [nome](attribute) [Catalano](cognome) (medico) ? 
+- vorrei sapere l' [indirizzo](attribute:indirizzo) del dr [nome](attribute) [KANTZAS](cognome) (medico) ? 
+- vorrei sapere l' [indirizzo](attribute:indirizzo) del [nome](attribute) [squillace](cognome) (medico) ? 
+- vorrei sapere l' [via](attribute:indirizzo) di [nome](attribute) [AGOSTO](cognome) (medico) ? 
+- vorrei sapere l' [via](attribute:indirizzo) del dr [nome](attribute) [BUSSO](cognome) (medico) ? 
+- vorrei sapere l' [via](attribute:indirizzo) del [nome](attribute) [ruga](cognome) (medico) ? 
+- cerco la [indirizzo](attribute:indirizzo) di [nome](attribute) [bardesono](cognome) (medico) ? 
+- cerco la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [DI DIO](cognome) (medico) ? 
+- cerco la [indirizzo](attribute:indirizzo) del [nome](attribute) [Lefik](cognome) (medico) ? 
+- cerco la [indirizzo](attribute:indirizzo) del [nome](attribute) [barrett](cognome) (medico) ? 
+- cerco la [via](attribute:indirizzo) di [nome](attribute) [Sciandra](cognome) (medico) ? 
+- cerco la [via](attribute:indirizzo) del dr [nome](attribute) [Federico](cognome) (medico) ? 
+- cerco la [via](attribute:indirizzo) del [nome](attribute) [Zaccuri](cognome) (medico) ? 
+- cerco il [indirizzo](attribute:indirizzo) di [nome](attribute) [mondino](cognome) (medico) ? 
+- cerco il [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Crosio](cognome) (medico) ? 
+- cerco il [indirizzo](attribute:indirizzo) del [nome](attribute) [raimondo](cognome) (medico) ? 
+- cerco il [via](attribute:indirizzo) di [nome](attribute) [D ADDONA](cognome) (medico) ? 
+- cerco il [via](attribute:indirizzo) del dr [nome](attribute) [Apostolo](cognome) (medico) ? 
+- cerco il [via](attribute:indirizzo) del [nome](attribute) [bolonotto](cognome) (medico) ? 
+- cerco l' [indirizzo](attribute:indirizzo) di [nome](attribute) [marchetti ruiz delgado](cognome) (medico) ? 
+- cerco l' [indirizzo](attribute:indirizzo) del dr [nome](attribute) [KASHIPAZHA](cognome) (medico) ? 
+- cerco l' [indirizzo](attribute:indirizzo) del [nome](attribute) [DE LETO](cognome) (medico) ? 
+- cerco l' [via](attribute:indirizzo) di [nome](attribute) [Roasio](cognome) (medico) ? 
+- cerco l' [via](attribute:indirizzo) del dr [nome](attribute) [Faienza](cognome) (medico) ? 
+- cerco l' [via](attribute:indirizzo) del [nome](attribute) [Gazzaniga](cognome) (medico) ? 
+- Qual'e la [distretto](attribute:desc_distretto) di [TONDA](cognome) (medico) ? 
+- Qual'e la [distretto](attribute:desc_distretto) di [Bramino chiapello](cognome) (medico) ? 
+- Qual'e la [zona](attribute:desc_distretto di [ZANINI](cognome) (medico) ? 
+- Qual'e il [distretto](attribute:desc_distretto) di [gatto](cognome) (medico) ? 
+- Qual'e il [distretto](attribute:desc_distretto) di [CAIRO](cognome) (medico) ? 
+- Qual'e il [zona](attribute:desc_distretto di [ROMANELLI](cognome) (medico) ? 
+- in quale la [distretto](attribute:desc_distretto) di [Belvedere](cognome) (medico) ? 
+- in quale la [zona](attribute:desc_distretto di [Piale](cognome) (medico) ? 
+- in quale la [zona](attribute:desc_distretto di [BUNIVA](cognome) (medico) ? 
+- in quale il [distretto](attribute:desc_distretto) di [Dellacroce](cognome) (medico) ? 
+- in quale il [zona](attribute:desc_distretto di [Omastova](cognome) (medico) ? 
+- dimmi la [distretto](attribute:desc_distretto) di [DOSSETTI](cognome) (medico) ? 
+- dimmi la [zona](attribute:desc_distretto di [lambarelli](cognome) (medico) ? 
+- dimmi il [distretto](attribute:desc_distretto) di [Viale](cognome) (medico) ? 
+- dimmi il [distretto](attribute:desc_distretto) di [Melano](cognome) (medico) ? 
+- dimmi il [zona](attribute:desc_distretto di [ROCCHIA](cognome) (medico) ? 
+- vorrei sapere la [distretto](attribute:desc_distretto) di [isabella](cognome) (medico) ? 
+- vorrei sapere la [zona](attribute:desc_distretto di [ALLIATA](cognome) (medico) ? 
+- vorrei sapere il [distretto](attribute:desc_distretto) di [vista](cognome) (medico) ? 
+- vorrei sapere il [zona](attribute:desc_distretto di [gaddi](cognome) (medico) ? 
+- cerco la [distretto](attribute:desc_distretto) di [bertinetti](cognome) (medico) ? 
+- cerco la [zona](attribute:desc_distretto di [FABIANO](cognome) (medico) ? 
+- cerco il [distretto](attribute:desc_distretto) di [voghera](cognome) (medico) ? 
+- cerco il [zona](attribute:desc_distretto di [ponchio](cognome) (medico) ? 
+- Qual'e il [telefono](attribute:telefono_primario) di [ultimo](mention:LAST) ? 
+- Qual'e il [telefono](attribute:telefono_primario) è [quello](mention) ? 
+- Qual'e il [numero](attribute:telefono_primario) di [terzo](mention:3) ? 
+- Qual'e il [numero](attribute:telefono_primario) è [primo](mention:1) ? 
+- Qual'e il [cellulare](attribute:telefono_primario) di [primo](mention:1) ? 
+- Qual'e il [cellulare](attribute:telefono_primario) è [secondo](mention:2) ? 
+- in quale il [telefono](attribute:telefono_primario) di [quello](mention) ? 
+- in quale il [telefono](attribute:telefono_primario) è [terzo](mention:3) ? 
+- in quale il [numero](attribute:telefono_primario) di [primo](mention:1) ? 
+- in quale il [numero](attribute:telefono_primario) di [ultimo](mention:LAST) ? 
+- in quale il [numero](attribute:telefono_primario) è [secondo](mention:2) ? 
+- in quale il [cellulare](attribute:telefono_primario) di [terzo](mention:3) ? 
+- in quale il [cellulare](attribute:telefono_primario) è [primo](mention:1) ? 
+- dimmi il [telefono](attribute:telefono_primario) di [ultimo](mention:LAST) ? 
+- dimmi il [telefono](attribute:telefono_primario) è [primo](mention:1) ? 
+- dimmi il [numero](attribute:telefono_primario) di [secondo](mention:2) ? 
+- dimmi il [numero](attribute:telefono_primario) è [quello](mention) ? 
+- dimmi il [cellulare](attribute:telefono_primario) di [ultimo](mention:LAST) ? 
+- dimmi il [cellulare](attribute:telefono_primario) è [terzo](mention:3) ? 
+- vorrei sapere il [telefono](attribute:telefono_primario) di [secondo](mention:2) ? 
+- vorrei sapere il [telefono](attribute:telefono_primario) è [terzo](mention:3) ? 
+- vorrei sapere il [numero](attribute:telefono_primario) di [quello](mention) ? 
+- vorrei sapere il [numero](attribute:telefono_primario) è [ultimo](mention:LAST) ? 
+- vorrei sapere il [cellulare](attribute:telefono_primario) di [primo](mention:1) ? 
+- vorrei sapere il [cellulare](attribute:telefono_primario) è [quello](mention) ? 
+- cerco il [telefono](attribute:telefono_primario) di [primo](mention:1) ? 
+- cerco il [telefono](attribute:telefono_primario) è [secondo](mention:2) ? 
+- cerco il [numero](attribute:telefono_primario) è [terzo](mention:3) ? 
+- cerco il [cellulare](attribute:telefono_primario) di [quello](mention) ? 
+- cerco il [cellulare](attribute:telefono_primario) è [ultimo](mention:LAST) ? 
+- Qual'e la [telefono](attribute:telefono_primario) di [Morese](cognome) (medico) ? 
+- Qual'e la [numero di telefono](attribute:telefono_primario) di [POSTINI](cognome) (medico) ? 
+- Qual'e la [numero](attribute:telefono_primario) di [MARNETTO](cognome) (medico) ? 
+- Qual'e il [telefono](attribute:telefono_primario) di [gennari](cognome) (medico) ? 
+- Qual'e il [numero di telefono](attribute:telefono_primario) di [Salvadori](cognome) (medico) ? 
+- Qual'e il [numero](attribute:telefono_primario) di [micheletta tita](cognome) (medico) ? 
+- in quale la [telefono](attribute:telefono_primario) di [D alu](cognome) (medico) ? 
+- in quale la [numero di telefono](attribute:telefono_primario) di [marletta](cognome) (medico) ? 
+- in quale la [numero](attribute:telefono_primario) di [TACHELLA](cognome) (medico) ? 
+- in quale il [telefono](attribute:telefono_primario) di [BORSERO](cognome) (medico) ? 
+- in quale il [numero di telefono](attribute:telefono_primario) di [talarico](cognome) (medico) ? 
+- in quale il [numero](attribute:telefono_primario) di [PITTAU](cognome) (medico) ? 
+- dimmi la [telefono](attribute:telefono_primario) di [RABITO](cognome) (medico) ? 
+- dimmi la [numero di telefono](attribute:telefono_primario) di [Gellona](cognome) (medico) ? 
+- dimmi la [numero](attribute:telefono_primario) di [Fissore](cognome) (medico) ? 
+- dimmi il [telefono](attribute:telefono_primario) di [MARCIANO](cognome) (medico) ? 
+- dimmi il [numero di telefono](attribute:telefono_primario) di [MASINI](cognome) (medico) ? 
+- dimmi il [numero](attribute:telefono_primario) di [reali](cognome) (medico) ? 
+- vorrei sapere la [telefono](attribute:telefono_primario) di [salzarulo](cognome) (medico) ? 
+- vorrei sapere la [numero di telefono](attribute:telefono_primario) di [Rutigliano](cognome) (medico) ? 
+- vorrei sapere la [numero](attribute:telefono_primario) di [mazzocchio](cognome) (medico) ? 
+- vorrei sapere il [telefono](attribute:telefono_primario) di [campagnolo](cognome) (medico) ? 
+- vorrei sapere il [telefono](attribute:telefono_primario) di [Manganaro](cognome) (medico) ? 
+- vorrei sapere il [numero di telefono](attribute:telefono_primario) di [MARIANI](cognome) (medico) ? 
+- vorrei sapere il [numero di telefono](attribute:telefono_primario) di [MARCELLINO](cognome) (medico) ? 
+- vorrei sapere il [numero](attribute:telefono_primario) di [PAVANELLO](cognome) (medico) ? 
+- cerco la [telefono](attribute:telefono_primario) di [bertello](cognome) (medico) ? 
+- cerco la [numero di telefono](attribute:telefono_primario) di [tullio](cognome) (medico) ? 
+- cerco la [numero](attribute:telefono_primario) di [giaccaria](cognome) (medico) ? 
+- cerco il [telefono](attribute:telefono_primario) di [Torino](cognome) (medico) ? 
+- cerco il [numero di telefono](attribute:telefono_primario) di [MARRI](cognome) (medico) ? 
+- cerco il [numero](attribute:telefono_primario) di [allemandi](cognome) (medico) ? 
+- [rucli](cognome) (medico) quale [citta](attribute:denom_comune) c'è ? 
+- [postini](cognome) (medico) in quale [comune](attribute:denom_comune) opera ? 
+- [Giuliodori](cognome) (medico) quale [comune](attribute:denom_comune) è ? 
+- [brunetti](cognome) (medico) in quale [citta](attribute:denom_comune) lavora ? 
+- [Romeo](cognome) (medico) in quale [comune](attribute:denom_comune) è ? 
+- [garbagni](cognome) (medico) in quale [città](attribute:denom_comune) opera ? 
+- [GIROTTO](cognome) (medico) quale [città](attribute:denom_comune) ha ? 
+- [vaudano](cognome) (medico) dove [comune](attribute:denom_comune) lo trovo ? 
+- [PRATS](cognome) (medico) quale [comune](attribute:denom_comune) lo trovo ? 
+- [carbone](cognome) (medico) in quale [citta](attribute:denom_comune) ha ? 
+- [Rolfo](cognome) (medico) dove [citta](attribute:denom_comune) opera ? 
+- [BO](cognome) (medico) quale [citta](attribute:denom_comune) è ? 
+- [testa](cognome) (medico) dove [città](attribute:denom_comune) lo trovo ? 
+- [TESTA](cognome) (medico) dove [comune](attribute:denom_comune) ha ? 
+- [LORENZETTO](cognome) (medico) dove [città](attribute:denom_comune) ha ? 
+- [Cavallo](cognome) (medico) dove [comune](attribute:denom_comune) opera ? 
+- [Barbieri](cognome) (medico) quale [città](attribute:denom_comune) è ? 
+- [baiotto](cognome) (medico) dove [comune](attribute:denom_comune) c'è ? 
+- [ROLIH](cognome) (medico) dove [città](attribute:denom_comune) è ? 
+- [De andreis](cognome) (medico) dove [città](attribute:denom_comune) c'è ? 
+- [Pilan](cognome) (medico) dove [città](attribute:denom_comune) lavora ? 
+- [FERRARIS](cognome) (medico) dove [comune](attribute:denom_comune) è ? 
+- [Ceretto castigliano](cognome) (medico) in quale [citta](attribute:denom_comune) lo trovo ? 
+- [coletta](cognome) (medico) in quale [citta](attribute:denom_comune) lavora ? 
+- [pesa](cognome) (medico) in quale [comune](attribute:denom_comune) ha ? 
+- [NEPOTE FUS](cognome) (medico) dove [città](attribute:denom_comune) opera ? 
+- [ROBATTO](cognome) (medico) in quale [citta](attribute:denom_comune) è ? 
+- [soldati](cognome) (medico) dove [citta](attribute:denom_comune) c'è ? 
+- [CRISTIANO](cognome) (medico) quale [città](attribute:denom_comune) lo trovo ? 
+- [clara](cognome) (medico) quale [città](attribute:denom_comune) lavora ? 
+- [Ticca](cognome) (medico) in quale [comune](attribute:denom_comune) lavora ? 
+- [CARAMELLO](cognome) (medico) quale [città](attribute:denom_comune) è ? 
+- [MIOTELLO](cognome) (medico) dove [citta](attribute:denom_comune) ha ? 
+- [dalponte](cognome) (medico) in quale [comune](attribute:denom_comune) ha ? 
+- [Postorino](cognome) (medico) in quale [città](attribute:denom_comune) lo trovo ? 
+- [Minari](cognome) (medico) quale [città](attribute:denom_comune) opera ? 
+- [ortensio](cognome) (medico) quale [comune](attribute:denom_comune) opera ? 
+- [pampalone](cognome) (medico) quale [citta](attribute:denom_comune) lavora ? 
+- [vasta](cognome) (medico) quale [comune](attribute:denom_comune) lavora ? 
+- [MUSCARA](cognome) (medico) in quale [comune](attribute:denom_comune) lo trovo ? 
+- [Bava](cognome) (medico) in quale [citta](attribute:denom_comune) c'è ? 
+- [COMAITA](cognome) (medico) in quale [città](attribute:denom_comune) ha ? 
+- [taro](cognome) (medico) in quale [citta](attribute:denom_comune) opera ? 
+- [gola](cognome) (medico) in quale [città](attribute:denom_comune) lo trovo ? 
+- [FRANZERO](cognome) (medico) quale [città](attribute:denom_comune) è ? 
+- [VERNA](cognome) (medico) quale [comune](attribute:denom_comune) lavora ? 
+- [quasso](cognome) (medico) in quale [città](attribute:denom_comune) è ? 
+- [spanu](cognome) (medico) quale [città](attribute:denom_comune) c'è ? 
+- [GILARDENGHI](cognome) (medico) dove [citta](attribute:denom_comune) lo trovo ? 
+- [Brundusino](cognome) (medico) quale [citta](attribute:denom_comune) ha ? 
+- [monferino](cognome) (medico) dove [comune](attribute:denom_comune) opera ? 
+- [Zawaideh](cognome) (medico) in quale [città](attribute:denom_comune) opera ? 
+- [Alessi](cognome) (medico) in quale [città](attribute:denom_comune) c'è ? 
+- [Rolandi](cognome) (medico) in quale [comune](attribute:denom_comune) c'è ? 
+- [fatoorehchi](cognome) (medico) dove [comune](attribute:denom_comune) lavora ? 
+- [MONTEU](cognome) (medico) quale [comune](attribute:denom_comune) c'è ? 
+- [fujisima](cognome) (medico) quale [citta](attribute:denom_comune) opera ? 
+- [naso](cognome) (medico) in quale [città](attribute:denom_comune) lavora ? 
+- [Antonacci](cognome) (medico) dove [citta](attribute:denom_comune) lavora ? 
+- [masini](cognome) (medico) dove [citta](attribute:denom_comune) è ? 
+- [lanza](cognome) (medico) dove [città](attribute:denom_comune) c'è ? 
+- [FIAMMENGO](cognome) (medico) quale [citta](attribute:denom_comune) lo trovo ? 
+- [Tringolo](cognome) (medico) quale [comune](attribute:denom_comune) ha ? 
+- [Tortalla](cognome) (medico) che [numero](attribute:telefono_primario) è ? 
+- [BOTTERO](cognome) (medico) quale [telefono](attribute:telefono_primario) possiede ? 
+- [Giori](cognome) (medico) che [telefono](attribute:telefono_primario) possiede ? 
+- [acquadro](cognome) (medico) quale [numero](attribute:telefono_primario) ha ? 
+- [padulazzi](cognome) (medico) che [numero](attribute:telefono_primario) possiede ? 
+- [PAGANI](cognome) (medico) che [telefono](attribute:telefono_primario) è ? 
+- [ugonia](cognome) (medico) che [numero](attribute:telefono_primario) possiede ? 
+- [SODDU](cognome) (medico) quale [telefono](attribute:telefono_primario) possiede ? 
+- [perni](cognome) (medico) che [numero](attribute:telefono_primario) ha ? 
+- [condemi](cognome) (medico) che [telefono](attribute:telefono_primario) è ? 
+- [Carignano](cognome) (medico) quale [telefono](attribute:telefono_primario) ha ? 
+- [di dio](cognome) (medico) che [telefono](attribute:telefono_primario) ha ? 
+- [boschiazzo](cognome) (medico) quale [numero](attribute:telefono_primario) possiede ? 
+- [Falcone](cognome) (medico) che [numero](attribute:telefono_primario) possiede ? 
+- [GIRAUDI](cognome) (medico) quale [numero](attribute:telefono_primario) è ? 
+- [sogni](cognome) (medico) quale [telefono](attribute:telefono_primario) è ? 
+- [mozzo](cognome) (medico) in quale [indirizzo](attribute:indirizzo) lo trovo ? 
+- [benincasa](cognome) (medico) dove [indirizzo](attribute:indirizzo) c'è ? 
+- [Mainardi](cognome) (medico) a quale [indirizzo](attribute:indirizzo) lo trovo ? 
+- [giommarresi](cognome) (medico) a quale [via](attribute:indirizzo) lo trovo ? 
+- [Piemonte](cognome) (medico) dove [via](attribute:indirizzo) c'è ? 
+- [BACCARINI](cognome) (medico) dove [via](attribute:indirizzo) possiede ? 
+- [Scovazzi](cognome) (medico) in quale [indirizzo](attribute:indirizzo) ha ? 
+- [D addino](cognome) (medico) a quale [indirizzo](attribute:indirizzo) c'è ? 
+- [Meistro](cognome) (medico) in quale [via](attribute:indirizzo) c'è ? 
+- [ferraris](cognome) (medico) dove [via](attribute:indirizzo) è ? 
+- [LIEVORE](cognome) (medico) in quale [via](attribute:indirizzo) è ? 
+- [lombardo](cognome) (medico) in quale [indirizzo](attribute:indirizzo) è ? 
+- [perona](cognome) (medico) dove [via](attribute:indirizzo) lo trovo ? 
+- [PERIS](cognome) (medico) a quale [via](attribute:indirizzo) ha ? 
+- [morabito](cognome) (medico) dove [indirizzo](attribute:indirizzo) è ? 
+- [Filippone](cognome) (medico) a quale [indirizzo](attribute:indirizzo) c'è ? 
+- [Zanini](cognome) (medico) dove [via](attribute:indirizzo) ha ? 
+- [Bonomo](cognome) (medico) dove [indirizzo](attribute:indirizzo) lo trovo ? 
+- [BALCONI](cognome) (medico) a quale [via](attribute:indirizzo) c'è ? 
+- [De regibus](cognome) (medico) a quale [indirizzo](attribute:indirizzo) è ? 
+- [Comaita](cognome) (medico) a quale [indirizzo](attribute:indirizzo) ha ? 
+- [BELLAN](cognome) (medico) a quale [via](attribute:indirizzo) è ? 
+- [GIANUSSI](cognome) (medico) in quale [indirizzo](attribute:indirizzo) c'è ? 
+- [roldi](cognome) (medico) in quale [via](attribute:indirizzo) lo trovo ? 
+- [LOMATER](cognome) (medico) in quale [via](attribute:indirizzo) ha ? 
+- [Iovino](cognome) (medico) a quale [via](attribute:indirizzo) c'è ? 
+- [Borasio](cognome) (medico) a quale [indirizzo](attribute:indirizzo) possiede ? 
+- [LAMBARELLI](cognome) (medico) a quale [via](attribute:indirizzo) possiede ? 
+- [LAVATELLI](cognome) (medico) a quale [indirizzo](attribute:indirizzo) possiede ? 
+- [Bellizzi](cognome) (medico) in quale [indirizzo](attribute:indirizzo) possiede ? 
+- [Peressini](cognome) (medico) dove [indirizzo](attribute:indirizzo) possiede ? 
+- [ARPELLINO](cognome) (medico) a quale [indirizzo](attribute:indirizzo) possiede ? 
+- [galati](cognome) (medico) a quale [indirizzo](attribute:indirizzo) possiede ? 
+- [SERRATRICE](cognome) (medico) dove [via](attribute:indirizzo) ha ? 
+- [Fascio](cognome) (medico) in quale [via](attribute:indirizzo) possiede ? 
+- [tempesta](cognome) (medico) dove [indirizzo](attribute:indirizzo) ha ? 
+- [secondo](mention:2) in quale [email](attribute) possiede ? 
+- [secondo](mention:2) in quale [distretto](attribute) lo trovo ? 
+- [secondo](mention:2) quale [email](attribute) è ? 
+- [terzo](mention:3) in quale [email](attribute) c'è ? 
+- [quello](mention) quale [email](attribute) possiede ? 
+- [quello](mention) quale [distretto](attribute) lo trovo ? 
+- [quest'ultimo](mention:LAST) in quale [distretto](attribute) possiede ? 
+- [quest'ultimo](mention:LAST) quale [email](attribute) lo trovo ? 
+- [quarto](mention:4) in quale [email](attribute) è ? 
+- [quarto](mention:4) quale [email](attribute) c'è ? 
+- [quinto](mention:5) in quale [distretto](attribute) è ? 
+- [sesto](mention:6) quale [email](attribute) ha ? 
+- [sesto](mention:6) quale [distretto](attribute) è ? 
+- [settimo](mention:7) in quale [distretto](attribute) c'è ? 
+- [ottavo](mention:8) quale [email](attribute) c'è ? 
+- [nono](mention:9) in quale [email](attribute) ha ? 
+- [nono](mention:9) quale [distretto](attribute) ha ? 
+- [3](mention) in quale [email](attribute) lo trovo ? 
+- [3](mention) in quale [distretto](attribute) ha ? 
+- [3](mention) quale [distretto](attribute) c'è ? 
+- [7](mention) quale [email](attribute) è ? 
+- [7](mention) quale [distretto](attribute) possiede ? 
+- e [civico](attribute:numero_civico) ? 
+- suo [indirizzo](attribute) ? 
+- sua [civico](attribute:numero_civico) ? 
+- e [numero](attribute:telefono_primario) ? 
+- suo [email](attribute:indirizzo_email) ? 
+- sua [telefono](attribute) ? 
+- e [distretto](attribute:cod_distretto) ? 
+- la [comune](attribute:denom_comune) ? 
+- il [distretto](attribute:cod_distretto) ? 
+- suo [distretto](attribute:cod_distretto) ? 
+- quanti sono i [posti disponibili](attribute:posti_disponibili) di [Pola](cognome) (medico) 
+- quanti sono i [posti](attribute:posti_disponibili] di [mosca](cognome) (medico) 
+- quanti sono i [posti](attribute:posti_disponibili] di [ALAIMO](cognome) (medico) 
+- Qual'e [email](attribute:indirizzo_email) di [Ciervo](cognome) (medico)? 
+- Qual'e [email](attribute:indirizzo_email) del dr [varaldo](cognome) (medico)? 
+- Qual'e [email](attribute:indirizzo_email) del dottor [polimeni](cognome) (medico)? 
+- Qual'e [e-mail](attribute:indirizzo_email) di [Pero](cognome) (medico)? 
+- Qual'e [e-mail](attribute:indirizzo_email) del dr [fila](cognome) (medico)? 
+- Qual'e [e-mail](attribute:indirizzo_email) del dottor [DI FINE](cognome) (medico)? 
+- Qual'e [e-mail](attribute:indirizzo_email) del dottor [Ferrarese](cognome) (medico)? 
+- Qual'e [e-mail](attribute:indirizzo_email) del dottor [GUASCHINO](cognome) (medico)? 
+- Qual'e [mail](attribute:indirizzo_email) di [DINATALE](cognome) (medico)? 
+- Qual'e [mail](attribute:indirizzo_email) del dr [Franze](cognome) (medico)? 
+- Qual'e [mail](attribute:indirizzo_email) del dottor [Demo](cognome) (medico)? 
+- in quale [email](attribute:indirizzo_email) di [GARBARINI](cognome) (medico)? 
+- in quale [email](attribute:indirizzo_email) del dr [Pezzulo](cognome) (medico)? 
+- in quale [email](attribute:indirizzo_email) del dottor [SETTEMBRINI](cognome) (medico)? 
+- in quale [e-mail](attribute:indirizzo_email) di [rulli](cognome) (medico)? 
+- in quale [e-mail](attribute:indirizzo_email) di [MASSANO](cognome) (medico)? 
+- in quale [e-mail](attribute:indirizzo_email) del dr [barlotta](cognome) (medico)? 
+- in quale [e-mail](attribute:indirizzo_email) del dottor [zambon](cognome) (medico)? 
+- in quale [mail](attribute:indirizzo_email) di [Tonda](cognome) (medico)? 
+- in quale [mail](attribute:indirizzo_email) del dr [beccaria](cognome) (medico)? 
+- in quale [mail](attribute:indirizzo_email) del dottor [CAPANO](cognome) (medico)? 
+- dimmi [email](attribute:indirizzo_email) di [TRIONE](cognome) (medico)? 
+- dimmi [email](attribute:indirizzo_email) del dr [nicola](cognome) (medico)? 
+- dimmi [email](attribute:indirizzo_email) del dottor [Bigando](cognome) (medico)? 
+- dimmi [e-mail](attribute:indirizzo_email) di [Dompe](cognome) (medico)? 
+- dimmi [e-mail](attribute:indirizzo_email) del dr [SOLIGO](cognome) (medico)? 
+- dimmi [e-mail](attribute:indirizzo_email) del dottor [ROTUNNO](cognome) (medico)? 
+- dimmi [e-mail](attribute:indirizzo_email) del dottor [Perli](cognome) (medico)? 
+- dimmi [e-mail](attribute:indirizzo_email) del dottor [emanuel](cognome) (medico)? 
+- dimmi [mail](attribute:indirizzo_email) di [SCABELLONE](cognome) (medico)? 
+- dimmi [mail](attribute:indirizzo_email) del dr [scaramuzzino](cognome) (medico)? 
+- dimmi [mail](attribute:indirizzo_email) del dottor [giordano](cognome) (medico)? 
+- vorrei sapere [email](attribute:indirizzo_email) di [PECORARI](cognome) (medico)? 
+- vorrei sapere [email](attribute:indirizzo_email) di [deabate](cognome) (medico)? 
+- vorrei sapere [email](attribute:indirizzo_email) di [Mathieu](cognome) (medico)? 
+- vorrei sapere [email](attribute:indirizzo_email) del dr [Montemaggiore](cognome) (medico)? 
+- vorrei sapere [email](attribute:indirizzo_email) del dottor [ZULLINO](cognome) (medico)? 
+- vorrei sapere [email](attribute:indirizzo_email) del dottor [lucia](cognome) (medico)? 
+- vorrei sapere [e-mail](attribute:indirizzo_email) di [mirra](cognome) (medico)? 
+- vorrei sapere [e-mail](attribute:indirizzo_email) del dr [GIUFFRIDA TRAMPETTA](cognome) (medico)? 
+- vorrei sapere [e-mail](attribute:indirizzo_email) del dottor [OMBRA](cognome) (medico)? 
+- vorrei sapere [mail](attribute:indirizzo_email) di [gennari](cognome) (medico)? 
+- vorrei sapere [mail](attribute:indirizzo_email) del dr [OTTOBRELLI](cognome) (medico)? 
+- vorrei sapere [mail](attribute:indirizzo_email) del dr [Aramis](cognome) (medico)? 
+- vorrei sapere [mail](attribute:indirizzo_email) del dottor [peris](cognome) (medico)? 
+- vorrei sapere [mail](attribute:indirizzo_email) del dottor [BECCHERO](cognome) (medico)? 
+- cerco [email](attribute:indirizzo_email) di [BOCCALATTE](cognome) (medico)? 
+- cerco [email](attribute:indirizzo_email) del dr [Del signore](cognome) (medico)? 
+- cerco [email](attribute:indirizzo_email) del dr [Quasso](cognome) (medico)? 
+- cerco [email](attribute:indirizzo_email) del dottor [Guabello](cognome) (medico)? 
+- cerco [e-mail](attribute:indirizzo_email) di [CAMOSSO](cognome) (medico)? 
+- cerco [e-mail](attribute:indirizzo_email) del dr [Tonda](cognome) (medico)? 
+- cerco [e-mail](attribute:indirizzo_email) del dr [martins de jesus](cognome) (medico)? 
+- cerco [e-mail](attribute:indirizzo_email) del dottor [Falloni](cognome) (medico)? 
+- cerco [mail](attribute:indirizzo_email) di [zucchetto](cognome) (medico)? 
+- cerco [mail](attribute:indirizzo_email) del dr [Garetto](cognome) (medico)? 
+- cerco [mail](attribute:indirizzo_email) del dottor [SIGAUDO](cognome) (medico)? 
+- cerco [mail](attribute:indirizzo_email) del dottor [Martelli](cognome) (medico)? 
+- Qual'e [comune](attribute:denom_comune) del [quinto](mention:5) ? 
+- Qual'e [comune](attribute:denom_comune) del [sesto](mention:6) ? 
+- Qual'e [comune](attribute:denom_comune) di [quello](mention) ? 
+- Qual'e [comune](attribute:denom_comune) di [quarto](mention:4) ? 
+- Qual'e [comune](attribute:denom_comune) è [primo](mention:1) ? 
+- Qual'e [località](attribute:denom_comune) del [secondo](mention:2) ? 
+- Qual'e [località](attribute:denom_comune) del [ultimo](mention:LAST) ? 
+- Qual'e [località](attribute:denom_comune) di [primo](mention:1) ? 
+- Qual'e [località](attribute:denom_comune) di [sesto](mention:6) ? 
+- Qual'e [località](attribute:denom_comune) di [7](mention) ? 
+- Qual'e [località](attribute:denom_comune) è [terzo](mention:3) ? 
+- Qual'e [citta](attribute:denom_comune) del [terzo](mention:3) ? 
+- Qual'e [citta](attribute:denom_comune) del [quello](mention) ? 
+- Qual'e [citta](attribute:denom_comune) del [quinto](mention:5) ? 
+- Qual'e [citta](attribute:denom_comune) di [1](mention)[5](mention) ? 
+- Qual'e [citta](attribute:denom_comune) è [quarto](mention:4) ? 
+- Qual'e [citta](attribute:denom_comune) è [sesto](mention:6) ? 
+- in quale [comune](attribute:denom_comune) del [8](mention) ? 
+- in quale [comune](attribute:denom_comune) di [1](mention)[5](mention) ? 
+- in quale [comune](attribute:denom_comune) è [quarto](mention:4) ? 
+- in quale [località](attribute:denom_comune) del [quello](mention) ? 
+- in quale [località](attribute:denom_comune) di [quarto](mention:4) ? 
+- in quale [località](attribute:denom_comune) di [quinto](mention:5) ? 
+- in quale [località](attribute:denom_comune) è [ultimo](mention:LAST) ? 
+- in quale [località](attribute:denom_comune) è [7](mention) ? 
+- in quale [citta](attribute:denom_comune) del [secondo](mention:2) ? 
+- in quale [citta](attribute:denom_comune) del [1](mention)[5](mention) ? 
+- in quale [citta](attribute:denom_comune) di [sesto](mention:6) ? 
+- in quale [citta](attribute:denom_comune) è [8](mention) ? 
+- dimmi [comune](attribute:denom_comune) del [secondo](mention:2) ? 
+- dimmi [comune](attribute:denom_comune) di [quarto](mention:4) ? 
+- dimmi [comune](attribute:denom_comune) è [8](mention) ? 
+- dimmi [comune](attribute:denom_comune) è [1](mention)[5](mention) ? 
+- dimmi [località](attribute:denom_comune) del [primo](mention:1) ? 
+- dimmi [località](attribute:denom_comune) di [quello](mention) ? 
+- dimmi [località](attribute:denom_comune) è [8](mention) ? 
+- dimmi [citta](attribute:denom_comune) del [primo](mention:1) ? 
+- dimmi [citta](attribute:denom_comune) del [sesto](mention:6) ? 
+- dimmi [citta](attribute:denom_comune) di [8](mention) ? 
+- dimmi [citta](attribute:denom_comune) è [ultimo](mention:LAST) ? 
+- vorrei sapere [comune](attribute:denom_comune) del [quello](mention) ? 
+- vorrei sapere [comune](attribute:denom_comune) di [sesto](mention:6) ? 
+- vorrei sapere [comune](attribute:denom_comune) di [8](mention) ? 
+- vorrei sapere [comune](attribute:denom_comune) è [7](mention) ? 
+- vorrei sapere [località](attribute:denom_comune) del [ultimo](mention:LAST) ? 
+- vorrei sapere [località](attribute:denom_comune) di [1](mention)[5](mention) ? 
+- vorrei sapere [località](attribute:denom_comune) è [quinto](mention:5) ? 
+- vorrei sapere [citta](attribute:denom_comune) del [8](mention) ? 
+- vorrei sapere [citta](attribute:denom_comune) di [terzo](mention:3) ? 
+- vorrei sapere [citta](attribute:denom_comune) è [primo](mention:1) ? 
+- cerco [comune](attribute:denom_comune) del [1](mention)[5](mention) ? 
+- cerco [comune](attribute:denom_comune) di [terzo](mention:3) ? 
+- cerco [comune](attribute:denom_comune) è [sesto](mention:6) ? 
+- cerco [località](attribute:denom_comune) del [terzo](mention:3) ? 
+- cerco [località](attribute:denom_comune) di [7](mention) ? 
+- cerco [località](attribute:denom_comune) è [primo](mention:1) ? 
+- cerco [citta](attribute:denom_comune) del [ultimo](mention:LAST) ? 
+- cerco [citta](attribute:denom_comune) del [7](mention) ? 
+- cerco [citta](attribute:denom_comune) di [secondo](mention:2) ? 
+- cerco [citta](attribute:denom_comune) è [quello](mention) ? 
+- Qual'e il [codice fiscale](attribute:codice_fiscale) di [LEONE](cognome) (medico)? 
+- in quale il [codice fiscale](attribute:codice_fiscale) di [GALLELLO](cognome) (medico)? 
+- dimmi il [codice fiscale](attribute:codice_fiscale) di [furno marchese](cognome) (medico)? 
+- vorrei sapere il [codice fiscale](attribute:codice_fiscale) di [Camusso](cognome) (medico)? 
+- cerco il [codice fiscale](attribute:codice_fiscale) di [Orecchia](cognome) (medico)? 
+- cerco il [codice fiscale](attribute:codice_fiscale) di [dattola](cognome) (medico)? 
+- Qual'e il [civico](attribute:numero_civico) di [carezzana](cognome) (medico)? 
+- in quale il [civico](attribute:numero_civico) di [Enea](cognome) (medico)? 
+- in quale il [civico](attribute:numero_civico) di [Dionisotti](cognome) (medico)? 
+- dimmi il [civico](attribute:numero_civico) di [de vanna](cognome) (medico)? 
+- dimmi il [civico](attribute:numero_civico) di [secco](cognome) (medico)? 
+- vorrei sapere il [civico](attribute:numero_civico) di [CAPUTO](cognome) (medico)? 
+- cerco il [civico](attribute:numero_civico) di [CALVO](cognome) (medico)? 
+- Qual'e i [giorni](attribute:giorno) di [TUNINETTI](cognome) (medico)? 
+- Qual'e i [giorni](attribute:giorno) di [BENZI](cognome) (medico)? 
+- in quale i [giorni](attribute:giorno) di [BARRAL](cognome) (medico)? 
+- dimmi i [giorni](attribute:giorno) di [soligo](cognome) (medico)? 
+- vorrei sapere i [giorni](attribute:giorno) di [VALSANIA](cognome) (medico)? 
+- cerco i [giorni](attribute:giorno) di [albonico](cognome) (medico)? 
+- Qual'e i [giorni](attribute:giorno) di apertura dell'ambulatorio a [INVERSO PINASCA](denom_comune) (ambulatorio)? 
+- in quale i [giorni](attribute:giorno) di apertura dell'ambulatorio a [Borgomasino](denom_comune) (ambulatorio)? 
+- dimmi i [giorni](attribute:giorno) di apertura dell'ambulatorio a [casale monferrato](denom_comune) (ambulatorio)? 
+- vorrei sapere i [giorni](attribute:giorno) di apertura dell'ambulatorio a [SALASSA](denom_comune) (ambulatorio)? 
+- vorrei sapere i [giorni](attribute:giorno) di apertura dell'ambulatorio a [montaldeo](denom_comune) (ambulatorio)? 
+- cerco i [giorni](attribute:giorno) di apertura dell'ambulatorio a [BURONZO](denom_comune) (ambulatorio)? 
+- cerco i [giorni](attribute:giorno) di apertura dell'ambulatorio a [benevello](denom_comune) (ambulatorio)? 
+- Qual'e la [indirizzo](attribute:indirizzo) di [nome](attribute) [DI BELLA](cognome) (medico) ? 
+- Qual'e la [indirizzo](attribute:indirizzo) di [nome](attribute) [MORENA](cognome) (medico) ? 
+- Qual'e la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [conte](cognome) (medico) ? 
+- Qual'e la [indirizzo](attribute:indirizzo) del [nome](attribute) [guerini rocco](cognome) (medico) ? 
+- Qual'e la [via](attribute:indirizzo) di [nome](attribute) [cugliandro](cognome) (medico) ? 
+- Qual'e la [via](attribute:indirizzo) del dr [nome](attribute) [BORSATI](cognome) (medico) ? 
+- Qual'e la [via](attribute:indirizzo) del dr [nome](attribute) [Garzino](cognome) (medico) ? 
+- Qual'e la [via](attribute:indirizzo) del dr [nome](attribute) [Sassone](cognome) (medico) ? 
+- Qual'e la [via](attribute:indirizzo) del [nome](attribute) [MIGHELI](cognome) (medico) ? 
+- Qual'e il [indirizzo](attribute:indirizzo) di [nome](attribute) [Picotto](cognome) (medico) ? 
+- Qual'e il [indirizzo](attribute:indirizzo) di [nome](attribute) [CUGNOLIO](cognome) (medico) ? 
+- Qual'e il [indirizzo](attribute:indirizzo) di [nome](attribute) [ORMEZZANO](cognome) (medico) ? 
+- Qual'e il [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Mondino](cognome) (medico) ? 
+- Qual'e il [indirizzo](attribute:indirizzo) del [nome](attribute) [PALAZZO](cognome) (medico) ? 
+- Qual'e il [via](attribute:indirizzo) di [nome](attribute) [raiteri](cognome) (medico) ? 
+- Qual'e il [via](attribute:indirizzo) di [nome](attribute) [calvi](cognome) (medico) ? 
+- Qual'e il [via](attribute:indirizzo) del dr [nome](attribute) [sanfilippo ceraso](cognome) (medico) ? 
+- Qual'e il [via](attribute:indirizzo) del [nome](attribute) [DAVICO](cognome) (medico) ? 
+- Qual'e l' [indirizzo](attribute:indirizzo) di [nome](attribute) [gismondo](cognome) (medico) ? 
+- Qual'e l' [indirizzo](attribute:indirizzo) del dr [nome](attribute) [tullio](cognome) (medico) ? 
+- Qual'e l' [indirizzo](attribute:indirizzo) del [nome](attribute) [VARELLO](cognome) (medico) ? 
+- Qual'e l' [indirizzo](attribute:indirizzo) del [nome](attribute) [D alu](cognome) (medico) ? 
+- Qual'e l' [via](attribute:indirizzo) di [nome](attribute) [riccardi](cognome) (medico) ? 
+- Qual'e l' [via](attribute:indirizzo) del dr [nome](attribute) [Rusz](cognome) (medico) ? 
+- Qual'e l' [via](attribute:indirizzo) del dr [nome](attribute) [di benedetto](cognome) (medico) ? 
+- Qual'e l' [via](attribute:indirizzo) del dr [nome](attribute) [NICOLA](cognome) (medico) ? 
+- Qual'e l' [via](attribute:indirizzo) del [nome](attribute) [Zorzi](cognome) (medico) ? 
+- in quale la [indirizzo](attribute:indirizzo) di [nome](attribute) [badawiyah](cognome) (medico) ? 
+- in quale la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [CARROZZO](cognome) (medico) ? 
+- in quale la [indirizzo](attribute:indirizzo) del [nome](attribute) [DACOMO](cognome) (medico) ? 
+- in quale la [via](attribute:indirizzo) di [nome](attribute) [saviano](cognome) (medico) ? 
+- in quale la [via](attribute:indirizzo) del dr [nome](attribute) [pasolini](cognome) (medico) ? 
+- in quale la [via](attribute:indirizzo) del [nome](attribute) [MAGNOLER](cognome) (medico) ? 
+- in quale il [indirizzo](attribute:indirizzo) di [nome](attribute) [rovelli](cognome) (medico) ? 
+- in quale il [indirizzo](attribute:indirizzo) del dr [nome](attribute) [RESTAINO](cognome) (medico) ? 
+- in quale il [indirizzo](attribute:indirizzo) del [nome](attribute) [ALPA](cognome) (medico) ? 
+- in quale il [via](attribute:indirizzo) di [nome](attribute) [SITZIA](cognome) (medico) ? 
+- in quale il [via](attribute:indirizzo) del dr [nome](attribute) [GHIONE](cognome) (medico) ? 
+- in quale il [via](attribute:indirizzo) del dr [nome](attribute) [biagioli](cognome) (medico) ? 
+- in quale il [via](attribute:indirizzo) del [nome](attribute) [Agosto](cognome) (medico) ? 
+- in quale l' [indirizzo](attribute:indirizzo) di [nome](attribute) [Boccardo](cognome) (medico) ? 
+- in quale l' [indirizzo](attribute:indirizzo) del dr [nome](attribute) [SANTI](cognome) (medico) ? 
+- in quale l' [indirizzo](attribute:indirizzo) del [nome](attribute) [DE REGIBUS](cognome) (medico) ? 
+- in quale l' [indirizzo](attribute:indirizzo) del [nome](attribute) [dallorto](cognome) (medico) ? 
+- in quale l' [via](attribute:indirizzo) di [nome](attribute) [scarzo](cognome) (medico) ? 
+- in quale l' [via](attribute:indirizzo) del dr [nome](attribute) [Pecorari](cognome) (medico) ? 
+- in quale l' [via](attribute:indirizzo) del [nome](attribute) [d alu](cognome) (medico) ? 
+- dimmi la [indirizzo](attribute:indirizzo) di [nome](attribute) [cortese](cognome) (medico) ? 
+- dimmi la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [QUATTROCCHI](cognome) (medico) ? 
+- dimmi la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Pacetti](cognome) (medico) ? 
+- dimmi la [indirizzo](attribute:indirizzo) del [nome](attribute) [rosina](cognome) (medico) ? 
+- dimmi la [via](attribute:indirizzo) di [nome](attribute) [cosenza](cognome) (medico) ? 
+- dimmi la [via](attribute:indirizzo) del dr [nome](attribute) [vercellotti](cognome) (medico) ? 
+- dimmi la [via](attribute:indirizzo) del [nome](attribute) [Carbone](cognome) (medico) ? 
+- dimmi il [indirizzo](attribute:indirizzo) di [nome](attribute) [MOGLIA](cognome) (medico) ? 
+- dimmi il [indirizzo](attribute:indirizzo) di [nome](attribute) [Disegni](cognome) (medico) ? 
+- dimmi il [indirizzo](attribute:indirizzo) del dr [nome](attribute) [VIENNA](cognome) (medico) ? 
+- dimmi il [indirizzo](attribute:indirizzo) del [nome](attribute) [amato](cognome) (medico) ? 
+- dimmi il [indirizzo](attribute:indirizzo) del [nome](attribute) [LONGHINI](cognome) (medico) ? 
+- dimmi il [via](attribute:indirizzo) di [nome](attribute) [moreno](cognome) (medico) ? 
+- dimmi il [via](attribute:indirizzo) del dr [nome](attribute) [VISPI](cognome) (medico) ? 
+- dimmi il [via](attribute:indirizzo) del [nome](attribute) [LO GULLO](cognome) (medico) ? 
+- dimmi l' [indirizzo](attribute:indirizzo) di [nome](attribute) [amprimo](cognome) (medico) ? 
+- dimmi l' [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Comolli](cognome) (medico) ? 
+- dimmi l' [indirizzo](attribute:indirizzo) del [nome](attribute) [PELLEGRINI](cognome) (medico) ? 
+- dimmi l' [via](attribute:indirizzo) di [nome](attribute) [Francia di celle](cognome) (medico) ? 
+- dimmi l' [via](attribute:indirizzo) del dr [nome](attribute) [Zambon](cognome) (medico) ? 
+- dimmi l' [via](attribute:indirizzo) del dr [nome](attribute) [PALUMERI](cognome) (medico) ? 
+- dimmi l' [via](attribute:indirizzo) del [nome](attribute) [Zante](cognome) (medico) ? 
+- vorrei sapere la [indirizzo](attribute:indirizzo) di [nome](attribute) [Prezioso](cognome) (medico) ? 
+- vorrei sapere la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Fungi](cognome) (medico) ? 
+- vorrei sapere la [indirizzo](attribute:indirizzo) del [nome](attribute) [Muscara](cognome) (medico) ? 
+- vorrei sapere la [via](attribute:indirizzo) di [nome](attribute) [PERSICO](cognome) (medico) ? 
+- vorrei sapere la [via](attribute:indirizzo) del dr [nome](attribute) [PERNI](cognome) (medico) ? 
+- vorrei sapere la [via](attribute:indirizzo) del [nome](attribute) [GRECHI](cognome) (medico) ? 
+- vorrei sapere il [indirizzo](attribute:indirizzo) di [nome](attribute) [ARRICHIELLO](cognome) (medico) ? 
+- vorrei sapere il [indirizzo](attribute:indirizzo) del dr [nome](attribute) [MAGGI](cognome) (medico) ? 
+- vorrei sapere il [indirizzo](attribute:indirizzo) del [nome](attribute) [ZAGARIA](cognome) (medico) ? 
+- vorrei sapere il [via](attribute:indirizzo) di [nome](attribute) [MARINUZZI](cognome) (medico) ? 
+- vorrei sapere il [via](attribute:indirizzo) del dr [nome](attribute) [Corea](cognome) (medico) ? 
+- vorrei sapere il [via](attribute:indirizzo) del [nome](attribute) [ragonesi](cognome) (medico) ? 
+- vorrei sapere l' [indirizzo](attribute:indirizzo) di [nome](attribute) [Biscaldi](cognome) (medico) ? 
+- vorrei sapere l' [indirizzo](attribute:indirizzo) del dr [nome](attribute) [CHIESA](cognome) (medico) ? 
+- vorrei sapere l' [indirizzo](attribute:indirizzo) del dr [nome](attribute) [MANGIACAVALLO](cognome) (medico) ? 
+- vorrei sapere l' [indirizzo](attribute:indirizzo) del [nome](attribute) [TIMO](cognome) (medico) ? 
+- vorrei sapere l' [via](attribute:indirizzo) di [nome](attribute) [Cugnolio](cognome) (medico) ? 
+- vorrei sapere l' [via](attribute:indirizzo) del dr [nome](attribute) [Parisio](cognome) (medico) ? 
+- vorrei sapere l' [via](attribute:indirizzo) del [nome](attribute) [Livorno](cognome) (medico) ? 
+- cerco la [indirizzo](attribute:indirizzo) di [nome](attribute) [BOTTALO](cognome) (medico) ? 
+- cerco la [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Mondino](cognome) (medico) ? 
+- cerco la [indirizzo](attribute:indirizzo) del [nome](attribute) [FERRERI](cognome) (medico) ? 
+- cerco la [via](attribute:indirizzo) di [nome](attribute) [blanc](cognome) (medico) ? 
+- cerco la [via](attribute:indirizzo) del dr [nome](attribute) [DAMILANO](cognome) (medico) ? 
+- cerco la [via](attribute:indirizzo) del [nome](attribute) [giraudo](cognome) (medico) ? 
+- cerco il [indirizzo](attribute:indirizzo) di [nome](attribute) [RICCI](cognome) (medico) ? 
+- cerco il [indirizzo](attribute:indirizzo) di [nome](attribute) [rabozzi](cognome) (medico) ? 
+- cerco il [indirizzo](attribute:indirizzo) del dr [nome](attribute) [SOLDATI](cognome) (medico) ? 
+- cerco il [indirizzo](attribute:indirizzo) del [nome](attribute) [vescovo](cognome) (medico) ? 
+- cerco il [indirizzo](attribute:indirizzo) del [nome](attribute) [agosto](cognome) (medico) ? 
+- cerco il [via](attribute:indirizzo) di [nome](attribute) [Cesari](cognome) (medico) ? 
+- cerco il [via](attribute:indirizzo) del dr [nome](attribute) [Pasteris](cognome) (medico) ? 
+- cerco il [via](attribute:indirizzo) del [nome](attribute) [Branda](cognome) (medico) ? 
+- cerco il [via](attribute:indirizzo) del [nome](attribute) [Righetti](cognome) (medico) ? 
+- cerco il [via](attribute:indirizzo) del [nome](attribute) [Nosengo](cognome) (medico) ? 
+- cerco l' [indirizzo](attribute:indirizzo) di [nome](attribute) [canal](cognome) (medico) ? 
+- cerco l' [indirizzo](attribute:indirizzo) del dr [nome](attribute) [Trotti](cognome) (medico) ? 
+- cerco l' [indirizzo](attribute:indirizzo) del [nome](attribute) [BERNARDELLI](cognome) (medico) ? 
+- cerco l' [via](attribute:indirizzo) di [nome](attribute) [natale](cognome) (medico) ? 
+- cerco l' [via](attribute:indirizzo) del dr [nome](attribute) [Damasio](cognome) (medico) ? 
+- cerco l' [via](attribute:indirizzo) del [nome](attribute) [COCOLA](cognome) (medico) ? 
+- Qual'e la [distretto](attribute:desc_distretto) di [ramella paia](cognome) (medico) ? 
+- Qual'e la [zona](attribute:desc_distretto di [frattaruolo](cognome) (medico) ? 
+- Qual'e la [zona](attribute:desc_distretto di [LIO](cognome) (medico) ? 
+- Qual'e il [distretto](attribute:desc_distretto) di [delbarba](cognome) (medico) ? 
+- Qual'e il [zona](attribute:desc_distretto di [BOSSOLASCO](cognome) (medico) ? 
+- in quale la [distretto](attribute:desc_distretto) di [Rossetti](cognome) (medico) ? 
+- in quale la [zona](attribute:desc_distretto di [Simone](cognome) (medico) ? 
+- in quale il [distretto](attribute:desc_distretto) di [Peris](cognome) (medico) ? 
+- in quale il [zona](attribute:desc_distretto di [SACCO BOTTO](cognome) (medico) ? 
+- dimmi la [distretto](attribute:desc_distretto) di [Tarascio](cognome) (medico) ? 
+- dimmi la [zona](attribute:desc_distretto di [rutigliano](cognome) (medico) ? 
+- dimmi il [distretto](attribute:desc_distretto) di [GALLIO](cognome) (medico) ? 
+- dimmi il [zona](attribute:desc_distretto di [Trinchero](cognome) (medico) ? 
+- vorrei sapere la [distretto](attribute:desc_distretto) di [Chiarcossi](cognome) (medico) ? 
+- vorrei sapere la [zona](attribute:desc_distretto di [Freda](cognome) (medico) ? 
+- vorrei sapere il [distretto](attribute:desc_distretto) di [DUSIO](cognome) (medico) ? 
+- vorrei sapere il [distretto](attribute:desc_distretto) di [rostagno](cognome) (medico) ? 
+- vorrei sapere il [distretto](attribute:desc_distretto) di [bertello](cognome) (medico) ? 
+- vorrei sapere il [zona](attribute:desc_distretto di [DEMARTINI](cognome) (medico) ? 
+- cerco la [distretto](attribute:desc_distretto) di [Gambuzza](cognome) (medico) ? 
+- cerco la [distretto](attribute:desc_distretto) di [giardini](cognome) (medico) ? 
+- cerco la [zona](attribute:desc_distretto di [Sarti](cognome) (medico) ? 
+- cerco il [distretto](attribute:desc_distretto) di [MELE CARROZZO ANTONAZZO](cognome) (medico) ? 
+- cerco il [zona](attribute:desc_distretto di [corio](cognome) (medico) ? 
+- Qual'e il [telefono](attribute:telefono_primario) di [ultimo](mention:LAST) ? 
+- Qual'e il [telefono](attribute:telefono_primario) è [primo](mention:1) ? 
+- Qual'e il [numero](attribute:telefono_primario) di [primo](mention:1) ? 
+- Qual'e il [numero](attribute:telefono_primario) di [quello](mention) ? 
+- Qual'e il [numero](attribute:telefono_primario) è [ultimo](mention:LAST) ? 
+- Qual'e il [cellulare](attribute:telefono_primario) di [secondo](mention:2) ? 
+- Qual'e il [cellulare](attribute:telefono_primario) è [primo](mention:1) ? 
+- Qual'e il [cellulare](attribute:telefono_primario) è [secondo](mention:2) ? 
+- in quale il [telefono](attribute:telefono_primario) di [terzo](mention:3) ? 
+- in quale il [telefono](attribute:telefono_primario) è [primo](mention:1) ? 
+- in quale il [numero](attribute:telefono_primario) di [quello](mention) ? 
+- in quale il [numero](attribute:telefono_primario) è [terzo](mention:3) ? 
+- in quale il [cellulare](attribute:telefono_primario) è [ultimo](mention:LAST) ? 
+- dimmi il [telefono](attribute:telefono_primario) di [secondo](mention:2) ? 
+- dimmi il [telefono](attribute:telefono_primario) è [terzo](mention:3) ? 
+- dimmi il [numero](attribute:telefono_primario) di [terzo](mention:3) ? 
+- dimmi il [numero](attribute:telefono_primario) è [primo](mention:1) ? 
+- dimmi il [numero](attribute:telefono_primario) è [quello](mention) ? 
+- dimmi il [cellulare](attribute:telefono_primario) di [quello](mention) ? 
+- vorrei sapere il [telefono](attribute:telefono_primario) di [ultimo](mention:LAST) ? 
+- vorrei sapere il [telefono](attribute:telefono_primario) è [secondo](mention:2) ? 
+- vorrei sapere il [numero](attribute:telefono_primario) di [secondo](mention:2) ? 
+- vorrei sapere il [numero](attribute:telefono_primario) è [ultimo](mention:LAST) ? 
+- vorrei sapere il [cellulare](attribute:telefono_primario) di [primo](mention:1) ? 
+- vorrei sapere il [cellulare](attribute:telefono_primario) di [terzo](mention:3) ? 
+- cerco il [telefono](attribute:telefono_primario) di [primo](mention:1) ? 
+- cerco il [telefono](attribute:telefono_primario) di [quello](mention) ? 
+- cerco il [telefono](attribute:telefono_primario) è [terzo](mention:3) ? 
+- cerco il [numero](attribute:telefono_primario) di [ultimo](mention:LAST) ? 
+- cerco il [numero](attribute:telefono_primario) è [secondo](mention:2) ? 
+- cerco il [cellulare](attribute:telefono_primario) è [quello](mention) ? 
+- Qual'e la [telefono](attribute:telefono_primario) di [BORRELLI](cognome) (medico) ? 
+- Qual'e la [telefono](attribute:telefono_primario) di [DI FABIO](cognome) (medico) ? 
+- Qual'e la [numero di telefono](attribute:telefono_primario) di [emmanuelli](cognome) (medico) ? 
+- Qual'e la [numero di telefono](attribute:telefono_primario) di [Griseri](cognome) (medico) ? 
+- Qual'e la [numero](attribute:telefono_primario) di [ZACCONE](cognome) (medico) ? 
+- Qual'e il [telefono](attribute:telefono_primario) di [AIMONE NICOLA](cognome) (medico) ? 
+- Qual'e il [telefono](attribute:telefono_primario) di [PIGINO](cognome) (medico) ? 
+- Qual'e il [numero di telefono](attribute:telefono_primario) di [rabbita](cognome) (medico) ? 
+- Qual'e il [numero di telefono](attribute:telefono_primario) di [sesca](cognome) (medico) ? 
+- Qual'e il [numero](attribute:telefono_primario) di [de pascalis](cognome) (medico) ? 
+- in quale la [telefono](attribute:telefono_primario) di [MARNETTO](cognome) (medico) ? 
+- in quale la [numero di telefono](attribute:telefono_primario) di [REGGIO](cognome) (medico) ? 
+- in quale la [numero](attribute:telefono_primario) di [brescia](cognome) (medico) ? 
+- in quale il [telefono](attribute:telefono_primario) di [RUFFINO](cognome) (medico) ? 
+- in quale il [numero di telefono](attribute:telefono_primario) di [ricciardello](cognome) (medico) ? 
+- in quale il [numero](attribute:telefono_primario) di [Strigini](cognome) (medico) ? 
+- in quale il [numero](attribute:telefono_primario) di [Bertello](cognome) (medico) ? 
+- dimmi la [telefono](attribute:telefono_primario) di [maraschiello](cognome) (medico) ? 
+- dimmi la [numero di telefono](attribute:telefono_primario) di [Macli](cognome) (medico) ? 
+- dimmi la [numero](attribute:telefono_primario) di [speranza](cognome) (medico) ? 
+- dimmi il [telefono](attribute:telefono_primario) di [MIETTO](cognome) (medico) ? 
+- dimmi il [telefono](attribute:telefono_primario) di [Moro](cognome) (medico) ? 
+- dimmi il [numero di telefono](attribute:telefono_primario) di [AMOUR](cognome) (medico) ? 
+- dimmi il [numero di telefono](attribute:telefono_primario) di [vincelli](cognome) (medico) ? 
+- dimmi il [numero di telefono](attribute:telefono_primario) di [ramella paia](cognome) (medico) ? 
+- dimmi il [numero](attribute:telefono_primario) di [TARANTINI](cognome) (medico) ? 
+- vorrei sapere la [telefono](attribute:telefono_primario) di [carrozzo](cognome) (medico) ? 
+- vorrei sapere la [numero di telefono](attribute:telefono_primario) di [CASELLA](cognome) (medico) ? 
+- vorrei sapere la [numero](attribute:telefono_primario) di [VALARAUDI](cognome) (medico) ? 
+- vorrei sapere il [telefono](attribute:telefono_primario) di [MONTEMAGNO](cognome) (medico) ? 
+- vorrei sapere il [numero di telefono](attribute:telefono_primario) di [La mura](cognome) (medico) ? 
+- vorrei sapere il [numero di telefono](attribute:telefono_primario) di [GERACE](cognome) (medico) ? 
+- vorrei sapere il [numero](attribute:telefono_primario) di [POMPONIO](cognome) (medico) ? 
+- cerco la [telefono](attribute:telefono_primario) di [Gallello](cognome) (medico) ? 
+- cerco la [numero di telefono](attribute:telefono_primario) di [VIGNA](cognome) (medico) ? 
+- cerco la [numero](attribute:telefono_primario) di [papini](cognome) (medico) ? 
+- cerco il [telefono](attribute:telefono_primario) di [Spinelli](cognome) (medico) ? 
+- cerco il [numero di telefono](attribute:telefono_primario) di [Fissore](cognome) (medico) ? 
+- cerco il [numero di telefono](attribute:telefono_primario) di [BERTOLA](cognome) (medico) ? 
+- cerco il [numero di telefono](attribute:telefono_primario) di [BADAWIYAH](cognome) (medico) ? 
+- cerco il [numero](attribute:telefono_primario) di [delzanno](cognome) (medico) ? 
+- [macedone](cognome) (medico) in quale [città](attribute:denom_comune) opera ? 
+- [Gado](cognome) (medico) quale [comune](attribute:denom_comune) è ? 
+- [Zanotto](cognome) (medico) dove [città](attribute:denom_comune) ha ? 
+- [Lucca](cognome) (medico) dove [citta](attribute:denom_comune) lavora ? 
+- [apparete](cognome) (medico) in quale [citta](attribute:denom_comune) lo trovo ? 
+- [LOSPINUSO](cognome) (medico) dove [citta](attribute:denom_comune) lo trovo ? 
+- [AUTILIO](cognome) (medico) quale [comune](attribute:denom_comune) ha ? 
+- [CESARIO](cognome) (medico) dove [citta](attribute:denom_comune) è ? 
+- [oliverio](cognome) (medico) quale [comune](attribute:denom_comune) lo trovo ? 
+- [lovera](cognome) (medico) dove [città](attribute:denom_comune) opera ? 
+- [AIRALDI](cognome) (medico) dove [citta](attribute:denom_comune) ha ? 
+- [de leo](cognome) (medico) dove [città](attribute:denom_comune) lo trovo ? 
+- [lacchia](cognome) (medico) dove [città](attribute:denom_comune) opera ? 
+- [CAPALBO](cognome) (medico) quale [comune](attribute:denom_comune) lavora ? 
+- [novaresio](cognome) (medico) in quale [comune](attribute:denom_comune) lavora ? 
+- [Murri](cognome) (medico) dove [comune](attribute:denom_comune) lo trovo ? 
+- [Fantoni](cognome) (medico) quale [citta](attribute:denom_comune) lo trovo ? 
+- [rattalino](cognome) (medico) dove [comune](attribute:denom_comune) è ? 
+- [Roberto](cognome) (medico) in quale [comune](attribute:denom_comune) c'è ? 
+- [MARTA](cognome) (medico) in quale [città](attribute:denom_comune) ha ? 
+- [cena](cognome) (medico) quale [città](attribute:denom_comune) è ? 
+- [borsati](cognome) (medico) quale [citta](attribute:denom_comune) lavora ? 
+- [bordone](cognome) (medico) quale [citta](attribute:denom_comune) opera ? 
+- [chiodo](cognome) (medico) in quale [città](attribute:denom_comune) c'è ? 
+- [rostagno](cognome) (medico) dove [comune](attribute:denom_comune) ha ? 
+- [CAPPELLETTO](cognome) (medico) dove [comune](attribute:denom_comune) lavora ? 
+- [becchis](cognome) (medico) in quale [comune](attribute:denom_comune) ha ? 
+- [iurato](cognome) (medico) dove [città](attribute:denom_comune) lavora ? 
+- [PALERMITI](cognome) (medico) in quale [citta](attribute:denom_comune) ha ? 
+- [Caramello](cognome) (medico) dove [citta](attribute:denom_comune) c'è ? 
+- [Moglia](cognome) (medico) quale [citta](attribute:denom_comune) ha ? 
+- [bosa](cognome) (medico) quale [città](attribute:denom_comune) lo trovo ? 
+- [GIANOLIO](cognome) (medico) dove [città](attribute:denom_comune) è ? 
+- [Popescu](cognome) (medico) in quale [citta](attribute:denom_comune) è ? 
+- [RIZZI](cognome) (medico) dove [citta](attribute:denom_comune) opera ? 
+- [Fumagalli](cognome) (medico) dove [citta](attribute:denom_comune) c'è ? 
+- [Pezzo](cognome) (medico) dove [comune](attribute:denom_comune) c'è ? 
+- [bocchio ramazio](cognome) (medico) dove [città](attribute:denom_comune) c'è ? 
+- [Manfre](cognome) (medico) quale [città](attribute:denom_comune) ha ? 
+- [Furno marchese](cognome) (medico) in quale [città](attribute:denom_comune) lo trovo ? 
+- [Baccalaro](cognome) (medico) dove [città](attribute:denom_comune) opera ? 
+- [gobbi](cognome) (medico) dove [comune](attribute:denom_comune) ha ? 
+- [Sciarrabba](cognome) (medico) quale [citta](attribute:denom_comune) ha ? 
+- [Pero](cognome) (medico) in quale [citta](attribute:denom_comune) opera ? 
+- [Mafrici](cognome) (medico) in quale [citta](attribute:denom_comune) lavora ? 
+- [Branca](cognome) (medico) in quale [comune](attribute:denom_comune) opera ? 
+- [torino](cognome) (medico) in quale [città](attribute:denom_comune) è ? 
+- [PANEPINTO](cognome) (medico) in quale [comune](attribute:denom_comune) lavora ? 
+- [lerda](cognome) (medico) in quale [comune](attribute:denom_comune) è ? 
+- [Pacetti](cognome) (medico) quale [comune](attribute:denom_comune) opera ? 
+- [SAROTTO](cognome) (medico) quale [città](attribute:denom_comune) opera ? 
+- [ROBA](cognome) (medico) in quale [comune](attribute:denom_comune) lo trovo ? 
+- [Macchia](cognome) (medico) quale [città](attribute:denom_comune) lavora ? 
+- [novarese](cognome) (medico) in quale [comune](attribute:denom_comune) lavora ? 
+- [giacobbe](cognome) (medico) quale [citta](attribute:denom_comune) c'è ? 
+- [ADEM](cognome) (medico) quale [comune](attribute:denom_comune) opera ? 
+- [Zanotta](cognome) (medico) quale [città](attribute:denom_comune) c'è ? 
+- [bertone](cognome) (medico) dove [comune](attribute:denom_comune) opera ? 
+- [Zagaria](cognome) (medico) quale [citta](attribute:denom_comune) è ? 
+- [taheri](cognome) (medico) dove [città](attribute:denom_comune) opera ? 
+- [Solera gianolio](cognome) (medico) in quale [citta](attribute:denom_comune) lavora ? 
+- [rivoire](cognome) (medico) quale [città](attribute:denom_comune) opera ? 
+- [mortara](cognome) (medico) in quale [città](attribute:denom_comune) lavora ? 
+- [dompe](cognome) (medico) quale [comune](attribute:denom_comune) c'è ? 
+- [MASINI](cognome) (medico) in quale [citta](attribute:denom_comune) c'è ? 
+- [TRIONE](cognome) (medico) quale [numero](attribute:telefono_primario) è ? 
+- [AIMETTI](cognome) (medico) che [numero](attribute:telefono_primario) possiede ? 
+- [CIVALLERO](cognome) (medico) quale [telefono](attribute:telefono_primario) ha ? 
+- [Baldini](cognome) (medico) quale [numero](attribute:telefono_primario) ha ? 
+- [CANAVESI](cognome) (medico) che [telefono](attribute:telefono_primario) possiede ? 
+- [Boccardo](cognome) (medico) quale [telefono](attribute:telefono_primario) è ? 
+- [Perona](cognome) (medico) che [numero](attribute:telefono_primario) è ? 
+- [RAPELLO](cognome) (medico) che [numero](attribute:telefono_primario) è ? 
+- [canal](cognome) (medico) quale [numero](attribute:telefono_primario) possiede ? 
+- [CAGNOLI](cognome) (medico) che [numero](attribute:telefono_primario) ha ? 
+- [Nacca](cognome) (medico) quale [numero](attribute:telefono_primario) possiede ? 
+- [Bongioanni](cognome) (medico) quale [telefono](attribute:telefono_primario) è ? 
+- [rinaudo](cognome) (medico) quale [numero](attribute:telefono_primario) ha ? 
+- [Candido](cognome) (medico) che [telefono](attribute:telefono_primario) ha ? 
+- [Manzi](cognome) (medico) che [telefono](attribute:telefono_primario) è ? 
+- [pedemonte](cognome) (medico) che [numero](attribute:telefono_primario) è ? 
+- [Lorenzati](cognome) (medico) quale [numero](attribute:telefono_primario) ha ? 
+- [ARDITI](cognome) (medico) quale [telefono](attribute:telefono_primario) possiede ? 
+- [ZANINETTI](cognome) (medico) dove [via](attribute:indirizzo) c'è ? 
+- [GILI](cognome) (medico) dove [indirizzo](attribute:indirizzo) ha ? 
+- [FRANCHINO](cognome) (medico) in quale [indirizzo](attribute:indirizzo) lo trovo ? 
+- [Caruso](cognome) (medico) dove [via](attribute:indirizzo) è ? 
+- [Topircean](cognome) (medico) a quale [indirizzo](attribute:indirizzo) è ? 
+- [MODAFFARI](cognome) (medico) in quale [via](attribute:indirizzo) c'è ? 
+- [Di todaro](cognome) (medico) dove [indirizzo](attribute:indirizzo) lo trovo ? 
+- [Soligo](cognome) (medico) dove [via](attribute:indirizzo) lo trovo ? 
+- [sibona](cognome) (medico) a quale [indirizzo](attribute:indirizzo) lo trovo ? 
+- [MARITANO](cognome) (medico) in quale [indirizzo](attribute:indirizzo) è ? 
+- [Pescarolo](cognome) (medico) dove [via](attribute:indirizzo) ha ? 
+- [CAVALLARI](cognome) (medico) a quale [via](attribute:indirizzo) lo trovo ? 
+- [Picollo](cognome) (medico) in quale [via](attribute:indirizzo) è ? 
+- [Versaci](cognome) (medico) a quale [via](attribute:indirizzo) possiede ? 
+- [MERCALLI](cognome) (medico) in quale [via](attribute:indirizzo) ha ? 
+- [BERTA](cognome) (medico) dove [indirizzo](attribute:indirizzo) è ? 
+- [carosso](cognome) (medico) dove [indirizzo](attribute:indirizzo) c'è ? 
+- [rayneri](cognome) (medico) a quale [via](attribute:indirizzo) è ? 
+- [Roero](cognome) (medico) a quale [via](attribute:indirizzo) c'è ? 
+- [Miotello](cognome) (medico) a quale [indirizzo](attribute:indirizzo) possiede ? 
+- [Tamburin](cognome) (medico) a quale [indirizzo](attribute:indirizzo) possiede ? 
+- [RUGA](cognome) (medico) a quale [via](attribute:indirizzo) ha ? 
+- [Momo](cognome) (medico) in quale [indirizzo](attribute:indirizzo) c'è ? 
+- [bargeri](cognome) (medico) in quale [indirizzo](attribute:indirizzo) c'è ? 
+- [Masone](cognome) (medico) a quale [indirizzo](attribute:indirizzo) c'è ? 
+- [formaggio](cognome) (medico) dove [via](attribute:indirizzo) possiede ? 
+- [pistone](cognome) (medico) in quale [indirizzo](attribute:indirizzo) ha ? 
+- [CROPPI](cognome) (medico) dove [indirizzo](attribute:indirizzo) possiede ? 
+- [Cucchiara](cognome) (medico) in quale [indirizzo](attribute:indirizzo) ha ? 
+- [INGEGNEROS](cognome) (medico) a quale [indirizzo](attribute:indirizzo) ha ? 
+- [buniva](cognome) (medico) dove [indirizzo](attribute:indirizzo) lo trovo ? 
+- [BECHIS](cognome) (medico) in quale [via](attribute:indirizzo) possiede ? 
+- [terranova](cognome) (medico) in quale [via](attribute:indirizzo) lo trovo ? 
+- [MARASCIO](cognome) (medico) dove [indirizzo](attribute:indirizzo) c'è ? 
+- [Livorno](cognome) (medico) dove [indirizzo](attribute:indirizzo) lo trovo ? 
+- [COLUCCIO](cognome) (medico) in quale [indirizzo](attribute:indirizzo) possiede ? 
+- [secondo](mention:2) quale [email](attribute) c'è ? 
+- [terzo](mention:3) in quale [email](attribute) ha ? 
+- [terzo](mention:3) in quale [distretto](attribute) lo trovo ? 
+- [terzo](mention:3) quale [email](attribute) lo trovo ? 
+- [terzo](mention:3) quale [email](attribute) è ? 
+- [quest'ultimo](mention:LAST) in quale [distretto](attribute) ha ? 
+- [quinto](mention:5) in quale [email](attribute) possiede ? 
+- [sesto](mention:6) in quale [email](attribute) c'è ? 
+- [sesto](mention:6) in quale [distretto](attribute) possiede ? 
+- [sesto](mention:6) quale [email](attribute) possiede ? 
+- [settimo](mention:7) in quale [distretto](attribute) è ? 
+- [settimo](mention:7) quale [email](attribute) ha ? 
+- [ottavo](mention:8) in quale [email](attribute) è ? 
+- [ottavo](mention:8) in quale [distretto](attribute) c'è ? 
+- [ottavo](mention:8) quale [distretto](attribute) è ? 
+- [nono](mention:9) in quale [email](attribute) lo trovo ? 
+- [nono](mention:9) quale [email](attribute) ha ? 
+- [nono](mention:9) quale [distretto](attribute) lo trovo ? 
+- [nono](mention:9) quale [distretto](attribute) c'è ? 
+- [decimo](mention:10) quale [email](attribute) possiede ? 
+- [decimo](mention:10) quale [distretto](attribute) ha ? 
+- [3](mention) quale [distretto](attribute) possiede ? 
+- e [indirizzo](attribute) ? 
+- e [civico](attribute:numero_civico) ? 
+- il [civico](attribute:numero_civico) ? 
+- sua [civico](attribute:numero_civico) ? 
+- la [telefono](attribute) ? 
+- il [telefono](attribute) ? 
+- suo [email](attribute:indirizzo_email) ? 
+- sua [telefono](attribute) ? 
+- sua [numero](attribute:telefono_primario) ? 
+- il [distretto](attribute:cod_distretto) ? 
+- suo [distretto](attribute:cod_distretto) ? 
+- sua [comune](attribute:denom_comune) ? 
+- quanti sono i [posti disponibili](attribute:posti_disponibili) di [FRASCA](cognome) (medico) 
+- quanti sono i [posti](attribute:posti_disponibili] di [bramante](cognome) (medico) 
 
 ## intent:query_knowledge_list
-- che [medico](object_type) mi consiglieresti  a [NOVARA](comune)?
-- elencami alcuni [medici](object_type:medico) a [MERANA](comune)
-- mi puoi nominare alcuni [medici](object_type:medico) per favore?
-- mi puoi mostrare alcuni [medici](object_type:medico) a [PARETO](comune) ?
-- elencami dei [medici](object_type:medico) che operano nel distretto [5](distretto)
-- quale [dottoressa](object_type:medico) ha lo studio a [VERCELLI](comune) ?
-- conosci anche alcuni [medici](object_type:medico) in [via nizza](indirizzo:VIA NIZZA) a [CARAGLIO](comune) ?
-- cerco gli [orari](object_type:orario) dell'ambulatorio a [CUNEO](comune) 
-- cerco gli [ambulatori](object_type:ambulatorio) che sono aperti dalle [10:00](ora_inizio)
-- che [medici](object_type:medico) conosci a [DOMODOSSOLA](comune) ?
-- nominami alcuni [dottori](object_type:medico) ad [ASTI](comune)
-- che [medici](object_type:medico) ci sono a [SCOPELLO](comune)
-- che [medici](object_type:medico) mi consiglieresti a [OCCIMIANO](comune)?
-- che [medici](object_type:medico) miconsiglieresti a [CINZANO](comune)?
-- mi puoi elencare alcuni [medici](object_type:medico) che operano fino alle  [18:00](ora_fine)?
-- mi puoi dire gli [ambulatori](object_type:ambulatorio) che operano a [TORINO](comune)?
-- mi puoi dire gli [orari](object_type:orario) che svolge il dr [BUONANIMA](cognome)?
-- quale [dottoressa](object_type:medico) ha lo studio a [CASTIGLIONE FALLETTO](comune)?
+- quali [medici](object_type:medico) sono nel comune di [10100](cap) ? 
+- quali [medici](object_type:medico) lavorano nel comune di [10154](cap) ? 
+- quali [medici](object_type:medico) lavorano nel comune di [10050](cap) ? 
+- quali [medici](object_type:medico) conosci nel comune di [12025](cap) ? 
+- quali [medici](object_type:medico) elenco nel comune di [10040](cap) ? 
+- quali [medici](object_type:medico) elencami nel comune di [10147](cap) ? 
+- quali [dottore](object_type:medico) sono nel comune di [10135](cap) ? 
+- quali [dottore](object_type:medico) lavorano nel comune di [10126](cap) ? 
+- quali [dottore](object_type:medico) conosci nel comune di [10143](cap) ? 
+- quali [dottore](object_type:medico) elenco nel comune di [28069](cap) ? 
+- quali [dottore](object_type:medico) elencami nel comune di [12040](cap) ? 
+- quali [dottoresse](object_type:medico) sono nel comune di [14058](cap) ? 
+- quali [dottoresse](object_type:medico) lavorano nel comune di [10141](cap) ? 
+- quali [dottoresse](object_type:medico) conosci nel comune di [13836](cap) ? 
+- quali [dottoresse](object_type:medico) elenco nel comune di [10083](cap) ? 
+- quali [dottoresse](object_type:medico) elencami nel comune di [28061](cap) ? 
+- quali [dottoressa](object_type:medico) sono nel comune di [12051](cap) ? 
+- quali [dottoressa](object_type:medico) sono nel comune di [14010](cap) ? 
+- quali [dottoressa](object_type:medico) lavorano nel comune di [10137](cap) ? 
+- quali [dottoressa](object_type:medico) conosci nel comune di [12100](cap) ? 
+- quali [dottoressa](object_type:medico) elenco nel comune di [15023](cap) ? 
+- quali [dottoressa](object_type:medico) elencami nel comune di [10042](cap) ? 
+- quali [dottori](object_type:medico) sono nel comune di [10044](cap) ? 
+- quali [dottori](object_type:medico) lavorano nel comune di [10040](cap) ? 
+- quali [dottori](object_type:medico) conosci nel comune di [12100](cap) ? 
+- quali [dottori](object_type:medico) elenco nel comune di [12030](cap) ? 
+- quali [dottori](object_type:medico) elencami nel comune di [10044](cap) ? 
+- quali [dottori](object_type:medico) elencami nel comune di [12061](cap) ? 
+- quali [ambulatori](object_type:ambulatorio) sono nel comune di [10127](cap) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano nel comune di [12020](cap) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci nel comune di [10050](cap) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco nel comune di [15047](cap) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami nel comune di [28075](cap) ? 
+- quali [lavora](object_type:medico) sono nel comune di [10088](cap) ? 
+- quali [lavora](object_type:medico) lavorano nel comune di [12042](cap) ? 
+- quali [lavora](object_type:medico) conosci nel comune di [10071](cap) ? 
+- quali [lavora](object_type:medico) elenco nel comune di [10149](cap) ? 
+- quali [lavora](object_type:medico) elencami nel comune di [15030](cap) ? 
+- chi [medici](object_type:medico) sono nel comune di [10024](cap) ? 
+- chi [medici](object_type:medico) lavorano nel comune di [10126](cap) ? 
+- chi [medici](object_type:medico) lavorano nel comune di [13011](cap) ? 
+- chi [medici](object_type:medico) lavorano nel comune di [13895](cap) ? 
+- chi [medici](object_type:medico) lavorano nel comune di [28010](cap) ? 
+- chi [medici](object_type:medico) lavorano nel comune di [28862](cap) ? 
+- chi [medici](object_type:medico) lavorano nel comune di [10147](cap) ? 
+- chi [medici](object_type:medico) conosci nel comune di [10040](cap) ? 
+- chi [medici](object_type:medico) conosci nel comune di [10023](cap) ? 
+- chi [medici](object_type:medico) elenco nel comune di [10060](cap) ? 
+- chi [medici](object_type:medico) elenco nel comune di [15016](cap) ? 
+- chi [medici](object_type:medico) elencami nel comune di [12033](cap) ? 
+- chi [medici](object_type:medico) elencami nel comune di [14030](cap) ? 
+- chi [dottore](object_type:medico) sono nel comune di [12040](cap) ? 
+- chi [dottore](object_type:medico) lavorano nel comune di [10040](cap) ? 
+- chi [dottore](object_type:medico) conosci nel comune di [13048](cap) ? 
+- chi [dottore](object_type:medico) elenco nel comune di [10135](cap) ? 
+- chi [dottore](object_type:medico) elencami nel comune di [12100](cap) ? 
+- chi [dottoresse](object_type:medico) sono nel comune di [15020](cap) ? 
+- chi [dottoresse](object_type:medico) lavorano nel comune di [15060](cap) ? 
+- chi [dottoresse](object_type:medico) conosci nel comune di [28845](cap) ? 
+- chi [dottoresse](object_type:medico) elenco nel comune di [12037](cap) ? 
+- chi [dottoresse](object_type:medico) elencami nel comune di [10036](cap) ? 
+- chi [dottoresse](object_type:medico) elencami nel comune di [10090](cap) ? 
+- chi [dottoresse](object_type:medico) elencami nel comune di [10024](cap) ? 
+- chi [dottoressa](object_type:medico) sono nel comune di [28041](cap) ? 
+- chi [dottoressa](object_type:medico) lavorano nel comune di [14012](cap) ? 
+- chi [dottoressa](object_type:medico) conosci nel comune di [12043](cap) ? 
+- chi [dottoressa](object_type:medico) elenco nel comune di [28060](cap) ? 
+- chi [dottoressa](object_type:medico) elencami nel comune di [10023](cap) ? 
+- chi [dottori](object_type:medico) sono nel comune di [12050](cap) ? 
+- chi [dottori](object_type:medico) sono nel comune di [12056](cap) ? 
+- chi [dottori](object_type:medico) sono nel comune di [12051](cap) ? 
+- chi [dottori](object_type:medico) lavorano nel comune di [12051](cap) ? 
+- chi [dottori](object_type:medico) conosci nel comune di [10137](cap) ? 
+- chi [dottori](object_type:medico) elenco nel comune di [13856](cap) ? 
+- chi [dottori](object_type:medico) elenco nel comune di [12035](cap) ? 
+- chi [dottori](object_type:medico) elenco nel comune di [28010](cap) ? 
+- chi [dottori](object_type:medico) elencami nel comune di [10077](cap) ? 
+- chi [dottori](object_type:medico) elencami nel comune di [12051](cap) ? 
+- chi [ambulatori](object_type:ambulatorio) sono nel comune di [10098](cap) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano nel comune di [10135](cap) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci nel comune di [10123](cap) ? 
+- chi [ambulatori](object_type:ambulatorio) elenco nel comune di [12065](cap) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami nel comune di [13043](cap) ? 
+- chi [lavora](object_type:medico) sono nel comune di [10095](cap) ? 
+- chi [lavora](object_type:medico) lavorano nel comune di [10059](cap) ? 
+- chi [lavora](object_type:medico) conosci nel comune di [28069](cap) ? 
+- chi [lavora](object_type:medico) elenco nel comune di [13853](cap) ? 
+- chi [lavora](object_type:medico) elenco nel comune di [10034](cap) ? 
+- chi [lavora](object_type:medico) elencami nel comune di [10073](cap) ? 
+- cerco i [medici](object_type:medico) sono nel comune di [10036](cap) ? 
+- cerco i [medici](object_type:medico) lavorano nel comune di [10040](cap) ? 
+- cerco i [medici](object_type:medico) lavorano nel comune di [10070](cap) ? 
+- cerco i [medici](object_type:medico) conosci nel comune di [28040](cap) ? 
+- cerco i [medici](object_type:medico) conosci nel comune di [28100](cap) ? 
+- cerco i [medici](object_type:medico) conosci nel comune di [12020](cap) ? 
+- cerco i [medici](object_type:medico) elenco nel comune di [15016](cap) ? 
+- cerco i [medici](object_type:medico) elencami nel comune di [13100](cap) ? 
+- cerco i [dottore](object_type:medico) sono nel comune di [10098](cap) ? 
+- cerco i [dottore](object_type:medico) lavorano nel comune di [12060](cap) ? 
+- cerco i [dottore](object_type:medico) conosci nel comune di [10092](cap) ? 
+- cerco i [dottore](object_type:medico) elenco nel comune di [15010](cap) ? 
+- cerco i [dottore](object_type:medico) elencami nel comune di [13043](cap) ? 
+- cerco i [dottoresse](object_type:medico) sono nel comune di [12016](cap) ? 
+- cerco i [dottoresse](object_type:medico) lavorano nel comune di [10135](cap) ? 
+- cerco i [dottoresse](object_type:medico) conosci nel comune di [10132](cap) ? 
+- cerco i [dottoresse](object_type:medico) elenco nel comune di [10026](cap) ? 
+- cerco i [dottoresse](object_type:medico) elencami nel comune di [10040](cap) ? 
+- cerco i [dottoressa](object_type:medico) sono nel comune di [12042](cap) ? 
+- cerco i [dottoressa](object_type:medico) sono nel comune di [15048](cap) ? 
+- cerco i [dottoressa](object_type:medico) lavorano nel comune di [15121](cap) ? 
+- cerco i [dottoressa](object_type:medico) conosci nel comune di [10024](cap) ? 
+- cerco i [dottoressa](object_type:medico) elenco nel comune di [10123](cap) ? 
+- cerco i [dottoressa](object_type:medico) elencami nel comune di [14044](cap) ? 
+- cerco i [dottori](object_type:medico) sono nel comune di [15033](cap) ? 
+- cerco i [dottori](object_type:medico) lavorano nel comune di [28100](cap) ? 
+- cerco i [dottori](object_type:medico) conosci nel comune di [28047](cap) ? 
+- cerco i [dottori](object_type:medico) elenco nel comune di [14030](cap) ? 
+- cerco i [dottori](object_type:medico) elenco nel comune di [10135](cap) ? 
+- cerco i [dottori](object_type:medico) elencami nel comune di [10035](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono nel comune di [10064](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano nel comune di [10145](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) conosci nel comune di [12069](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco nel comune di [13045](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco nel comune di [12043](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami nel comune di [13039](cap) ? 
+- cerco i [lavora](object_type:medico) sono nel comune di [28814](cap) ? 
+- cerco i [lavora](object_type:medico) lavorano nel comune di [10045](cap) ? 
+- cerco i [lavora](object_type:medico) lavorano nel comune di [10073](cap) ? 
+- cerco i [lavora](object_type:medico) conosci nel comune di [10022](cap) ? 
+- cerco i [lavora](object_type:medico) conosci nel comune di [10084](cap) ? 
+- cerco i [lavora](object_type:medico) elenco nel comune di [10146](cap) ? 
+- cerco i [lavora](object_type:medico) elencami nel comune di [10095](cap) ? 
+- cerco le [medici](object_type:medico) sono nel comune di [13900](cap) ? 
+- cerco le [medici](object_type:medico) lavorano nel comune di [12040](cap) ? 
+- cerco le [medici](object_type:medico) conosci nel comune di [10126](cap) ? 
+- cerco le [medici](object_type:medico) elenco nel comune di [13040](cap) ? 
+- cerco le [medici](object_type:medico) elencami nel comune di [10098](cap) ? 
+- cerco le [dottore](object_type:medico) sono nel comune di [12050](cap) ? 
+- cerco le [dottore](object_type:medico) lavorano nel comune di [10030](cap) ? 
+- cerco le [dottore](object_type:medico) conosci nel comune di [10143](cap) ? 
+- cerco le [dottore](object_type:medico) elenco nel comune di [13900](cap) ? 
+- cerco le [dottore](object_type:medico) elencami nel comune di [15016](cap) ? 
+- cerco le [dottoresse](object_type:medico) sono nel comune di [10048](cap) ? 
+- cerco le [dottoresse](object_type:medico) sono nel comune di [12081](cap) ? 
+- cerco le [dottoresse](object_type:medico) lavorano nel comune di [10020](cap) ? 
+- cerco le [dottoresse](object_type:medico) conosci nel comune di [13825](cap) ? 
+- cerco le [dottoresse](object_type:medico) conosci nel comune di [15067](cap) ? 
+- cerco le [dottoresse](object_type:medico) elenco nel comune di [10139](cap) ? 
+- cerco le [dottoresse](object_type:medico) elencami nel comune di [0](cap) ? 
+- cerco le [dottoressa](object_type:medico) sono nel comune di [13021](cap) ? 
+- cerco le [dottoressa](object_type:medico) lavorano nel comune di [10036](cap) ? 
+- cerco le [dottoressa](object_type:medico) conosci nel comune di [10022](cap) ? 
+- cerco le [dottoressa](object_type:medico) elenco nel comune di [10051](cap) ? 
+- cerco le [dottoressa](object_type:medico) elencami nel comune di [10137](cap) ? 
+- cerco le [dottori](object_type:medico) sono nel comune di [15076](cap) ? 
+- cerco le [dottori](object_type:medico) lavorano nel comune di [14036](cap) ? 
+- cerco le [dottori](object_type:medico) lavorano nel comune di [10149](cap) ? 
+- cerco le [dottori](object_type:medico) conosci nel comune di [10040](cap) ? 
+- cerco le [dottori](object_type:medico) elenco nel comune di [10143](cap) ? 
+- cerco le [dottori](object_type:medico) elencami nel comune di [15121](cap) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono nel comune di [15121](cap) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano nel comune di [10063](cap) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci nel comune di [12057](cap) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elenco nel comune di [10064](cap) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elenco nel comune di [10036](cap) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami nel comune di [28021](cap) ? 
+- cerco le [lavora](object_type:medico) sono nel comune di [10082](cap) ? 
+- cerco le [lavora](object_type:medico) lavorano nel comune di [10022](cap) ? 
+- cerco le [lavora](object_type:medico) conosci nel comune di [14049](cap) ? 
+- cerco le [lavora](object_type:medico) elenco nel comune di [10133](cap) ? 
+- cerco le [lavora](object_type:medico) elencami nel comune di [10020](cap) ? 
+- cerco le [lavora](object_type:medico) elencami nel comune di [14019](cap) ? 
+- cerco le [lavora](object_type:medico) elencami nel comune di [15067](cap) ? 
+- quali [medici](object_type:medico) sono nel comune di [ostana](denom_comune) ? 
+- quali [medici](object_type:medico) lavorano nel comune di [Viale d asti](denom_comune) ? 
+- quali [medici](object_type:medico) conosci nel comune di [FOBELLO](denom_comune) ? 
+- quali [medici](object_type:medico) elenco nel comune di [BORGONE SUSA](denom_comune) ? 
+- quali [medici](object_type:medico) elencami nel comune di [Roaschia](denom_comune) ? 
+- quali [dottore](object_type:medico) sono nel comune di [Sizzano](denom_comune) ? 
+- quali [dottore](object_type:medico) lavorano nel comune di [PINO D ASTI](denom_comune) ? 
+- quali [dottore](object_type:medico) conosci nel comune di [GRIGNASCO](denom_comune) ? 
+- quali [dottore](object_type:medico) elenco nel comune di [felizzano](denom_comune) ? 
+- quali [dottore](object_type:medico) elencami nel comune di [MONTALTO DORA](denom_comune) ? 
+- quali [dottoresse](object_type:medico) sono nel comune di [CREVACUORE](denom_comune) ? 
+- quali [dottoresse](object_type:medico) lavorano nel comune di [bra](denom_comune) ? 
+- quali [dottoresse](object_type:medico) conosci nel comune di [SAN MAURIZIO CANAVESE](denom_comune) ? 
+- quali [dottoresse](object_type:medico) elenco nel comune di [boves](denom_comune) ? 
+- quali [dottoresse](object_type:medico) elencami nel comune di [arignano](denom_comune) ? 
+- quali [dottoressa](object_type:medico) sono nel comune di [Castellino tanaro](denom_comune) ? 
+- quali [dottoressa](object_type:medico) lavorano nel comune di [beura cardezza](denom_comune) ? 
+- quali [dottoressa](object_type:medico) conosci nel comune di [Cortazzone](denom_comune) ? 
+- quali [dottoressa](object_type:medico) elenco nel comune di [RIFREDDO](denom_comune) ? 
+- quali [dottoressa](object_type:medico) elencami nel comune di [Carignano](denom_comune) ? 
+- quali [dottori](object_type:medico) sono nel comune di [PIOBESI TORINESE](denom_comune) ? 
+- quali [dottori](object_type:medico) lavorano nel comune di [RUBIANA](denom_comune) ? 
+- quali [dottori](object_type:medico) lavorano nel comune di [QUARANTI](denom_comune) ? 
+- quali [dottori](object_type:medico) conosci nel comune di [PREDOSA](denom_comune) ? 
+- quali [dottori](object_type:medico) elenco nel comune di [SALUSSOLA](denom_comune) ? 
+- quali [dottori](object_type:medico) elencami nel comune di [SAGLIANO MICCA](denom_comune) ? 
+- quali [dottori](object_type:medico) elencami nel comune di [COSTA VESCOVATO](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) sono nel comune di [MONCALVO](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) sono nel comune di [grazzano badoglio](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano nel comune di [STRESA](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci nel comune di [faule](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco nel comune di [montescheno](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami nel comune di [PECETTO DI VALENZA](denom_comune) ? 
+- quali [lavora](object_type:medico) sono nel comune di [OVADA](denom_comune) ? 
+- quali [lavora](object_type:medico) lavorano nel comune di [Alzano scrivia](denom_comune) ? 
+- quali [lavora](object_type:medico) conosci nel comune di [Castelletto molina](denom_comune) ? 
+- quali [lavora](object_type:medico) conosci nel comune di [MONTALDO SCARAMPI](denom_comune) ? 
+- quali [lavora](object_type:medico) elenco nel comune di [QUATTORDIO](denom_comune) ? 
+- quali [lavora](object_type:medico) elencami nel comune di [ronco biellese](denom_comune) ? 
+- chi [medici](object_type:medico) sono nel comune di [Cerreto castello](denom_comune) ? 
+- chi [medici](object_type:medico) lavorano nel comune di [VILLANOVA D ASTI](denom_comune) ? 
+- chi [medici](object_type:medico) conosci nel comune di [VESTIGNE](denom_comune) ? 
+- chi [medici](object_type:medico) elenco nel comune di [Mango](denom_comune) ? 
+- chi [medici](object_type:medico) elencami nel comune di [MOMBELLO DI TORINO](denom_comune) ? 
+- chi [dottore](object_type:medico) sono nel comune di [ROLETTO](denom_comune) ? 
+- chi [dottore](object_type:medico) lavorano nel comune di [villalvernia](denom_comune) ? 
+- chi [dottore](object_type:medico) conosci nel comune di [carentino](denom_comune) ? 
+- chi [dottore](object_type:medico) elenco nel comune di [GHIFFA](denom_comune) ? 
+- chi [dottore](object_type:medico) elencami nel comune di [Briona](denom_comune) ? 
+- chi [dottoresse](object_type:medico) sono nel comune di [VERUNO](denom_comune) ? 
+- chi [dottoresse](object_type:medico) sono nel comune di [alice bel colle](denom_comune) ? 
+- chi [dottoresse](object_type:medico) lavorano nel comune di [Fabbrica curone](denom_comune) ? 
+- chi [dottoresse](object_type:medico) conosci nel comune di [Crosa](denom_comune) ? 
+- chi [dottoresse](object_type:medico) elenco nel comune di [CASTELLETTO SOPRA TICINO](denom_comune) ? 
+- chi [dottoresse](object_type:medico) elencami nel comune di [front](denom_comune) ? 
+- chi [dottoressa](object_type:medico) sono nel comune di [Cavallerleone](denom_comune) ? 
+- chi [dottoressa](object_type:medico) lavorano nel comune di [DRUOGNO](denom_comune) ? 
+- chi [dottoressa](object_type:medico) conosci nel comune di [Bossolasco](denom_comune) ? 
+- chi [dottoressa](object_type:medico) elenco nel comune di [strambinello](denom_comune) ? 
+- chi [dottoressa](object_type:medico) elencami nel comune di [TRINO](denom_comune) ? 
+- chi [dottori](object_type:medico) sono nel comune di [LENTA](denom_comune) ? 
+- chi [dottori](object_type:medico) lavorano nel comune di [Bruzolo](denom_comune) ? 
+- chi [dottori](object_type:medico) conosci nel comune di [Postua](denom_comune) ? 
+- chi [dottori](object_type:medico) elenco nel comune di [Demonte](denom_comune) ? 
+- chi [dottori](object_type:medico) elenco nel comune di [GATTICO](denom_comune) ? 
+- chi [dottori](object_type:medico) elenco nel comune di [OTTIGLIO](denom_comune) ? 
+- chi [dottori](object_type:medico) elencami nel comune di [Pezzana](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) sono nel comune di [sinio](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano nel comune di [CAVAGLIETTO](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci nel comune di [CASTELLAZZO NOVARESE](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) elenco nel comune di [arola](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami nel comune di [Vaprio d agogna](denom_comune) ? 
+- chi [lavora](object_type:medico) sono nel comune di [san bernardino verbano](denom_comune) ? 
+- chi [lavora](object_type:medico) lavorano nel comune di [GATTINARA](denom_comune) ? 
+- chi [lavora](object_type:medico) conosci nel comune di [VOLPEDO](denom_comune) ? 
+- chi [lavora](object_type:medico) elenco nel comune di [Bassignana](denom_comune) ? 
+- chi [lavora](object_type:medico) elencami nel comune di [AMENO](denom_comune) ? 
+- cerco i [medici](object_type:medico) sono nel comune di [Miasino](denom_comune) ? 
+- cerco i [medici](object_type:medico) lavorano nel comune di [antignano](denom_comune) ? 
+- cerco i [medici](object_type:medico) lavorano nel comune di [GRONDONA](denom_comune) ? 
+- cerco i [medici](object_type:medico) conosci nel comune di [CEVA](denom_comune) ? 
+- cerco i [medici](object_type:medico) elenco nel comune di [Quagliuzzo](denom_comune) ? 
+- cerco i [medici](object_type:medico) elencami nel comune di [Somano](denom_comune) ? 
+- cerco i [dottore](object_type:medico) sono nel comune di [RUBIANA](denom_comune) ? 
+- cerco i [dottore](object_type:medico) lavorano nel comune di [MONTICELLO D ALBA](denom_comune) ? 
+- cerco i [dottore](object_type:medico) conosci nel comune di [canelli](denom_comune) ? 
+- cerco i [dottore](object_type:medico) elenco nel comune di [casalbeltrame](denom_comune) ? 
+- cerco i [dottore](object_type:medico) elencami nel comune di [dormelletto](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) sono nel comune di [MONCALIERI](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) lavorano nel comune di [Rivalta di torino](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) lavorano nel comune di [mombaldone](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) lavorano nel comune di [CASTELLETTO MERLI](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) conosci nel comune di [morano sul po](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) conosci nel comune di [cintano](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) conosci nel comune di [MONTA](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) elenco nel comune di [Ponderano](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) elencami nel comune di [San marzano oliveto](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) sono nel comune di [morbello](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) lavorano nel comune di [Vinovo](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) conosci nel comune di [La morra](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) elenco nel comune di [Feisoglio](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) elencami nel comune di [massazza](denom_comune) ? 
+- cerco i [dottori](object_type:medico) sono nel comune di [AGRATE CONTURBIA](denom_comune) ? 
+- cerco i [dottori](object_type:medico) lavorano nel comune di [Cortandone](denom_comune) ? 
+- cerco i [dottori](object_type:medico) conosci nel comune di [mondovi](denom_comune) ? 
+- cerco i [dottori](object_type:medico) elenco nel comune di [MONTEU DA PO](denom_comune) ? 
+- cerco i [dottori](object_type:medico) elencami nel comune di [CELLA MONTE](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono nel comune di [PINO D ASTI](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano nel comune di [lusiglie](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) conosci nel comune di [Bene vagienna](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco nel comune di [Maglione](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami nel comune di [gabiano](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami nel comune di [Rocca grimalda](denom_comune) ? 
+- cerco i [lavora](object_type:medico) sono nel comune di [CAMBURZANO](denom_comune) ? 
+- cerco i [lavora](object_type:medico) lavorano nel comune di [tarantasca](denom_comune) ? 
+- cerco i [lavora](object_type:medico) conosci nel comune di [VARALLO](denom_comune) ? 
+- cerco i [lavora](object_type:medico) elenco nel comune di [Lanzo torinese](denom_comune) ? 
+- cerco i [lavora](object_type:medico) elencami nel comune di [SAN GIORGIO SCARAMPI](denom_comune) ? 
+- cerco le [medici](object_type:medico) sono nel comune di [OGLIANICO](denom_comune) ? 
+- cerco le [medici](object_type:medico) lavorano nel comune di [castino](denom_comune) ? 
+- cerco le [medici](object_type:medico) conosci nel comune di [Oldenico](denom_comune) ? 
+- cerco le [medici](object_type:medico) elenco nel comune di [Pettenasco](denom_comune) ? 
+- cerco le [medici](object_type:medico) elenco nel comune di [Pietraporzio](denom_comune) ? 
+- cerco le [medici](object_type:medico) elencami nel comune di [rocchetta palafea](denom_comune) ? 
+- cerco le [medici](object_type:medico) elencami nel comune di [grignasco](denom_comune) ? 
+- cerco le [medici](object_type:medico) elencami nel comune di [mombercelli](denom_comune) ? 
+- cerco le [dottore](object_type:medico) sono nel comune di [bassignana](denom_comune) ? 
+- cerco le [dottore](object_type:medico) lavorano nel comune di [vialfre](denom_comune) ? 
+- cerco le [dottore](object_type:medico) conosci nel comune di [CAREZZANO](denom_comune) ? 
+- cerco le [dottore](object_type:medico) elenco nel comune di [sandigliano](denom_comune) ? 
+- cerco le [dottore](object_type:medico) elencami nel comune di [Groscavallo](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) sono nel comune di [Bibiana](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) sono nel comune di [crissolo](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) lavorano nel comune di [trecate](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) lavorano nel comune di [Nizza monferrato](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) lavorano nel comune di [Villanova biellese](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) conosci nel comune di [feisoglio](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) elenco nel comune di [Rivalta di torino](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) elencami nel comune di [Prazzo](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) sono nel comune di [Viguzzolo](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) lavorano nel comune di [POMBIA](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) conosci nel comune di [vinchio](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) elenco nel comune di [Susa](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) elenco nel comune di [Viale d asti](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) elencami nel comune di [camagna monferrato](denom_comune) ? 
+- cerco le [dottori](object_type:medico) sono nel comune di [Arquata scrivia](denom_comune) ? 
+- cerco le [dottori](object_type:medico) lavorano nel comune di [Castelnuovo bormida](denom_comune) ? 
+- cerco le [dottori](object_type:medico) conosci nel comune di [NIELLA BELBO](denom_comune) ? 
+- cerco le [dottori](object_type:medico) conosci nel comune di [POCAPAGLIA](denom_comune) ? 
+- cerco le [dottori](object_type:medico) elenco nel comune di [macello](denom_comune) ? 
+- cerco le [dottori](object_type:medico) elenco nel comune di [villanova biellese](denom_comune) ? 
+- cerco le [dottori](object_type:medico) elencami nel comune di [piedicavallo](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono nel comune di [pinerolo](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano nel comune di [SANTENA](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci nel comune di [roccavione](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci nel comune di [Santo stefano roero](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elenco nel comune di [Gottasecca](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami nel comune di [MONTANARO](denom_comune) ? 
+- cerco le [lavora](object_type:medico) sono nel comune di [LESSOLO](denom_comune) ? 
+- cerco le [lavora](object_type:medico) lavorano nel comune di [torre san giorgio](denom_comune) ? 
+- cerco le [lavora](object_type:medico) conosci nel comune di [BIBIANA](denom_comune) ? 
+- cerco le [lavora](object_type:medico) elenco nel comune di [greggio](denom_comune) ? 
+- cerco le [lavora](object_type:medico) elencami nel comune di [Montemagno](denom_comune) ? 
+- quali [medici](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) è nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) sono nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) sono nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) è nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) sono nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) elenco nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) è nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) è nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) è all' indirizzo [via del castello](indirizzo) ? 
+- quali [medici](object_type:medico) è all' via [PIAZZA DON ANDREA DHO - ROAPIANA](indirizzo) ? 
+- quali [medici](object_type:medico) è all' via [piazza regina elena](indirizzo) ? 
+- quali [medici](object_type:medico) sono all' indirizzo [via plava](indirizzo) ? 
+- quali [medici](object_type:medico) sono all' via [via san mauro](indirizzo) ? 
+- quali [medici](object_type:medico) sono all' via [fraz. mussotto c.so canale](indirizzo) ? 
+- quali [medici](object_type:medico) lavorano all' indirizzo [via s. lorenzo](indirizzo) ? 
+- quali [medici](object_type:medico) lavorano all' via [PIAZZA DEL MERCATO](indirizzo) ? 
+- quali [medici](object_type:medico) lavorano all' via [V.lo viziale](indirizzo) ? 
+- quali [medici](object_type:medico) conosci all' indirizzo [via forchino](indirizzo) ? 
+- quali [medici](object_type:medico) conosci all' via [Piazza caduti di tutte le guerre](indirizzo) ? 
+- quali [medici](object_type:medico) elenco all' indirizzo [Via pinerolo-susa](indirizzo) ? 
+- quali [medici](object_type:medico) elenco all' via [Piazza giorgio ambrosoli](indirizzo) ? 
+- quali [medici](object_type:medico) elencami all' indirizzo [VIA SAN MASSIMO](indirizzo) ? 
+- quali [medici](object_type:medico) elencami all' via [LOC. CASTAGNEA](indirizzo) ? 
+- quali [dottore](object_type:medico) è all' indirizzo [Corso torino](indirizzo) ? 
+- quali [dottore](object_type:medico) è all' indirizzo [via roma (loc. strona)](indirizzo) ? 
+- quali [dottore](object_type:medico) è all' via [via govean](indirizzo) ? 
+- quali [dottore](object_type:medico) sono all' indirizzo [PIAZZA BENGASI](indirizzo) ? 
+- quali [dottore](object_type:medico) sono all' indirizzo [via della casa nicola](indirizzo) ? 
+- quali [dottore](object_type:medico) sono all' via [Via josina](indirizzo) ? 
+- quali [dottore](object_type:medico) lavorano all' indirizzo [SALITA AL CASTELLO](indirizzo) ? 
+- quali [dottore](object_type:medico) lavorano all' indirizzo [P.-za de mosso](indirizzo) ? 
+- quali [dottore](object_type:medico) lavorano all' via [via cortemilia](indirizzo) ? 
+- quali [dottore](object_type:medico) conosci all' indirizzo [Via baratonia](indirizzo) ? 
+- quali [dottore](object_type:medico) conosci all' via [FRAZIONE S. CARLO - VIA MONTECHIARO](indirizzo) ? 
+- quali [dottore](object_type:medico) elenco all' indirizzo [Via piero gobetti](indirizzo) ? 
+- quali [dottore](object_type:medico) elenco all' via [Via matteotti -vergnasco](indirizzo) ? 
+- quali [dottore](object_type:medico) elencami all' indirizzo [PIAZZA CAPELLI RENATO (LOC. GRANOZZO)](indirizzo) ? 
+- quali [dottore](object_type:medico) elencami all' via [STRADA VALLE PASANO](indirizzo) ? 
+- quali [dottoresse](object_type:medico) è all' indirizzo [VIA I.ROSSI](indirizzo) ? 
+- quali [dottoresse](object_type:medico) è all' via [PIAZZA DANTE](indirizzo) ? 
+- quali [dottoresse](object_type:medico) sono all' indirizzo [presso amb. distrettuale via cosola](indirizzo) ? 
+- quali [dottoresse](object_type:medico) sono all' via [Piazza ercole paolo](indirizzo) ? 
+- quali [dottoresse](object_type:medico) lavorano all' indirizzo [via piave (presso poliambulatorio)](indirizzo) ? 
+- quali [dottoresse](object_type:medico) lavorano all' via [Via vallauri tommaso](indirizzo) ? 
+- quali [dottoresse](object_type:medico) conosci all' indirizzo [FRAZ. RICCA P.ZA ALBA](indirizzo) ? 
+- quali [dottoresse](object_type:medico) conosci all' via [piazza leonardi](indirizzo) ? 
+- quali [dottoresse](object_type:medico) elenco all' indirizzo [corso orbassano](indirizzo) ? 
+- quali [dottoresse](object_type:medico) elenco all' via [Fr. masero via chiesalunga](indirizzo) ? 
+- quali [dottoresse](object_type:medico) elenco all' via [Via craveri](indirizzo) ? 
+- quali [dottoresse](object_type:medico) elenco all' via [viale rimembranza (loc. castelferro)](indirizzo) ? 
+- quali [dottoresse](object_type:medico) elencami all' indirizzo [piazza matteotti giacomo (loc. beura)](indirizzo) ? 
+- quali [dottoresse](object_type:medico) elencami all' via [VIA PELIZZA](indirizzo) ? 
+- quali [dottoresse](object_type:medico) elencami all' via [LOC. CUZZEGO DI BEURA CARDEZZA](indirizzo) ? 
+- quali [dottoressa](object_type:medico) è all' indirizzo [PIAZZA BALBO CESARE](indirizzo) ? 
+- quali [dottoressa](object_type:medico) è all' via [VIA CASALBORGONE](indirizzo) ? 
+- quali [dottoressa](object_type:medico) sono all' indirizzo [Corso alfonso lamarmora](indirizzo) ? 
+- quali [dottoressa](object_type:medico) sono all' via [vico rose](indirizzo) ? 
+- quali [dottoressa](object_type:medico) lavorano all' indirizzo [VIA VERONA](indirizzo) ? 
+- quali [dottoressa](object_type:medico) lavorano all' via [VIA UMBERO I](indirizzo) ? 
+- quali [dottoressa](object_type:medico) conosci all' indirizzo [frazione arto](indirizzo) ? 
+- quali [dottoressa](object_type:medico) conosci all' via [VIA GIRAUDO GIOVANNI BATTISTA](indirizzo) ? 
+- quali [dottoressa](object_type:medico) elenco all' indirizzo [Via s. evasio](indirizzo) ? 
+- quali [dottoressa](object_type:medico) elenco all' via [PIAZZA CURINO GIOVANNI](indirizzo) ? 
+- quali [dottoressa](object_type:medico) elencami all' indirizzo [CORSO GIUSEPPE MAZZINI](indirizzo) ? 
+- quali [dottoressa](object_type:medico) elencami all' via [Via stazione](indirizzo) ? 
+- quali [dottoressa](object_type:medico) elencami all' via [VIA CAUDANA MARIO](indirizzo) ? 
+- quali [dottori](object_type:medico) è all' indirizzo [Via tripoli](indirizzo) ? 
+- quali [dottori](object_type:medico) è all' via [piazza mercato](indirizzo) ? 
+- quali [dottori](object_type:medico) sono all' indirizzo [Piazza ercole paolo](indirizzo) ? 
+- quali [dottori](object_type:medico) sono all' via [Fr. fabiano](indirizzo) ? 
+- quali [dottori](object_type:medico) lavorano all' indirizzo [via mazzolari primo](indirizzo) ? 
+- quali [dottori](object_type:medico) lavorano all' via [P.ZZA CINQUE LUGLIO 1944](indirizzo) ? 
+- quali [dottori](object_type:medico) conosci all' indirizzo [fraz. vintebbio via baraggione](indirizzo) ? 
+- quali [dottori](object_type:medico) conosci all' via [VIA TORINO BELTRAMA](indirizzo) ? 
+- quali [dottori](object_type:medico) conosci all' via [Piazza giusta](indirizzo) ? 
+- quali [dottori](object_type:medico) elenco all' indirizzo [VIA ALLA STAZIONE](indirizzo) ? 
+- quali [dottori](object_type:medico) elenco all' via [Via pietro cossavella](indirizzo) ? 
+- quali [dottori](object_type:medico) elencami all' indirizzo [VIA CASTELLAMONTE](indirizzo) ? 
+- quali [dottori](object_type:medico) elencami all' via [via marco de marchi](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) è all' indirizzo [corso cavour](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) è all' indirizzo [Piazza rissone lino - c/o comune](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) è all' via [LOC.BORCA](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) sono all' indirizzo [Via leini](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) sono all' via [LOC.ANTROGNA](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano all' indirizzo [Piazza rissone lino](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano all' via [VIA NOVAREGLIA](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci all' indirizzo [corso alessandria](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci all' via [Via alba](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci all' via [VIA LEON TRON](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci all' via [VIA A. FERRARIS](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco all' indirizzo [VIA MACALLE](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco all' via [ambulatorio pubblico](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami all' indirizzo [Vicolo mondo](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami all' indirizzo [p.za delleani - amb. pubblico](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami all' indirizzo [ospedale s. biagio](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami all' indirizzo [VIA A.GRAMSCI -C/O POLIAMBULATORIO DI OLEGGIO](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami all' via [Via don pirali](indirizzo) ? 
+- quali [lavora](object_type:medico) è all' indirizzo [Via giuseppe garibaldi](indirizzo) ? 
+- quali [lavora](object_type:medico) è all' via [Via novelli gian pietro (loc. crava)](indirizzo) ? 
+- quali [lavora](object_type:medico) sono all' indirizzo [via nazionale](indirizzo) ? 
+- quali [lavora](object_type:medico) sono all' via [salita al castello](indirizzo) ? 
+- quali [lavora](object_type:medico) lavorano all' indirizzo [VIA LAVAGNA](indirizzo) ? 
+- quali [lavora](object_type:medico) lavorano all' via [VIA PRA](indirizzo) ? 
+- quali [lavora](object_type:medico) conosci all' indirizzo [Via giaveno](indirizzo) ? 
+- quali [lavora](object_type:medico) conosci all' via [VIA RIVA](indirizzo) ? 
+- quali [lavora](object_type:medico) elenco all' indirizzo [Piazza vittorio emanuele ii](indirizzo) ? 
+- quali [lavora](object_type:medico) elenco all' via [VIA MERCATO](indirizzo) ? 
+- quali [lavora](object_type:medico) elencami all' indirizzo [p.za g. marconi](indirizzo) ? 
+- quali [lavora](object_type:medico) elencami all' via [VIA RIVETTI](indirizzo) ? 
+- chi [medici](object_type:medico) è all' indirizzo [via borgnis mattia](indirizzo) ? 
+- chi [medici](object_type:medico) è all' via [p.zza municipio](indirizzo) ? 
+- chi [medici](object_type:medico) sono all' indirizzo [via santa chiara](indirizzo) ? 
+- chi [medici](object_type:medico) sono all' indirizzo [VIA PETITTI RORETO CONTI](indirizzo) ? 
+- chi [medici](object_type:medico) sono all' via [via regio parco](indirizzo) ? 
+- chi [medici](object_type:medico) lavorano all' indirizzo [VIA VECELLIO TIZIANO](indirizzo) ? 
+- chi [medici](object_type:medico) lavorano all' via [Via faraggiana](indirizzo) ? 
+- chi [medici](object_type:medico) conosci all' indirizzo [PIAZZA SCLOPIS](indirizzo) ? 
+- chi [medici](object_type:medico) conosci all' via [CORSO MICHELE COPPINO](indirizzo) ? 
+- chi [medici](object_type:medico) elenco all' indirizzo [amb. comunale - frazione legro - via prisciola](indirizzo) ? 
+- chi [medici](object_type:medico) elenco all' via [Via liberazione](indirizzo) ? 
+- chi [medici](object_type:medico) elencami all' indirizzo [via costantino nigra](indirizzo) ? 
+- chi [medici](object_type:medico) elencami all' via [Via berti domenico](indirizzo) ? 
+- chi [dottore](object_type:medico) è all' indirizzo [Ambulatorio comunale - via chiesa](indirizzo) ? 
+- chi [dottore](object_type:medico) è all' indirizzo [CORSO DELIO VERNA](indirizzo) ? 
+- chi [dottore](object_type:medico) è all' via [via santa chiara](indirizzo) ? 
+- chi [dottore](object_type:medico) sono all' indirizzo [Frazione pozzo](indirizzo) ? 
+- chi [dottore](object_type:medico) sono all' via [via langhe](indirizzo) ? 
+- chi [dottore](object_type:medico) lavorano all' indirizzo [Corso alcide de gasperi](indirizzo) ? 
+- chi [dottore](object_type:medico) lavorano all' via [FRAZ. RIVALBA](indirizzo) ? 
+- chi [dottore](object_type:medico) conosci all' indirizzo [Via genova (loc. spinetta marengo)](indirizzo) ? 
+- chi [dottore](object_type:medico) conosci all' via [VIA PIAVE (LOC. SCANDELUZZA)](indirizzo) ? 
+- chi [dottore](object_type:medico) elenco all' indirizzo [p.zza martiri](indirizzo) ? 
+- chi [dottore](object_type:medico) elenco all' via [Via villanis francesco](indirizzo) ? 
+- chi [dottore](object_type:medico) elencami all' indirizzo [STRADA GENOVA](indirizzo) ? 
+- chi [dottore](object_type:medico) elencami all' via [via tepice](indirizzo) ? 
+- chi [dottoresse](object_type:medico) è all' indirizzo [VIA ROMERA - FR. SPINETTA M.GO](indirizzo) ? 
+- chi [dottoresse](object_type:medico) è all' via [Piazza della repubblica](indirizzo) ? 
+- chi [dottoresse](object_type:medico) sono all' indirizzo [VIA S. FRANCESCO D ASSISI](indirizzo) ? 
+- chi [dottoresse](object_type:medico) sono all' via [via acqui](indirizzo) ? 
+- chi [dottoresse](object_type:medico) lavorano all' indirizzo [Via san bernardo](indirizzo) ? 
+- chi [dottoresse](object_type:medico) lavorano all' via [Ambulatorio pubblico montrigiasco](indirizzo) ? 
+- chi [dottoresse](object_type:medico) conosci all' indirizzo [Viale consolata](indirizzo) ? 
+- chi [dottoresse](object_type:medico) conosci all' via [Loc. cuzzego di beura cardezza](indirizzo) ? 
+- chi [dottoresse](object_type:medico) elenco all' indirizzo [LOC. CASTAGNEA](indirizzo) ? 
+- chi [dottoresse](object_type:medico) elenco all' via [VIA XVII MARTIRI](indirizzo) ? 
+- chi [dottoresse](object_type:medico) elencami all' indirizzo [LARGO MAZZINI GIUSEPPE](indirizzo) ? 
+- chi [dottoresse](object_type:medico) elencami all' indirizzo [VIA DON ORIONE](indirizzo) ? 
+- chi [dottoresse](object_type:medico) elencami all' via [via xlii martiri (loc. feriolo)](indirizzo) ? 
+- chi [dottoressa](object_type:medico) è all' indirizzo [VIA MICHELE BERRINO](indirizzo) ? 
+- chi [dottoressa](object_type:medico) è all' via [Via fratelli vitrani](indirizzo) ? 
+- chi [dottoressa](object_type:medico) è all' via [c.so f.lli bandiera](indirizzo) ? 
+- chi [dottoressa](object_type:medico) sono all' indirizzo [Via figini domenico](indirizzo) ? 
+- chi [dottoressa](object_type:medico) sono all' via [Via renaldi maria teresa](indirizzo) ? 
+- chi [dottoressa](object_type:medico) lavorano all' indirizzo [Corso monte grappa](indirizzo) ? 
+- chi [dottoressa](object_type:medico) lavorano all' via [Via brofferio](indirizzo) ? 
+- chi [dottoressa](object_type:medico) conosci all' indirizzo [via santa maria mazzarello](indirizzo) ? 
+- chi [dottoressa](object_type:medico) conosci all' via [Piazza don fassino (loc. favari-avatanei)](indirizzo) ? 
+- chi [dottoressa](object_type:medico) conosci all' via [c/o   municipio](indirizzo) ? 
+- chi [dottoressa](object_type:medico) conosci all' via [fr. campo via goglio](indirizzo) ? 
+- chi [dottoressa](object_type:medico) elenco all' indirizzo [VIA ZUFFI](indirizzo) ? 
+- chi [dottoressa](object_type:medico) elenco all' via [Via stazione](indirizzo) ? 
+- chi [dottoressa](object_type:medico) elenco all' via [VIA SPIANATA FIERA](indirizzo) ? 
+- chi [dottoressa](object_type:medico) elencami all' indirizzo [Via borsellino](indirizzo) ? 
+- chi [dottoressa](object_type:medico) elencami all' via [piazza carlo alberto dalla chiesa](indirizzo) ? 
+- chi [dottori](object_type:medico) è all' indirizzo [via xxiii marzo](indirizzo) ? 
+- chi [dottori](object_type:medico) è all' indirizzo [COMUNALE](indirizzo) ? 
+- chi [dottori](object_type:medico) è all' via [corso nazioni unite](indirizzo) ? 
+- chi [dottori](object_type:medico) sono all' indirizzo [VIA UMBERTO IÂ° 23 C/O MUNICIPIO](indirizzo) ? 
+- chi [dottori](object_type:medico) sono all' via [via antica di grugliasco](indirizzo) ? 
+- chi [dottori](object_type:medico) lavorano all' indirizzo [via mario del pozzo](indirizzo) ? 
+- chi [dottori](object_type:medico) lavorano all' via [Corso piero maroncelli](indirizzo) ? 
+- chi [dottori](object_type:medico) conosci all' indirizzo [PIAZZA FRATELLI GARRONE](indirizzo) ? 
+- chi [dottori](object_type:medico) conosci all' via [VIA SCOLARI](indirizzo) ? 
+- chi [dottori](object_type:medico) conosci all' via [fraz alzo](indirizzo) ? 
+- chi [dottori](object_type:medico) elenco all' indirizzo [Via celso miglietti](indirizzo) ? 
+- chi [dottori](object_type:medico) elenco all' via [PIAZZA PADRE ARCANGELO FERRO](indirizzo) ? 
+- chi [dottori](object_type:medico) elencami all' indirizzo [piazza mercato](indirizzo) ? 
+- chi [dottori](object_type:medico) elencami all' indirizzo [via iâ° maggio](indirizzo) ? 
+- chi [dottori](object_type:medico) elencami all' via [via repubblica argentina](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) è all' indirizzo [PIAZZA OLIVETTI](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) è all' via [via gallaretto carlo tenente](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) sono all' indirizzo [frazione boglietto - via alba](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) sono all' via [via portofino](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano all' indirizzo [via g. matteotti](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano all' via [VIA S. RITA](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci all' indirizzo [via provinciale](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci all' indirizzo [VIA AMEDEO D AOSTA](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci all' via [via don rosso (loc. crava)](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) elenco all' indirizzo [via s.s. martiri](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) elenco all' via [PZ MARTIRI - VEVERI](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) elenco all' via [Via oropa -cossila](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami all' indirizzo [via castellamonte](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami all' via [Corso vercelli](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami all' via [via rigolfo](indirizzo) ? 
+- chi [lavora](object_type:medico) è all' indirizzo [VIA MANTEGNA](indirizzo) ? 
+- chi [lavora](object_type:medico) è all' indirizzo [Frazione chiesa](indirizzo) ? 
+- chi [lavora](object_type:medico) è all' via [via trinita](indirizzo) ? 
+- chi [lavora](object_type:medico) sono all' indirizzo [Viale fasano francesco](indirizzo) ? 
+- chi [lavora](object_type:medico) sono all' via [Viale partigiani](indirizzo) ? 
+- chi [lavora](object_type:medico) lavorano all' indirizzo [VIA LAMARMORA](indirizzo) ? 
+- chi [lavora](object_type:medico) lavorano all' via [VIA BORSELLINO E FALCONE](indirizzo) ? 
+- chi [lavora](object_type:medico) conosci all' indirizzo [CORSO MATTEOTTI](indirizzo) ? 
+- chi [lavora](object_type:medico) conosci all' via [VIA URANIO FRAZ. SAN GIACOMO](indirizzo) ? 
+- chi [lavora](object_type:medico) elenco all' indirizzo [Via giovanni giolitti](indirizzo) ? 
+- chi [lavora](object_type:medico) elenco all' via [FRAZIONE CALOGNA](indirizzo) ? 
+- chi [lavora](object_type:medico) elencami all' indirizzo [Largo cantelli](indirizzo) ? 
+- chi [lavora](object_type:medico) elencami all' via [PIAZZA ARTURO GRAF](indirizzo) ? 
+- cerco i [medici](object_type:medico) è all' indirizzo [corso giovanni giolitti](indirizzo) ? 
+- cerco i [medici](object_type:medico) è all' via [CENTRO ANZIANI  VILLAGGIO CONCORDIA](indirizzo) ? 
+- cerco i [medici](object_type:medico) sono all' indirizzo [FRAZIONE QUARTO INFERIORE - VIA ANTICA DOGANA](indirizzo) ? 
+- cerco i [medici](object_type:medico) sono all' via [via roma c/o ambulatorio comunale](indirizzo) ? 
+- cerco i [medici](object_type:medico) lavorano all' indirizzo [VIA GIACOMETTI PAOLO](indirizzo) ? 
+- cerco i [medici](object_type:medico) lavorano all' via [Via greppi](indirizzo) ? 
+- cerco i [medici](object_type:medico) conosci all' indirizzo [Via goffredo casalis](indirizzo) ? 
+- cerco i [medici](object_type:medico) conosci all' via [via ruetta](indirizzo) ? 
+- cerco i [medici](object_type:medico) conosci all' via [c/o palazzo comunale](indirizzo) ? 
+- cerco i [medici](object_type:medico) elenco all' indirizzo [c/o municipio](indirizzo) ? 
+- cerco i [medici](object_type:medico) elenco all' via [Via malabaila](indirizzo) ? 
+- cerco i [medici](object_type:medico) elencami all' indirizzo [piazza galimberti tancredi duccio](indirizzo) ? 
+- cerco i [medici](object_type:medico) elencami all' via [p.zza dott. carlo baroli](indirizzo) ? 
+- cerco i [dottore](object_type:medico) è all' indirizzo [corso nizza](indirizzo) ? 
+- cerco i [dottore](object_type:medico) è all' indirizzo [via paris salvago](indirizzo) ? 
+- cerco i [dottore](object_type:medico) è all' indirizzo [P.ZA MARTIRI LIBERTA](indirizzo) ? 
+- cerco i [dottore](object_type:medico) è all' indirizzo [Amb. comunale c/o municipio](indirizzo) ? 
+- cerco i [dottore](object_type:medico) è all' indirizzo [Via s.s. martiri](indirizzo) ? 
+- cerco i [dottore](object_type:medico) è all' indirizzo [Via genola](indirizzo) ? 
+- cerco i [dottore](object_type:medico) è all' via [Piazza martiri della liberazione](indirizzo) ? 
+- cerco i [dottore](object_type:medico) sono all' indirizzo [Amb. comunale](indirizzo) ? 
+- cerco i [dottore](object_type:medico) sono all' via [Via cagliari](indirizzo) ? 
+- cerco i [dottore](object_type:medico) lavorano all' indirizzo [Via g. matteotti](indirizzo) ? 
+- cerco i [dottore](object_type:medico) lavorano all' via [STRADA BUSSOLINO](indirizzo) ? 
+- cerco i [dottore](object_type:medico) conosci all' indirizzo [via galileo ferraris](indirizzo) ? 
+- cerco i [dottore](object_type:medico) conosci all' via [p.za martiri liberta](indirizzo) ? 
+- cerco i [dottore](object_type:medico) elenco all' indirizzo [CORSO TRAPANI](indirizzo) ? 
+- cerco i [dottore](object_type:medico) elenco all' via [Via s. bernolfo](indirizzo) ? 
+- cerco i [dottore](object_type:medico) elenco all' via [Via santuario ca  del bello](indirizzo) ? 
+- cerco i [dottore](object_type:medico) elencami all' indirizzo [Vico rose](indirizzo) ? 
+- cerco i [dottore](object_type:medico) elencami all' via [Fraz. dagnente via f. cavallotti](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) è all' indirizzo [VICOLO REALE](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) è all' via [P.za roma 7](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) sono all' indirizzo [via s.paolo](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) sono all' via [Corso italia  (ingresso da piazza rovere)](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) lavorano all' indirizzo [VIA NAZIONALE](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) lavorano all' via [FRAZIONE CASTEL DEL BOSCO](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) conosci all' indirizzo [piazza durio](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) conosci all' via [VIA S. BIAGIO](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) elenco all' indirizzo [VIA S. PANCRAZIO](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) elenco all' via [via milanere (loc. milanere)](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) elencami all' indirizzo [viale marconi](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) elencami all' via [Via gavuzzi stefano](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) è all' indirizzo [VIA VITTORIO EMANUELE III](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) è all' via [Via b. garibaldi](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) è all' via [via cesare battisti (ambulatorio comunale)](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) sono all' indirizzo [VIA SENTA](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) sono all' indirizzo [via g. di rovasenda](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) sono all' via [via bonatto](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) lavorano all' indirizzo [via beinasco](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) lavorano all' via [Borgata ghigo](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) lavorano all' via [PIAZZA OTTORINO RESPIGHI](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) conosci all' indirizzo [via conte di roccavione](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) conosci all' via [VIA BONDESAN SILVIO](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) conosci all' via [Piazza giuseppe garibaldi](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) elenco all' indirizzo [via del campo](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) elenco all' indirizzo [VIA BAGIARINI - C/O CASA DI RIPOSO](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) elenco all' indirizzo [via r. cadorna](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) elenco all' via [loc. s. giacomo](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) elencami all' indirizzo [Via bonatto giovanni cavaliere](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) elencami all' indirizzo [fraz. mussotto c.so canale](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) elencami all' via [Via s. evasio](indirizzo) ? 
+- cerco i [dottori](object_type:medico) è all' indirizzo [VIA CROSA](indirizzo) ? 
+- cerco i [dottori](object_type:medico) è all' via [Via magalotti](indirizzo) ? 
+- cerco i [dottori](object_type:medico) sono all' indirizzo [Via barbano dante](indirizzo) ? 
+- cerco i [dottori](object_type:medico) sono all' via [via castagnevizza](indirizzo) ? 
+- cerco i [dottori](object_type:medico) lavorano all' indirizzo [Via al castello](indirizzo) ? 
+- cerco i [dottori](object_type:medico) lavorano all' indirizzo [Piazza lucchini paolo](indirizzo) ? 
+- cerco i [dottori](object_type:medico) lavorano all' via [Via cavour](indirizzo) ? 
+- cerco i [dottori](object_type:medico) lavorano all' via [VIA MONCENISIO](indirizzo) ? 
+- cerco i [dottori](object_type:medico) lavorano all' via [Piazza cadorna luigi](indirizzo) ? 
+- cerco i [dottori](object_type:medico) lavorano all' via [via don oddonino](indirizzo) ? 
+- cerco i [dottori](object_type:medico) conosci all' indirizzo [via de sanctis 56](indirizzo) ? 
+- cerco i [dottori](object_type:medico) conosci all' via [Via martiri della liberta](indirizzo) ? 
+- cerco i [dottori](object_type:medico) elenco all' indirizzo [VIA CERNAIA](indirizzo) ? 
+- cerco i [dottori](object_type:medico) elenco all' via [Piazza ambrosoli giorgio](indirizzo) ? 
+- cerco i [dottori](object_type:medico) elenco all' via [via mosso onorio](indirizzo) ? 
+- cerco i [dottori](object_type:medico) elencami all' indirizzo [VIA SEPPIANA](indirizzo) ? 
+- cerco i [dottori](object_type:medico) elencami all' via [Via guglielmo pietro (loc. luserna)](indirizzo) ? 
+- cerco i [dottori](object_type:medico) elencami all' via [Via comentina enrico](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) è all' indirizzo [Via ariottina pernate](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) è all' via [VIA F. MENABREA](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono all' indirizzo [via vecellio tiziano](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono all' via [via stefano paolino](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano all' indirizzo [VIALE RIMEMBRANZE](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano all' via [Via claro](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) conosci all' indirizzo [fraz.  mocogna via casetti](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) conosci all' via [BORGATA CAPOLUOGO](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco all' indirizzo [Piazza vittorio emanuele](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco all' via [via l. perosi](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami all' indirizzo [via lovera](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami all' via [Piazza tapparo giuseppe](indirizzo) ? 
+- cerco i [lavora](object_type:medico) è all' indirizzo [Via crocette](indirizzo) ? 
+- cerco i [lavora](object_type:medico) è all' via [Via barbaresco](indirizzo) ? 
+- cerco i [lavora](object_type:medico) sono all' indirizzo [Comunale via roma piano terra](indirizzo) ? 
+- cerco i [lavora](object_type:medico) sono all' via [Via del cavallino](indirizzo) ? 
+- cerco i [lavora](object_type:medico) lavorano all' indirizzo [VIA GIUSEPPE VERDI](indirizzo) ? 
+- cerco i [lavora](object_type:medico) lavorano all' via [VIA PALENZONA](indirizzo) ? 
+- cerco i [lavora](object_type:medico) conosci all' indirizzo [VAI STAZIONE](indirizzo) ? 
+- cerco i [lavora](object_type:medico) conosci all' via [Fraz. bornate sesia - via monte castello](indirizzo) ? 
+- cerco i [lavora](object_type:medico) elenco all' indirizzo [via mameli](indirizzo) ? 
+- cerco i [lavora](object_type:medico) elenco all' via [via bossi](indirizzo) ? 
+- cerco i [lavora](object_type:medico) elencami all' indirizzo [VIA CALDANA](indirizzo) ? 
+- cerco i [lavora](object_type:medico) elencami all' via [VIA DELLA VILLA](indirizzo) ? 
+- cerco le [medici](object_type:medico) è all' indirizzo [VIA REGINA MARGHERITA-BORNASCO](indirizzo) ? 
+- cerco le [medici](object_type:medico) è all' via [Via degli aceri](indirizzo) ? 
+- cerco le [medici](object_type:medico) sono all' indirizzo [via pellaverne](indirizzo) ? 
+- cerco le [medici](object_type:medico) sono all' via [VIA SABOTINO](indirizzo) ? 
+- cerco le [medici](object_type:medico) lavorano all' indirizzo [via vallino](indirizzo) ? 
+- cerco le [medici](object_type:medico) lavorano all' indirizzo [C/O PALAZZO COMUNALE](indirizzo) ? 
+- cerco le [medici](object_type:medico) lavorano all' via [VIA CADUTI PER LA LIBERTA](indirizzo) ? 
+- cerco le [medici](object_type:medico) conosci all' indirizzo [VIA CADUTI](indirizzo) ? 
+- cerco le [medici](object_type:medico) conosci all' via [VIA M. BORGNIS](indirizzo) ? 
+- cerco le [medici](object_type:medico) elenco all' indirizzo [via del partigiano](indirizzo) ? 
+- cerco le [medici](object_type:medico) elenco all' via [corso monte cucco](indirizzo) ? 
+- cerco le [medici](object_type:medico) elencami all' indirizzo [via garibaldi , c/o poliamb.](indirizzo) ? 
+- cerco le [medici](object_type:medico) elencami all' via [VIA ROMA C/O PALAZZO COMUNALE](indirizzo) ? 
+- cerco le [medici](object_type:medico) elencami all' via [Via solferino](indirizzo) ? 
+- cerco le [dottore](object_type:medico) è all' indirizzo [via sebastiano grandis](indirizzo) ? 
+- cerco le [dottore](object_type:medico) è all' via [PIAZZA GIUSEPPE GARIBALDI](indirizzo) ? 
+- cerco le [dottore](object_type:medico) sono all' indirizzo [Via martelli gaspare](indirizzo) ? 
+- cerco le [dottore](object_type:medico) sono all' via [corso marenco romualdo](indirizzo) ? 
+- cerco le [dottore](object_type:medico) lavorano all' indirizzo [VIA G. DI ROVASENDA](indirizzo) ? 
+- cerco le [dottore](object_type:medico) lavorano all' via [piazza i maggio](indirizzo) ? 
+- cerco le [dottore](object_type:medico) conosci all' indirizzo [VIA B. LUINI](indirizzo) ? 
+- cerco le [dottore](object_type:medico) conosci all' via [C/o casa della salute via prof calderini](indirizzo) ? 
+- cerco le [dottore](object_type:medico) elenco all' indirizzo [loc. s. giacomo](indirizzo) ? 
+- cerco le [dottore](object_type:medico) elenco all' via [VIA PRAMARZO](indirizzo) ? 
+- cerco le [dottore](object_type:medico) elencami all' indirizzo [VIALO MUNGIS](indirizzo) ? 
+- cerco le [dottore](object_type:medico) elencami all' via [CORSO SAN MARTINO](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) è all' indirizzo [VIA SEBASTIANO GRANDIS](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) è all' via [Comunale -fraz.colloro](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) sono all' indirizzo [PIAZZA DE  BARTOLOMEI ENRICO](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) sono all' via [via pelizza](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) sono all' via [VICOLO NOVALETTI](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) lavorano all' indirizzo [VIA LEGNANO](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) lavorano all' via [PIAZZA DEL MUNICIPIO](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) lavorano all' via [Via jonghi sergio](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) lavorano all' via [Via c. beaumont](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) lavorano all' via [Via accademia albertina](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) conosci all' indirizzo [Localita  maddalene](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) conosci all' via [Piazzale porta ticinese](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) elenco all' indirizzo [C/COMUNE](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) elenco all' via [via levone](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) elencami all' indirizzo [Via marco de marchi](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) elencami all' via [Corso beltramo](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) è all' indirizzo [Via monte nero](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) è all' via [Via s.g.m.gambaro](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) sono all' indirizzo [Via pramarzo](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) sono all' indirizzo [Piazza municipale](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) sono all' via [C.SO DIVISIONI ALPINE](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) lavorano all' indirizzo [VIA MIGLIETTI](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) lavorano all' via [viale conte cicogna](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) conosci all' indirizzo [PIAZZA DON RAVELLI](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) conosci all' via [VIA CHIESA VECCHIA](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) conosci all' via [AGRANO](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) elenco all' indirizzo [VIA DEL PORTO](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) elenco all' via [Strada comunale (loc. valmadonna)](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) elencami all' indirizzo [via armando diaz](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) elencami all' via [Via leon tron](indirizzo) ? 
+- cerco le [dottori](object_type:medico) è all' indirizzo [piazza italia](indirizzo) ? 
+- cerco le [dottori](object_type:medico) è all' indirizzo [Frazione accorneri valle](indirizzo) ? 
+- cerco le [dottori](object_type:medico) è all' via [via vegno](indirizzo) ? 
+- cerco le [dottori](object_type:medico) sono all' indirizzo [Via mafferia](indirizzo) ? 
+- cerco le [dottori](object_type:medico) sono all' via [AMBUL. COMUNALE C/O CASA DI RIPOSO](indirizzo) ? 
+- cerco le [dottori](object_type:medico) lavorano all' indirizzo [via ferrari lorenzo (loc. crealla)](indirizzo) ? 
+- cerco le [dottori](object_type:medico) lavorano all' indirizzo [VIA S. ROCCO](indirizzo) ? 
+- cerco le [dottori](object_type:medico) lavorano all' via [Viale xxiv maggio](indirizzo) ? 
+- cerco le [dottori](object_type:medico) conosci all' indirizzo [VIALE PARTIGIANI](indirizzo) ? 
+- cerco le [dottori](object_type:medico) conosci all' via [Via adua](indirizzo) ? 
+- cerco le [dottori](object_type:medico) elenco all' indirizzo [via m. liberta](indirizzo) ? 
+- cerco le [dottori](object_type:medico) elenco all' via [via tadini](indirizzo) ? 
+- cerco le [dottori](object_type:medico) elencami all' indirizzo [Via sabotino](indirizzo) ? 
+- cerco le [dottori](object_type:medico) elencami all' via [VIA FILIPPO JUVARRA](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) è all' indirizzo [P.zza brindicci - bonzani](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) è all' indirizzo [VIA SAMONE](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) è all' via [Piazzale fortina giuseppe](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono all' indirizzo [VIALE PARONA](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono all' via [piazza pignolo](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano all' indirizzo [Via crimea](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano all' via [Piazza fratelli garrone](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci all' indirizzo [Via nebulina](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci all' via [Via rosazza 42 -](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elenco all' indirizzo [c.so risorgimento](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elenco all' via [VIA GIRAUDO GIOVANNI BATTISTA](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami all' indirizzo [piazza carlo alberto dalla chiesa](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami all' indirizzo [C.SO MATTEOTTI](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami all' via [BALUARDO PARTIGIANI](indirizzo) ? 
+- cerco le [lavora](object_type:medico) è all' indirizzo [corso risorgimento](indirizzo) ? 
+- cerco le [lavora](object_type:medico) è all' via [piazza barattia](indirizzo) ? 
+- cerco le [lavora](object_type:medico) sono all' indirizzo [via cavalieri di vittorio veneto](indirizzo) ? 
+- cerco le [lavora](object_type:medico) sono all' via [Via bisalta - borgo s. giuseppe](indirizzo) ? 
+- cerco le [lavora](object_type:medico) sono all' via [via lovera giovanni](indirizzo) ? 
+- cerco le [lavora](object_type:medico) lavorano all' indirizzo [Via volpiano](indirizzo) ? 
+- cerco le [lavora](object_type:medico) lavorano all' via [PRESSO MUNICIPIO](indirizzo) ? 
+- cerco le [lavora](object_type:medico) conosci all' indirizzo [via lovera](indirizzo) ? 
+- cerco le [lavora](object_type:medico) conosci all' via [Via lamarmora](indirizzo) ? 
+- cerco le [lavora](object_type:medico) elenco all' indirizzo [VIA DELLA VALLE FEDERICO](indirizzo) ? 
+- cerco le [lavora](object_type:medico) elenco all' via [corso giacomo matteotti](indirizzo) ? 
+- cerco le [lavora](object_type:medico) elenco all' via [VIA LODI](indirizzo) ? 
+- cerco le [lavora](object_type:medico) elencami all' indirizzo [Via a. farinelli](indirizzo) ? 
+- cerco le [lavora](object_type:medico) elencami all' indirizzo [Via gay matteo](indirizzo) ? 
+- cerco le [lavora](object_type:medico) elencami all' via [fr. montevalenza](indirizzo) ? 
+- quali [medici](object_type:medico) lavorano nell'ambulatorio 
+- quali [dottore](object_type:medico) elenco nell'ambulatorio 
+- quali [dottoresse](object_type:medico) sono nell'ambulatorio 
+- quali [dottoressa](object_type:medico) elencami nell'ambulatorio 
+- quali [lavora](object_type:medico) si trova nell'ambulatorio 
+- quali [lavora](object_type:medico) conosci nell'ambulatorio 
+- chi [medici](object_type:medico) elencami nell'ambulatorio 
+- chi [dottore](object_type:medico) sono nell'ambulatorio 
+- chi [dottoresse](object_type:medico) si trova nell'ambulatorio 
+- chi [dottoressa](object_type:medico) si trova nell'ambulatorio 
+- chi [dottori](object_type:medico) conosci nell'ambulatorio 
+- chi [dottori](object_type:medico) elenco nell'ambulatorio 
+- chi [ambulatori](object_type:ambulatorio) si trova nell'ambulatorio 
+- chi [lavora](object_type:medico) lavorano nell'ambulatorio 
+- cerco i [medici](object_type:medico) conosci nell'ambulatorio 
+- cerco i [dottore](object_type:medico) si trova nell'ambulatorio 
+- cerco i [dottoresse](object_type:medico) elenco nell'ambulatorio 
+- cerco i [dottoressa](object_type:medico) lavorano nell'ambulatorio 
+- cerco i [dottori](object_type:medico) elencami nell'ambulatorio 
+- cerco i [ambulatori](object_type:ambulatorio) sono nell'ambulatorio 
+- cerco le [medici](object_type:medico) si trova nell'ambulatorio 
+- cerco le [dottore](object_type:medico) lavorano nell'ambulatorio 
+- cerco le [dottore](object_type:medico) conosci nell'ambulatorio 
+- cerco le [dottoressa](object_type:medico) sono nell'ambulatorio 
+- cerco le [dottori](object_type:medico) si trova nell'ambulatorio 
+- cerco le [ambulatori](object_type:ambulatorio) elenco nell'ambulatorio 
+- cerco le [lavora](object_type:medico) elencami nell'ambulatorio 
+- quali [medici](object_type:medico) che fanno attività 
+- quali [dottore](object_type:medico) che fanno attivita 
+- quali [dottore](object_type:medico) che conosci attivita 
+- quali [dottoresse](object_type:medico) che lavorano attività 
+- quali [dottoresse](object_type:medico) che conosci attivita 
+- quali [dottoressa](object_type:medico) che lavorano attivita 
+- quali [dottoressa](object_type:medico) che elencami attività 
+- quali [dottori](object_type:medico) che conosci attività 
+- quali [ambulatori](object_type:ambulatorio) che elenco attivita 
+- quali [lavora](object_type:medico) che elenco attività 
+- quali [lavora](object_type:medico) che elencami attivita 
+- chi [medici](object_type:medico) che lavorano attività 
+- chi [medici](object_type:medico) che elencami attivita 
+- chi [dottore](object_type:medico) che elencami attività 
+- chi [dottoressa](object_type:medico) che fanno attività 
+- chi [dottoressa](object_type:medico) che elencami attivita 
+- chi [dottori](object_type:medico) che conosci attività 
+- chi [dottori](object_type:medico) che elenco attivita 
+- chi [ambulatori](object_type:ambulatorio) che fanno attività 
+- chi [ambulatori](object_type:ambulatorio) che lavorano attivita 
+- chi [ambulatori](object_type:ambulatorio) che elenco attività 
+- chi [lavora](object_type:medico) che fanno attivita 
+- cerco i [medici](object_type:medico) che elenco attivita 
+- cerco i [dottore](object_type:medico) che fanno attività 
+- cerco i [dottore](object_type:medico) che elenco attività 
+- cerco i [dottoresse](object_type:medico) che fanno attività 
+- cerco i [dottoressa](object_type:medico) che fanno attivita 
+- cerco i [dottoressa](object_type:medico) che lavorano attività 
+- cerco i [dottoressa](object_type:medico) che elencami attività 
+- cerco i [dottori](object_type:medico) che conosci attività 
+- cerco i [ambulatori](object_type:ambulatorio) che conosci attivita 
+- cerco i [ambulatori](object_type:ambulatorio) che elencami attivita 
+- cerco i [lavora](object_type:medico) che fanno attività 
+- cerco i [lavora](object_type:medico) che lavorano attivita 
+- cerco le [medici](object_type:medico) che conosci attivita 
+- cerco le [dottore](object_type:medico) che fanno attività 
+- cerco le [dottore](object_type:medico) che lavorano attivita 
+- cerco le [dottoresse](object_type:medico) che elencami attività 
+- cerco le [dottoressa](object_type:medico) che elenco attivita 
+- cerco le [dottori](object_type:medico) che lavorano attività 
+- cerco le [dottori](object_type:medico) che elenco attività 
+- cerco le [dottori](object_type:medico) che elencami attivita 
+- cerco le [ambulatori](object_type:ambulatorio) che fanno attivita 
+- cerco le [ambulatori](object_type:ambulatorio) che conosci attività 
+- cerco le [lavora](object_type:medico) che conosci attivita 
+- quali [medici](object_type:medico) operano fino alle [10:15](ora_fine) ? 
+- quali [medici](object_type:medico) lavorano fino alle [15:45](ora_fine) ? 
+- quali [medici](object_type:medico) sono aperti fino alle [19:30](ora_fine) ? 
+- quali [medici](object_type:medico) sono aperti fino alle [09:00](ora_fine) ? 
+- quali [dottore](object_type:medico) operano fino alle [11:00](ora_fine) ? 
+- quali [dottore](object_type:medico) lavorano fino alle [15:00](ora_fine) ? 
+- quali [dottore](object_type:medico) sono aperti fino alle [09:30](ora_fine) ? 
+- quali [dottoresse](object_type:medico) operano fino alle [19:45](ora_fine) ? 
+- quali [dottoresse](object_type:medico) lavorano fino alle [20:30](ora_fine) ? 
+- quali [dottoresse](object_type:medico) sono aperti fino alle [18:30](ora_fine) ? 
+- quali [dottoressa](object_type:medico) operano fino alle [18:00](ora_fine) ? 
+- quali [dottoressa](object_type:medico) lavorano fino alle [11:00](ora_fine) ? 
+- quali [dottoressa](object_type:medico) sono aperti fino alle [15:45](ora_fine) ? 
+- quali [dottoressa](object_type:medico) sono aperti fino alle [09:15](ora_fine) ? 
+- quali [dottori](object_type:medico) operano fino alle [15:00](ora_fine) ? 
+- quali [dottori](object_type:medico) lavorano fino alle [12:15](ora_fine) ? 
+- quali [dottori](object_type:medico) sono aperti fino alle [19:00](ora_fine) ? 
+- quali [ambulatori](object_type:ambulatorio) operano fino alle [12:30](ora_fine) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano fino alle [20:00](ora_fine) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano fino alle [17:45](ora_fine) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano fino alle [13:45](ora_fine) ? 
+- quali [ambulatori](object_type:ambulatorio) sono aperti fino alle [19:20](ora_fine) ? 
+- quali [ambulatori](object_type:ambulatorio) sono aperti fino alle [10:40](ora_fine) ? 
+- quali [lavora](object_type:medico) operano fino alle [09:25](ora_fine) ? 
+- quali [lavora](object_type:medico) lavorano fino alle [13:15](ora_fine) ? 
+- quali [lavora](object_type:medico) sono aperti fino alle [11:00](ora_fine) ? 
+- quali [lavora](object_type:medico) sono aperti fino alle [11:03](ora_fine) ? 
+- chi [medici](object_type:medico) operano fino alle [18:50](ora_fine) ? 
+- chi [medici](object_type:medico) lavorano fino alle [11:30](ora_fine) ? 
+- chi [medici](object_type:medico) sono aperti fino alle [19:45](ora_fine) ? 
+- chi [dottore](object_type:medico) operano fino alle [17:45](ora_fine) ? 
+- chi [dottore](object_type:medico) lavorano fino alle [12:50](ora_fine) ? 
+- chi [dottore](object_type:medico) sono aperti fino alle [14:00](ora_fine) ? 
+- chi [dottoresse](object_type:medico) operano fino alle [16:30](ora_fine) ? 
+- chi [dottoresse](object_type:medico) lavorano fino alle [14:15](ora_fine) ? 
+- chi [dottoresse](object_type:medico) sono aperti fino alle [09:45](ora_fine) ? 
+- chi [dottoressa](object_type:medico) operano fino alle [10:00](ora_fine) ? 
+- chi [dottoressa](object_type:medico) lavorano fino alle [14:20](ora_fine) ? 
+- chi [dottoressa](object_type:medico) sono aperti fino alle [12:45](ora_fine) ? 
+- chi [dottori](object_type:medico) operano fino alle [16:00](ora_fine) ? 
+- chi [dottori](object_type:medico) lavorano fino alle [19:15](ora_fine) ? 
+- chi [dottori](object_type:medico) sono aperti fino alle [18:10](ora_fine) ? 
+- chi [ambulatori](object_type:ambulatorio) operano fino alle [18:45](ora_fine) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano fino alle [10:20](ora_fine) ? 
+- chi [ambulatori](object_type:ambulatorio) sono aperti fino alle [12:10](ora_fine) ? 
+- chi [lavora](object_type:medico) operano fino alle [20:00](ora_fine) ? 
+- chi [lavora](object_type:medico) lavorano fino alle [12:50](ora_fine) ? 
+- chi [lavora](object_type:medico) sono aperti fino alle [09:30](ora_fine) ? 
+- cerco i [medici](object_type:medico) operano fino alle [15:45](ora_fine) ? 
+- cerco i [medici](object_type:medico) operano fino alle [08:45](ora_fine) ? 
+- cerco i [medici](object_type:medico) lavorano fino alle [08:00](ora_fine) ? 
+- cerco i [medici](object_type:medico) sono aperti fino alle [09:25](ora_fine) ? 
+- cerco i [dottore](object_type:medico) operano fino alle [10:20](ora_fine) ? 
+- cerco i [dottore](object_type:medico) lavorano fino alle [16:30](ora_fine) ? 
+- cerco i [dottore](object_type:medico) sono aperti fino alle [18:50](ora_fine) ? 
+- cerco i [dottoresse](object_type:medico) operano fino alle [18:15](ora_fine) ? 
+- cerco i [dottoresse](object_type:medico) lavorano fino alle [13:15](ora_fine) ? 
+- cerco i [dottoresse](object_type:medico) lavorano fino alle [15:15](ora_fine) ? 
+- cerco i [dottoresse](object_type:medico) sono aperti fino alle [17:15](ora_fine) ? 
+- cerco i [dottoressa](object_type:medico) operano fino alle [14:15](ora_fine) ? 
+- cerco i [dottoressa](object_type:medico) lavorano fino alle [20:30](ora_fine) ? 
+- cerco i [dottoressa](object_type:medico) lavorano fino alle [15:20](ora_fine) ? 
+- cerco i [dottoressa](object_type:medico) sono aperti fino alle [18:30](ora_fine) ? 
+- cerco i [dottori](object_type:medico) operano fino alle [11:30](ora_fine) ? 
+- cerco i [dottori](object_type:medico) lavorano fino alle [15:45](ora_fine) ? 
+- cerco i [dottori](object_type:medico) sono aperti fino alle [16:45](ora_fine) ? 
+- cerco i [ambulatori](object_type:ambulatorio) operano fino alle [19:45](ora_fine) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano fino alle [09:15](ora_fine) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono aperti fino alle [10:30](ora_fine) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono aperti fino alle [13:50](ora_fine) ? 
+- cerco i [lavora](object_type:medico) operano fino alle [12:45](ora_fine) ? 
+- cerco i [lavora](object_type:medico) lavorano fino alle [10:40](ora_fine) ? 
+- cerco i [lavora](object_type:medico) sono aperti fino alle [11:15](ora_fine) ? 
+- cerco le [medici](object_type:medico) operano fino alle [13:15](ora_fine) ? 
+- cerco le [medici](object_type:medico) lavorano fino alle [12:00](ora_fine) ? 
+- cerco le [medici](object_type:medico) sono aperti fino alle [10:00](ora_fine) ? 
+- cerco le [medici](object_type:medico) sono aperti fino alle [13:50](ora_fine) ? 
+- cerco le [dottore](object_type:medico) operano fino alle [13:30](ora_fine) ? 
+- cerco le [dottore](object_type:medico) lavorano fino alle [11:30](ora_fine) ? 
+- cerco le [dottore](object_type:medico) sono aperti fino alle [11:45](ora_fine) ? 
+- cerco le [dottoresse](object_type:medico) operano fino alle [11:40](ora_fine) ? 
+- cerco le [dottoresse](object_type:medico) lavorano fino alle [12:20](ora_fine) ? 
+- cerco le [dottoresse](object_type:medico) sono aperti fino alle [17:45](ora_fine) ? 
+- cerco le [dottoressa](object_type:medico) operano fino alle [18:30](ora_fine) ? 
+- cerco le [dottoressa](object_type:medico) lavorano fino alle [09:00](ora_fine) ? 
+- cerco le [dottoressa](object_type:medico) sono aperti fino alle [13:00](ora_fine) ? 
+- cerco le [dottori](object_type:medico) operano fino alle [12:20](ora_fine) ? 
+- cerco le [dottori](object_type:medico) lavorano fino alle [18:00](ora_fine) ? 
+- cerco le [dottori](object_type:medico) lavorano fino alle [12:45](ora_fine) ? 
+- cerco le [dottori](object_type:medico) sono aperti fino alle [00:00](ora_fine) ? 
+- cerco le [ambulatori](object_type:ambulatorio) operano fino alle [16:45](ora_fine) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano fino alle [09:45](ora_fine) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono aperti fino alle [18:50](ora_fine) ? 
+- cerco le [lavora](object_type:medico) operano fino alle [00:00](ora_fine) ? 
+- cerco le [lavora](object_type:medico) lavorano fino alle [14:45](ora_fine) ? 
+- cerco le [lavora](object_type:medico) sono aperti fino alle [15:05](ora_fine) ? 
+- quali [medici](object_type:medico) aprono alle [19:30](ora_inizio) ? 
+- quali [medici](object_type:medico) lavorano alle [10:15](ora_inizio) ? 
+- quali [medici](object_type:medico) lavorano alle [00:00](ora_inizio) ? 
+- quali [medici](object_type:medico) sono aperti alle [07:15](ora_inizio) ? 
+- quali [dottore](object_type:medico) aprono alle [18:45](ora_inizio) ? 
+- quali [dottore](object_type:medico) lavorano alle [18:15](ora_inizio) ? 
+- quali [dottore](object_type:medico) lavorano alle [07:00](ora_inizio) ? 
+- quali [dottore](object_type:medico) sono aperti alle [10:45](ora_inizio) ? 
+- quali [dottoresse](object_type:medico) aprono alle [11:00](ora_inizio) ? 
+- quali [dottoresse](object_type:medico) lavorano alle [12:45](ora_inizio) ? 
+- quali [dottoresse](object_type:medico) sono aperti alle [15:05](ora_inizio) ? 
+- quali [dottoressa](object_type:medico) aprono alle [16:20](ora_inizio) ? 
+- quali [dottoressa](object_type:medico) lavorano alle [17:45](ora_inizio) ? 
+- quali [dottoressa](object_type:medico) sono aperti alle [16:20](ora_inizio) ? 
+- quali [dottori](object_type:medico) aprono alle [19:00](ora_inizio) ? 
+- quali [dottori](object_type:medico) lavorano alle [07:45](ora_inizio) ? 
+- quali [dottori](object_type:medico) sono aperti alle [17:30](ora_inizio) ? 
+- quali [ambulatori](object_type:ambulatorio) aprono alle [07:15](ora_inizio) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano alle [13:00](ora_inizio) ? 
+- quali [ambulatori](object_type:ambulatorio) sono aperti alle [10:00](ora_inizio) ? 
+- quali [lavora](object_type:medico) aprono alle [13:45](ora_inizio) ? 
+- quali [lavora](object_type:medico) lavorano alle [16:10](ora_inizio) ? 
+- quali [lavora](object_type:medico) sono aperti alle [17:00](ora_inizio) ? 
+- quali [lavora](object_type:medico) sono aperti alle [16:50](ora_inizio) ? 
+- chi [medici](object_type:medico) aprono alle [13:30](ora_inizio) ? 
+- chi [medici](object_type:medico) lavorano alle [07:00](ora_inizio) ? 
+- chi [medici](object_type:medico) sono aperti alle [18:30](ora_inizio) ? 
+- chi [dottore](object_type:medico) aprono alle [10:20](ora_inizio) ? 
+- chi [dottore](object_type:medico) lavorano alle [15:45](ora_inizio) ? 
+- chi [dottore](object_type:medico) lavorano alle [07:30](ora_inizio) ? 
+- chi [dottore](object_type:medico) sono aperti alle [16:45](ora_inizio) ? 
+- chi [dottoresse](object_type:medico) aprono alle [17:15](ora_inizio) ? 
+- chi [dottoresse](object_type:medico) lavorano alle [16:00](ora_inizio) ? 
+- chi [dottoresse](object_type:medico) sono aperti alle [10:00](ora_inizio) ? 
+- chi [dottoressa](object_type:medico) aprono alle [08:45](ora_inizio) ? 
+- chi [dottoressa](object_type:medico) lavorano alle [18:30](ora_inizio) ? 
+- chi [dottoressa](object_type:medico) sono aperti alle [12:50](ora_inizio) ? 
+- chi [dottori](object_type:medico) aprono alle [09:10](ora_inizio) ? 
+- chi [dottori](object_type:medico) lavorano alle [14:00](ora_inizio) ? 
+- chi [dottori](object_type:medico) sono aperti alle [19:00](ora_inizio) ? 
+- chi [dottori](object_type:medico) sono aperti alle [18:00](ora_inizio) ? 
+- chi [dottori](object_type:medico) sono aperti alle [07:00](ora_inizio) ? 
+- chi [ambulatori](object_type:ambulatorio) aprono alle [16:50](ora_inizio) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano alle [10:30](ora_inizio) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano alle [13:45](ora_inizio) ? 
+- chi [ambulatori](object_type:ambulatorio) sono aperti alle [07:15](ora_inizio) ? 
+- chi [lavora](object_type:medico) aprono alle [10:00](ora_inizio) ? 
+- chi [lavora](object_type:medico) aprono alle [10:15](ora_inizio) ? 
+- chi [lavora](object_type:medico) lavorano alle [08:10](ora_inizio) ? 
+- chi [lavora](object_type:medico) sono aperti alle [11:10](ora_inizio) ? 
+- cerco i [medici](object_type:medico) aprono alle [13:00](ora_inizio) ? 
+- cerco i [medici](object_type:medico) aprono alle [11:15](ora_inizio) ? 
+- cerco i [medici](object_type:medico) aprono alle [16:20](ora_inizio) ? 
+- cerco i [medici](object_type:medico) lavorano alle [15:30](ora_inizio) ? 
+- cerco i [medici](object_type:medico) sono aperti alle [19:00](ora_inizio) ? 
+- cerco i [dottore](object_type:medico) aprono alle [18:30](ora_inizio) ? 
+- cerco i [dottore](object_type:medico) aprono alle [16:15](ora_inizio) ? 
+- cerco i [dottore](object_type:medico) lavorano alle [12:00](ora_inizio) ? 
+- cerco i [dottore](object_type:medico) sono aperti alle [15:30](ora_inizio) ? 
+- cerco i [dottore](object_type:medico) sono aperti alle [18:05](ora_inizio) ? 
+- cerco i [dottoresse](object_type:medico) aprono alle [18:05](ora_inizio) ? 
+- cerco i [dottoresse](object_type:medico) lavorano alle [13:45](ora_inizio) ? 
+- cerco i [dottoresse](object_type:medico) sono aperti alle [16:10](ora_inizio) ? 
+- cerco i [dottoressa](object_type:medico) aprono alle [15:05](ora_inizio) ? 
+- cerco i [dottoressa](object_type:medico) lavorano alle [07:45](ora_inizio) ? 
+- cerco i [dottoressa](object_type:medico) sono aperti alle [11:30](ora_inizio) ? 
+- cerco i [dottori](object_type:medico) aprono alle [18:45](ora_inizio) ? 
+- cerco i [dottori](object_type:medico) lavorano alle [12:15](ora_inizio) ? 
+- cerco i [dottori](object_type:medico) sono aperti alle [15:15](ora_inizio) ? 
+- cerco i [dottori](object_type:medico) sono aperti alle [00:00](ora_inizio) ? 
+- cerco i [ambulatori](object_type:ambulatorio) aprono alle [11:30](ora_inizio) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano alle [16:50](ora_inizio) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono aperti alle [17:00](ora_inizio) ? 
+- cerco i [lavora](object_type:medico) aprono alle [12:20](ora_inizio) ? 
+- cerco i [lavora](object_type:medico) lavorano alle [17:15](ora_inizio) ? 
+- cerco i [lavora](object_type:medico) sono aperti alle [13:45](ora_inizio) ? 
+- cerco i [lavora](object_type:medico) sono aperti alle [13:30](ora_inizio) ? 
+- cerco le [medici](object_type:medico) aprono alle [17:15](ora_inizio) ? 
+- cerco le [medici](object_type:medico) lavorano alle [09:10](ora_inizio) ? 
+- cerco le [medici](object_type:medico) sono aperti alle [19:30](ora_inizio) ? 
+- cerco le [dottore](object_type:medico) aprono alle [16:30](ora_inizio) ? 
+- cerco le [dottore](object_type:medico) lavorano alle [14:45](ora_inizio) ? 
+- cerco le [dottore](object_type:medico) sono aperti alle [18:50](ora_inizio) ? 
+- cerco le [dottoresse](object_type:medico) aprono alle [19:00](ora_inizio) ? 
+- cerco le [dottoresse](object_type:medico) aprono alle [18:30](ora_inizio) ? 
+- cerco le [dottoresse](object_type:medico) aprono alle [16:45](ora_inizio) ? 
+- cerco le [dottoresse](object_type:medico) lavorano alle [07:15](ora_inizio) ? 
+- cerco le [dottoresse](object_type:medico) sono aperti alle [12:00](ora_inizio) ? 
+- cerco le [dottoressa](object_type:medico) aprono alle [14:15](ora_inizio) ? 
+- cerco le [dottoressa](object_type:medico) aprono alle [07:15](ora_inizio) ? 
+- cerco le [dottoressa](object_type:medico) lavorano alle [11:00](ora_inizio) ? 
+- cerco le [dottoressa](object_type:medico) sono aperti alle [10:15](ora_inizio) ? 
+- cerco le [dottori](object_type:medico) aprono alle [10:00](ora_inizio) ? 
+- cerco le [dottori](object_type:medico) lavorano alle [11:15](ora_inizio) ? 
+- cerco le [dottori](object_type:medico) sono aperti alle [11:20](ora_inizio) ? 
+- cerco le [ambulatori](object_type:ambulatorio) aprono alle [18:15](ora_inizio) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano alle [10:45](ora_inizio) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono aperti alle [14:15](ora_inizio) ? 
+- cerco le [lavora](object_type:medico) aprono alle [11:30](ora_inizio) ? 
+- cerco le [lavora](object_type:medico) lavorano alle [17:30](ora_inizio) ? 
+- cerco le [lavora](object_type:medico) sono aperti alle [11:15](ora_inizio) ? 
+- quali [medici](object_type:medico) operano il [sabato](giorno) ? 
+- quali [medici](object_type:medico) è aperto il [giovedi](giorno) ? 
+- quali [medici](object_type:medico) è aperto il [MARTEDI](giorno) ? 
+- quali [medici](object_type:medico) lavorano il [sabato](giorno) ? 
+- quali [medici](object_type:medico) sono aperti il [Giovedi](giorno) ? 
+- quali [dottore](object_type:medico) operano il [venerdi](giorno) ? 
+- quali [dottore](object_type:medico) è aperto il [Mercoledi](giorno) ? 
+- quali [dottore](object_type:medico) lavorano il [Martedi](giorno) ? 
+- quali [dottore](object_type:medico) sono aperti il [SABATO](giorno) ? 
+- quali [dottoresse](object_type:medico) operano il [mercoledi](giorno) ? 
+- quali [dottoresse](object_type:medico) è aperto il [Venerdi](giorno) ? 
+- quali [dottoresse](object_type:medico) lavorano il [Giovedi](giorno) ? 
+- quali [dottoresse](object_type:medico) sono aperti il [Martedi](giorno) ? 
+- quali [dottoressa](object_type:medico) è aperto il [sabato](giorno) ? 
+- quali [dottoressa](object_type:medico) lavorano il [lunedi](giorno) ? 
+- quali [dottoressa](object_type:medico) sono aperti il [mercoledi](giorno) ? 
+- quali [dottori](object_type:medico) operano il [GIOVEDI](giorno) ? 
+- quali [dottori](object_type:medico) è aperto il [lunedi](giorno) ? 
+- quali [dottori](object_type:medico) lavorano il [Venerdi](giorno) ? 
+- quali [dottori](object_type:medico) sono aperti il [Sabato](giorno) ? 
+- quali [ambulatori](object_type:ambulatorio) operano il [martedi](giorno) ? 
+- quali [ambulatori](object_type:ambulatorio) è aperto il [Sabato](giorno) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano il [MERCOLEDI](giorno) ? 
+- quali [ambulatori](object_type:ambulatorio) sono aperti il [VENERDI](giorno) ? 
+- chi [medici](object_type:medico) operano il [venerdi](giorno) ? 
+- chi [medici](object_type:medico) è aperto il [Lunedi](giorno) ? 
+- chi [medici](object_type:medico) lavorano il [martedi](giorno) ? 
+- chi [medici](object_type:medico) sono aperti il [SABATO](giorno) ? 
+- chi [dottore](object_type:medico) operano il [Giovedi](giorno) ? 
+- chi [dottore](object_type:medico) lavorano il [GIOVEDI](giorno) ? 
+- chi [dottore](object_type:medico) lavorano il [Sabato](giorno) ? 
+- chi [dottore](object_type:medico) sono aperti il [martedi](giorno) ? 
+- chi [dottoresse](object_type:medico) operano il [SABATO](giorno) ? 
+- chi [dottoresse](object_type:medico) è aperto il [giovedi](giorno) ? 
+- chi [dottoresse](object_type:medico) lavorano il [VENERDI](giorno) ? 
+- chi [dottoresse](object_type:medico) lavorano il [Mercoledi](giorno) ? 
+- chi [dottoressa](object_type:medico) operano il [LUNEDI](giorno) ? 
+- chi [dottoressa](object_type:medico) operano il [MARTEDI](giorno) ? 
+- chi [dottoressa](object_type:medico) operano il [mercoledi](giorno) ? 
+- chi [dottoressa](object_type:medico) lavorano il [Venerdi](giorno) ? 
+- chi [dottori](object_type:medico) è aperto il [MARTEDI](giorno) ? 
+- chi [dottori](object_type:medico) lavorano il [lunedi](giorno) ? 
+- chi [dottori](object_type:medico) sono aperti il [Giovedi](giorno) ? 
+- chi [ambulatori](object_type:ambulatorio) è aperto il [venerdi](giorno) ? 
+- chi [ambulatori](object_type:ambulatorio) sono aperti il [Giovedi](giorno) ? 
+- cerco i [medici](object_type:medico) operano il [MERCOLEDI](giorno) ? 
+- cerco i [medici](object_type:medico) è aperto il [MARTEDI](giorno) ? 
+- cerco i [dottore](object_type:medico) è aperto il [LUNEDI](giorno) ? 
+- cerco i [dottore](object_type:medico) lavorano il [venerdi](giorno) ? 
+- cerco i [dottoresse](object_type:medico) operano il [MARTEDI](giorno) ? 
+- cerco i [dottoresse](object_type:medico) è aperto il [Mercoledi](giorno) ? 
+- cerco i [dottoresse](object_type:medico) lavorano il [Sabato](giorno) ? 
+- cerco i [dottoresse](object_type:medico) sono aperti il [LUNEDI](giorno) ? 
+- cerco i [dottoressa](object_type:medico) operano il [Giovedi](giorno) ? 
+- cerco i [dottoressa](object_type:medico) è aperto il [GIOVEDI](giorno) ? 
+- cerco i [dottoressa](object_type:medico) lavorano il [martedi](giorno) ? 
+- cerco i [dottoressa](object_type:medico) lavorano il [mercoledi](giorno) ? 
+- cerco i [dottoressa](object_type:medico) sono aperti il [venerdi](giorno) ? 
+- cerco i [dottori](object_type:medico) operano il [VENERDI](giorno) ? 
+- cerco i [dottori](object_type:medico) è aperto il [mercoledi](giorno) ? 
+- cerco i [dottori](object_type:medico) lavorano il [GIOVEDI](giorno) ? 
+- cerco i [dottori](object_type:medico) sono aperti il [MARTEDI](giorno) ? 
+- cerco i [ambulatori](object_type:ambulatorio) operano il [Sabato](giorno) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano il [LUNEDI](giorno) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono aperti il [mercoledi](giorno) ? 
+- cerco le [medici](object_type:medico) operano il [sabato](giorno) ? 
+- cerco le [medici](object_type:medico) lavorano il [Lunedi](giorno) ? 
+- cerco le [medici](object_type:medico) sono aperti il [venerdi](giorno) ? 
+- cerco le [medici](object_type:medico) sono aperti il [Martedi](giorno) ? 
+- cerco le [dottore](object_type:medico) operano il [mercoledi](giorno) ? 
+- cerco le [dottore](object_type:medico) è aperto il [Venerdi](giorno) ? 
+- cerco le [dottore](object_type:medico) è aperto il [martedi](giorno) ? 
+- cerco le [dottore](object_type:medico) lavorano il [Lunedi](giorno) ? 
+- cerco le [dottore](object_type:medico) sono aperti il [GIOVEDI](giorno) ? 
+- cerco le [dottoresse](object_type:medico) operano il [GIOVEDI](giorno) ? 
+- cerco le [dottoresse](object_type:medico) è aperto il [martedi](giorno) ? 
+- cerco le [dottoresse](object_type:medico) lavorano il [Sabato](giorno) ? 
+- cerco le [dottoresse](object_type:medico) sono aperti il [VENERDI](giorno) ? 
+- cerco le [dottoressa](object_type:medico) è aperto il [lunedi](giorno) ? 
+- cerco le [dottoressa](object_type:medico) lavorano il [GIOVEDI](giorno) ? 
+- cerco le [dottoressa](object_type:medico) sono aperti il [Sabato](giorno) ? 
+- cerco le [dottori](object_type:medico) operano il [LUNEDI](giorno) ? 
+- cerco le [dottori](object_type:medico) è aperto il [giovedi](giorno) ? 
+- cerco le [dottori](object_type:medico) lavorano il [mercoledi](giorno) ? 
+- cerco le [dottori](object_type:medico) sono aperti il [lunedi](giorno) ? 
+- cerco le [ambulatori](object_type:ambulatorio) operano il [VENERDI](giorno) ? 
+- cerco le [ambulatori](object_type:ambulatorio) è aperto il [Mercoledi](giorno) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano il [Martedi](giorno) ? 
+- quali [medici](object_type:medico) sono a [CANTOIRA](denom_comune) ? 
+- quali [dottore](object_type:medico) sono a [MONCALVO](denom_comune) ? 
+- quali [dottoresse](object_type:medico) sono a [POMARO MONFERRATO](denom_comune) ? 
+- quali [dottoressa](object_type:medico) sono a [Costanzana](denom_comune) ? 
+- quali [dottoressa](object_type:medico) sono a [CARISIO](denom_comune) ? 
+- quali [dottori](object_type:medico) sono a [sali vercellese](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) sono a [MONTALDO ROERO](denom_comune) ? 
+- chi [medici](object_type:medico) sono a [chiusa pesio](denom_comune) ? 
+- chi [medici](object_type:medico) sono a [Vicoforte](denom_comune) ? 
+- chi [dottore](object_type:medico) sono a [canelli](denom_comune) ? 
+- chi [dottore](object_type:medico) sono a [Rocchetta tanaro](denom_comune) ? 
+- chi [dottoresse](object_type:medico) sono a [CERRETO GRUE](denom_comune) ? 
+- chi [dottoressa](object_type:medico) sono a [Villafalletto](denom_comune) ? 
+- chi [dottori](object_type:medico) sono a [san paolo solbrito](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) sono a [brossasco](denom_comune) ? 
+- cerco i [medici](object_type:medico) sono a [ornavasso](denom_comune) ? 
+- cerco i [dottore](object_type:medico) sono a [VAGLIO SERRA](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) sono a [pralungo](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) sono a [Anzola d ossola](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) sono a [Front](denom_comune) ? 
+- cerco i [dottori](object_type:medico) sono a [LEVICE](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono a [poirino](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono a [COLAZZA](denom_comune) ? 
+- cerco le [medici](object_type:medico) sono a [Castiglione falletto](denom_comune) ? 
+- cerco le [dottore](object_type:medico) sono a [CARROSIO](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) sono a [Priocca](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) sono a [cessole](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) sono a [CASTELLAMONTE](denom_comune) ? 
+- cerco le [dottori](object_type:medico) sono a [casale monferrato](denom_comune) ? 
+- cerco le [dottori](object_type:medico) sono a [AVIGLIANA](denom_comune) ? 
+- cerco le [dottori](object_type:medico) sono a [envie](denom_comune) ? 
+- cerco le [dottori](object_type:medico) sono a [MONESIGLIO](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono a [collegno](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono a [Chiomonte](denom_comune) ? 
+- elencami [medici](object_type:medico) a [Castellamonte](denom_comune) 
+- elencami [dottore](object_type:medico) a [sozzago](denom_comune) 
+- elencami [dottoresse](object_type:medico) a [BARGE](denom_comune) 
+- elencami [dottoressa](object_type:medico) a [Casanova elvo](denom_comune) 
+- elencami [dottori](object_type:medico) a [Vercelli](denom_comune) 
+- elencami [ambulatori](object_type:ambulatorio a [BRUINO](denom_comune) 
+- mostrami [medici](object_type:medico) a [Gattinara](denom_comune) 
+- mostrami [dottore](object_type:medico) a [MEZZOMERICO](denom_comune) 
+- mostrami [dottoresse](object_type:medico) a [Guarene](denom_comune) 
+- mostrami [dottoressa](object_type:medico) a [Gaglianico](denom_comune) 
+- mostrami [dottori](object_type:medico) a [GOTTASECCA](denom_comune) 
+- mostrami [ambulatori](object_type:ambulatorio a [CHIAVERANO](denom_comune) 
+- dimmi [medici](object_type:medico) a [formazza](denom_comune) 
+- dimmi [dottore](object_type:medico) a [Castelnuovo di ceva](denom_comune) 
+- dimmi [dottore](object_type:medico) a [bassignana](denom_comune) 
+- dimmi [dottoresse](object_type:medico) a [casteldelfino](denom_comune) 
+- dimmi [dottoressa](object_type:medico) a [VANZONE CON SAN CARLO](denom_comune) 
+- dimmi [dottoressa](object_type:medico) a [VILLAR PELLICE](denom_comune) 
+- dimmi [dottoressa](object_type:medico) a [ponzone](denom_comune) 
+- dimmi [dottori](object_type:medico) a [SAN GERMANO CHISONE](denom_comune) 
+- dimmi [ambulatori](object_type:ambulatorio a [montecastello](denom_comune) 
+- elencami [medici](object_type:medico) a [0](desc_distretto) 
+- elencami [medici](object_type:medico) a [0](desc_distretto) 
+- elencami [dottore](object_type:medico) a [0](desc_distretto) 
+- elencami [dottoresse](object_type:medico) a [0](desc_distretto) 
+- elencami [dottoressa](object_type:medico) a [0](desc_distretto) 
+- elencami [dottoressa](object_type:medico) a [0](desc_distretto) 
+- elencami [dottori](object_type:medico) a [0](desc_distretto) 
+- elencami [ambulatori](object_type:ambulatorio a [0](desc_distretto) 
+- mostrami [medici](object_type:medico) a [0](desc_distretto) 
+- mostrami [medici](object_type:medico) a [0](desc_distretto) 
+- mostrami [dottore](object_type:medico) a [0](desc_distretto) 
+- mostrami [dottoresse](object_type:medico) a [0](desc_distretto) 
+- mostrami [dottoressa](object_type:medico) a [0](desc_distretto) 
+- mostrami [dottoressa](object_type:medico) a [0](desc_distretto) 
+- mostrami [dottori](object_type:medico) a [0](desc_distretto) 
+- mostrami [ambulatori](object_type:ambulatorio a [0](desc_distretto) 
+- dimmi [medici](object_type:medico) a [0](desc_distretto) 
+- dimmi [dottore](object_type:medico) a [0](desc_distretto) 
+- dimmi [dottoresse](object_type:medico) a [0](desc_distretto) 
+- dimmi [dottoressa](object_type:medico) a [0](desc_distretto) 
+- dimmi [dottori](object_type:medico) a [0](desc_distretto) 
+- dimmi [ambulatori](object_type:ambulatorio a [0](desc_distretto) 
+- elencami [medici](object_type:medico) in [via xx settembre](indirizzo) 
+- elencami [medici](object_type:medico) in [VIA DEL TEATRO](indirizzo) 
+- elencami [dottore](object_type:medico) in [Via abate a.m. vassalli eandi](indirizzo) 
+- elencami [dottoresse](object_type:medico) in [Via costa carlo](indirizzo) 
+- elencami [dottoressa](object_type:medico) in [PIAZZA COMUNE](indirizzo) 
+- elencami [dottoressa](object_type:medico) in [via mille](indirizzo) 
+- elencami [dottori](object_type:medico) in [via tabucchi](indirizzo) 
+- elencami [ambulatori](object_type:ambulatorio in [OSPEDALE S. BIAGIO](indirizzo) 
+- mostrami [medici](object_type:medico) in [Piazza battisti cesare](indirizzo) 
+- mostrami [medici](object_type:medico) in [Corso liberta](indirizzo) 
+- mostrami [dottore](object_type:medico) in [via ley](indirizzo) 
+- mostrami [dottoresse](object_type:medico) in [Corso italia](indirizzo) 
+- mostrami [dottoressa](object_type:medico) in [via montevideo](indirizzo) 
+- mostrami [dottori](object_type:medico) in [Via faraggiana](indirizzo) 
+- mostrami [dottori](object_type:medico) in [via artisti](indirizzo) 
+- mostrami [ambulatori](object_type:ambulatorio in [via aosta](indirizzo) 
+- mostrami [ambulatori](object_type:ambulatorio in [loc.ta  fontane - ambulatorio comunale](indirizzo) 
+- dimmi [medici](object_type:medico) in [via seppiana](indirizzo) 
+- dimmi [dottore](object_type:medico) in [via vittorio emanuele iii](indirizzo) 
+- dimmi [dottoresse](object_type:medico) in [Piazza doria](indirizzo) 
+- dimmi [dottoressa](object_type:medico) in [VIA FAVOLE ANTONIO](indirizzo) 
+- dimmi [dottori](object_type:medico) in [Via bolzano](indirizzo) 
+- dimmi [ambulatori](object_type:ambulatorio in [via ley](indirizzo) 
+- elencami [medici](object_type:medico) a [casaleggio boiro](denom_comune) 
+- elencami [dottore](object_type:medico) a [BIANDRATE](denom_comune) 
+- elencami [dottoresse](object_type:medico) a [almese](denom_comune) 
+- elencami [dottoressa](object_type:medico) a [TORINO](denom_comune) 
+- elencami [dottoressa](object_type:medico) a [Rosta](denom_comune) 
+- elencami [dottori](object_type:medico) a [ROPPOLO](denom_comune) 
+- elencami [ambulatori](object_type:ambulatorio a [Momperone](denom_comune) 
+- mostrami [medici](object_type:medico) a [verrone](denom_comune) 
+- mostrami [medici](object_type:medico) a [Pradleves](denom_comune) 
+- mostrami [medici](object_type:medico) a [MELAZZO](denom_comune) 
+- mostrami [dottore](object_type:medico) a [Pasturana](denom_comune) 
+- mostrami [dottore](object_type:medico) a [MONTEU DA PO](denom_comune) 
+- mostrami [dottoresse](object_type:medico) a [Penango](denom_comune) 
+- mostrami [dottoressa](object_type:medico) a [Leini](denom_comune) 
+- mostrami [dottoressa](object_type:medico) a [valmala](denom_comune) 
+- mostrami [dottori](object_type:medico) a [BELFORTE MONFERRATO](denom_comune) 
+- mostrami [ambulatori](object_type:ambulatorio a [Montelupo albese](denom_comune) 
+- dimmi [medici](object_type:medico) a [Forno canavese](denom_comune) 
+- dimmi [dottore](object_type:medico) a [Arquata scrivia](denom_comune) 
+- dimmi [dottore](object_type:medico) a [Balme](denom_comune) 
+- dimmi [dottoresse](object_type:medico) a [CONDOVE](denom_comune) 
+- dimmi [dottoressa](object_type:medico) a [vinovo](denom_comune) 
+- dimmi [dottoressa](object_type:medico) a [Quarna sotto](denom_comune) 
+- dimmi [dottori](object_type:medico) a [pila](denom_comune) 
+- dimmi [dottori](object_type:medico) a [Cassano spinola](denom_comune) 
+- dimmi [ambulatori](object_type:ambulatorio a [Montabone](denom_comune) 
+- elencami [medici](object_type:medico) aperti di [Venerdi](giorno) 
+- elencami [medici](object_type:medico) aperti il [MARTEDI](giorno) 
+- elencami [dottore](object_type:medico) aperti di [Mercoledi](giorno) 
+- elencami [dottore](object_type:medico) aperti il [Martedi](giorno) 
+- elencami [dottoresse](object_type:medico) aperti di [GIOVEDI](giorno) 
+- elencami [dottoresse](object_type:medico) aperti il [MERCOLEDI](giorno) 
+- elencami [dottoressa](object_type:medico) aperti di [lunedi](giorno) 
+- elencami [dottoressa](object_type:medico) aperti il [giovedi](giorno) 
+- elencami [dottori](object_type:medico) aperti di [Martedi](giorno) 
+- elencami [dottori](object_type:medico) aperti il [Giovedi](giorno) 
+- elencami [ambulatori](object_type:ambulatorio aperti di [sabato](giorno) 
+- elencami [ambulatori](object_type:ambulatorio aperti il [Mercoledi](giorno) 
+- mostrami [medici](object_type:medico) aperti di [GIOVEDI](giorno) 
+- mostrami [medici](object_type:medico) aperti di [Sabato](giorno) 
+- mostrami [medici](object_type:medico) aperti il [Lunedi](giorno) 
+- mostrami [dottore](object_type:medico) aperti di [lunedi](giorno) 
+- mostrami [dottore](object_type:medico) aperti il [MARTEDI](giorno) 
+- mostrami [dottoresse](object_type:medico) aperti di [SABATO](giorno) 
+- mostrami [dottoressa](object_type:medico) aperti di [MARTEDI](giorno) 
+- mostrami [dottoressa](object_type:medico) aperti il [SABATO](giorno) 
+- mostrami [dottori](object_type:medico) aperti di [venerdi](giorno) 
+- mostrami [dottori](object_type:medico) aperti il [venerdi](giorno) 
+- mostrami [ambulatori](object_type:ambulatorio aperti di [lunedi](giorno) 
+- mostrami [ambulatori](object_type:ambulatorio aperti il [GIOVEDI](giorno) 
+- dimmi [medici](object_type:medico) aperti di [VENERDI](giorno) 
+- dimmi [medici](object_type:medico) aperti il [Mercoledi](giorno) 
+- dimmi [dottore](object_type:medico) aperti di [sabato](giorno) 
+- dimmi [dottore](object_type:medico) aperti il [GIOVEDI](giorno) 
+- dimmi [dottoresse](object_type:medico) aperti di [venerdi](giorno) 
+- dimmi [dottoresse](object_type:medico) aperti il [MARTEDI](giorno) 
+- dimmi [dottoressa](object_type:medico) aperti di [GIOVEDI](giorno) 
+- dimmi [dottoressa](object_type:medico) aperti il [LUNEDI](giorno) 
+- dimmi [dottori](object_type:medico) aperti di [Mercoledi](giorno) 
+- dimmi [dottori](object_type:medico) aperti il [Sabato](giorno) 
+- dimmi [ambulatori](object_type:ambulatorio aperti di [MARTEDI](giorno) 
+- dimmi [ambulatori](object_type:ambulatorio aperti il [Venerdi](giorno) 
+- elencami [medici](object_type:medico) in [12051](cap) 
+- elencami [dottore](object_type:medico) in [10090](cap) 
+- elencami [dottoresse](object_type:medico) in [15040](cap) 
+- elencami [dottoressa](object_type:medico) in [10098](cap) 
+- elencami [dottori](object_type:medico) in [28041](cap) 
+- elencami [ambulatori](object_type:ambulatorio in [13040](cap) 
+- elencami [ambulatori](object_type:ambulatorio in [15033](cap) 
+- mostrami [medici](object_type:medico) in [12100](cap) 
+- mostrami [medici](object_type:medico) in [10127](cap) 
+- mostrami [dottore](object_type:medico) in [15020](cap) 
+- mostrami [dottoresse](object_type:medico) in [10036](cap) 
+- mostrami [dottoressa](object_type:medico) in [15121](cap) 
+- mostrami [dottori](object_type:medico) in [15121](cap) 
+- mostrami [dottori](object_type:medico) in [13900](cap) 
+- mostrami [ambulatori](object_type:ambulatorio in [13100](cap) 
+- mostrami [ambulatori](object_type:ambulatorio in [28881](cap) 
+- dimmi [medici](object_type:medico) in [10012](cap) 
+- dimmi [dottore](object_type:medico) in [14100](cap) 
+- dimmi [dottoresse](object_type:medico) in [10080](cap) 
+- dimmi [dottoressa](object_type:medico) in [28100](cap) 
+- dimmi [dottori](object_type:medico) in [12040](cap) 
+- dimmi [ambulatori](object_type:ambulatorio in [15060](cap) 
+- dimmi [ambulatori](object_type:ambulatorio in [15121](cap) 
+- elencami [medici](object_type:medico) che lavorano dalle [11:00](ora_inizio) 
+- elencami [medici](object_type:medico) che lavorano alle [08:30](ora_inizio) 
+- elencami [medici](object_type:medico) che fanno dalle [09:25](ora_inizio) 
+- elencami [medici](object_type:medico) che fanno alle [08:40](ora_inizio) 
+- elencami [medici](object_type:medico) che aprono dalle [18:20](ora_inizio) 
+- elencami [medici](object_type:medico) che aprono alle [15:45](ora_inizio) 
+- elencami [medici](object_type:medico) che aprono alle [09:25](ora_inizio) 
+- elencami [medici](object_type:medico) che iniziano dalle [12:30](ora_inizio) 
+- elencami [medici](object_type:medico) che iniziano dalle [00:00](ora_inizio) 
+- elencami [medici](object_type:medico) che iniziano alle [12:20](ora_inizio) 
+- elencami [dottore](object_type:medico) che lavorano dalle [13:15](ora_inizio) 
+- elencami [dottore](object_type:medico) che lavorano alle [14:15](ora_inizio) 
+- elencami [dottore](object_type:medico) che fanno dalle [14:00](ora_inizio) 
+- elencami [dottore](object_type:medico) che fanno dalle [09:10](ora_inizio) 
+- elencami [dottore](object_type:medico) che fanno alle [17:30](ora_inizio) 
+- elencami [dottore](object_type:medico) che aprono dalle [15:10](ora_inizio) 
+- elencami [dottore](object_type:medico) che aprono alle [11:30](ora_inizio) 
+- elencami [dottore](object_type:medico) che iniziano dalle [18:20](ora_inizio) 
+- elencami [dottore](object_type:medico) che iniziano alle [08:15](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che lavorano dalle [11:15](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che lavorano alle [13:00](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che fanno dalle [17:45](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che fanno alle [15:30](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che aprono dalle [08:30](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che aprono alle [08:45](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che iniziano dalle [09:30](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che iniziano alle [07:15](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che lavorano dalle [08:00](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che lavorano alle [12:00](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che fanno dalle [09:30](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che fanno dalle [08:40](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che fanno alle [11:30](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che aprono dalle [17:30](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che aprono alle [15:00](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che iniziano dalle [15:30](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che iniziano alle [16:30](ora_inizio) 
+- elencami [dottori](object_type:medico) che lavorano dalle [12:30](ora_inizio) 
+- elencami [dottori](object_type:medico) che lavorano alle [16:30](ora_inizio) 
+- elencami [dottori](object_type:medico) che lavorano alle [09:00](ora_inizio) 
+- elencami [dottori](object_type:medico) che lavorano alle [11:45](ora_inizio) 
+- elencami [dottori](object_type:medico) che fanno dalle [17:50](ora_inizio) 
+- elencami [dottori](object_type:medico) che fanno alle [09:10](ora_inizio) 
+- elencami [dottori](object_type:medico) che aprono dalle [11:10](ora_inizio) 
+- elencami [dottori](object_type:medico) che aprono alle [17:50](ora_inizio) 
+- elencami [dottori](object_type:medico) che iniziano dalle [17:00](ora_inizio) 
+- elencami [dottori](object_type:medico) che iniziano alle [17:30](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che lavorano dalle [15:45](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che lavorano alle [10:15](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che fanno dalle [18:45](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che fanno alle [15:05](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che aprono dalle [14:00](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che aprono alle [18:50](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che iniziano dalle [18:15](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che iniziano dalle [09:10](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che iniziano dalle [18:05](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che iniziano alle [07:00](ora_inizio) 
+- mostrami [medici](object_type:medico) che lavorano dalle [12:15](ora_inizio) 
+- mostrami [medici](object_type:medico) che lavorano alle [07:00](ora_inizio) 
+- mostrami [medici](object_type:medico) che fanno dalle [09:00](ora_inizio) 
+- mostrami [medici](object_type:medico) che fanno dalle [19:30](ora_inizio) 
+- mostrami [medici](object_type:medico) che fanno alle [15:30](ora_inizio) 
+- mostrami [medici](object_type:medico) che fanno alle [09:25](ora_inizio) 
+- mostrami [medici](object_type:medico) che aprono dalle [08:30](ora_inizio) 
+- mostrami [medici](object_type:medico) che aprono alle [13:45](ora_inizio) 
+- mostrami [medici](object_type:medico) che iniziano dalle [08:45](ora_inizio) 
+- mostrami [medici](object_type:medico) che iniziano dalle [18:45](ora_inizio) 
+- mostrami [medici](object_type:medico) che iniziano alle [11:00](ora_inizio) 
+- mostrami [dottore](object_type:medico) che lavorano dalle [08:00](ora_inizio) 
+- mostrami [dottore](object_type:medico) che lavorano alle [08:30](ora_inizio) 
+- mostrami [dottore](object_type:medico) che fanno dalle [15:05](ora_inizio) 
+- mostrami [dottore](object_type:medico) che fanno alle [13:00](ora_inizio) 
+- mostrami [dottore](object_type:medico) che aprono dalle [10:30](ora_inizio) 
+- mostrami [dottore](object_type:medico) che aprono dalle [00:00](ora_inizio) 
+- mostrami [dottore](object_type:medico) che aprono alle [18:30](ora_inizio) 
+- mostrami [dottore](object_type:medico) che iniziano dalle [12:30](ora_inizio) 
+- mostrami [dottore](object_type:medico) che iniziano alle [08:00](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che lavorano dalle [09:30](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che lavorano alle [17:50](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che fanno dalle [11:45](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che fanno alle [15:05](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che aprono dalle [16:30](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che aprono dalle [12:00](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che aprono dalle [20:00](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che aprono alle [07:30](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che iniziano dalle [19:30](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che iniziano alle [10:15](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che iniziano alle [18:20](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che lavorano dalle [15:15](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che lavorano dalle [09:25](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che lavorano alle [10:30](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che fanno dalle [16:30](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che fanno alle [07:30](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che aprono dalle [19:00](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che aprono dalle [08:10](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che aprono alle [18:00](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che iniziano dalle [09:10](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che iniziano alle [17:45](ora_inizio) 
+- mostrami [dottori](object_type:medico) che lavorano dalle [11:20](ora_inizio) 
+- mostrami [dottori](object_type:medico) che lavorano alle [09:40](ora_inizio) 
+- mostrami [dottori](object_type:medico) che fanno dalle [17:45](ora_inizio) 
+- mostrami [dottori](object_type:medico) che fanno alle [18:50](ora_inizio) 
+- mostrami [dottori](object_type:medico) che aprono dalle [18:05](ora_inizio) 
+- mostrami [dottori](object_type:medico) che aprono alle [16:00](ora_inizio) 
+- mostrami [dottori](object_type:medico) che iniziano dalle [11:10](ora_inizio) 
+- mostrami [dottori](object_type:medico) che iniziano alle [15:30](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che lavorano dalle [11:10](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che lavorano dalle [07:45](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che lavorano alle [19:00](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che lavorano alle [08:45](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che fanno dalle [16:00](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che fanno dalle [08:15](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che fanno alle [13:20](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che aprono dalle [15:15](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che aprono alle [16:20](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che iniziano dalle [19:30](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che iniziano alle [00:00](ora_inizio) 
+- dimmi [medici](object_type:medico) che lavorano dalle [09:10](ora_inizio) 
+- dimmi [medici](object_type:medico) che lavorano alle [09:30](ora_inizio) 
+- dimmi [medici](object_type:medico) che lavorano alle [18:30](ora_inizio) 
+- dimmi [medici](object_type:medico) che fanno dalle [10:00](ora_inizio) 
+- dimmi [medici](object_type:medico) che fanno alle [09:15](ora_inizio) 
+- dimmi [medici](object_type:medico) che fanno alle [12:20](ora_inizio) 
+- dimmi [medici](object_type:medico) che aprono dalle [18:00](ora_inizio) 
+- dimmi [medici](object_type:medico) che aprono alle [12:50](ora_inizio) 
+- dimmi [medici](object_type:medico) che aprono alle [17:50](ora_inizio) 
+- dimmi [medici](object_type:medico) che iniziano dalle [14:00](ora_inizio) 
+- dimmi [medici](object_type:medico) che iniziano dalle [12:45](ora_inizio) 
+- dimmi [medici](object_type:medico) che iniziano alle [14:15](ora_inizio) 
+- dimmi [dottore](object_type:medico) che lavorano dalle [11:10](ora_inizio) 
+- dimmi [dottore](object_type:medico) che lavorano alle [14:45](ora_inizio) 
+- dimmi [dottore](object_type:medico) che fanno dalle [18:15](ora_inizio) 
+- dimmi [dottore](object_type:medico) che fanno alle [13:30](ora_inizio) 
+- dimmi [dottore](object_type:medico) che aprono dalle [09:40](ora_inizio) 
+- dimmi [dottore](object_type:medico) che aprono alle [15:00](ora_inizio) 
+- dimmi [dottore](object_type:medico) che aprono alle [16:30](ora_inizio) 
+- dimmi [dottore](object_type:medico) che iniziano dalle [17:15](ora_inizio) 
+- dimmi [dottore](object_type:medico) che iniziano alle [18:15](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che lavorano dalle [08:30](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che lavorano alle [10:00](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che lavorano alle [11:45](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che fanno dalle [17:30](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che fanno dalle [16:45](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che fanno dalle [16:10](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che fanno dalle [10:20](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che fanno alle [08:30](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che aprono dalle [17:00](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che aprono alle [07:15](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che iniziano dalle [18:30](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che iniziano dalle [14:15](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che iniziano alle [17:00](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che lavorano dalle [18:50](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che lavorano alle [14:00](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che fanno dalle [16:20](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che fanno alle [08:00](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che aprono dalle [20:00](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che aprono alle [12:00](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che iniziano dalle [15:15](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che iniziano alle [15:15](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che iniziano alle [16:20](ora_inizio) 
+- dimmi [dottori](object_type:medico) che lavorano dalle [16:15](ora_inizio) 
+- dimmi [dottori](object_type:medico) che lavorano alle [18:00](ora_inizio) 
+- dimmi [dottori](object_type:medico) che lavorano alle [15:15](ora_inizio) 
+- dimmi [dottori](object_type:medico) che fanno dalle [16:30](ora_inizio) 
+- dimmi [dottori](object_type:medico) che fanno alle [18:15](ora_inizio) 
+- dimmi [dottori](object_type:medico) che aprono dalle [08:40](ora_inizio) 
+- dimmi [dottori](object_type:medico) che aprono alle [09:30](ora_inizio) 
+- dimmi [dottori](object_type:medico) che aprono alle [17:15](ora_inizio) 
+- dimmi [dottori](object_type:medico) che aprono alle [11:20](ora_inizio) 
+- dimmi [dottori](object_type:medico) che iniziano dalle [09:00](ora_inizio) 
+- dimmi [dottori](object_type:medico) che iniziano alle [18:20](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che lavorano dalle [12:45](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che lavorano alle [09:00](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che fanno dalle [11:45](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che fanno alle [15:10](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che fanno alle [12:50](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che aprono dalle [09:15](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che aprono alle [17:45](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che aprono alle [10:20](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che iniziano dalle [13:20](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che iniziano alle [09:10](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che iniziano alle [11:45](ora_inizio) 
+- elencami [medici](object_type:medico) che lavorano alle [10:00](ora_fine) 
+- elencami [medici](object_type:medico) che lavorano alle [19:15](ora_fine) 
+- elencami [medici](object_type:medico) che lavorano alle [12:50](ora_fine) 
+- elencami [medici](object_type:medico) che lavorano fino alle [18:50](ora_fine) 
+- elencami [medici](object_type:medico) che fanno alle [12:45](ora_fine) 
+- elencami [medici](object_type:medico) che fanno alle [11:40](ora_fine) 
+- elencami [medici](object_type:medico) che fanno fino alle [18:00](ora_fine) 
+- elencami [medici](object_type:medico) che chiudono alle [11:03](ora_fine) 
+- elencami [medici](object_type:medico) che chiudono fino alle [19:20](ora_fine) 
+- elencami [medici](object_type:medico) che restano aperti alle [13:30](ora_fine) 
+- elencami [medici](object_type:medico) che restano aperti fino alle [20:00](ora_fine) 
+- elencami [dottore](object_type:medico) che lavorano alle [18:50](ora_fine) 
+- elencami [dottore](object_type:medico) che lavorano fino alle [22:00](ora_fine) 
+- elencami [dottore](object_type:medico) che fanno alle [21:00](ora_fine) 
+- elencami [dottore](object_type:medico) che fanno fino alle [14:45](ora_fine) 
+- elencami [dottore](object_type:medico) che fanno fino alle [09:25](ora_fine) 
+- elencami [dottore](object_type:medico) che chiudono alle [10:20](ora_fine) 
+- elencami [dottore](object_type:medico) che chiudono fino alle [18:45](ora_fine) 
+- elencami [dottore](object_type:medico) che restano aperti alle [18:00](ora_fine) 
+- elencami [dottore](object_type:medico) che restano aperti fino alle [19:45](ora_fine) 
+- elencami [dottoresse](object_type:medico) che lavorano alle [10:20](ora_fine) 
+- elencami [dottoresse](object_type:medico) che lavorano fino alle [19:45](ora_fine) 
+- elencami [dottoresse](object_type:medico) che fanno alle [10:45](ora_fine) 
+- elencami [dottoresse](object_type:medico) che fanno fino alle [13:50](ora_fine) 
+- elencami [dottoresse](object_type:medico) che chiudono alle [09:25](ora_fine) 
+- elencami [dottoresse](object_type:medico) che chiudono fino alle [11:00](ora_fine) 
+- elencami [dottoresse](object_type:medico) che chiudono fino alle [11:30](ora_fine) 
+- elencami [dottoresse](object_type:medico) che restano aperti alle [20:30](ora_fine) 
+- elencami [dottoresse](object_type:medico) che restano aperti alle [16:35](ora_fine) 
+- elencami [dottoresse](object_type:medico) che restano aperti fino alle [09:15](ora_fine) 
+- elencami [dottoressa](object_type:medico) che lavorano alle [18:45](ora_fine) 
+- elencami [dottoressa](object_type:medico) che lavorano fino alle [16:15](ora_fine) 
+- elencami [dottoressa](object_type:medico) che lavorano fino alle [08:00](ora_fine) 
+- elencami [dottoressa](object_type:medico) che fanno alle [11:15](ora_fine) 
+- elencami [dottoressa](object_type:medico) che fanno alle [09:30](ora_fine) 
+- elencami [dottoressa](object_type:medico) che fanno fino alle [09:45](ora_fine) 
+- elencami [dottoressa](object_type:medico) che chiudono alle [08:30](ora_fine) 
+- elencami [dottoressa](object_type:medico) che chiudono fino alle [16:00](ora_fine) 
+- elencami [dottoressa](object_type:medico) che restano aperti alle [12:15](ora_fine) 
+- elencami [dottoressa](object_type:medico) che restano aperti fino alle [19:30](ora_fine) 
+- elencami [dottoressa](object_type:medico) che restano aperti fino alle [11:30](ora_fine) 
+- elencami [dottori](object_type:medico) che lavorano alle [21:30](ora_fine) 
+- elencami [dottori](object_type:medico) che lavorano alle [18:15](ora_fine) 
+- elencami [dottori](object_type:medico) che lavorano fino alle [15:30](ora_fine) 
+- elencami [dottori](object_type:medico) che fanno alle [17:45](ora_fine) 
+- elencami [dottori](object_type:medico) che fanno alle [12:20](ora_fine) 
+- elencami [dottori](object_type:medico) che fanno fino alle [15:15](ora_fine) 
+- elencami [dottori](object_type:medico) che fanno fino alle [15:20](ora_fine) 
+- elencami [dottori](object_type:medico) che chiudono alle [12:30](ora_fine) 
+- elencami [dottori](object_type:medico) che chiudono fino alle [13:50](ora_fine) 
+- elencami [dottori](object_type:medico) che chiudono fino alle [18:15](ora_fine) 
+- elencami [dottori](object_type:medico) che restano aperti alle [17:00](ora_fine) 
+- elencami [dottori](object_type:medico) che restano aperti alle [12:10](ora_fine) 
+- elencami [dottori](object_type:medico) che restano aperti fino alle [12:00](ora_fine) 
+- elencami [dottori](object_type:medico) che restano aperti fino alle [11:15](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che lavorano alle [16:15](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che lavorano fino alle [12:20](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che fanno alle [08:00](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che fanno fino alle [13:00](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che fanno fino alle [14:20](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che chiudono alle [11:00](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che chiudono alle [15:20](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che chiudono fino alle [20:00](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che restano aperti alle [14:30](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che restano aperti alle [16:35](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che restano aperti fino alle [21:30](ora_fine) 
+- mostrami [medici](object_type:medico) che lavorano alle [15:05](ora_fine) 
+- mostrami [medici](object_type:medico) che lavorano fino alle [20:15](ora_fine) 
+- mostrami [medici](object_type:medico) che fanno alle [18:50](ora_fine) 
+- mostrami [medici](object_type:medico) che fanno fino alle [15:05](ora_fine) 
+- mostrami [medici](object_type:medico) che chiudono alle [16:35](ora_fine) 
+- mostrami [medici](object_type:medico) che chiudono fino alle [15:30](ora_fine) 
+- mostrami [medici](object_type:medico) che restano aperti alle [13:15](ora_fine) 
+- mostrami [medici](object_type:medico) che restano aperti alle [21:30](ora_fine) 
+- mostrami [medici](object_type:medico) che restano aperti fino alle [19:15](ora_fine) 
+- mostrami [dottore](object_type:medico) che lavorano alle [17:30](ora_fine) 
+- mostrami [dottore](object_type:medico) che lavorano fino alle [15:15](ora_fine) 
+- mostrami [dottore](object_type:medico) che fanno alle [11:03](ora_fine) 
+- mostrami [dottore](object_type:medico) che fanno fino alle [15:30](ora_fine) 
+- mostrami [dottore](object_type:medico) che chiudono alle [11:40](ora_fine) 
+- mostrami [dottore](object_type:medico) che chiudono fino alle [18:00](ora_fine) 
+- mostrami [dottore](object_type:medico) che restano aperti alle [15:05](ora_fine) 
+- mostrami [dottore](object_type:medico) che restano aperti fino alle [19:00](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che lavorano alle [16:35](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che lavorano fino alle [13:00](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che fanno alle [13:15](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che fanno fino alle [08:00](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che chiudono alle [18:30](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che chiudono fino alle [16:30](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che chiudono fino alle [14:20](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che restano aperti alle [16:45](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che restano aperti alle [14:20](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che restano aperti fino alle [15:45](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che restano aperti fino alle [18:10](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che lavorano alle [18:15](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che lavorano fino alle [00:00](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che fanno alle [16:30](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che fanno fino alle [10:15](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che chiudono alle [09:15](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che chiudono fino alle [13:50](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che restano aperti alle [18:50](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che restano aperti fino alle [16:30](ora_fine) 
+- mostrami [dottori](object_type:medico) che lavorano alle [20:30](ora_fine) 
+- mostrami [dottori](object_type:medico) che lavorano fino alle [18:10](ora_fine) 
+- mostrami [dottori](object_type:medico) che lavorano fino alle [15:05](ora_fine) 
+- mostrami [dottori](object_type:medico) che fanno alle [13:50](ora_fine) 
+- mostrami [dottori](object_type:medico) che fanno fino alle [17:30](ora_fine) 
+- mostrami [dottori](object_type:medico) che chiudono alle [18:10](ora_fine) 
+- mostrami [dottori](object_type:medico) che chiudono fino alle [19:00](ora_fine) 
+- mostrami [dottori](object_type:medico) che restano aperti alle [09:25](ora_fine) 
+- mostrami [dottori](object_type:medico) che restano aperti fino alle [16:35](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che lavorano alle [18:10](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che lavorano fino alle [17:30](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che fanno alle [16:45](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che fanno fino alle [18:50](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che chiudono alle [11:40](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che chiudono fino alle [11:00](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che restano aperti alle [16:15](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che restano aperti fino alle [14:00](ora_fine) 
+- dimmi [medici](object_type:medico) che lavorano alle [11:15](ora_fine) 
+- dimmi [medici](object_type:medico) che lavorano fino alle [09:00](ora_fine) 
+- dimmi [medici](object_type:medico) che fanno alle [21:00](ora_fine) 
+- dimmi [medici](object_type:medico) che fanno alle [16:35](ora_fine) 
+- dimmi [medici](object_type:medico) che fanno fino alle [10:45](ora_fine) 
+- dimmi [medici](object_type:medico) che chiudono alle [20:00](ora_fine) 
+- dimmi [medici](object_type:medico) che chiudono alle [14:00](ora_fine) 
+- dimmi [medici](object_type:medico) che chiudono fino alle [08:45](ora_fine) 
+- dimmi [medici](object_type:medico) che restano aperti alle [16:30](ora_fine) 
+- dimmi [medici](object_type:medico) che restano aperti fino alle [00:00](ora_fine) 
+- dimmi [dottore](object_type:medico) che lavorano alle [15:05](ora_fine) 
+- dimmi [dottore](object_type:medico) che lavorano alle [22:00](ora_fine) 
+- dimmi [dottore](object_type:medico) che lavorano fino alle [19:20](ora_fine) 
+- dimmi [dottore](object_type:medico) che fanno alle [21:30](ora_fine) 
+- dimmi [dottore](object_type:medico) che fanno fino alle [00:00](ora_fine) 
+- dimmi [dottore](object_type:medico) che chiudono alle [16:00](ora_fine) 
+- dimmi [dottore](object_type:medico) che chiudono alle [14:45](ora_fine) 
+- dimmi [dottore](object_type:medico) che chiudono fino alle [13:00](ora_fine) 
+- dimmi [dottore](object_type:medico) che chiudono fino alle [14:20](ora_fine) 
+- dimmi [dottore](object_type:medico) che restano aperti alle [00:00](ora_fine) 
+- dimmi [dottore](object_type:medico) che restano aperti fino alle [10:15](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che lavorano alle [15:15](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che lavorano fino alle [20:15](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che fanno alle [14:30](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che fanno fino alle [16:15](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che chiudono alle [21:00](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che chiudono fino alle [14:30](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che restano aperti alle [15:45](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che restano aperti fino alle [11:30](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che restano aperti fino alle [09:00](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che restano aperti fino alle [08:00](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che lavorano alle [20:30](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che lavorano fino alle [19:15](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che fanno alle [08:30](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che fanno fino alle [09:15](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che fanno fino alle [18:50](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che chiudono alle [11:00](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che chiudono fino alle [00:00](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che restano aperti alle [16:10](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che restano aperti alle [17:55](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che restano aperti fino alle [20:15](ora_fine) 
+- dimmi [dottori](object_type:medico) che lavorano alle [14:20](ora_fine) 
+- dimmi [dottori](object_type:medico) che lavorano fino alle [10:00](ora_fine) 
+- dimmi [dottori](object_type:medico) che fanno alle [19:30](ora_fine) 
+- dimmi [dottori](object_type:medico) che fanno fino alle [11:30](ora_fine) 
+- dimmi [dottori](object_type:medico) che chiudono alle [10:00](ora_fine) 
+- dimmi [dottori](object_type:medico) che chiudono fino alle [09:00](ora_fine) 
+- dimmi [dottori](object_type:medico) che chiudono fino alle [17:55](ora_fine) 
+- dimmi [dottori](object_type:medico) che restano aperti alle [11:45](ora_fine) 
+- dimmi [dottori](object_type:medico) che restano aperti fino alle [14:20](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che lavorano alle [15:15](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che lavorano fino alle [15:05](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che fanno alle [12:10](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che fanno fino alle [12:00](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che chiudono alle [12:30](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che chiudono alle [13:45](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che chiudono alle [09:25](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che chiudono fino alle [18:30](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che restano aperti alle [19:45](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che restano aperti fino alle [17:55](ora_fine) 
+- Qual'e l' [orari](object_type:orario) di [fantino](cognome) ? 
+- Qual'e l' [orari](object_type:orario) del [dossena](cognome) ? 
+- Qual'e l' [orario](object_type) di [panzarasa](cognome) ? 
+- Qual'e l' [orario](object_type) del [minero](cognome) ? 
+- Qual'e gli [orari](object_type:orario) di [NICOLA](cognome) ? 
+- Qual'e gli [orari](object_type:orario) del [varacalli](cognome) ? 
+- Qual'e gli [orario](object_type) di [LEANZA](cognome) ? 
+- Qual'e gli [orario](object_type) del [chiesa](cognome) ? 
+- dimmi l' [orari](object_type:orario) di [Albonico](cognome) ? 
+- dimmi l' [orari](object_type:orario) del [italiano](cognome) ? 
+- dimmi l' [orario](object_type) di [DAGLIO](cognome) ? 
+- dimmi l' [orario](object_type) del [mariani](cognome) ? 
+- dimmi gli [orari](object_type:orario) di [Sarotto](cognome) ? 
+- dimmi gli [orari](object_type:orario) del [D ADDONA](cognome) ? 
+- dimmi gli [orari](object_type:orario) del [Belforte](cognome) ? 
+- dimmi gli [orario](object_type) di [mammano](cognome) ? 
+- dimmi gli [orario](object_type) del [CHIADO  CUTIN](cognome) ? 
+- vorrei sapere l' [orari](object_type:orario) di [RESTAINO](cognome) ? 
+- vorrei sapere l' [orari](object_type:orario) del [dormetta](cognome) ? 
+- vorrei sapere l' [orario](object_type) di [Bossolasco](cognome) ? 
+- vorrei sapere l' [orario](object_type) di [AGARLA](cognome) ? 
+- vorrei sapere l' [orario](object_type) del [MELLANO](cognome) ? 
+- vorrei sapere gli [orari](object_type:orario) di [AMOSSO](cognome) ? 
+- vorrei sapere gli [orari](object_type:orario) di [AGOSTO](cognome) ? 
+- vorrei sapere gli [orari](object_type:orario) del [massobrio](cognome) ? 
+- vorrei sapere gli [orario](object_type) di [Zerlia](cognome) ? 
+- vorrei sapere gli [orario](object_type) di [Ghirardo](cognome) ? 
+- vorrei sapere gli [orario](object_type) di [Guidetti](cognome) ? 
+- vorrei sapere gli [orario](object_type) del [MAISTO](cognome) ? 
+- cerco l' [orari](object_type:orario) di [moretto](cognome) ? 
+- cerco l' [orari](object_type:orario) del [Sica](cognome) ? 
+- cerco l' [orari](object_type:orario) del [BINAGHI](cognome) ? 
+- cerco l' [orario](object_type) di [crovella](cognome) ? 
+- cerco l' [orario](object_type) del [GENNARI](cognome) ? 
+- cerco gli [orari](object_type:orario) di [cardella](cognome) ? 
+- cerco gli [orari](object_type:orario) del [SILVESTRO](cognome) ? 
+- cerco gli [orario](object_type) di [ZUCCHETTI](cognome) ? 
+- cerco gli [orario](object_type) del [cesana](cognome) ? 
+- Qual'e l' [orari](object_type:orario) di [Di vito](cognome) ? 
+- Qual'e l' [orari](object_type:orario) del [Oberta paget](cognome) ? 
+- Qual'e l' [orario](object_type) di [ZANTE](cognome) ? 
+- Qual'e l' [orario](object_type) del [BADAWIYAH](cognome) ? 
+- Qual'e l' [orario](object_type) del [IACOMETTI](cognome) ? 
+- Qual'e l' [orario](object_type) del [Garione](cognome) ? 
+- Qual'e gli [orari](object_type:orario) di [allemandi](cognome) ? 
+- Qual'e gli [orari](object_type:orario) di [Bulgarelli](cognome) ? 
+- Qual'e gli [orari](object_type:orario) del [montemaggiore](cognome) ? 
+- Qual'e gli [orario](object_type) di [RABBIA](cognome) ? 
+- Qual'e gli [orario](object_type) del [gambaro](cognome) ? 
+- dimmi l' [orari](object_type:orario) di [murri](cognome) ? 
+- dimmi l' [orari](object_type:orario) del [CHIAVERINA](cognome) ? 
+- dimmi l' [orario](object_type) di [GABELLA](cognome) ? 
+- dimmi l' [orario](object_type) del [di sario](cognome) ? 
+- dimmi gli [orari](object_type:orario) di [Gavioli](cognome) ? 
+- dimmi gli [orari](object_type:orario) del [tornoni](cognome) ? 
+- dimmi gli [orario](object_type) di [monteu](cognome) ? 
+- dimmi gli [orario](object_type) del [Troncale](cognome) ? 
+- vorrei sapere l' [orari](object_type:orario) di [Talarico](cognome) ? 
+- vorrei sapere l' [orari](object_type:orario) del [Giordano](cognome) ? 
+- vorrei sapere l' [orari](object_type:orario) del [bertin](cognome) ? 
+- vorrei sapere l' [orario](object_type) di [turotti](cognome) ? 
+- vorrei sapere l' [orario](object_type) del [Terlingo](cognome) ? 
+- vorrei sapere l' [orario](object_type) del [FIAMMENGO](cognome) ? 
+- vorrei sapere gli [orari](object_type:orario) di [FEDERICO](cognome) ? 
+- vorrei sapere gli [orari](object_type:orario) del [zaccuri](cognome) ? 
+- vorrei sapere gli [orario](object_type) di [falloni](cognome) ? 
+- vorrei sapere gli [orario](object_type) del [gai](cognome) ? 
+- cerco l' [orari](object_type:orario) di [barra](cognome) ? 
+- cerco l' [orari](object_type:orario) del [SALSOTTO](cognome) ? 
+- cerco l' [orario](object_type) di [barnabino](cognome) ? 
+- cerco l' [orario](object_type) del [Lo russo](cognome) ? 
+- cerco l' [orario](object_type) del [ghirardo](cognome) ? 
+- cerco gli [orari](object_type:orario) di [siri](cognome) ? 
+- cerco gli [orari](object_type:orario) di [BRETTO](cognome) ? 
+- cerco gli [orari](object_type:orario) di [faralli](cognome) ? 
+- cerco gli [orari](object_type:orario) di [Melzi](cognome) ? 
+- cerco gli [orari](object_type:orario) di [forte](cognome) ? 
+- cerco gli [orari](object_type:orario) del [Rigoli](cognome) ? 
+- cerco gli [orario](object_type) di [SCARRONE](cognome) ? 
+- cerco gli [orario](object_type) del [ARICO](cognome) ? 
+- quali [medici](object_type:medico) sono nel comune di [10040](cap) ? 
+- quali [medici](object_type:medico) lavorano nel comune di [28043](cap) ? 
+- quali [medici](object_type:medico) conosci nel comune di [10010](cap) ? 
+- quali [medici](object_type:medico) elenco nel comune di [10151](cap) ? 
+- quali [medici](object_type:medico) elencami nel comune di [10090](cap) ? 
+- quali [dottore](object_type:medico) sono nel comune di [10086](cap) ? 
+- quali [dottore](object_type:medico) lavorano nel comune di [10141](cap) ? 
+- quali [dottore](object_type:medico) conosci nel comune di [10050](cap) ? 
+- quali [dottore](object_type:medico) elenco nel comune di [10042](cap) ? 
+- quali [dottore](object_type:medico) elencami nel comune di [14010](cap) ? 
+- quali [dottoresse](object_type:medico) sono nel comune di [15121](cap) ? 
+- quali [dottoresse](object_type:medico) lavorano nel comune di [13836](cap) ? 
+- quali [dottoresse](object_type:medico) conosci nel comune di [10067](cap) ? 
+- quali [dottoresse](object_type:medico) elenco nel comune di [12039](cap) ? 
+- quali [dottoresse](object_type:medico) elenco nel comune di [10155](cap) ? 
+- quali [dottoresse](object_type:medico) elenco nel comune di [10144](cap) ? 
+- quali [dottoresse](object_type:medico) elencami nel comune di [13881](cap) ? 
+- quali [dottoressa](object_type:medico) sono nel comune di [10154](cap) ? 
+- quali [dottoressa](object_type:medico) lavorano nel comune di [13851](cap) ? 
+- quali [dottoressa](object_type:medico) conosci nel comune di [10128](cap) ? 
+- quali [dottoressa](object_type:medico) elenco nel comune di [15048](cap) ? 
+- quali [dottoressa](object_type:medico) elencami nel comune di [12051](cap) ? 
+- quali [dottori](object_type:medico) sono nel comune di [10091](cap) ? 
+- quali [dottori](object_type:medico) sono nel comune di [13899](cap) ? 
+- quali [dottori](object_type:medico) lavorano nel comune di [10020](cap) ? 
+- quali [dottori](object_type:medico) conosci nel comune di [13043](cap) ? 
+- quali [dottori](object_type:medico) conosci nel comune di [28887](cap) ? 
+- quali [dottori](object_type:medico) conosci nel comune di [15121](cap) ? 
+- quali [dottori](object_type:medico) elenco nel comune di [10090](cap) ? 
+- quali [dottori](object_type:medico) elencami nel comune di [10095](cap) ? 
+- quali [dottori](object_type:medico) elencami nel comune di [10155](cap) ? 
+- quali [ambulatori](object_type:ambulatorio) sono nel comune di [10073](cap) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano nel comune di [12050](cap) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci nel comune di [28838](cap) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco nel comune di [10060](cap) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami nel comune di [12045](cap) ? 
+- quali [lavora](object_type:medico) sono nel comune di [10144](cap) ? 
+- quali [lavora](object_type:medico) lavorano nel comune di [10050](cap) ? 
+- quali [lavora](object_type:medico) conosci nel comune di [14100](cap) ? 
+- quali [lavora](object_type:medico) elenco nel comune di [10078](cap) ? 
+- quali [lavora](object_type:medico) elencami nel comune di [10023](cap) ? 
+- chi [medici](object_type:medico) sono nel comune di [28100](cap) ? 
+- chi [medici](object_type:medico) lavorano nel comune di [14048](cap) ? 
+- chi [medici](object_type:medico) lavorano nel comune di [10155](cap) ? 
+- chi [medici](object_type:medico) conosci nel comune di [14100](cap) ? 
+- chi [medici](object_type:medico) elenco nel comune di [10134](cap) ? 
+- chi [medici](object_type:medico) elencami nel comune di [10094](cap) ? 
+- chi [dottore](object_type:medico) sono nel comune di [28823](cap) ? 
+- chi [dottore](object_type:medico) sono nel comune di [12042](cap) ? 
+- chi [dottore](object_type:medico) lavorano nel comune di [10023](cap) ? 
+- chi [dottore](object_type:medico) lavorano nel comune di [10034](cap) ? 
+- chi [dottore](object_type:medico) lavorano nel comune di [28100](cap) ? 
+- chi [dottore](object_type:medico) conosci nel comune di [15121](cap) ? 
+- chi [dottore](object_type:medico) elenco nel comune di [10090](cap) ? 
+- chi [dottore](object_type:medico) elencami nel comune di [15033](cap) ? 
+- chi [dottoresse](object_type:medico) sono nel comune di [10077](cap) ? 
+- chi [dottoresse](object_type:medico) lavorano nel comune di [13856](cap) ? 
+- chi [dottoresse](object_type:medico) conosci nel comune di [10147](cap) ? 
+- chi [dottoresse](object_type:medico) conosci nel comune di [12045](cap) ? 
+- chi [dottoresse](object_type:medico) elenco nel comune di [10051](cap) ? 
+- chi [dottoresse](object_type:medico) elencami nel comune di [10066](cap) ? 
+- chi [dottoresse](object_type:medico) elencami nel comune di [10142](cap) ? 
+- chi [dottoressa](object_type:medico) sono nel comune di [12084](cap) ? 
+- chi [dottoressa](object_type:medico) lavorano nel comune di [15066](cap) ? 
+- chi [dottoressa](object_type:medico) conosci nel comune di [28043](cap) ? 
+- chi [dottoressa](object_type:medico) conosci nel comune di [10145](cap) ? 
+- chi [dottoressa](object_type:medico) elenco nel comune di [28069](cap) ? 
+- chi [dottoressa](object_type:medico) elencami nel comune di [10034](cap) ? 
+- chi [dottori](object_type:medico) sono nel comune di [10064](cap) ? 
+- chi [dottori](object_type:medico) lavorano nel comune di [10040](cap) ? 
+- chi [dottori](object_type:medico) lavorano nel comune di [15057](cap) ? 
+- chi [dottori](object_type:medico) lavorano nel comune di [10147](cap) ? 
+- chi [dottori](object_type:medico) conosci nel comune di [10020](cap) ? 
+- chi [dottori](object_type:medico) conosci nel comune di [15053](cap) ? 
+- chi [dottori](object_type:medico) elenco nel comune di [28100](cap) ? 
+- chi [dottori](object_type:medico) elencami nel comune di [12023](cap) ? 
+- chi [ambulatori](object_type:ambulatorio) sono nel comune di [12062](cap) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano nel comune di [10042](cap) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci nel comune di [13100](cap) ? 
+- chi [ambulatori](object_type:ambulatorio) elenco nel comune di [10036](cap) ? 
+- chi [ambulatori](object_type:ambulatorio) elenco nel comune di [10090](cap) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami nel comune di [10035](cap) ? 
+- chi [lavora](object_type:medico) sono nel comune di [28074](cap) ? 
+- chi [lavora](object_type:medico) lavorano nel comune di [10137](cap) ? 
+- chi [lavora](object_type:medico) conosci nel comune di [10083](cap) ? 
+- chi [lavora](object_type:medico) elenco nel comune di [15060](cap) ? 
+- chi [lavora](object_type:medico) elencami nel comune di [10059](cap) ? 
+- cerco i [medici](object_type:medico) sono nel comune di [14100](cap) ? 
+- cerco i [medici](object_type:medico) lavorano nel comune di [10095](cap) ? 
+- cerco i [medici](object_type:medico) lavorano nel comune di [10149](cap) ? 
+- cerco i [medici](object_type:medico) conosci nel comune di [10134](cap) ? 
+- cerco i [medici](object_type:medico) elenco nel comune di [12040](cap) ? 
+- cerco i [medici](object_type:medico) elenco nel comune di [10051](cap) ? 
+- cerco i [medici](object_type:medico) elenco nel comune di [28075](cap) ? 
+- cerco i [medici](object_type:medico) elencami nel comune di [10147](cap) ? 
+- cerco i [dottore](object_type:medico) sono nel comune di [10149](cap) ? 
+- cerco i [dottore](object_type:medico) lavorano nel comune di [13900](cap) ? 
+- cerco i [dottore](object_type:medico) conosci nel comune di [10073](cap) ? 
+- cerco i [dottore](object_type:medico) elenco nel comune di [28016](cap) ? 
+- cerco i [dottore](object_type:medico) elencami nel comune di [28060](cap) ? 
+- cerco i [dottore](object_type:medico) elencami nel comune di [10144](cap) ? 
+- cerco i [dottoresse](object_type:medico) sono nel comune di [15010](cap) ? 
+- cerco i [dottoresse](object_type:medico) lavorano nel comune di [14030](cap) ? 
+- cerco i [dottoresse](object_type:medico) conosci nel comune di [15060](cap) ? 
+- cerco i [dottoresse](object_type:medico) elenco nel comune di [12042](cap) ? 
+- cerco i [dottoresse](object_type:medico) elencami nel comune di [10036](cap) ? 
+- cerco i [dottoressa](object_type:medico) sono nel comune di [12011](cap) ? 
+- cerco i [dottoressa](object_type:medico) lavorano nel comune di [12030](cap) ? 
+- cerco i [dottoressa](object_type:medico) conosci nel comune di [10050](cap) ? 
+- cerco i [dottoressa](object_type:medico) conosci nel comune di [14045](cap) ? 
+- cerco i [dottoressa](object_type:medico) elenco nel comune di [10125](cap) ? 
+- cerco i [dottoressa](object_type:medico) elencami nel comune di [13100](cap) ? 
+- cerco i [dottoressa](object_type:medico) elencami nel comune di [13836](cap) ? 
+- cerco i [dottoressa](object_type:medico) elencami nel comune di [10156](cap) ? 
+- cerco i [dottori](object_type:medico) sono nel comune di [12036](cap) ? 
+- cerco i [dottori](object_type:medico) lavorano nel comune di [10072](cap) ? 
+- cerco i [dottori](object_type:medico) lavorano nel comune di [12030](cap) ? 
+- cerco i [dottori](object_type:medico) lavorano nel comune di [12031](cap) ? 
+- cerco i [dottori](object_type:medico) conosci nel comune di [10127](cap) ? 
+- cerco i [dottori](object_type:medico) elenco nel comune di [10060](cap) ? 
+- cerco i [dottori](object_type:medico) elencami nel comune di [13878](cap) ? 
+- cerco i [dottori](object_type:medico) elencami nel comune di [14010](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono nel comune di [10053](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano nel comune di [10080](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) conosci nel comune di [10100](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco nel comune di [13044](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami nel comune di [10086](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami nel comune di [14100](cap) ? 
+- cerco i [lavora](object_type:medico) sono nel comune di [12040](cap) ? 
+- cerco i [lavora](object_type:medico) lavorano nel comune di [13875](cap) ? 
+- cerco i [lavora](object_type:medico) conosci nel comune di [28064](cap) ? 
+- cerco i [lavora](object_type:medico) elenco nel comune di [12060](cap) ? 
+- cerco i [lavora](object_type:medico) elencami nel comune di [10062](cap) ? 
+- cerco le [medici](object_type:medico) sono nel comune di [10059](cap) ? 
+- cerco le [medici](object_type:medico) lavorano nel comune di [28069](cap) ? 
+- cerco le [medici](object_type:medico) conosci nel comune di [10043](cap) ? 
+- cerco le [medici](object_type:medico) conosci nel comune di [10081](cap) ? 
+- cerco le [medici](object_type:medico) elenco nel comune di [10156](cap) ? 
+- cerco le [medici](object_type:medico) elencami nel comune di [10036](cap) ? 
+- cerco le [dottore](object_type:medico) sono nel comune di [15078](cap) ? 
+- cerco le [dottore](object_type:medico) lavorano nel comune di [14053](cap) ? 
+- cerco le [dottore](object_type:medico) conosci nel comune di [10048](cap) ? 
+- cerco le [dottore](object_type:medico) elenco nel comune di [10148](cap) ? 
+- cerco le [dottore](object_type:medico) elencami nel comune di [15012](cap) ? 
+- cerco le [dottoresse](object_type:medico) sono nel comune di [10100](cap) ? 
+- cerco le [dottoresse](object_type:medico) lavorano nel comune di [10070](cap) ? 
+- cerco le [dottoresse](object_type:medico) conosci nel comune di [10141](cap) ? 
+- cerco le [dottoresse](object_type:medico) elenco nel comune di [28047](cap) ? 
+- cerco le [dottoresse](object_type:medico) elencami nel comune di [15121](cap) ? 
+- cerco le [dottoressa](object_type:medico) sono nel comune di [28845](cap) ? 
+- cerco le [dottoressa](object_type:medico) sono nel comune di [10090](cap) ? 
+- cerco le [dottoressa](object_type:medico) sono nel comune di [10010](cap) ? 
+- cerco le [dottoressa](object_type:medico) lavorano nel comune di [13816](cap) ? 
+- cerco le [dottoressa](object_type:medico) conosci nel comune di [10136](cap) ? 
+- cerco le [dottoressa](object_type:medico) elenco nel comune di [13019](cap) ? 
+- cerco le [dottoressa](object_type:medico) elencami nel comune di [12042](cap) ? 
+- cerco le [dottori](object_type:medico) sono nel comune di [10080](cap) ? 
+- cerco le [dottori](object_type:medico) lavorano nel comune di [10154](cap) ? 
+- cerco le [dottori](object_type:medico) conosci nel comune di [12050](cap) ? 
+- cerco le [dottori](object_type:medico) elenco nel comune di [10022](cap) ? 
+- cerco le [dottori](object_type:medico) elencami nel comune di [10060](cap) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono nel comune di [10064](cap) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano nel comune di [15068](cap) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci nel comune di [12020](cap) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci nel comune di [13040](cap) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elenco nel comune di [12060](cap) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami nel comune di [10040](cap) ? 
+- cerco le [lavora](object_type:medico) sono nel comune di [10082](cap) ? 
+- cerco le [lavora](object_type:medico) lavorano nel comune di [10040](cap) ? 
+- cerco le [lavora](object_type:medico) conosci nel comune di [10036](cap) ? 
+- cerco le [lavora](object_type:medico) elenco nel comune di [15039](cap) ? 
+- cerco le [lavora](object_type:medico) elencami nel comune di [15050](cap) ? 
+- quali [medici](object_type:medico) sono nel comune di [MONCALIERI](denom_comune) ? 
+- quali [medici](object_type:medico) lavorano nel comune di [cessole](denom_comune) ? 
+- quali [medici](object_type:medico) conosci nel comune di [macugnaga](denom_comune) ? 
+- quali [medici](object_type:medico) elenco nel comune di [ANDEZENO](denom_comune) ? 
+- quali [medici](object_type:medico) elenco nel comune di [Cocconato](denom_comune) ? 
+- quali [medici](object_type:medico) elencami nel comune di [ENVIE](denom_comune) ? 
+- quali [dottore](object_type:medico) sono nel comune di [serravalle langhe](denom_comune) ? 
+- quali [dottore](object_type:medico) lavorano nel comune di [Mombello monferrato](denom_comune) ? 
+- quali [dottore](object_type:medico) conosci nel comune di [Francavilla bisio](denom_comune) ? 
+- quali [dottore](object_type:medico) elenco nel comune di [Montechiaro d acqui](denom_comune) ? 
+- quali [dottore](object_type:medico) elencami nel comune di [Baceno](denom_comune) ? 
+- quali [dottoresse](object_type:medico) sono nel comune di [FARA NOVARESE](denom_comune) ? 
+- quali [dottoresse](object_type:medico) lavorano nel comune di [colleretto castelnuovo](denom_comune) ? 
+- quali [dottoresse](object_type:medico) conosci nel comune di [Casale monferrato](denom_comune) ? 
+- quali [dottoresse](object_type:medico) elenco nel comune di [Divignano](denom_comune) ? 
+- quali [dottoresse](object_type:medico) elencami nel comune di [carbonara scrivia](denom_comune) ? 
+- quali [dottoressa](object_type:medico) sono nel comune di [Monta](denom_comune) ? 
+- quali [dottoressa](object_type:medico) lavorano nel comune di [CRAVANZANA](denom_comune) ? 
+- quali [dottoressa](object_type:medico) conosci nel comune di [Granozzo con monticello](denom_comune) ? 
+- quali [dottoressa](object_type:medico) elenco nel comune di [meina](denom_comune) ? 
+- quali [dottoressa](object_type:medico) elencami nel comune di [CASALNOCETO](denom_comune) ? 
+- quali [dottori](object_type:medico) sono nel comune di [CIGLIANO](denom_comune) ? 
+- quali [dottori](object_type:medico) sono nel comune di [Villanova d asti](denom_comune) ? 
+- quali [dottori](object_type:medico) lavorano nel comune di [CASTELL ALFERO](denom_comune) ? 
+- quali [dottori](object_type:medico) conosci nel comune di [ALPIGNANO](denom_comune) ? 
+- quali [dottori](object_type:medico) conosci nel comune di [POSTUA](denom_comune) ? 
+- quali [dottori](object_type:medico) elenco nel comune di [Curino](denom_comune) ? 
+- quali [dottori](object_type:medico) elencami nel comune di [caprezzo](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) sono nel comune di [TERRUGGIA](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano nel comune di [Vanzone con san carlo](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci nel comune di [Perrero](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco nel comune di [Lozzolo](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco nel comune di [boves](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami nel comune di [San didero](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami nel comune di [CASTELNUOVO NIGRA](denom_comune) ? 
+- quali [lavora](object_type:medico) sono nel comune di [Miazzina](denom_comune) ? 
+- quali [lavora](object_type:medico) lavorano nel comune di [SANTHIA](denom_comune) ? 
+- quali [lavora](object_type:medico) conosci nel comune di [Morano sul po](denom_comune) ? 
+- quali [lavora](object_type:medico) elenco nel comune di [Vezza d alba](denom_comune) ? 
+- quali [lavora](object_type:medico) elencami nel comune di [Frabosa soprana](denom_comune) ? 
+- chi [medici](object_type:medico) sono nel comune di [Cavour](denom_comune) ? 
+- chi [medici](object_type:medico) sono nel comune di [Murisengo](denom_comune) ? 
+- chi [medici](object_type:medico) lavorano nel comune di [baldissero torinese](denom_comune) ? 
+- chi [medici](object_type:medico) lavorano nel comune di [Brusnengo](denom_comune) ? 
+- chi [medici](object_type:medico) conosci nel comune di [FOBELLO](denom_comune) ? 
+- chi [medici](object_type:medico) elenco nel comune di [FRONT](denom_comune) ? 
+- chi [medici](object_type:medico) elencami nel comune di [bogogno](denom_comune) ? 
+- chi [medici](object_type:medico) elencami nel comune di [PILA](denom_comune) ? 
+- chi [medici](object_type:medico) elencami nel comune di [briaglia](denom_comune) ? 
+- chi [dottore](object_type:medico) sono nel comune di [mombello di torino](denom_comune) ? 
+- chi [dottore](object_type:medico) lavorano nel comune di [tagliolo monferrato](denom_comune) ? 
+- chi [dottore](object_type:medico) conosci nel comune di [acceglio](denom_comune) ? 
+- chi [dottore](object_type:medico) elenco nel comune di [novi ligure](denom_comune) ? 
+- chi [dottore](object_type:medico) elenco nel comune di [Nucetto](denom_comune) ? 
+- chi [dottore](object_type:medico) elenco nel comune di [MURISENGO](denom_comune) ? 
+- chi [dottore](object_type:medico) elencami nel comune di [campertogno](denom_comune) ? 
+- chi [dottoresse](object_type:medico) sono nel comune di [ANDORNO MICCA](denom_comune) ? 
+- chi [dottoresse](object_type:medico) lavorano nel comune di [Pocapaglia](denom_comune) ? 
+- chi [dottoresse](object_type:medico) conosci nel comune di [Odalengo grande](denom_comune) ? 
+- chi [dottoresse](object_type:medico) elenco nel comune di [masio](denom_comune) ? 
+- chi [dottoresse](object_type:medico) elencami nel comune di [PIEVE VERGONTE](denom_comune) ? 
+- chi [dottoressa](object_type:medico) sono nel comune di [CASALE MONFERRATO](denom_comune) ? 
+- chi [dottoressa](object_type:medico) sono nel comune di [sizzano](denom_comune) ? 
+- chi [dottoressa](object_type:medico) sono nel comune di [Ponzone](denom_comune) ? 
+- chi [dottoressa](object_type:medico) lavorano nel comune di [PREMOSELLO-CHIOVENDA](denom_comune) ? 
+- chi [dottoressa](object_type:medico) lavorano nel comune di [Motta de  conti](denom_comune) ? 
+- chi [dottoressa](object_type:medico) lavorano nel comune di [ZUBIENA](denom_comune) ? 
+- chi [dottoressa](object_type:medico) conosci nel comune di [VERCELLI](denom_comune) ? 
+- chi [dottoressa](object_type:medico) elenco nel comune di [FRESONARA](denom_comune) ? 
+- chi [dottoressa](object_type:medico) elencami nel comune di [vauda canavese](denom_comune) ? 
+- chi [dottori](object_type:medico) sono nel comune di [trasquera](denom_comune) ? 
+- chi [dottori](object_type:medico) lavorano nel comune di [Vigone](denom_comune) ? 
+- chi [dottori](object_type:medico) conosci nel comune di [San martino canavese](denom_comune) ? 
+- chi [dottori](object_type:medico) elenco nel comune di [crova](denom_comune) ? 
+- chi [dottori](object_type:medico) elencami nel comune di [Baldissero canavese](denom_comune) ? 
+- chi [dottori](object_type:medico) elencami nel comune di [scarnafigi](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) sono nel comune di [castagnole monferrato](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano nel comune di [MONASTERO BORMIDA](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano nel comune di [CASTELLETTO D ORBA](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci nel comune di [INVORIO](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) elenco nel comune di [DRUENTO](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami nel comune di [GARBAGNA](denom_comune) ? 
+- chi [lavora](object_type:medico) sono nel comune di [zubiena](denom_comune) ? 
+- chi [lavora](object_type:medico) lavorano nel comune di [Chivasso](denom_comune) ? 
+- chi [lavora](object_type:medico) conosci nel comune di [Villar pellice](denom_comune) ? 
+- chi [lavora](object_type:medico) elenco nel comune di [BORGHETTO DI BORBERA](denom_comune) ? 
+- chi [lavora](object_type:medico) elencami nel comune di [Macello](denom_comune) ? 
+- cerco i [medici](object_type:medico) sono nel comune di [Novara](denom_comune) ? 
+- cerco i [medici](object_type:medico) lavorano nel comune di [Gaiola](denom_comune) ? 
+- cerco i [medici](object_type:medico) conosci nel comune di [serravalle sesia](denom_comune) ? 
+- cerco i [medici](object_type:medico) elenco nel comune di [CAMPIGLIA CERVO](denom_comune) ? 
+- cerco i [medici](object_type:medico) elencami nel comune di [borgoratto alessandrino](denom_comune) ? 
+- cerco i [dottore](object_type:medico) sono nel comune di [parella](denom_comune) ? 
+- cerco i [dottore](object_type:medico) lavorano nel comune di [portula](denom_comune) ? 
+- cerco i [dottore](object_type:medico) conosci nel comune di [Osasio](denom_comune) ? 
+- cerco i [dottore](object_type:medico) elenco nel comune di [volvera](denom_comune) ? 
+- cerco i [dottore](object_type:medico) elenco nel comune di [Trisobbio](denom_comune) ? 
+- cerco i [dottore](object_type:medico) elenco nel comune di [PIOBESI D ALBA](denom_comune) ? 
+- cerco i [dottore](object_type:medico) elencami nel comune di [ottiglio](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) sono nel comune di [gambasca](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) lavorano nel comune di [bognanco](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) conosci nel comune di [strambino](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) elenco nel comune di [GRAZZANO BADOGLIO](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) elencami nel comune di [serravalle langhe](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) sono nel comune di [san martino canavese](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) sono nel comune di [Chialamberto](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) lavorano nel comune di [TORRAZZA PIEMONTE](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) conosci nel comune di [romagnano sesia](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) elenco nel comune di [CORTEMILIA](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) elenco nel comune di [OMEGNA](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) elencami nel comune di [SAN DAMIANO MACRA](denom_comune) ? 
+- cerco i [dottori](object_type:medico) sono nel comune di [Bricherasio](denom_comune) ? 
+- cerco i [dottori](object_type:medico) lavorano nel comune di [CELLA MONTE](denom_comune) ? 
+- cerco i [dottori](object_type:medico) conosci nel comune di [castagnito](denom_comune) ? 
+- cerco i [dottori](object_type:medico) elenco nel comune di [locana](denom_comune) ? 
+- cerco i [dottori](object_type:medico) elencami nel comune di [burolo](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono nel comune di [San benedetto belbo](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano nel comune di [castagneto po](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) conosci nel comune di [quarna sotto](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco nel comune di [castellazzo bormida](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco nel comune di [PRIOCCA](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami nel comune di [Castel rocchero](denom_comune) ? 
+- cerco i [lavora](object_type:medico) sono nel comune di [piobesi d alba](denom_comune) ? 
+- cerco i [lavora](object_type:medico) lavorano nel comune di [Alessandria](denom_comune) ? 
+- cerco i [lavora](object_type:medico) conosci nel comune di [bozzole](denom_comune) ? 
+- cerco i [lavora](object_type:medico) elenco nel comune di [margarita](denom_comune) ? 
+- cerco i [lavora](object_type:medico) elencami nel comune di [pancalieri](denom_comune) ? 
+- cerco i [lavora](object_type:medico) elencami nel comune di [MONTALDO BORMIDA](denom_comune) ? 
+- cerco le [medici](object_type:medico) sono nel comune di [CORTAZZONE](denom_comune) ? 
+- cerco le [medici](object_type:medico) lavorano nel comune di [camino](denom_comune) ? 
+- cerco le [medici](object_type:medico) conosci nel comune di [gassino torinese](denom_comune) ? 
+- cerco le [medici](object_type:medico) elenco nel comune di [REVELLO](denom_comune) ? 
+- cerco le [medici](object_type:medico) elencami nel comune di [san didero](denom_comune) ? 
+- cerco le [dottore](object_type:medico) sono nel comune di [Borgo san dalmazzo](denom_comune) ? 
+- cerco le [dottore](object_type:medico) lavorano nel comune di [Borgolavezzaro](denom_comune) ? 
+- cerco le [dottore](object_type:medico) conosci nel comune di [Fenestrelle](denom_comune) ? 
+- cerco le [dottore](object_type:medico) elenco nel comune di [CASSANO SPINOLA](denom_comune) ? 
+- cerco le [dottore](object_type:medico) elencami nel comune di [isola d asti](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) sono nel comune di [Formigliana](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) lavorano nel comune di [TRICERRO](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) conosci nel comune di [LERMA](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) elenco nel comune di [MONTIGLIO MONFERRATO](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) elencami nel comune di [roccasparvera](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) sono nel comune di [VIVERONE](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) lavorano nel comune di [Corio](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) conosci nel comune di [CASTAGNOLE DELLE LANZE](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) elenco nel comune di [costigliole saluzzo](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) elencami nel comune di [LOAZZOLO](denom_comune) ? 
+- cerco le [dottori](object_type:medico) sono nel comune di [COAZZE](denom_comune) ? 
+- cerco le [dottori](object_type:medico) sono nel comune di [frinco](denom_comune) ? 
+- cerco le [dottori](object_type:medico) lavorano nel comune di [ronco canavese](denom_comune) ? 
+- cerco le [dottori](object_type:medico) conosci nel comune di [ponzano monferrato](denom_comune) ? 
+- cerco le [dottori](object_type:medico) elenco nel comune di [Fontanile](denom_comune) ? 
+- cerco le [dottori](object_type:medico) elencami nel comune di [VOLTAGGIO](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono nel comune di [GRAGLIA](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano nel comune di [Argentera](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci nel comune di [Tornaco](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elenco nel comune di [Lamporo](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami nel comune di [Sostegno](denom_comune) ? 
+- cerco le [lavora](object_type:medico) sono nel comune di [PIATTO](denom_comune) ? 
+- cerco le [lavora](object_type:medico) lavorano nel comune di [NETRO](denom_comune) ? 
+- cerco le [lavora](object_type:medico) conosci nel comune di [piasco](denom_comune) ? 
+- cerco le [lavora](object_type:medico) elenco nel comune di [vico canavese](denom_comune) ? 
+- cerco le [lavora](object_type:medico) elencami nel comune di [Graglia](denom_comune) ? 
+- cerco le [lavora](object_type:medico) elencami nel comune di [MASSINO VISCONTI](denom_comune) ? 
+- quali [medici](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) è nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) sono nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) è nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) è nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) sono nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) elenco nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) è nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) è nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) è nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) è all' indirizzo [Via vanchiglia](indirizzo) ? 
+- quali [medici](object_type:medico) è all' via [FR. GARELLA](indirizzo) ? 
+- quali [medici](object_type:medico) sono all' indirizzo [Via bidone](indirizzo) ? 
+- quali [medici](object_type:medico) sono all' via [Frazione bassura](indirizzo) ? 
+- quali [medici](object_type:medico) lavorano all' indirizzo [P.ZZA G. PUCCINI (EX SCUOLE)- BARAGGIA DI SUNO](indirizzo) ? 
+- quali [medici](object_type:medico) lavorano all' via [CORSO FILIPPO BRUNELLESCHI](indirizzo) ? 
+- quali [medici](object_type:medico) conosci all' indirizzo [VIA MAZZINI - ALZATE DI MOMO](indirizzo) ? 
+- quali [medici](object_type:medico) conosci all' via [Via monfalcone](indirizzo) ? 
+- quali [medici](object_type:medico) elenco all' indirizzo [fraz. pozzo largo caduti](indirizzo) ? 
+- quali [medici](object_type:medico) elenco all' indirizzo [via saorgio](indirizzo) ? 
+- quali [medici](object_type:medico) elenco all' via [ambulatorio comunale - cereie](indirizzo) ? 
+- quali [medici](object_type:medico) elenco all' via [VIA DANTE ALIGHIERI](indirizzo) ? 
+- quali [medici](object_type:medico) elencami all' indirizzo [Fraz. fusero](indirizzo) ? 
+- quali [medici](object_type:medico) elencami all' via [Piazza tenco luigi](indirizzo) ? 
+- quali [dottore](object_type:medico) è all' indirizzo [Via regina margherita di savoia (loc. pollenzo)](indirizzo) ? 
+- quali [dottore](object_type:medico) è all' via [Via bruno c/o municipio](indirizzo) ? 
+- quali [dottore](object_type:medico) sono all' indirizzo [Via s. rocco](indirizzo) ? 
+- quali [dottore](object_type:medico) sono all' via [via b.sella](indirizzo) ? 
+- quali [dottore](object_type:medico) lavorano all' indirizzo [fraz. pozzengo-via bigliani](indirizzo) ? 
+- quali [dottore](object_type:medico) lavorano all' via [via centallo roata chiusani (loc. roata chiusani)](indirizzo) ? 
+- quali [dottore](object_type:medico) lavorano all' via [CORSO ANTONY](indirizzo) ? 
+- quali [dottore](object_type:medico) conosci all' indirizzo [VIA DE NOTARIS GIUSEPPE](indirizzo) ? 
+- quali [dottore](object_type:medico) conosci all' via [Via galileo ferraris](indirizzo) ? 
+- quali [dottore](object_type:medico) elenco all' indirizzo [VIA THAON DE REVEL PAOLO](indirizzo) ? 
+- quali [dottore](object_type:medico) elenco all' indirizzo [via al castello](indirizzo) ? 
+- quali [dottore](object_type:medico) elenco all' via [PIAZZA MARCONI GUGLIELMO](indirizzo) ? 
+- quali [dottore](object_type:medico) elencami all' indirizzo [frazione s. rocco (loc. s. rocco)](indirizzo) ? 
+- quali [dottore](object_type:medico) elencami all' via [amb. c/o casa di riposo giallosole](indirizzo) ? 
+- quali [dottoresse](object_type:medico) è all' indirizzo [VIA DEL TEATRO](indirizzo) ? 
+- quali [dottoresse](object_type:medico) è all' indirizzo [Via baratonia](indirizzo) ? 
+- quali [dottoresse](object_type:medico) è all' via [VIA BRIGNONE](indirizzo) ? 
+- quali [dottoresse](object_type:medico) sono all' indirizzo [STRADALE TORINO](indirizzo) ? 
+- quali [dottoresse](object_type:medico) sono all' via [via guglielmo pietro (loc. luserna)](indirizzo) ? 
+- quali [dottoresse](object_type:medico) sono all' via [VIA DEL CAVALLINO](indirizzo) ? 
+- quali [dottoresse](object_type:medico) lavorano all' indirizzo [via ala](indirizzo) ? 
+- quali [dottoresse](object_type:medico) lavorano all' via [Via monteverdi claudio](indirizzo) ? 
+- quali [dottoresse](object_type:medico) conosci all' indirizzo [ambulatorio comunale - via chiesa](indirizzo) ? 
+- quali [dottoresse](object_type:medico) conosci all' via [via vincenzo maria miglietti](indirizzo) ? 
+- quali [dottoresse](object_type:medico) conosci all' via [VIA BOVONE   MANDROGNE](indirizzo) ? 
+- quali [dottoresse](object_type:medico) elenco all' indirizzo [VIA PAISIELLO](indirizzo) ? 
+- quali [dottoresse](object_type:medico) elenco all' via [Via monte vitale](indirizzo) ? 
+- quali [dottoresse](object_type:medico) elencami all' indirizzo [via d. guidobono](indirizzo) ? 
+- quali [dottoresse](object_type:medico) elencami all' via [via vittorio veneto](indirizzo) ? 
+- quali [dottoresse](object_type:medico) elencami all' via [PIAZZA VIOLETTA](indirizzo) ? 
+- quali [dottoressa](object_type:medico) è all' indirizzo [corso caio plinio](indirizzo) ? 
+- quali [dottoressa](object_type:medico) è all' via [Via caluso](indirizzo) ? 
+- quali [dottoressa](object_type:medico) sono all' indirizzo [Via chiampo](indirizzo) ? 
+- quali [dottoressa](object_type:medico) sono all' via [VIA PRIERI BARTOLOMEO](indirizzo) ? 
+- quali [dottoressa](object_type:medico) lavorano all' indirizzo [Via centallo roata chiusani (loc. roata chiusani)](indirizzo) ? 
+- quali [dottoressa](object_type:medico) lavorano all' via [via poggi](indirizzo) ? 
+- quali [dottoressa](object_type:medico) conosci all' indirizzo [Via g. bogino](indirizzo) ? 
+- quali [dottoressa](object_type:medico) conosci all' via [piazza della posta  -cireggio-](indirizzo) ? 
+- quali [dottoressa](object_type:medico) elenco all' indirizzo [via cernaia](indirizzo) ? 
+- quali [dottoressa](object_type:medico) elenco all' via [via peradotto](indirizzo) ? 
+- quali [dottoressa](object_type:medico) elencami all' indirizzo [VIA MOLINO SOTTO](indirizzo) ? 
+- quali [dottoressa](object_type:medico) elencami all' via [corso montello](indirizzo) ? 
+- quali [dottori](object_type:medico) è all' indirizzo [Via montaldo roero (loc. borgonuovo)](indirizzo) ? 
+- quali [dottori](object_type:medico) è all' via [Via s. pietro](indirizzo) ? 
+- quali [dottori](object_type:medico) è all' via [Via breglio](indirizzo) ? 
+- quali [dottori](object_type:medico) sono all' indirizzo [piazza parrocchiale (loc. sant antonino)](indirizzo) ? 
+- quali [dottori](object_type:medico) sono all' via [Piazza durio](indirizzo) ? 
+- quali [dottori](object_type:medico) lavorano all' indirizzo [Frazione s. giovanni via centrale](indirizzo) ? 
+- quali [dottori](object_type:medico) lavorano all' via [Via lodi](indirizzo) ? 
+- quali [dottori](object_type:medico) conosci all' indirizzo [Via novara](indirizzo) ? 
+- quali [dottori](object_type:medico) conosci all' via [Via montiglio vittorio](indirizzo) ? 
+- quali [dottori](object_type:medico) elenco all' indirizzo [via umberto iâ° 23 c/o municipio](indirizzo) ? 
+- quali [dottori](object_type:medico) elenco all' via [regione alle nosere](indirizzo) ? 
+- quali [dottori](object_type:medico) elencami all' indirizzo [VIA BAZZI](indirizzo) ? 
+- quali [dottori](object_type:medico) elencami all' indirizzo [via fabbriche -p.terra](indirizzo) ? 
+- quali [dottori](object_type:medico) elencami all' via [VIA ANTICA DI GRUGLIASCO](indirizzo) ? 
+- quali [dottori](object_type:medico) elencami all' via [VIA S. ROCCO](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) è all' indirizzo [strada mongina](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) è all' via [VIA S. MARTINO](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) sono all' indirizzo [via borgosesia](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) sono all' via [Bellavista piazza i maggio](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano all' indirizzo [VIA SAPPA](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano all' via [Via maestra (loc. castellar) c/o municipio](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci all' indirizzo [VIA CUSTODI PIETRO](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci all' via [VIA ROSMINI ANTONIO](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci all' via [VIA LOSSANI MARIO](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco all' indirizzo [STRADA VAUDA](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco all' via [VIA CREDENZIERI](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami all' indirizzo [piazza vistarini](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami all' via [via don b. grazioli](indirizzo) ? 
+- quali [lavora](object_type:medico) è all' indirizzo [VIA TIRRENO](indirizzo) ? 
+- quali [lavora](object_type:medico) è all' via [Corso i maggio](indirizzo) ? 
+- quali [lavora](object_type:medico) sono all' indirizzo [FR. PORTANOVA (AL) - VIA OVADA](indirizzo) ? 
+- quali [lavora](object_type:medico) sono all' via [Via vallauri tommaso](indirizzo) ? 
+- quali [lavora](object_type:medico) lavorano all' indirizzo [via moretta](indirizzo) ? 
+- quali [lavora](object_type:medico) lavorano all' via [FRAZ.VALLEGIOLITTI- VIA ROMAGNOLI](indirizzo) ? 
+- quali [lavora](object_type:medico) lavorano all' via [VIA P. GALLUPPI](indirizzo) ? 
+- quali [lavora](object_type:medico) conosci all' indirizzo [Frazione alto](indirizzo) ? 
+- quali [lavora](object_type:medico) conosci all' via [via castello - presso castello - ambulatorio comunale](indirizzo) ? 
+- quali [lavora](object_type:medico) conosci all' via [C.SO MICHELE COPPINO](indirizzo) ? 
+- quali [lavora](object_type:medico) elenco all' indirizzo [PIAZZA CERONI](indirizzo) ? 
+- quali [lavora](object_type:medico) elenco all' via [viale diaz armando generale](indirizzo) ? 
+- quali [lavora](object_type:medico) elencami all' indirizzo [piazza bovetti](indirizzo) ? 
+- quali [lavora](object_type:medico) elencami all' indirizzo [VIA MATTEOTTI -VERGNASCO](indirizzo) ? 
+- quali [lavora](object_type:medico) elencami all' via [poliambulatorio asl - via roma](indirizzo) ? 
+- quali [lavora](object_type:medico) elencami all' via [via castelgomberto](indirizzo) ? 
+- chi [medici](object_type:medico) è all' indirizzo [Via l. palma di cesnola](indirizzo) ? 
+- chi [medici](object_type:medico) è all' via [VI A MOLINO](indirizzo) ? 
+- chi [medici](object_type:medico) sono all' indirizzo [piazza comunale](indirizzo) ? 
+- chi [medici](object_type:medico) sono all' indirizzo [VIA BERSANI](indirizzo) ? 
+- chi [medici](object_type:medico) sono all' via [via vico](indirizzo) ? 
+- chi [medici](object_type:medico) lavorano all' indirizzo [via carrera 76](indirizzo) ? 
+- chi [medici](object_type:medico) lavorano all' via [corso couvert](indirizzo) ? 
+- chi [medici](object_type:medico) conosci all' indirizzo [FRAZ. S.PIETRO](indirizzo) ? 
+- chi [medici](object_type:medico) conosci all' indirizzo [VIA NIZZA](indirizzo) ? 
+- chi [medici](object_type:medico) conosci all' via [Via scuole](indirizzo) ? 
+- chi [medici](object_type:medico) elenco all' indirizzo [via f.lli cora](indirizzo) ? 
+- chi [medici](object_type:medico) elenco all' via [frazione s. grisante (bimensile)](indirizzo) ? 
+- chi [medici](object_type:medico) elencami all' indirizzo [comunale](indirizzo) ? 
+- chi [medici](object_type:medico) elencami all' via [piazza balla](indirizzo) ? 
+- chi [dottore](object_type:medico) è all' indirizzo [Via p.custodi](indirizzo) ? 
+- chi [dottore](object_type:medico) è all' indirizzo [Via c.raimondi](indirizzo) ? 
+- chi [dottore](object_type:medico) è all' via [VICOLO MONDO](indirizzo) ? 
+- chi [dottore](object_type:medico) sono all' indirizzo [c/o sub-distretto](indirizzo) ? 
+- chi [dottore](object_type:medico) sono all' indirizzo [VIA DELLA PITTURA](indirizzo) ? 
+- chi [dottore](object_type:medico) sono all' via [PIAZZA XIV DICEMBRE](indirizzo) ? 
+- chi [dottore](object_type:medico) lavorano all' indirizzo [VIA SCOLARI](indirizzo) ? 
+- chi [dottore](object_type:medico) lavorano all' via [Fraz. chiesa](indirizzo) ? 
+- chi [dottore](object_type:medico) conosci all' indirizzo [Piazza xxx aprile](indirizzo) ? 
+- chi [dottore](object_type:medico) conosci all' via [via san mauro](indirizzo) ? 
+- chi [dottore](object_type:medico) elenco all' indirizzo [Via leini](indirizzo) ? 
+- chi [dottore](object_type:medico) elenco all' via [Via garibaldi - presso municipio](indirizzo) ? 
+- chi [dottore](object_type:medico) elencami all' indirizzo [VIA DEL CAVALLINO](indirizzo) ? 
+- chi [dottore](object_type:medico) elencami all' indirizzo [amb. pediatria osp domodossola](indirizzo) ? 
+- chi [dottore](object_type:medico) elencami all' via [VIA FERRARIS GIOVANNI](indirizzo) ? 
+- chi [dottoresse](object_type:medico) è all' indirizzo [VIA LOVERA](indirizzo) ? 
+- chi [dottoresse](object_type:medico) è all' via [Via govean](indirizzo) ? 
+- chi [dottoresse](object_type:medico) sono all' indirizzo [VIA SAN GIUSEPPE](indirizzo) ? 
+- chi [dottoresse](object_type:medico) sono all' via [Via l. vanvitelli](indirizzo) ? 
+- chi [dottoresse](object_type:medico) lavorano all' indirizzo [Via caraglio](indirizzo) ? 
+- chi [dottoresse](object_type:medico) lavorano all' via [Corso italia (ingresso da piazza rovere)](indirizzo) ? 
+- chi [dottoresse](object_type:medico) lavorano all' via [REGIONE LEISO](indirizzo) ? 
+- chi [dottoresse](object_type:medico) conosci all' indirizzo [via a. de rege](indirizzo) ? 
+- chi [dottoresse](object_type:medico) conosci all' via [Via iosina](indirizzo) ? 
+- chi [dottoresse](object_type:medico) elenco all' indirizzo [strada genova](indirizzo) ? 
+- chi [dottoresse](object_type:medico) elenco all' via [Via marconi guglielmo](indirizzo) ? 
+- chi [dottoresse](object_type:medico) elencami all' indirizzo [piazza tapparo giuseppe](indirizzo) ? 
+- chi [dottoresse](object_type:medico) elencami all' via [via muriaglio](indirizzo) ? 
+- chi [dottoressa](object_type:medico) è all' indirizzo [VIA SAN GIOVANNI](indirizzo) ? 
+- chi [dottoressa](object_type:medico) è all' via [via s. francesco d assisi](indirizzo) ? 
+- chi [dottoressa](object_type:medico) sono all' indirizzo [via donatori del sangue](indirizzo) ? 
+- chi [dottoressa](object_type:medico) sono all' via [VIA BENADIR](indirizzo) ? 
+- chi [dottoressa](object_type:medico) lavorano all' indirizzo [Via spallanzani](indirizzo) ? 
+- chi [dottoressa](object_type:medico) lavorano all' via [corso vittorio emanuele ii](indirizzo) ? 
+- chi [dottoressa](object_type:medico) conosci all' indirizzo [VIA EMILIO GHIONE](indirizzo) ? 
+- chi [dottoressa](object_type:medico) conosci all' via [CORSO MICHELE COPPINO](indirizzo) ? 
+- chi [dottoressa](object_type:medico) elenco all' indirizzo [via asilo](indirizzo) ? 
+- chi [dottoressa](object_type:medico) elenco all' indirizzo [via roncarolo](indirizzo) ? 
+- chi [dottoressa](object_type:medico) elenco all' via [frazione valle tanaro](indirizzo) ? 
+- chi [dottoressa](object_type:medico) elencami all' indirizzo [PIAZZA MELLANO GIORGIO](indirizzo) ? 
+- chi [dottoressa](object_type:medico) elencami all' via [Via villanis francesco](indirizzo) ? 
+- chi [dottori](object_type:medico) è all' indirizzo [Corso ferraris galileo](indirizzo) ? 
+- chi [dottori](object_type:medico) è all' via [VIA VIGLIANI](indirizzo) ? 
+- chi [dottori](object_type:medico) sono all' indirizzo [FRAZIONE S. GRISANTE (BIMENSILE)](indirizzo) ? 
+- chi [dottori](object_type:medico) sono all' via [Via michelotti gigi](indirizzo) ? 
+- chi [dottori](object_type:medico) lavorano all' indirizzo [Via caluso](indirizzo) ? 
+- chi [dottori](object_type:medico) lavorano all' via [Viale gramsci antonio](indirizzo) ? 
+- chi [dottori](object_type:medico) lavorano all' via [ambul.comunale](indirizzo) ? 
+- chi [dottori](object_type:medico) lavorano all' via [VIA A.GRAMSCI -C/O POLIAMBULATORIO DI OLEGGIO](indirizzo) ? 
+- chi [dottori](object_type:medico) conosci all' indirizzo [PIAZZA GIUSEPPE GARIBALDI](indirizzo) ? 
+- chi [dottori](object_type:medico) conosci all' indirizzo [piazza angelo brusotti](indirizzo) ? 
+- chi [dottori](object_type:medico) conosci all' via [Via regina margherita-bornasco](indirizzo) ? 
+- chi [dottori](object_type:medico) elenco all' indirizzo [piazza boetto](indirizzo) ? 
+- chi [dottori](object_type:medico) elenco all' via [via monte pertica](indirizzo) ? 
+- chi [dottori](object_type:medico) elencami all' indirizzo [VIA CHIESA DAMIANO](indirizzo) ? 
+- chi [dottori](object_type:medico) elencami all' via [VIA JUVARRA FILIPPO](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) è all' indirizzo [piazza parrocchiale](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) è all' via [Piazza c. di robilant](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) sono all' indirizzo [Piazza maggiore](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) sono all' via [VIA NORCIA](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano all' indirizzo [piazza europa unita](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano all' indirizzo [VIA SAORGIO](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano all' indirizzo [PIAZZA TERZO MILLENNIO](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano all' via [CORSO LAGHI](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci all' indirizzo [Via matteotti -vergnasco](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci all' via [Via belfiore](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) elenco all' indirizzo [via martiri della liberta](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) elenco all' via [loc.ta  fontane - ambulatorio comunale](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami all' indirizzo [VIA ANTICA DOGANA](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami all' via [via m. borgnis](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami all' via [VIA FOLIGNO](indirizzo) ? 
+- chi [lavora](object_type:medico) è all' indirizzo [P.LE AREONAUTICA](indirizzo) ? 
+- chi [lavora](object_type:medico) è all' via [Corso alfieri vittorio](indirizzo) ? 
+- chi [lavora](object_type:medico) sono all' indirizzo [Corso monte grappa](indirizzo) ? 
+- chi [lavora](object_type:medico) sono all' via [C/0 COMUNE](indirizzo) ? 
+- chi [lavora](object_type:medico) sono all' via [fraz. bornate via montecastello](indirizzo) ? 
+- chi [lavora](object_type:medico) lavorano all' indirizzo [Via cremona](indirizzo) ? 
+- chi [lavora](object_type:medico) lavorano all' via [Via rigola luigi](indirizzo) ? 
+- chi [lavora](object_type:medico) conosci all' indirizzo [corso gen. volpini battista  (loc. piano-molini d isola)](indirizzo) ? 
+- chi [lavora](object_type:medico) conosci all' via [Via valeggio](indirizzo) ? 
+- chi [lavora](object_type:medico) elenco all' indirizzo [FRAZIONE MORETTI](indirizzo) ? 
+- chi [lavora](object_type:medico) elenco all' via [Vai stazione](indirizzo) ? 
+- chi [lavora](object_type:medico) elenco all' via [Piazza comune](indirizzo) ? 
+- chi [lavora](object_type:medico) elencami all' indirizzo [Via san rocco](indirizzo) ? 
+- chi [lavora](object_type:medico) elencami all' via [fraz. ricca p.za alba](indirizzo) ? 
+- cerco i [medici](object_type:medico) è all' indirizzo [FRAZIONE ALTO](indirizzo) ? 
+- cerco i [medici](object_type:medico) è all' via [via gauberti](indirizzo) ? 
+- cerco i [medici](object_type:medico) è all' via [Piazza vittorio emanuele](indirizzo) ? 
+- cerco i [medici](object_type:medico) sono all' indirizzo [VIA DELLA VALLE FEDERICO](indirizzo) ? 
+- cerco i [medici](object_type:medico) sono all' via [piazza umberto i](indirizzo) ? 
+- cerco i [medici](object_type:medico) lavorano all' indirizzo [via borgo d ale](indirizzo) ? 
+- cerco i [medici](object_type:medico) lavorano all' via [Via torquato tasso](indirizzo) ? 
+- cerco i [medici](object_type:medico) conosci all' indirizzo [VIA POLONGHERA](indirizzo) ? 
+- cerco i [medici](object_type:medico) conosci all' via [via adua](indirizzo) ? 
+- cerco i [medici](object_type:medico) elenco all' indirizzo [FRAZ. GARELLA](indirizzo) ? 
+- cerco i [medici](object_type:medico) elenco all' indirizzo [Frazione sant  antonino - via comotto](indirizzo) ? 
+- cerco i [medici](object_type:medico) elenco all' via [PIAZZA DON RAVELLI](indirizzo) ? 
+- cerco i [medici](object_type:medico) elencami all' indirizzo [via pallanza](indirizzo) ? 
+- cerco i [medici](object_type:medico) elencami all' via [Via valeggio](indirizzo) ? 
+- cerco i [dottore](object_type:medico) è all' indirizzo [via solferino (loc. brovello)](indirizzo) ? 
+- cerco i [dottore](object_type:medico) è all' indirizzo [via po](indirizzo) ? 
+- cerco i [dottore](object_type:medico) è all' via [VIA 26 APRILE](indirizzo) ? 
+- cerco i [dottore](object_type:medico) sono all' indirizzo [via antica dogana](indirizzo) ? 
+- cerco i [dottore](object_type:medico) sono all' via [Via cap. gatti](indirizzo) ? 
+- cerco i [dottore](object_type:medico) sono all' via [Via chiesa della salute](indirizzo) ? 
+- cerco i [dottore](object_type:medico) lavorano all' indirizzo [strada valle pasano](indirizzo) ? 
+- cerco i [dottore](object_type:medico) lavorano all' via [VIA PISACANE](indirizzo) ? 
+- cerco i [dottore](object_type:medico) conosci all' indirizzo [VIA S. EVASIO](indirizzo) ? 
+- cerco i [dottore](object_type:medico) conosci all' via [Via piave amb. asl](indirizzo) ? 
+- cerco i [dottore](object_type:medico) conosci all' via [Piazza gianoglio](indirizzo) ? 
+- cerco i [dottore](object_type:medico) elenco all' indirizzo [Via s. lorenzo](indirizzo) ? 
+- cerco i [dottore](object_type:medico) elenco all' via [Via valle sesia](indirizzo) ? 
+- cerco i [dottore](object_type:medico) elencami all' indirizzo [Via pellaverne](indirizzo) ? 
+- cerco i [dottore](object_type:medico) elencami all' via [VIA ALNEDA](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) è all' indirizzo [CORSO SAN MARTINO](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) è all' via [via debouche](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) sono all' indirizzo [VIA SALE (LOC. SAN GIULIANO VECCHIO)](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) sono all' via [VIA DEL TEATRO](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) lavorano all' indirizzo [via lullo raimondo](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) lavorano all' via [PIAZZA XX SETTEMBRE](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) conosci all' indirizzo [Piazza medici del vascello](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) conosci all' via [Fr.villabella](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) elenco all' indirizzo [via pellizza giuseppe](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) elenco all' via [Via azari giuseppe](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) elencami all' indirizzo [VIA GNEMMI ANGELO (LOC. CAMPAGNOLA)](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) elencami all' via [VIA CAUDANA](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) elencami all' via [piazza regina elena](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) è all' indirizzo [Via morra](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) è all' via [Via francesco de sanctis](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) sono all' indirizzo [corso regina margherita](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) sono all' via [corso umberto iâ° - c/o comune](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) lavorano all' indirizzo [via langhe c/o municipio](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) lavorano all' indirizzo [VIA DEI GLICINI](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) lavorano all' via [VIA CERETTA INFERIORE](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) conosci all' indirizzo [via loreto](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) conosci all' via [piazza goggi clelio monsignore](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) elenco all' indirizzo [loc. anzino via titoli](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) elenco all' via [via bagiarini](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) elencami all' indirizzo [VIA LUIGI EINAUDI](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) elencami all' via [PIAZZA BERLINGUER ENRICO](indirizzo) ? 
+- cerco i [dottori](object_type:medico) è all' indirizzo [Via gorini giovan battista c/o municipio](indirizzo) ? 
+- cerco i [dottori](object_type:medico) è all' via [VIA PARTIGIANI](indirizzo) ? 
+- cerco i [dottori](object_type:medico) sono all' indirizzo [via breme](indirizzo) ? 
+- cerco i [dottori](object_type:medico) sono all' indirizzo [Via pastrengo](indirizzo) ? 
+- cerco i [dottori](object_type:medico) sono all' via [FRAZIONE SANT ANTONINO - VIA COMOTTO](indirizzo) ? 
+- cerco i [dottori](object_type:medico) lavorano all' indirizzo [PIAZZA MICCA PIETRO](indirizzo) ? 
+- cerco i [dottori](object_type:medico) lavorano all' indirizzo [Via r. sanzio](indirizzo) ? 
+- cerco i [dottori](object_type:medico) lavorano all' via [piazza paolo lucchini](indirizzo) ? 
+- cerco i [dottori](object_type:medico) conosci all' indirizzo [via s. orsola](indirizzo) ? 
+- cerco i [dottori](object_type:medico) conosci all' via [via brignone](indirizzo) ? 
+- cerco i [dottori](object_type:medico) elenco all' indirizzo [via margaritis](indirizzo) ? 
+- cerco i [dottori](object_type:medico) elenco all' via [VIA MANZONI ALESSANDRO](indirizzo) ? 
+- cerco i [dottori](object_type:medico) elenco all' via [Via tirreno](indirizzo) ? 
+- cerco i [dottori](object_type:medico) elenco all' via [PIAZZA CHIORATTI AIMONE ALDO](indirizzo) ? 
+- cerco i [dottori](object_type:medico) elencami all' indirizzo [VIA R. SANZIO](indirizzo) ? 
+- cerco i [dottori](object_type:medico) elencami all' via [VIA ODESCALCHI](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) è all' indirizzo [Via guglielmo pietro (loc. luserna)](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) è all' indirizzo [VIA PER AGRANO (LOC. AGRANO)](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) è all' via [PIAZZA LIBERTA  C/O AMBULATORIO COMUNALE](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono all' indirizzo [VIA ALLA CHIESA - LUMELLOGNO](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono all' indirizzo [Piazza romita](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono all' via [via piave (presso poliambulatorio)](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano all' indirizzo [Via lepetit](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano all' via [p:zza innocenzo ix](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) conosci all' indirizzo [Piazza ivaldi](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) conosci all' via [Corso re umberto](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco all' indirizzo [C/o amb. comunale via casana](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco all' via [VICOLO SAN MARTINO](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami all' indirizzo [Via piana del salto](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami all' via [P.ZA DEL FILATOIO](indirizzo) ? 
+- cerco i [lavora](object_type:medico) è all' indirizzo [via croso plinio](indirizzo) ? 
+- cerco i [lavora](object_type:medico) è all' indirizzo [REGIONE LEISO](indirizzo) ? 
+- cerco i [lavora](object_type:medico) è all' indirizzo [Fraz.pozzo largo caduti](indirizzo) ? 
+- cerco i [lavora](object_type:medico) è all' via [via barbano dante](indirizzo) ? 
+- cerco i [lavora](object_type:medico) sono all' indirizzo [Corso gastaldi giovanni](indirizzo) ? 
+- cerco i [lavora](object_type:medico) sono all' via [PIAZZA CAMISOLA GIUSEPPE](indirizzo) ? 
+- cerco i [lavora](object_type:medico) lavorano all' indirizzo [VIA MONVISO](indirizzo) ? 
+- cerco i [lavora](object_type:medico) lavorano all' via [coassolo capoluogo](indirizzo) ? 
+- cerco i [lavora](object_type:medico) conosci all' indirizzo [Via debouche](indirizzo) ? 
+- cerco i [lavora](object_type:medico) conosci all' via [bellavista piazza i maggio](indirizzo) ? 
+- cerco i [lavora](object_type:medico) conosci all' via [VIA REGINA MARGHERITA](indirizzo) ? 
+- cerco i [lavora](object_type:medico) elenco all' indirizzo [v.le mazzini](indirizzo) ? 
+- cerco i [lavora](object_type:medico) elenco all' via [Viale buridani](indirizzo) ? 
+- cerco i [lavora](object_type:medico) elencami all' indirizzo [via vigliani](indirizzo) ? 
+- cerco i [lavora](object_type:medico) elencami all' via [Via juvarra filippo](indirizzo) ? 
+- cerco le [medici](object_type:medico) è all' indirizzo [VIA ROSMINI ANTONIO](indirizzo) ? 
+- cerco le [medici](object_type:medico) è all' via [via maina carlo](indirizzo) ? 
+- cerco le [medici](object_type:medico) sono all' indirizzo [VIA TEPICE](indirizzo) ? 
+- cerco le [medici](object_type:medico) sono all' via [via umbero i](indirizzo) ? 
+- cerco le [medici](object_type:medico) lavorano all' indirizzo [CORSO MONTELLO](indirizzo) ? 
+- cerco le [medici](object_type:medico) lavorano all' indirizzo [Piazza santa chiara](indirizzo) ? 
+- cerco le [medici](object_type:medico) lavorano all' indirizzo [Via santa maria](indirizzo) ? 
+- cerco le [medici](object_type:medico) lavorano all' via [Comunale - via dei martiri](indirizzo) ? 
+- cerco le [medici](object_type:medico) conosci all' indirizzo [Via s. giovanni](indirizzo) ? 
+- cerco le [medici](object_type:medico) conosci all' indirizzo [piazza giuseppe garibaldi](indirizzo) ? 
+- cerco le [medici](object_type:medico) conosci all' indirizzo [corso sebastopoli](indirizzo) ? 
+- cerco le [medici](object_type:medico) conosci all' via [c.so langhe ingresso da via santa margherita](indirizzo) ? 
+- cerco le [medici](object_type:medico) elenco all' indirizzo [VIA PAROLA LUIGI](indirizzo) ? 
+- cerco le [medici](object_type:medico) elenco all' via [Via gen. dalla chiesa](indirizzo) ? 
+- cerco le [medici](object_type:medico) elencami all' indirizzo [VIA PALEOCAPA](indirizzo) ? 
+- cerco le [medici](object_type:medico) elencami all' via [Via a.borgogna](indirizzo) ? 
+- cerco le [dottore](object_type:medico) è all' indirizzo [PIAZZA AMEDEO PEYRON](indirizzo) ? 
+- cerco le [dottore](object_type:medico) è all' via [LOC. PESTARENA](indirizzo) ? 
+- cerco le [dottore](object_type:medico) sono all' indirizzo [Piazza regina margherita](indirizzo) ? 
+- cerco le [dottore](object_type:medico) sono all' via [amb. comunale via principale](indirizzo) ? 
+- cerco le [dottore](object_type:medico) lavorano all' indirizzo [Via carlo capelli](indirizzo) ? 
+- cerco le [dottore](object_type:medico) lavorano all' via [Via calderini pietro professore](indirizzo) ? 
+- cerco le [dottore](object_type:medico) conosci all' indirizzo [VIA MONTE GRAPPA](indirizzo) ? 
+- cerco le [dottore](object_type:medico) conosci all' via [Piazza berruto](indirizzo) ? 
+- cerco le [dottore](object_type:medico) elenco all' indirizzo [Comunale - via dei martiri](indirizzo) ? 
+- cerco le [dottore](object_type:medico) elenco all' via [Via ponsati vincenzo](indirizzo) ? 
+- cerco le [dottore](object_type:medico) elencami all' indirizzo [Viale giuseppe azari](indirizzo) ? 
+- cerco le [dottore](object_type:medico) elencami all' via [via lombriasco](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) è all' indirizzo [Via bramante](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) è all' via [Via del tempio](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) sono all' indirizzo [PIAZZALE DELL  AERONAUTICA](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) sono all' via [PIAZZA DELLA PACE](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) lavorano all' indirizzo [Via plochiu](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) lavorano all' via [via baldichieri](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) conosci all' indirizzo [via forchino](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) conosci all' via [Via parma](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) elenco all' indirizzo [FRAZIONE SANT ANTONINO - VIA COMOTTO](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) elenco all' via [Corso novara](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) elencami all' indirizzo [fraz. benne - via buretta](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) elencami all' via [C/o amb. comunale via casana](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) elencami all' via [FR. RONCAGLIA- VIA BOSCO DEL RONCO](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) è all' indirizzo [via passo piazza (loc. trarego)](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) è all' via [VIA FARAGGIANA](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) sono all' indirizzo [Frazione madonnina](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) sono all' via [Via asuncion](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) lavorano all' indirizzo [loc. granero](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) lavorano all' via [VIA FORCHINO](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) lavorano all' via [C.SO GARIBALDI](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) lavorano all' via [Via cavallotto carlo (loc. piana)](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) conosci all' indirizzo [via buenos aires](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) conosci all' via [Via monferrato](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) elenco all' indirizzo [Bellavista piazza i maggio](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) elenco all' via [Piazza europa (loc. piana)](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) elencami all' indirizzo [VIA CAGLIARI](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) elencami all' via [VIA COTONIFICIO](indirizzo) ? 
+- cerco le [dottori](object_type:medico) è all' indirizzo [Via alfieri](indirizzo) ? 
+- cerco le [dottori](object_type:medico) è all' via [corso moncalieri](indirizzo) ? 
+- cerco le [dottori](object_type:medico) sono all' indirizzo [AMB. COMUNALE FRAZ. MAGGIATE](indirizzo) ? 
+- cerco le [dottori](object_type:medico) sono all' via [corso bagni estivo](indirizzo) ? 
+- cerco le [dottori](object_type:medico) lavorano all' indirizzo [Via m. liberta](indirizzo) ? 
+- cerco le [dottori](object_type:medico) lavorano all' via [via del teatro](indirizzo) ? 
+- cerco le [dottori](object_type:medico) conosci all' indirizzo [pz martiri - veveri](indirizzo) ? 
+- cerco le [dottori](object_type:medico) conosci all' via [PIAZZA CHE GUEVARA ERNESTO](indirizzo) ? 
+- cerco le [dottori](object_type:medico) elenco all' indirizzo [FRAZIONE DON ASTRE](indirizzo) ? 
+- cerco le [dottori](object_type:medico) elenco all' via [Via regina margherita](indirizzo) ? 
+- cerco le [dottori](object_type:medico) elencami all' indirizzo [VIA CANETO - SCALA B 1Â°PIANO](indirizzo) ? 
+- cerco le [dottori](object_type:medico) elencami all' via [via valle sesia](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) è all' indirizzo [Piazza arturo graf](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) è all' via [Piazza matteotti giacomo](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono all' indirizzo [PIAZZA GIOVANNI ASTENGO](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono all' via [Frazione baltigati](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano all' indirizzo [VIA VOLTA](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano all' via [via dei gladioli](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano all' via [frazione moretti](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci all' indirizzo [Corso einaudi luigi](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci all' via [via petrarca francesco](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elenco all' indirizzo [Via serra](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elenco all' via [VIA GUIDO RENI](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami all' indirizzo [corso traiano](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami all' via [VIA DELLE SCUOLE (LOC. SILVA)](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami all' via [via acqui](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami all' via [via carlo allioni](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami all' via [via maria ausiliatrice](indirizzo) ? 
+- cerco le [lavora](object_type:medico) è all' indirizzo [Via castelnuovo](indirizzo) ? 
+- cerco le [lavora](object_type:medico) è all' via [VIA MIOGLIA](indirizzo) ? 
+- cerco le [lavora](object_type:medico) sono all' indirizzo [ambulatorio comunale - talonno](indirizzo) ? 
+- cerco le [lavora](object_type:medico) sono all' via [VIA GROSSI](indirizzo) ? 
+- cerco le [lavora](object_type:medico) sono all' via [Via orsi alessandro](indirizzo) ? 
+- cerco le [lavora](object_type:medico) lavorano all' indirizzo [VIA BISCARRA](indirizzo) ? 
+- cerco le [lavora](object_type:medico) lavorano all' via [Via deportati ebrei](indirizzo) ? 
+- cerco le [lavora](object_type:medico) conosci all' indirizzo [amb. c/o casa di riposo giallosole](indirizzo) ? 
+- cerco le [lavora](object_type:medico) conosci all' via [VIA PEZZA](indirizzo) ? 
+- cerco le [lavora](object_type:medico) elenco all' indirizzo [via bengasi](indirizzo) ? 
+- cerco le [lavora](object_type:medico) elenco all' via [piazza liberta  c/o ambulatorio comunale](indirizzo) ? 
+- cerco le [lavora](object_type:medico) elencami all' indirizzo [via delle scuole](indirizzo) ? 
+- cerco le [lavora](object_type:medico) elencami all' indirizzo [P.ZZA MAZZINI](indirizzo) ? 
+- cerco le [lavora](object_type:medico) elencami all' via [via virginio](indirizzo) ? 
+- quali [medici](object_type:medico) lavorano nell'ambulatorio 
+- quali [dottore](object_type:medico) sono nell'ambulatorio 
+- quali [dottore](object_type:medico) lavorano nell'ambulatorio 
+- quali [dottore](object_type:medico) elenco nell'ambulatorio 
+- quali [dottoresse](object_type:medico) elencami nell'ambulatorio 
+- quali [dottoressa](object_type:medico) elencami nell'ambulatorio 
+- quali [dottori](object_type:medico) conosci nell'ambulatorio 
+- quali [ambulatori](object_type:ambulatorio) si trova nell'ambulatorio 
+- quali [ambulatori](object_type:ambulatorio) sono nell'ambulatorio 
+- quali [lavora](object_type:medico) elenco nell'ambulatorio 
+- chi [medici](object_type:medico) elenco nell'ambulatorio 
+- chi [dottore](object_type:medico) conosci nell'ambulatorio 
+- chi [dottoresse](object_type:medico) lavorano nell'ambulatorio 
+- chi [dottoressa](object_type:medico) sono nell'ambulatorio 
+- chi [dottori](object_type:medico) elenco nell'ambulatorio 
+- chi [ambulatori](object_type:ambulatorio) elencami nell'ambulatorio 
+- chi [lavora](object_type:medico) si trova nell'ambulatorio 
+- cerco i [medici](object_type:medico) si trova nell'ambulatorio 
+- cerco i [dottore](object_type:medico) elenco nell'ambulatorio 
+- cerco i [dottoresse](object_type:medico) conosci nell'ambulatorio 
+- cerco i [dottori](object_type:medico) elencami nell'ambulatorio 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano nell'ambulatorio 
+- cerco i [lavora](object_type:medico) sono nell'ambulatorio 
+- cerco le [medici](object_type:medico) sono nell'ambulatorio 
+- cerco le [dottore](object_type:medico) elencami nell'ambulatorio 
+- cerco le [dottoresse](object_type:medico) elenco nell'ambulatorio 
+- cerco le [dottoressa](object_type:medico) si trova nell'ambulatorio 
+- cerco le [dottori](object_type:medico) lavorano nell'ambulatorio 
+- cerco le [ambulatori](object_type:ambulatorio) elenco nell'ambulatorio 
+- cerco le [lavora](object_type:medico) elencami nell'ambulatorio 
+- quali [medici](object_type:medico) che lavorano attività 
+- quali [dottore](object_type:medico) che fanno attivita 
+- quali [dottore](object_type:medico) che elencami attività 
+- quali [dottoresse](object_type:medico) che fanno attività 
+- quali [dottoresse](object_type:medico) che conosci attivita 
+- quali [dottori](object_type:medico) che elencami attivita 
+- quali [ambulatori](object_type:ambulatorio) che lavorano attivita 
+- quali [ambulatori](object_type:ambulatorio) che elenco attività 
+- quali [lavora](object_type:medico) che conosci attività 
+- quali [lavora](object_type:medico) che elenco attivita 
+- chi [medici](object_type:medico) che fanno attivita 
+- chi [medici](object_type:medico) che conosci attività 
+- chi [dottore](object_type:medico) che conosci attivita 
+- chi [dottore](object_type:medico) che elenco attività 
+- chi [dottoresse](object_type:medico) che elenco attivita 
+- chi [dottoressa](object_type:medico) che fanno attivita 
+- chi [dottoressa](object_type:medico) che conosci attività 
+- chi [dottori](object_type:medico) che lavorano attivita 
+- chi [ambulatori](object_type:ambulatorio) che fanno attivita 
+- chi [ambulatori](object_type:ambulatorio) che elencami attività 
+- chi [lavora](object_type:medico) che fanno attività 
+- chi [lavora](object_type:medico) che lavorano attività 
+- chi [lavora](object_type:medico) che elencami attivita 
+- cerco i [medici](object_type:medico) che fanno attività 
+- cerco i [medici](object_type:medico) che elencami attivita 
+- cerco i [dottore](object_type:medico) che conosci attività 
+- cerco i [dottore](object_type:medico) che elencami attivita 
+- cerco i [dottoresse](object_type:medico) che fanno attivita 
+- cerco i [dottoresse](object_type:medico) che elenco attività 
+- cerco i [dottoressa](object_type:medico) che lavorano attivita 
+- cerco i [dottori](object_type:medico) che fanno attività 
+- cerco i [dottori](object_type:medico) che conosci attivita 
+- cerco i [ambulatori](object_type:ambulatorio) che lavorano attività 
+- cerco i [ambulatori](object_type:ambulatorio) che elenco attivita 
+- cerco i [lavora](object_type:medico) che lavorano attivita 
+- cerco i [lavora](object_type:medico) che elencami attività 
+- cerco le [medici](object_type:medico) che lavorano attivita 
+- cerco le [medici](object_type:medico) che elenco attività 
+- cerco le [dottore](object_type:medico) che elenco attivita 
+- cerco le [dottore](object_type:medico) che elencami attività 
+- cerco le [dottoresse](object_type:medico) che fanno attivita 
+- cerco le [dottoresse](object_type:medico) che elencami attività 
+- cerco le [dottoressa](object_type:medico) che elencami attivita 
+- cerco le [dottori](object_type:medico) che lavorano attività 
+- cerco le [ambulatori](object_type:ambulatorio) che fanno attività 
+- cerco le [ambulatori](object_type:ambulatorio) che lavorano attività 
+- cerco le [lavora](object_type:medico) che fanno attività 
+- cerco le [lavora](object_type:medico) che conosci attivita 
+- quali [medici](object_type:medico) operano fino alle [08:30](ora_fine) ? 
+- quali [medici](object_type:medico) lavorano fino alle [10:45](ora_fine) ? 
+- quali [medici](object_type:medico) sono aperti fino alle [13:45](ora_fine) ? 
+- quali [dottore](object_type:medico) operano fino alle [16:00](ora_fine) ? 
+- quali [dottore](object_type:medico) operano fino alle [11:03](ora_fine) ? 
+- quali [dottore](object_type:medico) operano fino alle [15:20](ora_fine) ? 
+- quali [dottore](object_type:medico) lavorano fino alle [13:15](ora_fine) ? 
+- quali [dottore](object_type:medico) sono aperti fino alle [10:45](ora_fine) ? 
+- quali [dottoresse](object_type:medico) operano fino alle [11:40](ora_fine) ? 
+- quali [dottoresse](object_type:medico) lavorano fino alle [18:00](ora_fine) ? 
+- quali [dottoresse](object_type:medico) sono aperti fino alle [16:15](ora_fine) ? 
+- quali [dottoressa](object_type:medico) operano fino alle [19:30](ora_fine) ? 
+- quali [dottoressa](object_type:medico) operano fino alle [17:55](ora_fine) ? 
+- quali [dottoressa](object_type:medico) lavorano fino alle [12:00](ora_fine) ? 
+- quali [dottoressa](object_type:medico) lavorano fino alle [11:40](ora_fine) ? 
+- quali [dottoressa](object_type:medico) sono aperti fino alle [11:03](ora_fine) ? 
+- quali [dottori](object_type:medico) operano fino alle [12:50](ora_fine) ? 
+- quali [dottori](object_type:medico) lavorano fino alle [13:30](ora_fine) ? 
+- quali [dottori](object_type:medico) sono aperti fino alle [14:45](ora_fine) ? 
+- quali [ambulatori](object_type:ambulatorio) operano fino alle [12:30](ora_fine) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano fino alle [15:45](ora_fine) ? 
+- quali [ambulatori](object_type:ambulatorio) sono aperti fino alle [20:30](ora_fine) ? 
+- quali [lavora](object_type:medico) operano fino alle [19:20](ora_fine) ? 
+- quali [lavora](object_type:medico) operano fino alle [08:00](ora_fine) ? 
+- quali [lavora](object_type:medico) lavorano fino alle [21:00](ora_fine) ? 
+- quali [lavora](object_type:medico) sono aperti fino alle [09:25](ora_fine) ? 
+- chi [medici](object_type:medico) operano fino alle [11:03](ora_fine) ? 
+- chi [medici](object_type:medico) lavorano fino alle [12:45](ora_fine) ? 
+- chi [medici](object_type:medico) sono aperti fino alle [08:00](ora_fine) ? 
+- chi [dottore](object_type:medico) operano fino alle [15:45](ora_fine) ? 
+- chi [dottore](object_type:medico) lavorano fino alle [14:30](ora_fine) ? 
+- chi [dottore](object_type:medico) sono aperti fino alle [09:30](ora_fine) ? 
+- chi [dottore](object_type:medico) sono aperti fino alle [12:50](ora_fine) ? 
+- chi [dottoresse](object_type:medico) operano fino alle [10:15](ora_fine) ? 
+- chi [dottoresse](object_type:medico) lavorano fino alle [10:20](ora_fine) ? 
+- chi [dottoresse](object_type:medico) sono aperti fino alle [16:30](ora_fine) ? 
+- chi [dottoresse](object_type:medico) sono aperti fino alle [12:45](ora_fine) ? 
+- chi [dottoresse](object_type:medico) sono aperti fino alle [22:00](ora_fine) ? 
+- chi [dottoressa](object_type:medico) operano fino alle [15:05](ora_fine) ? 
+- chi [dottoressa](object_type:medico) lavorano fino alle [16:35](ora_fine) ? 
+- chi [dottoressa](object_type:medico) lavorano fino alle [10:40](ora_fine) ? 
+- chi [dottoressa](object_type:medico) sono aperti fino alle [16:10](ora_fine) ? 
+- chi [dottori](object_type:medico) operano fino alle [17:55](ora_fine) ? 
+- chi [dottori](object_type:medico) lavorano fino alle [09:00](ora_fine) ? 
+- chi [dottori](object_type:medico) sono aperti fino alle [15:20](ora_fine) ? 
+- chi [ambulatori](object_type:ambulatorio) operano fino alle [12:15](ora_fine) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano fino alle [19:15](ora_fine) ? 
+- chi [ambulatori](object_type:ambulatorio) sono aperti fino alle [14:20](ora_fine) ? 
+- chi [lavora](object_type:medico) operano fino alle [19:30](ora_fine) ? 
+- chi [lavora](object_type:medico) lavorano fino alle [14:15](ora_fine) ? 
+- chi [lavora](object_type:medico) sono aperti fino alle [21:30](ora_fine) ? 
+- cerco i [medici](object_type:medico) operano fino alle [18:50](ora_fine) ? 
+- cerco i [medici](object_type:medico) lavorano fino alle [11:00](ora_fine) ? 
+- cerco i [medici](object_type:medico) lavorano fino alle [15:20](ora_fine) ? 
+- cerco i [medici](object_type:medico) sono aperti fino alle [10:30](ora_fine) ? 
+- cerco i [dottore](object_type:medico) operano fino alle [16:30](ora_fine) ? 
+- cerco i [dottore](object_type:medico) lavorano fino alle [12:10](ora_fine) ? 
+- cerco i [dottore](object_type:medico) sono aperti fino alle [18:45](ora_fine) ? 
+- cerco i [dottoresse](object_type:medico) operano fino alle [11:45](ora_fine) ? 
+- cerco i [dottoresse](object_type:medico) lavorano fino alle [19:30](ora_fine) ? 
+- cerco i [dottoresse](object_type:medico) sono aperti fino alle [17:30](ora_fine) ? 
+- cerco i [dottoresse](object_type:medico) sono aperti fino alle [12:10](ora_fine) ? 
+- cerco i [dottoressa](object_type:medico) operano fino alle [13:00](ora_fine) ? 
+- cerco i [dottoressa](object_type:medico) lavorano fino alle [08:00](ora_fine) ? 
+- cerco i [dottoressa](object_type:medico) sono aperti fino alle [14:45](ora_fine) ? 
+- cerco i [dottori](object_type:medico) operano fino alle [14:00](ora_fine) ? 
+- cerco i [dottori](object_type:medico) lavorano fino alle [13:00](ora_fine) ? 
+- cerco i [dottori](object_type:medico) lavorano fino alle [16:45](ora_fine) ? 
+- cerco i [dottori](object_type:medico) lavorano fino alle [15:05](ora_fine) ? 
+- cerco i [dottori](object_type:medico) sono aperti fino alle [17:45](ora_fine) ? 
+- cerco i [dottori](object_type:medico) sono aperti fino alle [18:10](ora_fine) ? 
+- cerco i [ambulatori](object_type:ambulatorio) operano fino alle [08:45](ora_fine) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano fino alle [15:05](ora_fine) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono aperti fino alle [11:03](ora_fine) ? 
+- cerco i [lavora](object_type:medico) operano fino alle [00:00](ora_fine) ? 
+- cerco i [lavora](object_type:medico) lavorano fino alle [09:25](ora_fine) ? 
+- cerco i [lavora](object_type:medico) sono aperti fino alle [08:00](ora_fine) ? 
+- cerco le [medici](object_type:medico) operano fino alle [10:45](ora_fine) ? 
+- cerco le [medici](object_type:medico) lavorano fino alle [09:30](ora_fine) ? 
+- cerco le [medici](object_type:medico) sono aperti fino alle [20:15](ora_fine) ? 
+- cerco le [dottore](object_type:medico) operano fino alle [10:20](ora_fine) ? 
+- cerco le [dottore](object_type:medico) lavorano fino alle [11:40](ora_fine) ? 
+- cerco le [dottore](object_type:medico) sono aperti fino alle [15:00](ora_fine) ? 
+- cerco le [dottoresse](object_type:medico) operano fino alle [20:15](ora_fine) ? 
+- cerco le [dottoresse](object_type:medico) lavorano fino alle [15:45](ora_fine) ? 
+- cerco le [dottoresse](object_type:medico) sono aperti fino alle [10:20](ora_fine) ? 
+- cerco le [dottoressa](object_type:medico) operano fino alle [11:03](ora_fine) ? 
+- cerco le [dottoressa](object_type:medico) lavorano fino alle [13:30](ora_fine) ? 
+- cerco le [dottoressa](object_type:medico) lavorano fino alle [08:45](ora_fine) ? 
+- cerco le [dottoressa](object_type:medico) sono aperti fino alle [12:30](ora_fine) ? 
+- cerco le [dottori](object_type:medico) operano fino alle [17:30](ora_fine) ? 
+- cerco le [dottori](object_type:medico) lavorano fino alle [12:15](ora_fine) ? 
+- cerco le [dottori](object_type:medico) sono aperti fino alle [19:00](ora_fine) ? 
+- cerco le [ambulatori](object_type:ambulatorio) operano fino alle [11:30](ora_fine) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano fino alle [11:03](ora_fine) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono aperti fino alle [15:45](ora_fine) ? 
+- cerco le [lavora](object_type:medico) operano fino alle [16:00](ora_fine) ? 
+- cerco le [lavora](object_type:medico) operano fino alle [14:45](ora_fine) ? 
+- cerco le [lavora](object_type:medico) lavorano fino alle [16:10](ora_fine) ? 
+- cerco le [lavora](object_type:medico) sono aperti fino alle [08:45](ora_fine) ? 
+- quali [medici](object_type:medico) aprono alle [07:15](ora_inizio) ? 
+- quali [medici](object_type:medico) lavorano alle [19:00](ora_inizio) ? 
+- quali [medici](object_type:medico) sono aperti alle [16:15](ora_inizio) ? 
+- quali [dottore](object_type:medico) aprono alle [15:10](ora_inizio) ? 
+- quali [dottore](object_type:medico) lavorano alle [15:15](ora_inizio) ? 
+- quali [dottore](object_type:medico) sono aperti alle [17:15](ora_inizio) ? 
+- quali [dottoresse](object_type:medico) aprono alle [11:15](ora_inizio) ? 
+- quali [dottoresse](object_type:medico) lavorano alle [08:00](ora_inizio) ? 
+- quali [dottoresse](object_type:medico) lavorano alle [10:30](ora_inizio) ? 
+- quali [dottoresse](object_type:medico) sono aperti alle [17:45](ora_inizio) ? 
+- quali [dottoresse](object_type:medico) sono aperti alle [12:20](ora_inizio) ? 
+- quali [dottoressa](object_type:medico) aprono alle [10:15](ora_inizio) ? 
+- quali [dottoressa](object_type:medico) lavorano alle [09:15](ora_inizio) ? 
+- quali [dottoressa](object_type:medico) sono aperti alle [17:50](ora_inizio) ? 
+- quali [dottori](object_type:medico) aprono alle [19:30](ora_inizio) ? 
+- quali [dottori](object_type:medico) lavorano alle [18:30](ora_inizio) ? 
+- quali [dottori](object_type:medico) sono aperti alle [10:15](ora_inizio) ? 
+- quali [ambulatori](object_type:ambulatorio) aprono alle [09:30](ora_inizio) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano alle [09:40](ora_inizio) ? 
+- quali [ambulatori](object_type:ambulatorio) sono aperti alle [16:00](ora_inizio) ? 
+- quali [lavora](object_type:medico) aprono alle [18:00](ora_inizio) ? 
+- quali [lavora](object_type:medico) aprono alle [07:00](ora_inizio) ? 
+- quali [lavora](object_type:medico) lavorano alle [13:15](ora_inizio) ? 
+- quali [lavora](object_type:medico) sono aperti alle [11:30](ora_inizio) ? 
+- chi [medici](object_type:medico) aprono alle [14:45](ora_inizio) ? 
+- chi [medici](object_type:medico) lavorano alle [16:00](ora_inizio) ? 
+- chi [medici](object_type:medico) sono aperti alle [08:30](ora_inizio) ? 
+- chi [dottore](object_type:medico) aprono alle [13:00](ora_inizio) ? 
+- chi [dottore](object_type:medico) lavorano alle [07:45](ora_inizio) ? 
+- chi [dottore](object_type:medico) sono aperti alle [16:10](ora_inizio) ? 
+- chi [dottoresse](object_type:medico) aprono alle [08:45](ora_inizio) ? 
+- chi [dottoresse](object_type:medico) lavorano alle [09:00](ora_inizio) ? 
+- chi [dottoresse](object_type:medico) sono aperti alle [10:20](ora_inizio) ? 
+- chi [dottoressa](object_type:medico) aprono alle [14:00](ora_inizio) ? 
+- chi [dottoressa](object_type:medico) lavorano alle [16:00](ora_inizio) ? 
+- chi [dottoressa](object_type:medico) lavorano alle [19:00](ora_inizio) ? 
+- chi [dottoressa](object_type:medico) sono aperti alle [00:00](ora_inizio) ? 
+- chi [dottori](object_type:medico) aprono alle [12:20](ora_inizio) ? 
+- chi [dottori](object_type:medico) lavorano alle [07:30](ora_inizio) ? 
+- chi [dottori](object_type:medico) lavorano alle [11:45](ora_inizio) ? 
+- chi [dottori](object_type:medico) sono aperti alle [20:00](ora_inizio) ? 
+- chi [ambulatori](object_type:ambulatorio) aprono alle [15:00](ora_inizio) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano alle [10:00](ora_inizio) ? 
+- chi [ambulatori](object_type:ambulatorio) sono aperti alle [17:20](ora_inizio) ? 
+- chi [lavora](object_type:medico) aprono alle [18:50](ora_inizio) ? 
+- chi [lavora](object_type:medico) aprono alle [09:40](ora_inizio) ? 
+- chi [lavora](object_type:medico) lavorano alle [11:00](ora_inizio) ? 
+- chi [lavora](object_type:medico) lavorano alle [15:45](ora_inizio) ? 
+- chi [lavora](object_type:medico) lavorano alle [18:20](ora_inizio) ? 
+- chi [lavora](object_type:medico) sono aperti alle [18:00](ora_inizio) ? 
+- cerco i [medici](object_type:medico) aprono alle [10:00](ora_inizio) ? 
+- cerco i [medici](object_type:medico) lavorano alle [17:45](ora_inizio) ? 
+- cerco i [medici](object_type:medico) sono aperti alle [13:30](ora_inizio) ? 
+- cerco i [medici](object_type:medico) sono aperti alle [18:15](ora_inizio) ? 
+- cerco i [medici](object_type:medico) sono aperti alle [07:45](ora_inizio) ? 
+- cerco i [medici](object_type:medico) sono aperti alle [00:00](ora_inizio) ? 
+- cerco i [medici](object_type:medico) sono aperti alle [08:40](ora_inizio) ? 
+- cerco i [dottore](object_type:medico) aprono alle [10:00](ora_inizio) ? 
+- cerco i [dottore](object_type:medico) lavorano alle [09:15](ora_inizio) ? 
+- cerco i [dottore](object_type:medico) sono aperti alle [12:20](ora_inizio) ? 
+- cerco i [dottoresse](object_type:medico) aprono alle [09:40](ora_inizio) ? 
+- cerco i [dottoresse](object_type:medico) lavorano alle [18:30](ora_inizio) ? 
+- cerco i [dottoresse](object_type:medico) lavorano alle [17:20](ora_inizio) ? 
+- cerco i [dottoresse](object_type:medico) sono aperti alle [19:00](ora_inizio) ? 
+- cerco i [dottoressa](object_type:medico) aprono alle [15:15](ora_inizio) ? 
+- cerco i [dottoressa](object_type:medico) lavorano alle [17:50](ora_inizio) ? 
+- cerco i [dottoressa](object_type:medico) lavorano alle [09:40](ora_inizio) ? 
+- cerco i [dottoressa](object_type:medico) sono aperti alle [09:00](ora_inizio) ? 
+- cerco i [dottoressa](object_type:medico) sono aperti alle [14:30](ora_inizio) ? 
+- cerco i [dottoressa](object_type:medico) sono aperti alle [09:15](ora_inizio) ? 
+- cerco i [dottoressa](object_type:medico) sono aperti alle [17:20](ora_inizio) ? 
+- cerco i [dottori](object_type:medico) aprono alle [15:00](ora_inizio) ? 
+- cerco i [dottori](object_type:medico) lavorano alle [11:10](ora_inizio) ? 
+- cerco i [dottori](object_type:medico) sono aperti alle [15:15](ora_inizio) ? 
+- cerco i [ambulatori](object_type:ambulatorio) aprono alle [08:40](ora_inizio) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano alle [19:00](ora_inizio) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono aperti alle [18:30](ora_inizio) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono aperti alle [20:00](ora_inizio) ? 
+- cerco i [lavora](object_type:medico) aprono alle [09:30](ora_inizio) ? 
+- cerco i [lavora](object_type:medico) lavorano alle [08:00](ora_inizio) ? 
+- cerco i [lavora](object_type:medico) lavorano alle [13:20](ora_inizio) ? 
+- cerco i [lavora](object_type:medico) sono aperti alle [09:15](ora_inizio) ? 
+- cerco le [medici](object_type:medico) aprono alle [08:15](ora_inizio) ? 
+- cerco le [medici](object_type:medico) lavorano alle [10:30](ora_inizio) ? 
+- cerco le [medici](object_type:medico) lavorano alle [17:20](ora_inizio) ? 
+- cerco le [medici](object_type:medico) sono aperti alle [12:45](ora_inizio) ? 
+- cerco le [medici](object_type:medico) sono aperti alle [09:25](ora_inizio) ? 
+- cerco le [dottore](object_type:medico) aprono alle [10:30](ora_inizio) ? 
+- cerco le [dottore](object_type:medico) lavorano alle [13:15](ora_inizio) ? 
+- cerco le [dottore](object_type:medico) sono aperti alle [15:05](ora_inizio) ? 
+- cerco le [dottoresse](object_type:medico) aprono alle [11:00](ora_inizio) ? 
+- cerco le [dottoresse](object_type:medico) lavorano alle [16:30](ora_inizio) ? 
+- cerco le [dottoresse](object_type:medico) sono aperti alle [10:30](ora_inizio) ? 
+- cerco le [dottoressa](object_type:medico) aprono alle [15:10](ora_inizio) ? 
+- cerco le [dottoressa](object_type:medico) aprono alle [11:45](ora_inizio) ? 
+- cerco le [dottoressa](object_type:medico) lavorano alle [09:30](ora_inizio) ? 
+- cerco le [dottoressa](object_type:medico) sono aperti alle [17:45](ora_inizio) ? 
+- cerco le [dottori](object_type:medico) aprono alle [16:15](ora_inizio) ? 
+- cerco le [dottori](object_type:medico) lavorano alle [13:45](ora_inizio) ? 
+- cerco le [dottori](object_type:medico) sono aperti alle [09:25](ora_inizio) ? 
+- cerco le [ambulatori](object_type:ambulatorio) aprono alle [11:10](ora_inizio) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano alle [15:30](ora_inizio) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano alle [20:00](ora_inizio) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono aperti alle [09:40](ora_inizio) ? 
+- cerco le [lavora](object_type:medico) aprono alle [12:45](ora_inizio) ? 
+- cerco le [lavora](object_type:medico) lavorano alle [17:30](ora_inizio) ? 
+- cerco le [lavora](object_type:medico) sono aperti alle [08:00](ora_inizio) ? 
+- quali [medici](object_type:medico) operano il [MARTEDI](giorno) ? 
+- quali [medici](object_type:medico) è aperto il [venerdi](giorno) ? 
+- quali [medici](object_type:medico) sono aperti il [GIOVEDI](giorno) ? 
+- quali [dottore](object_type:medico) lavorano il [Lunedi](giorno) ? 
+- quali [dottore](object_type:medico) lavorano il [martedi](giorno) ? 
+- quali [dottore](object_type:medico) sono aperti il [SABATO](giorno) ? 
+- quali [dottoresse](object_type:medico) operano il [GIOVEDI](giorno) ? 
+- quali [dottoresse](object_type:medico) operano il [mercoledi](giorno) ? 
+- quali [dottoresse](object_type:medico) operano il [sabato](giorno) ? 
+- quali [dottoresse](object_type:medico) è aperto il [Lunedi](giorno) ? 
+- quali [dottoresse](object_type:medico) sono aperti il [venerdi](giorno) ? 
+- quali [dottoressa](object_type:medico) operano il [VENERDI](giorno) ? 
+- quali [dottoressa](object_type:medico) è aperto il [Martedi](giorno) ? 
+- quali [dottoressa](object_type:medico) è aperto il [SABATO](giorno) ? 
+- quali [dottoressa](object_type:medico) lavorano il [giovedi](giorno) ? 
+- quali [dottoressa](object_type:medico) sono aperti il [VENERDI](giorno) ? 
+- quali [dottori](object_type:medico) operano il [Sabato](giorno) ? 
+- quali [dottori](object_type:medico) è aperto il [GIOVEDI](giorno) ? 
+- quali [dottori](object_type:medico) lavorano il [mercoledi](giorno) ? 
+- quali [dottori](object_type:medico) sono aperti il [Mercoledi](giorno) ? 
+- quali [ambulatori](object_type:ambulatorio) operano il [Lunedi](giorno) ? 
+- quali [ambulatori](object_type:ambulatorio) è aperto il [mercoledi](giorno) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano il [Venerdi](giorno) ? 
+- quali [ambulatori](object_type:ambulatorio) sono aperti il [Martedi](giorno) ? 
+- chi [medici](object_type:medico) operano il [Giovedi](giorno) ? 
+- chi [medici](object_type:medico) è aperto il [Lunedi](giorno) ? 
+- chi [medici](object_type:medico) lavorano il [martedi](giorno) ? 
+- chi [medici](object_type:medico) lavorano il [MERCOLEDI](giorno) ? 
+- chi [medici](object_type:medico) sono aperti il [LUNEDI](giorno) ? 
+- chi [dottore](object_type:medico) operano il [Sabato](giorno) ? 
+- chi [dottore](object_type:medico) è aperto il [Lunedi](giorno) ? 
+- chi [dottore](object_type:medico) lavorano il [Venerdi](giorno) ? 
+- chi [dottoresse](object_type:medico) operano il [Venerdi](giorno) ? 
+- chi [dottoresse](object_type:medico) è aperto il [sabato](giorno) ? 
+- chi [dottoresse](object_type:medico) lavorano il [Giovedi](giorno) ? 
+- chi [dottoresse](object_type:medico) sono aperti il [Mercoledi](giorno) ? 
+- chi [dottoressa](object_type:medico) operano il [LUNEDI](giorno) ? 
+- chi [dottoressa](object_type:medico) operano il [MARTEDI](giorno) ? 
+- chi [dottoressa](object_type:medico) è aperto il [Mercoledi](giorno) ? 
+- chi [dottoressa](object_type:medico) lavorano il [sabato](giorno) ? 
+- chi [dottori](object_type:medico) operano il [Mercoledi](giorno) ? 
+- chi [dottori](object_type:medico) è aperto il [martedi](giorno) ? 
+- chi [dottori](object_type:medico) lavorano il [LUNEDI](giorno) ? 
+- chi [dottori](object_type:medico) sono aperti il [Giovedi](giorno) ? 
+- chi [ambulatori](object_type:ambulatorio) è aperto il [GIOVEDI](giorno) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano il [Martedi](giorno) ? 
+- chi [ambulatori](object_type:ambulatorio) sono aperti il [VENERDI](giorno) ? 
+- cerco i [medici](object_type:medico) operano il [LUNEDI](giorno) ? 
+- cerco i [medici](object_type:medico) lavorano il [SABATO](giorno) ? 
+- cerco i [medici](object_type:medico) sono aperti il [mercoledi](giorno) ? 
+- cerco i [dottore](object_type:medico) operano il [Venerdi](giorno) ? 
+- cerco i [dottore](object_type:medico) è aperto il [Sabato](giorno) ? 
+- cerco i [dottore](object_type:medico) lavorano il [MERCOLEDI](giorno) ? 
+- cerco i [dottore](object_type:medico) sono aperti il [MARTEDI](giorno) ? 
+- cerco i [dottoresse](object_type:medico) operano il [MARTEDI](giorno) ? 
+- cerco i [dottoresse](object_type:medico) è aperto il [VENERDI](giorno) ? 
+- cerco i [dottoresse](object_type:medico) è aperto il [LUNEDI](giorno) ? 
+- cerco i [dottoresse](object_type:medico) sono aperti il [Giovedi](giorno) ? 
+- cerco i [dottoressa](object_type:medico) operano il [SABATO](giorno) ? 
+- cerco i [dottoressa](object_type:medico) è aperto il [giovedi](giorno) ? 
+- cerco i [dottoressa](object_type:medico) lavorano il [LUNEDI](giorno) ? 
+- cerco i [dottori](object_type:medico) operano il [MARTEDI](giorno) ? 
+- cerco i [dottori](object_type:medico) è aperto il [mercoledi](giorno) ? 
+- cerco i [dottori](object_type:medico) lavorano il [Giovedi](giorno) ? 
+- cerco i [dottori](object_type:medico) sono aperti il [Sabato](giorno) ? 
+- cerco i [ambulatori](object_type:ambulatorio) operano il [MERCOLEDI](giorno) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano il [MARTEDI](giorno) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono aperti il [VENERDI](giorno) ? 
+- cerco le [medici](object_type:medico) operano il [SABATO](giorno) ? 
+- cerco le [medici](object_type:medico) è aperto il [martedi](giorno) ? 
+- cerco le [medici](object_type:medico) lavorano il [Mercoledi](giorno) ? 
+- cerco le [dottore](object_type:medico) operano il [venerdi](giorno) ? 
+- cerco le [dottore](object_type:medico) è aperto il [GIOVEDI](giorno) ? 
+- cerco le [dottore](object_type:medico) sono aperti il [MERCOLEDI](giorno) ? 
+- cerco le [dottoresse](object_type:medico) è aperto il [Mercoledi](giorno) ? 
+- cerco le [dottoresse](object_type:medico) lavorano il [SABATO](giorno) ? 
+- cerco le [dottoresse](object_type:medico) sono aperti il [Martedi](giorno) ? 
+- cerco le [dottoressa](object_type:medico) operano il [MERCOLEDI](giorno) ? 
+- cerco le [dottoressa](object_type:medico) è aperto il [Lunedi](giorno) ? 
+- cerco le [dottoressa](object_type:medico) lavorano il [martedi](giorno) ? 
+- cerco le [dottoressa](object_type:medico) sono aperti il [Giovedi](giorno) ? 
+- cerco le [dottoressa](object_type:medico) sono aperti il [LUNEDI](giorno) ? 
+- cerco le [dottori](object_type:medico) operano il [LUNEDI](giorno) ? 
+- cerco le [dottori](object_type:medico) è aperto il [Sabato](giorno) ? 
+- cerco le [dottori](object_type:medico) lavorano il [Giovedi](giorno) ? 
+- cerco le [dottori](object_type:medico) sono aperti il [VENERDI](giorno) ? 
+- cerco le [ambulatori](object_type:ambulatorio) operano il [giovedi](giorno) ? 
+- cerco le [ambulatori](object_type:ambulatorio) è aperto il [VENERDI](giorno) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano il [LUNEDI](giorno) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono aperti il [Sabato](giorno) ? 
+- quali [medici](object_type:medico) sono a [Arizzano](denom_comune) ? 
+- quali [medici](object_type:medico) sono a [Treville](denom_comune) ? 
+- quali [dottore](object_type:medico) sono a [SILLAVENGO](denom_comune) ? 
+- quali [dottoresse](object_type:medico) sono a [San maurizio canavese](denom_comune) ? 
+- quali [dottoressa](object_type:medico) sono a [Varallo pombia](denom_comune) ? 
+- quali [dottori](object_type:medico) sono a [ferrere](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) sono a [La loggia](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) sono a [battifollo](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) sono a [claviere](denom_comune) ? 
+- chi [medici](object_type:medico) sono a [GARBAGNA](denom_comune) ? 
+- chi [dottore](object_type:medico) sono a [moiola](denom_comune) ? 
+- chi [dottoresse](object_type:medico) sono a [Treville](denom_comune) ? 
+- chi [dottoressa](object_type:medico) sono a [Refrancore](denom_comune) ? 
+- chi [dottori](object_type:medico) sono a [VEGLIO](denom_comune) ? 
+- chi [dottori](object_type:medico) sono a [aramengo](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) sono a [Trarego viggiona](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) sono a [VALFENERA](denom_comune) ? 
+- cerco i [medici](object_type:medico) sono a [VILLANOVA MONFERRATO](denom_comune) ? 
+- cerco i [medici](object_type:medico) sono a [Galliate](denom_comune) ? 
+- cerco i [dottore](object_type:medico) sono a [TORNACO](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) sono a [narzole](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) sono a [verzuolo](denom_comune) ? 
+- cerco i [dottori](object_type:medico) sono a [nomaglio](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono a [Virle piemonte](denom_comune) ? 
+- cerco le [medici](object_type:medico) sono a [Campiglione fenile](denom_comune) ? 
+- cerco le [dottore](object_type:medico) sono a [san germano vercellese](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) sono a [Roletto](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) sono a [pogno](denom_comune) ? 
+- cerco le [dottori](object_type:medico) sono a [torrazza piemonte](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono a [villafranca d asti](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono a [Viganella](denom_comune) ? 
+- elencami [medici](object_type:medico) a [Sestriere](denom_comune) 
+- elencami [dottore](object_type:medico) a [Piedimulera](denom_comune) 
+- elencami [dottoresse](object_type:medico) a [NIBBIOLA](denom_comune) 
+- elencami [dottoresse](object_type:medico) a [VIARIGI](denom_comune) 
+- elencami [dottoressa](object_type:medico) a [Valenza](denom_comune) 
+- elencami [dottoressa](object_type:medico) a [orsara bormida](denom_comune) 
+- elencami [dottori](object_type:medico) a [OULX](denom_comune) 
+- elencami [ambulatori](object_type:ambulatorio a [BORGOVERCELLI](denom_comune) 
+- elencami [ambulatori](object_type:ambulatorio a [Pratiglione](denom_comune) 
+- mostrami [medici](object_type:medico) a [VALDIERI](denom_comune) 
+- mostrami [dottore](object_type:medico) a [Valenza](denom_comune) 
+- mostrami [dottoresse](object_type:medico) a [cocconato](denom_comune) 
+- mostrami [dottoressa](object_type:medico) a [san secondo di pinerolo](denom_comune) 
+- mostrami [dottori](object_type:medico) a [SILVANO D ORBA](denom_comune) 
+- mostrami [ambulatori](object_type:ambulatorio a [settimo vittone](denom_comune) 
+- mostrami [ambulatori](object_type:ambulatorio a [Bibiana](denom_comune) 
+- dimmi [medici](object_type:medico) a [Canale](denom_comune) 
+- dimmi [dottore](object_type:medico) a [isasca](denom_comune) 
+- dimmi [dottoresse](object_type:medico) a [Graglia](denom_comune) 
+- dimmi [dottoressa](object_type:medico) a [ARMENO](denom_comune) 
+- dimmi [dottori](object_type:medico) a [pont-canavese](denom_comune) 
+- dimmi [dottori](object_type:medico) a [Torre san giorgio](denom_comune) 
+- dimmi [ambulatori](object_type:ambulatorio a [TERNENGO](denom_comune) 
+- elencami [medici](object_type:medico) a [0](desc_distretto) 
+- elencami [dottore](object_type:medico) a [0](desc_distretto) 
+- elencami [dottore](object_type:medico) a [0](desc_distretto) 
+- elencami [dottore](object_type:medico) a [0](desc_distretto) 
+- elencami [dottoresse](object_type:medico) a [0](desc_distretto) 
+- elencami [dottoressa](object_type:medico) a [0](desc_distretto) 
+- elencami [dottori](object_type:medico) a [0](desc_distretto) 
+- elencami [ambulatori](object_type:ambulatorio a [0](desc_distretto) 
+- mostrami [medici](object_type:medico) a [0](desc_distretto) 
+- mostrami [dottore](object_type:medico) a [0](desc_distretto) 
+- mostrami [dottoresse](object_type:medico) a [0](desc_distretto) 
+- mostrami [dottoressa](object_type:medico) a [0](desc_distretto) 
+- mostrami [dottori](object_type:medico) a [0](desc_distretto) 
+- mostrami [ambulatori](object_type:ambulatorio a [0](desc_distretto) 
+- dimmi [medici](object_type:medico) a [0](desc_distretto) 
+- dimmi [medici](object_type:medico) a [0](desc_distretto) 
+- dimmi [dottore](object_type:medico) a [0](desc_distretto) 
+- dimmi [dottore](object_type:medico) a [0](desc_distretto) 
+- dimmi [dottoresse](object_type:medico) a [0](desc_distretto) 
+- dimmi [dottoressa](object_type:medico) a [0](desc_distretto) 
+- dimmi [dottori](object_type:medico) a [0](desc_distretto) 
+- dimmi [dottori](object_type:medico) a [0](desc_distretto) 
+- dimmi [dottori](object_type:medico) a [0](desc_distretto) 
+- dimmi [ambulatori](object_type:ambulatorio a [0](desc_distretto) 
+- dimmi [ambulatori](object_type:ambulatorio a [0](desc_distretto) 
+- dimmi [ambulatori](object_type:ambulatorio a [0](desc_distretto) 
+- elencami [medici](object_type:medico) in [VIA CROSO PLINIO](indirizzo) 
+- elencami [dottore](object_type:medico) in [via 25 aprile](indirizzo) 
+- elencami [dottoresse](object_type:medico) in [VIA CASTELLAMONTE](indirizzo) 
+- elencami [dottoresse](object_type:medico) in [Via faraggiana](indirizzo) 
+- elencami [dottoressa](object_type:medico) in [Via combattenti](indirizzo) 
+- elencami [dottori](object_type:medico) in [ambulatorio comunale](indirizzo) 
+- elencami [ambulatori](object_type:ambulatorio in [VIALE XXIV MAGGIO](indirizzo) 
+- elencami [ambulatori](object_type:ambulatorio in [Via spaventa](indirizzo) 
+- mostrami [medici](object_type:medico) in [VIA GIORDANO](indirizzo) 
+- mostrami [dottore](object_type:medico) in [VIA S. ROCCO](indirizzo) 
+- mostrami [dottoresse](object_type:medico) in [Via berti domenico](indirizzo) 
+- mostrami [dottoressa](object_type:medico) in [Via catania](indirizzo) 
+- mostrami [dottori](object_type:medico) in [Via paolo braccini](indirizzo) 
+- mostrami [ambulatori](object_type:ambulatorio in [Via cane guido (loc. valle talloria)](indirizzo) 
+- mostrami [ambulatori](object_type:ambulatorio in [via alluvioni](indirizzo) 
+- dimmi [medici](object_type:medico) in [vicolo don orione luigi](indirizzo) 
+- dimmi [dottore](object_type:medico) in [piazza camisola giuseppe](indirizzo) 
+- dimmi [dottoresse](object_type:medico) in [Piazzale europa](indirizzo) 
+- dimmi [dottoresse](object_type:medico) in [via giacomo saudino](indirizzo) 
+- dimmi [dottoressa](object_type:medico) in [frazione accorneri valle](indirizzo) 
+- dimmi [dottori](object_type:medico) in [via candelo 25 - su appuntamento negli altri orari](indirizzo) 
+- dimmi [ambulatori](object_type:ambulatorio in [piazza enrico berlinguer](indirizzo) 
+- elencami [medici](object_type:medico) a [Lesa](denom_comune) 
+- elencami [dottore](object_type:medico) a [piscina](denom_comune) 
+- elencami [dottoresse](object_type:medico) a [montaldo torinese](denom_comune) 
+- elencami [dottoressa](object_type:medico) a [TARANTASCA](denom_comune) 
+- elencami [dottori](object_type:medico) a [Montalenghe](denom_comune) 
+- elencami [ambulatori](object_type:ambulatorio a [Strambino](denom_comune) 
+- mostrami [medici](object_type:medico) a [ghemme](denom_comune) 
+- mostrami [dottore](object_type:medico) a [MUZZANO](denom_comune) 
+- mostrami [dottoresse](object_type:medico) a [sala monferrato](denom_comune) 
+- mostrami [dottoressa](object_type:medico) a [castelletto molina](denom_comune) 
+- mostrami [dottori](object_type:medico) a [Monastero di lanzo](denom_comune) 
+- mostrami [ambulatori](object_type:ambulatorio a [racconigi](denom_comune) 
+- dimmi [medici](object_type:medico) a [Moncalvo](denom_comune) 
+- dimmi [dottore](object_type:medico) a [San pietro val lemina](denom_comune) 
+- dimmi [dottoresse](object_type:medico) a [Castellamonte](denom_comune) 
+- dimmi [dottoresse](object_type:medico) a [Verrua savoia](denom_comune) 
+- dimmi [dottoressa](object_type:medico) a [BRIGNANO FRASCATA](denom_comune) 
+- dimmi [dottori](object_type:medico) a [Rodello](denom_comune) 
+- dimmi [ambulatori](object_type:ambulatorio a [trasquera](denom_comune) 
+- elencami [medici](object_type:medico) aperti di [MERCOLEDI](giorno) 
+- elencami [medici](object_type:medico) aperti il [venerdi](giorno) 
+- elencami [medici](object_type:medico) aperti il [lunedi](giorno) 
+- elencami [dottore](object_type:medico) aperti di [MARTEDI](giorno) 
+- elencami [dottore](object_type:medico) aperti il [LUNEDI](giorno) 
+- elencami [dottoresse](object_type:medico) aperti di [Sabato](giorno) 
+- elencami [dottoresse](object_type:medico) aperti il [Giovedi](giorno) 
+- elencami [dottoressa](object_type:medico) aperti di [LUNEDI](giorno) 
+- elencami [dottoressa](object_type:medico) aperti il [MERCOLEDI](giorno) 
+- elencami [dottori](object_type:medico) aperti di [VENERDI](giorno) 
+- elencami [dottori](object_type:medico) aperti il [Sabato](giorno) 
+- elencami [ambulatori](object_type:ambulatorio aperti di [giovedi](giorno) 
+- elencami [ambulatori](object_type:ambulatorio aperti il [Martedi](giorno) 
+- mostrami [medici](object_type:medico) aperti di [LUNEDI](giorno) 
+- mostrami [medici](object_type:medico) aperti il [giovedi](giorno) 
+- mostrami [dottore](object_type:medico) aperti di [VENERDI](giorno) 
+- mostrami [dottore](object_type:medico) aperti il [Sabato](giorno) 
+- mostrami [dottoresse](object_type:medico) aperti di [mercoledi](giorno) 
+- mostrami [dottoresse](object_type:medico) aperti il [MARTEDI](giorno) 
+- mostrami [dottoresse](object_type:medico) aperti il [MERCOLEDI](giorno) 
+- mostrami [dottoressa](object_type:medico) aperti di [Giovedi](giorno) 
+- mostrami [dottoressa](object_type:medico) aperti il [lunedi](giorno) 
+- mostrami [dottori](object_type:medico) aperti di [Sabato](giorno) 
+- mostrami [ambulatori](object_type:ambulatorio aperti di [MARTEDI](giorno) 
+- mostrami [ambulatori](object_type:ambulatorio aperti il [venerdi](giorno) 
+- dimmi [medici](object_type:medico) aperti di [VENERDI](giorno) 
+- dimmi [medici](object_type:medico) aperti il [Mercoledi](giorno) 
+- dimmi [dottore](object_type:medico) aperti di [Sabato](giorno) 
+- dimmi [dottore](object_type:medico) aperti il [MARTEDI](giorno) 
+- dimmi [dottoresse](object_type:medico) aperti di [MARTEDI](giorno) 
+- dimmi [dottoresse](object_type:medico) aperti il [Giovedi](giorno) 
+- dimmi [dottoressa](object_type:medico) aperti il [Venerdi](giorno) 
+- dimmi [dottori](object_type:medico) aperti di [Giovedi](giorno) 
+- dimmi [dottori](object_type:medico) aperti di [LUNEDI](giorno) 
+- dimmi [dottori](object_type:medico) aperti il [MERCOLEDI](giorno) 
+- dimmi [ambulatori](object_type:ambulatorio aperti di [mercoledi](giorno) 
+- dimmi [ambulatori](object_type:ambulatorio aperti il [Sabato](giorno) 
+- elencami [medici](object_type:medico) in [13018](cap) 
+- elencami [dottore](object_type:medico) in [28060](cap) 
+- elencami [dottoresse](object_type:medico) in [10100](cap) 
+- elencami [dottoressa](object_type:medico) in [12038](cap) 
+- elencami [dottori](object_type:medico) in [10025](cap) 
+- elencami [ambulatori](object_type:ambulatorio in [10043](cap) 
+- elencami [ambulatori](object_type:ambulatorio in [10132](cap) 
+- mostrami [medici](object_type:medico) in [10050](cap) 
+- mostrami [medici](object_type:medico) in [28845](cap) 
+- mostrami [dottore](object_type:medico) in [14015](cap) 
+- mostrami [dottoresse](object_type:medico) in [12080](cap) 
+- mostrami [dottoressa](object_type:medico) in [15073](cap) 
+- mostrami [dottori](object_type:medico) in [15067](cap) 
+- mostrami [dottori](object_type:medico) in [12029](cap) 
+- mostrami [ambulatori](object_type:ambulatorio in [12038](cap) 
+- dimmi [medici](object_type:medico) in [10040](cap) 
+- dimmi [dottore](object_type:medico) in [10121](cap) 
+- dimmi [dottoresse](object_type:medico) in [12078](cap) 
+- dimmi [dottoressa](object_type:medico) in [10153](cap) 
+- dimmi [dottori](object_type:medico) in [12025](cap) 
+- dimmi [ambulatori](object_type:ambulatorio in [28069](cap) 
+- elencami [medici](object_type:medico) che lavorano dalle [13:00](ora_inizio) 
+- elencami [medici](object_type:medico) che lavorano alle [18:50](ora_inizio) 
+- elencami [medici](object_type:medico) che fanno dalle [11:30](ora_inizio) 
+- elencami [medici](object_type:medico) che fanno alle [09:10](ora_inizio) 
+- elencami [medici](object_type:medico) che aprono dalle [16:10](ora_inizio) 
+- elencami [medici](object_type:medico) che aprono alle [08:00](ora_inizio) 
+- elencami [medici](object_type:medico) che aprono alle [07:30](ora_inizio) 
+- elencami [medici](object_type:medico) che iniziano dalle [18:00](ora_inizio) 
+- elencami [medici](object_type:medico) che iniziano alle [09:25](ora_inizio) 
+- elencami [dottore](object_type:medico) che lavorano dalle [18:50](ora_inizio) 
+- elencami [dottore](object_type:medico) che lavorano alle [17:30](ora_inizio) 
+- elencami [dottore](object_type:medico) che fanno dalle [16:15](ora_inizio) 
+- elencami [dottore](object_type:medico) che fanno alle [16:00](ora_inizio) 
+- elencami [dottore](object_type:medico) che aprono dalle [15:00](ora_inizio) 
+- elencami [dottore](object_type:medico) che aprono alle [14:15](ora_inizio) 
+- elencami [dottore](object_type:medico) che iniziano dalle [13:15](ora_inizio) 
+- elencami [dottore](object_type:medico) che iniziano alle [14:30](ora_inizio) 
+- elencami [dottore](object_type:medico) che iniziano alle [07:30](ora_inizio) 
+- elencami [dottore](object_type:medico) che iniziano alle [08:40](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che lavorano dalle [18:20](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che lavorano alle [12:20](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che lavorano alle [11:20](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che fanno dalle [11:00](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che fanno alle [18:45](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che aprono dalle [18:45](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che aprono alle [09:00](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che iniziano dalle [15:45](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che iniziano dalle [08:10](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che iniziano alle [12:50](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che lavorano dalle [17:15](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che lavorano alle [15:05](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che fanno dalle [16:45](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che fanno dalle [09:10](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che fanno alle [14:45](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che fanno alle [12:15](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che aprono dalle [14:00](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che aprono dalle [18:20](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che aprono alle [16:45](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che iniziano dalle [07:00](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che iniziano alle [17:30](ora_inizio) 
+- elencami [dottori](object_type:medico) che lavorano dalle [15:15](ora_inizio) 
+- elencami [dottori](object_type:medico) che lavorano alle [08:15](ora_inizio) 
+- elencami [dottori](object_type:medico) che fanno dalle [19:00](ora_inizio) 
+- elencami [dottori](object_type:medico) che fanno alle [12:20](ora_inizio) 
+- elencami [dottori](object_type:medico) che aprono dalle [11:20](ora_inizio) 
+- elencami [dottori](object_type:medico) che aprono alle [12:50](ora_inizio) 
+- elencami [dottori](object_type:medico) che iniziano dalle [18:50](ora_inizio) 
+- elencami [dottori](object_type:medico) che iniziano alle [18:00](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che lavorano dalle [17:00](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che lavorano dalle [10:30](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che lavorano alle [09:00](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che fanno dalle [15:30](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che fanno dalle [13:15](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che fanno dalle [20:00](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che fanno alle [12:30](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che aprono dalle [18:00](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che aprono alle [15:45](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che iniziano dalle [19:00](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che iniziano dalle [09:10](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che iniziano alle [17:45](ora_inizio) 
+- mostrami [medici](object_type:medico) che lavorano dalle [20:00](ora_inizio) 
+- mostrami [medici](object_type:medico) che lavorano alle [08:30](ora_inizio) 
+- mostrami [medici](object_type:medico) che fanno dalle [18:00](ora_inizio) 
+- mostrami [medici](object_type:medico) che fanno alle [11:00](ora_inizio) 
+- mostrami [medici](object_type:medico) che aprono dalle [17:30](ora_inizio) 
+- mostrami [medici](object_type:medico) che aprono alle [12:00](ora_inizio) 
+- mostrami [medici](object_type:medico) che iniziano dalle [15:00](ora_inizio) 
+- mostrami [medici](object_type:medico) che iniziano alle [09:15](ora_inizio) 
+- mostrami [dottore](object_type:medico) che lavorano dalle [12:20](ora_inizio) 
+- mostrami [dottore](object_type:medico) che lavorano alle [07:15](ora_inizio) 
+- mostrami [dottore](object_type:medico) che fanno dalle [12:50](ora_inizio) 
+- mostrami [dottore](object_type:medico) che fanno alle [07:30](ora_inizio) 
+- mostrami [dottore](object_type:medico) che aprono dalle [15:05](ora_inizio) 
+- mostrami [dottore](object_type:medico) che aprono alle [19:00](ora_inizio) 
+- mostrami [dottore](object_type:medico) che iniziano dalle [07:45](ora_inizio) 
+- mostrami [dottore](object_type:medico) che iniziano dalle [09:10](ora_inizio) 
+- mostrami [dottore](object_type:medico) che iniziano alle [16:50](ora_inizio) 
+- mostrami [dottore](object_type:medico) che iniziano alle [00:00](ora_inizio) 
+- mostrami [dottore](object_type:medico) che iniziano alle [18:05](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che lavorano dalle [15:30](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che lavorano alle [18:20](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che fanno dalle [07:45](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che fanno alle [11:30](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che aprono dalle [15:00](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che aprono alle [09:45](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che iniziano dalle [08:45](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che iniziano alle [17:30](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che iniziano alle [18:30](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che lavorano dalle [10:45](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che lavorano alle [14:45](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che fanno dalle [18:30](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che fanno alle [16:15](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che fanno alle [17:15](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che aprono dalle [08:45](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che aprono alle [00:00](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che iniziano dalle [18:50](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che iniziano alle [10:00](ora_inizio) 
+- mostrami [dottori](object_type:medico) che lavorano dalle [10:15](ora_inizio) 
+- mostrami [dottori](object_type:medico) che lavorano alle [16:30](ora_inizio) 
+- mostrami [dottori](object_type:medico) che fanno dalle [12:00](ora_inizio) 
+- mostrami [dottori](object_type:medico) che fanno alle [10:45](ora_inizio) 
+- mostrami [dottori](object_type:medico) che aprono dalle [11:10](ora_inizio) 
+- mostrami [dottori](object_type:medico) che aprono alle [16:10](ora_inizio) 
+- mostrami [dottori](object_type:medico) che iniziano dalle [16:00](ora_inizio) 
+- mostrami [dottori](object_type:medico) che iniziano alle [10:15](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che lavorano dalle [08:40](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che lavorano dalle [11:20](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che lavorano alle [13:00](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che lavorano alle [14:45](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che fanno dalle [18:00](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che fanno alle [14:00](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che aprono dalle [10:45](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che aprono alle [12:15](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che iniziano dalle [08:40](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che iniziano alle [15:15](ora_inizio) 
+- dimmi [medici](object_type:medico) che lavorano dalle [11:00](ora_inizio) 
+- dimmi [medici](object_type:medico) che lavorano alle [13:20](ora_inizio) 
+- dimmi [medici](object_type:medico) che fanno dalle [11:20](ora_inizio) 
+- dimmi [medici](object_type:medico) che fanno alle [16:30](ora_inizio) 
+- dimmi [medici](object_type:medico) che fanno alle [11:15](ora_inizio) 
+- dimmi [medici](object_type:medico) che aprono dalle [08:45](ora_inizio) 
+- dimmi [medici](object_type:medico) che aprono dalle [09:10](ora_inizio) 
+- dimmi [medici](object_type:medico) che aprono alle [15:15](ora_inizio) 
+- dimmi [medici](object_type:medico) che iniziano dalle [16:15](ora_inizio) 
+- dimmi [medici](object_type:medico) che iniziano alle [08:45](ora_inizio) 
+- dimmi [dottore](object_type:medico) che lavorano dalle [12:15](ora_inizio) 
+- dimmi [dottore](object_type:medico) che lavorano alle [10:30](ora_inizio) 
+- dimmi [dottore](object_type:medico) che fanno dalle [08:45](ora_inizio) 
+- dimmi [dottore](object_type:medico) che fanno dalle [08:10](ora_inizio) 
+- dimmi [dottore](object_type:medico) che fanno alle [10:20](ora_inizio) 
+- dimmi [dottore](object_type:medico) che aprono dalle [07:45](ora_inizio) 
+- dimmi [dottore](object_type:medico) che aprono alle [12:30](ora_inizio) 
+- dimmi [dottore](object_type:medico) che aprono alle [11:45](ora_inizio) 
+- dimmi [dottore](object_type:medico) che iniziano dalle [09:40](ora_inizio) 
+- dimmi [dottore](object_type:medico) che iniziano alle [17:50](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che lavorano dalle [15:10](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che lavorano alle [09:25](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che fanno dalle [18:45](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che fanno alle [10:15](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che aprono dalle [07:00](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che aprono alle [08:10](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che iniziano dalle [11:30](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che iniziano alle [15:05](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che lavorano dalle [17:00](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che lavorano dalle [08:10](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che lavorano alle [17:50](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che fanno dalle [11:45](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che fanno alle [13:00](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che aprono dalle [18:00](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che aprono alle [14:00](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che iniziano dalle [15:15](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che iniziano dalle [17:50](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che iniziano alle [17:20](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che iniziano alle [09:10](ora_inizio) 
+- dimmi [dottori](object_type:medico) che lavorano dalle [13:15](ora_inizio) 
+- dimmi [dottori](object_type:medico) che lavorano alle [09:00](ora_inizio) 
+- dimmi [dottori](object_type:medico) che fanno dalle [09:00](ora_inizio) 
+- dimmi [dottori](object_type:medico) che fanno alle [14:45](ora_inizio) 
+- dimmi [dottori](object_type:medico) che aprono dalle [17:30](ora_inizio) 
+- dimmi [dottori](object_type:medico) che aprono alle [13:15](ora_inizio) 
+- dimmi [dottori](object_type:medico) che iniziano dalle [07:30](ora_inizio) 
+- dimmi [dottori](object_type:medico) che iniziano alle [16:15](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che lavorano dalle [14:00](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che lavorano alle [08:40](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che fanno dalle [07:45](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che fanno alle [00:00](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che aprono dalle [10:15](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che aprono alle [07:30](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che iniziano dalle [16:20](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che iniziano alle [18:00](ora_inizio) 
+- elencami [medici](object_type:medico) che lavorano alle [10:45](ora_fine) 
+- elencami [medici](object_type:medico) che lavorano fino alle [11:45](ora_fine) 
+- elencami [medici](object_type:medico) che fanno alle [13:30](ora_fine) 
+- elencami [medici](object_type:medico) che fanno fino alle [10:15](ora_fine) 
+- elencami [medici](object_type:medico) che chiudono alle [21:30](ora_fine) 
+- elencami [medici](object_type:medico) che chiudono fino alle [11:15](ora_fine) 
+- elencami [medici](object_type:medico) che chiudono fino alle [14:45](ora_fine) 
+- elencami [medici](object_type:medico) che restano aperti alle [12:20](ora_fine) 
+- elencami [medici](object_type:medico) che restano aperti fino alle [13:15](ora_fine) 
+- elencami [dottore](object_type:medico) che lavorano alle [18:10](ora_fine) 
+- elencami [dottore](object_type:medico) che lavorano fino alle [09:45](ora_fine) 
+- elencami [dottore](object_type:medico) che fanno alle [14:15](ora_fine) 
+- elencami [dottore](object_type:medico) che fanno fino alle [18:00](ora_fine) 
+- elencami [dottore](object_type:medico) che chiudono alle [18:50](ora_fine) 
+- elencami [dottore](object_type:medico) che chiudono fino alle [17:30](ora_fine) 
+- elencami [dottore](object_type:medico) che restano aperti alle [16:00](ora_fine) 
+- elencami [dottore](object_type:medico) che restano aperti fino alle [16:15](ora_fine) 
+- elencami [dottoresse](object_type:medico) che lavorano alle [14:30](ora_fine) 
+- elencami [dottoresse](object_type:medico) che lavorano fino alle [16:10](ora_fine) 
+- elencami [dottoresse](object_type:medico) che fanno alle [08:30](ora_fine) 
+- elencami [dottoresse](object_type:medico) che fanno fino alle [18:45](ora_fine) 
+- elencami [dottoresse](object_type:medico) che chiudono alle [15:20](ora_fine) 
+- elencami [dottoresse](object_type:medico) che chiudono fino alle [18:30](ora_fine) 
+- elencami [dottoresse](object_type:medico) che restano aperti alle [15:00](ora_fine) 
+- elencami [dottoresse](object_type:medico) che restano aperti fino alle [14:15](ora_fine) 
+- elencami [dottoressa](object_type:medico) che lavorano alle [08:30](ora_fine) 
+- elencami [dottoressa](object_type:medico) che lavorano fino alle [09:30](ora_fine) 
+- elencami [dottoressa](object_type:medico) che fanno alle [21:30](ora_fine) 
+- elencami [dottoressa](object_type:medico) che fanno fino alle [09:25](ora_fine) 
+- elencami [dottoressa](object_type:medico) che chiudono alle [16:00](ora_fine) 
+- elencami [dottoressa](object_type:medico) che chiudono fino alle [18:10](ora_fine) 
+- elencami [dottoressa](object_type:medico) che chiudono fino alle [10:40](ora_fine) 
+- elencami [dottoressa](object_type:medico) che restano aperti alle [11:30](ora_fine) 
+- elencami [dottoressa](object_type:medico) che restano aperti alle [14:20](ora_fine) 
+- elencami [dottoressa](object_type:medico) che restano aperti fino alle [09:00](ora_fine) 
+- elencami [dottori](object_type:medico) che lavorano alle [15:15](ora_fine) 
+- elencami [dottori](object_type:medico) che lavorano fino alle [14:45](ora_fine) 
+- elencami [dottori](object_type:medico) che fanno alle [16:35](ora_fine) 
+- elencami [dottori](object_type:medico) che fanno fino alle [12:50](ora_fine) 
+- elencami [dottori](object_type:medico) che chiudono alle [11:03](ora_fine) 
+- elencami [dottori](object_type:medico) che chiudono fino alle [10:15](ora_fine) 
+- elencami [dottori](object_type:medico) che restano aperti alle [10:20](ora_fine) 
+- elencami [dottori](object_type:medico) che restano aperti fino alle [17:00](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che lavorano alle [12:20](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che lavorano fino alle [18:00](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che lavorano fino alle [11:15](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che lavorano fino alle [12:15](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che lavorano fino alle [16:15](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che fanno alle [16:15](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che fanno fino alle [18:50](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che chiudono alle [19:45](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che chiudono fino alle [10:30](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che chiudono fino alle [15:05](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che chiudono fino alle [22:00](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che restano aperti alle [09:00](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che restano aperti fino alle [16:00](ora_fine) 
+- mostrami [medici](object_type:medico) che lavorano alle [16:45](ora_fine) 
+- mostrami [medici](object_type:medico) che lavorano fino alle [12:30](ora_fine) 
+- mostrami [medici](object_type:medico) che lavorano fino alle [09:15](ora_fine) 
+- mostrami [medici](object_type:medico) che fanno alle [15:00](ora_fine) 
+- mostrami [medici](object_type:medico) che fanno alle [20:30](ora_fine) 
+- mostrami [medici](object_type:medico) che fanno fino alle [17:30](ora_fine) 
+- mostrami [medici](object_type:medico) che fanno fino alle [09:00](ora_fine) 
+- mostrami [medici](object_type:medico) che chiudono alle [21:30](ora_fine) 
+- mostrami [medici](object_type:medico) che chiudono fino alle [16:10](ora_fine) 
+- mostrami [medici](object_type:medico) che restano aperti alle [10:40](ora_fine) 
+- mostrami [medici](object_type:medico) che restano aperti fino alle [10:30](ora_fine) 
+- mostrami [dottore](object_type:medico) che lavorano alle [17:30](ora_fine) 
+- mostrami [dottore](object_type:medico) che lavorano alle [11:03](ora_fine) 
+- mostrami [dottore](object_type:medico) che lavorano fino alle [18:10](ora_fine) 
+- mostrami [dottore](object_type:medico) che lavorano fino alle [10:40](ora_fine) 
+- mostrami [dottore](object_type:medico) che fanno alle [16:10](ora_fine) 
+- mostrami [dottore](object_type:medico) che fanno fino alle [19:20](ora_fine) 
+- mostrami [dottore](object_type:medico) che chiudono alle [14:30](ora_fine) 
+- mostrami [dottore](object_type:medico) che chiudono fino alle [19:45](ora_fine) 
+- mostrami [dottore](object_type:medico) che chiudono fino alle [12:20](ora_fine) 
+- mostrami [dottore](object_type:medico) che restano aperti alle [13:50](ora_fine) 
+- mostrami [dottore](object_type:medico) che restano aperti fino alle [09:25](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che lavorano alle [09:15](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che lavorano fino alle [15:45](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che lavorano fino alle [15:05](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che fanno alle [17:00](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che fanno fino alle [12:20](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che chiudono alle [18:00](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che chiudono fino alle [19:00](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che chiudono fino alle [15:20](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che restano aperti alle [15:15](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che restano aperti alle [19:20](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che restano aperti fino alle [08:30](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che lavorano alle [09:00](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che lavorano fino alle [16:00](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che lavorano fino alle [08:45](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che fanno alle [14:15](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che fanno fino alle [16:45](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che chiudono alle [10:15](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che chiudono fino alle [16:45](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che restano aperti alle [08:00](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che restano aperti fino alle [14:15](ora_fine) 
+- mostrami [dottori](object_type:medico) che lavorano alle [14:00](ora_fine) 
+- mostrami [dottori](object_type:medico) che lavorano fino alle [13:15](ora_fine) 
+- mostrami [dottori](object_type:medico) che lavorano fino alle [10:20](ora_fine) 
+- mostrami [dottori](object_type:medico) che fanno alle [10:30](ora_fine) 
+- mostrami [dottori](object_type:medico) che fanno alle [11:40](ora_fine) 
+- mostrami [dottori](object_type:medico) che fanno fino alle [17:55](ora_fine) 
+- mostrami [dottori](object_type:medico) che chiudono alle [15:30](ora_fine) 
+- mostrami [dottori](object_type:medico) che chiudono alle [16:15](ora_fine) 
+- mostrami [dottori](object_type:medico) che chiudono alle [08:00](ora_fine) 
+- mostrami [dottori](object_type:medico) che chiudono fino alle [13:30](ora_fine) 
+- mostrami [dottori](object_type:medico) che chiudono fino alle [17:45](ora_fine) 
+- mostrami [dottori](object_type:medico) che restano aperti alle [11:03](ora_fine) 
+- mostrami [dottori](object_type:medico) che restano aperti fino alle [16:10](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che lavorano alle [13:45](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che lavorano fino alle [11:30](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che fanno alle [13:50](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che fanno fino alle [18:10](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che chiudono alle [19:15](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che chiudono fino alle [15:30](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che chiudono fino alle [16:10](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che restano aperti alle [16:00](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che restano aperti fino alle [19:15](ora_fine) 
+- dimmi [medici](object_type:medico) che lavorano alle [11:45](ora_fine) 
+- dimmi [medici](object_type:medico) che lavorano alle [11:40](ora_fine) 
+- dimmi [medici](object_type:medico) che lavorano alle [10:20](ora_fine) 
+- dimmi [medici](object_type:medico) che lavorano fino alle [17:55](ora_fine) 
+- dimmi [medici](object_type:medico) che fanno alle [13:45](ora_fine) 
+- dimmi [medici](object_type:medico) che fanno fino alle [22:00](ora_fine) 
+- dimmi [medici](object_type:medico) che chiudono alle [11:15](ora_fine) 
+- dimmi [medici](object_type:medico) che chiudono alle [16:15](ora_fine) 
+- dimmi [medici](object_type:medico) che chiudono fino alle [08:45](ora_fine) 
+- dimmi [medici](object_type:medico) che chiudono fino alle [09:25](ora_fine) 
+- dimmi [medici](object_type:medico) che restano aperti alle [13:50](ora_fine) 
+- dimmi [medici](object_type:medico) che restano aperti fino alle [08:00](ora_fine) 
+- dimmi [dottore](object_type:medico) che lavorano alle [16:15](ora_fine) 
+- dimmi [dottore](object_type:medico) che lavorano fino alle [11:15](ora_fine) 
+- dimmi [dottore](object_type:medico) che lavorano fino alle [20:30](ora_fine) 
+- dimmi [dottore](object_type:medico) che fanno alle [15:00](ora_fine) 
+- dimmi [dottore](object_type:medico) che fanno fino alle [11:03](ora_fine) 
+- dimmi [dottore](object_type:medico) che chiudono alle [14:15](ora_fine) 
+- dimmi [dottore](object_type:medico) che chiudono fino alle [18:10](ora_fine) 
+- dimmi [dottore](object_type:medico) che chiudono fino alle [22:00](ora_fine) 
+- dimmi [dottore](object_type:medico) che restano aperti alle [15:20](ora_fine) 
+- dimmi [dottore](object_type:medico) che restano aperti fino alle [21:00](ora_fine) 
+- dimmi [dottore](object_type:medico) che restano aperti fino alle [10:40](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che lavorano alle [10:45](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che lavorano alle [00:00](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che lavorano alle [09:25](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che lavorano fino alle [09:45](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che lavorano fino alle [14:45](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che fanno alle [10:40](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che fanno fino alle [12:45](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che chiudono alle [10:15](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che chiudono fino alle [19:15](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che restano aperti alle [08:00](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che restano aperti fino alle [10:15](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che lavorano alle [13:45](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che lavorano fino alle [15:15](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che fanno alle [00:00](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che fanno fino alle [13:30](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che chiudono alle [11:45](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che chiudono fino alle [10:15](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che restano aperti alle [18:15](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che restano aperti fino alle [12:45](ora_fine) 
+- dimmi [dottori](object_type:medico) che lavorano alle [10:00](ora_fine) 
+- dimmi [dottori](object_type:medico) che lavorano alle [09:30](ora_fine) 
+- dimmi [dottori](object_type:medico) che lavorano alle [08:00](ora_fine) 
+- dimmi [dottori](object_type:medico) che lavorano fino alle [14:20](ora_fine) 
+- dimmi [dottori](object_type:medico) che fanno alle [14:00](ora_fine) 
+- dimmi [dottori](object_type:medico) che fanno alle [11:03](ora_fine) 
+- dimmi [dottori](object_type:medico) che fanno fino alle [10:00](ora_fine) 
+- dimmi [dottori](object_type:medico) che chiudono alle [15:45](ora_fine) 
+- dimmi [dottori](object_type:medico) che chiudono fino alle [20:30](ora_fine) 
+- dimmi [dottori](object_type:medico) che restano aperti alle [08:30](ora_fine) 
+- dimmi [dottori](object_type:medico) che restano aperti fino alle [12:00](ora_fine) 
+- dimmi [dottori](object_type:medico) che restano aperti fino alle [18:45](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che lavorano alle [20:30](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che lavorano alle [15:15](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che lavorano fino alle [13:45](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che fanno alle [14:20](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che fanno fino alle [09:00](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che fanno fino alle [15:15](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che fanno fino alle [20:15](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che chiudono alle [12:20](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che chiudono fino alle [11:45](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che restano aperti alle [16:45](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che restano aperti alle [13:30](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che restano aperti fino alle [17:00](ora_fine) 
+- Qual'e l' [orari](object_type:orario) di [TUDISCO](cognome) ? 
+- Qual'e l' [orari](object_type:orario) del [RAVAZZANI](cognome) ? 
+- Qual'e l' [orario](object_type) di [VIOLINO](cognome) ? 
+- Qual'e l' [orario](object_type) del [sigaudo](cognome) ? 
+- Qual'e gli [orari](object_type:orario) di [bellone](cognome) ? 
+- Qual'e gli [orari](object_type:orario) del [caligari](cognome) ? 
+- Qual'e gli [orario](object_type) di [Grigoletto](cognome) ? 
+- Qual'e gli [orario](object_type) del [SODANO](cognome) ? 
+- dimmi l' [orari](object_type:orario) di [SIBILIA](cognome) ? 
+- dimmi l' [orari](object_type:orario) del [nardo](cognome) ? 
+- dimmi l' [orario](object_type) di [FREDA](cognome) ? 
+- dimmi l' [orario](object_type) del [Branca](cognome) ? 
+- dimmi gli [orari](object_type:orario) di [Spagnolello](cognome) ? 
+- dimmi gli [orari](object_type:orario) del [caramello](cognome) ? 
+- dimmi gli [orario](object_type) di [Tamietti](cognome) ? 
+- dimmi gli [orario](object_type) del [busca](cognome) ? 
+- dimmi gli [orario](object_type) del [VIGONE](cognome) ? 
+- vorrei sapere l' [orari](object_type:orario) di [TONELLO](cognome) ? 
+- vorrei sapere l' [orari](object_type:orario) del [SIMONETTI](cognome) ? 
+- vorrei sapere l' [orario](object_type) di [desana](cognome) ? 
+- vorrei sapere l' [orario](object_type) del [BASSI](cognome) ? 
+- vorrei sapere l' [orario](object_type) del [PELISSERO](cognome) ? 
+- vorrei sapere gli [orari](object_type:orario) di [tabacco](cognome) ? 
+- vorrei sapere gli [orari](object_type:orario) del [BENSO](cognome) ? 
+- vorrei sapere gli [orari](object_type:orario) del [MAROLDA](cognome) ? 
+- vorrei sapere gli [orario](object_type) di [VERCELLINO](cognome) ? 
+- vorrei sapere gli [orario](object_type) del [CIPOLLA](cognome) ? 
+- cerco l' [orari](object_type:orario) di [VALENTE](cognome) ? 
+- cerco l' [orari](object_type:orario) del [Dalloni](cognome) ? 
+- cerco l' [orario](object_type) di [surdo](cognome) ? 
+- cerco l' [orario](object_type) del [Loiaconi](cognome) ? 
+- cerco gli [orari](object_type:orario) di [LOMONACO](cognome) ? 
+- cerco gli [orari](object_type:orario) del [porta](cognome) ? 
+- cerco gli [orario](object_type) di [de sanctis](cognome) ? 
+- cerco gli [orario](object_type) del [brunetti](cognome) ? 
+- Qual'e l' [orari](object_type:orario) di [gabasio](cognome) ? 
+- Qual'e l' [orari](object_type:orario) del [MORETTI](cognome) ? 
+- Qual'e l' [orario](object_type) di [ENRICI](cognome) ? 
+- Qual'e l' [orario](object_type) del [d alu](cognome) ? 
+- Qual'e gli [orari](object_type:orario) di [De nicolo](cognome) ? 
+- Qual'e gli [orari](object_type:orario) del [Fascio](cognome) ? 
+- Qual'e gli [orario](object_type) di [Marchetti ruiz delgado](cognome) ? 
+- Qual'e gli [orario](object_type) del [BORRELLI](cognome) ? 
+- dimmi l' [orari](object_type:orario) di [Medda](cognome) ? 
+- dimmi l' [orari](object_type:orario) di [CERESETTI](cognome) ? 
+- dimmi l' [orari](object_type:orario) di [catti](cognome) ? 
+- dimmi l' [orari](object_type:orario) del [FORACCHIA](cognome) ? 
+- dimmi l' [orario](object_type) di [ravazzani](cognome) ? 
+- dimmi l' [orario](object_type) del [BERNARDELLI](cognome) ? 
+- dimmi gli [orari](object_type:orario) di [de benedictis](cognome) ? 
+- dimmi gli [orari](object_type:orario) di [priore](cognome) ? 
+- dimmi gli [orari](object_type:orario) del [PASOLINI](cognome) ? 
+- dimmi gli [orario](object_type) di [Pasetti](cognome) ? 
+- dimmi gli [orario](object_type) del [BACCALARO](cognome) ? 
+- dimmi gli [orario](object_type) del [POL](cognome) ? 
+- vorrei sapere l' [orari](object_type:orario) di [Macheda](cognome) ? 
+- vorrei sapere l' [orari](object_type:orario) del [BINANTI](cognome) ? 
+- vorrei sapere l' [orario](object_type) di [CERCHIO](cognome) ? 
+- vorrei sapere l' [orario](object_type) del [barra](cognome) ? 
+- vorrei sapere gli [orari](object_type:orario) di [Barlotta](cognome) ? 
+- vorrei sapere gli [orari](object_type:orario) del [Uglietti](cognome) ? 
+- vorrei sapere gli [orario](object_type) di [GOLA](cognome) ? 
+- vorrei sapere gli [orario](object_type) del [Manfrinetti](cognome) ? 
+- cerco l' [orari](object_type:orario) di [GENTILE](cognome) ? 
+- cerco l' [orari](object_type:orario) del [Pedala](cognome) ? 
+- cerco l' [orario](object_type) di [ANASTASENI](cognome) ? 
+- cerco l' [orario](object_type) del [Cugnolio](cognome) ? 
+- cerco gli [orari](object_type:orario) di [eglione](cognome) ? 
+- cerco gli [orari](object_type:orario) del [VICCICA](cognome) ? 
+- cerco gli [orario](object_type) di [Barge](cognome) ? 
+- cerco gli [orario](object_type) del [Tieppo](cognome) ? 
+- quali [medici](object_type:medico) sono nel comune di [15030](cap) ? 
+- quali [medici](object_type:medico) lavorano nel comune di [13011](cap) ? 
+- quali [medici](object_type:medico) conosci nel comune di [10064](cap) ? 
+- quali [medici](object_type:medico) elenco nel comune di [10064](cap) ? 
+- quali [medici](object_type:medico) elencami nel comune di [15033](cap) ? 
+- quali [dottore](object_type:medico) sono nel comune di [28100](cap) ? 
+- quali [dottore](object_type:medico) lavorano nel comune di [10137](cap) ? 
+- quali [dottore](object_type:medico) conosci nel comune di [10036](cap) ? 
+- quali [dottore](object_type:medico) elenco nel comune di [15060](cap) ? 
+- quali [dottore](object_type:medico) elencami nel comune di [10090](cap) ? 
+- quali [dottoresse](object_type:medico) sono nel comune di [28100](cap) ? 
+- quali [dottoresse](object_type:medico) lavorano nel comune di [15058](cap) ? 
+- quali [dottoresse](object_type:medico) conosci nel comune di [28069](cap) ? 
+- quali [dottoresse](object_type:medico) elenco nel comune di [13835](cap) ? 
+- quali [dottoresse](object_type:medico) elencami nel comune di [14031](cap) ? 
+- quali [dottoressa](object_type:medico) sono nel comune di [15053](cap) ? 
+- quali [dottoressa](object_type:medico) lavorano nel comune di [13825](cap) ? 
+- quali [dottoressa](object_type:medico) conosci nel comune di [12060](cap) ? 
+- quali [dottoressa](object_type:medico) elenco nel comune di [10078](cap) ? 
+- quali [dottoressa](object_type:medico) elencami nel comune di [10099](cap) ? 
+- quali [dottori](object_type:medico) sono nel comune di [10092](cap) ? 
+- quali [dottori](object_type:medico) lavorano nel comune di [15057](cap) ? 
+- quali [dottori](object_type:medico) conosci nel comune di [10042](cap) ? 
+- quali [dottori](object_type:medico) elenco nel comune di [13100](cap) ? 
+- quali [dottori](object_type:medico) elencami nel comune di [15040](cap) ? 
+- quali [ambulatori](object_type:ambulatorio) sono nel comune di [10100](cap) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano nel comune di [12084](cap) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano nel comune di [10022](cap) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano nel comune di [10126](cap) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci nel comune di [13047](cap) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco nel comune di [15067](cap) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami nel comune di [10024](cap) ? 
+- quali [lavora](object_type:medico) sono nel comune di [12073](cap) ? 
+- quali [lavora](object_type:medico) lavorano nel comune di [13024](cap) ? 
+- quali [lavora](object_type:medico) lavorano nel comune di [28824](cap) ? 
+- quali [lavora](object_type:medico) conosci nel comune di [10070](cap) ? 
+- quali [lavora](object_type:medico) elenco nel comune di [12045](cap) ? 
+- quali [lavora](object_type:medico) elencami nel comune di [10080](cap) ? 
+- chi [medici](object_type:medico) sono nel comune di [10146](cap) ? 
+- chi [medici](object_type:medico) lavorano nel comune di [10152](cap) ? 
+- chi [medici](object_type:medico) conosci nel comune di [13010](cap) ? 
+- chi [medici](object_type:medico) elenco nel comune di [10152](cap) ? 
+- chi [medici](object_type:medico) elencami nel comune di [15066](cap) ? 
+- chi [dottore](object_type:medico) sono nel comune di [12037](cap) ? 
+- chi [dottore](object_type:medico) lavorano nel comune di [13100](cap) ? 
+- chi [dottore](object_type:medico) conosci nel comune di [15033](cap) ? 
+- chi [dottore](object_type:medico) elenco nel comune di [10055](cap) ? 
+- chi [dottore](object_type:medico) elenco nel comune di [10029](cap) ? 
+- chi [dottore](object_type:medico) elencami nel comune di [12011](cap) ? 
+- chi [dottoresse](object_type:medico) sono nel comune di [10156](cap) ? 
+- chi [dottoresse](object_type:medico) lavorano nel comune di [13100](cap) ? 
+- chi [dottoresse](object_type:medico) conosci nel comune di [13035](cap) ? 
+- chi [dottoresse](object_type:medico) elenco nel comune di [12072](cap) ? 
+- chi [dottoresse](object_type:medico) elencami nel comune di [13020](cap) ? 
+- chi [dottoressa](object_type:medico) sono nel comune di [15060](cap) ? 
+- chi [dottoressa](object_type:medico) lavorano nel comune di [10042](cap) ? 
+- chi [dottoressa](object_type:medico) conosci nel comune di [10137](cap) ? 
+- chi [dottoressa](object_type:medico) elenco nel comune di [0](cap) ? 
+- chi [dottoressa](object_type:medico) elencami nel comune di [14049](cap) ? 
+- chi [dottori](object_type:medico) sono nel comune di [10050](cap) ? 
+- chi [dottori](object_type:medico) lavorano nel comune di [10137](cap) ? 
+- chi [dottori](object_type:medico) conosci nel comune di [10046](cap) ? 
+- chi [dottori](object_type:medico) elenco nel comune di [10072](cap) ? 
+- chi [dottori](object_type:medico) elencami nel comune di [10098](cap) ? 
+- chi [dottori](object_type:medico) elencami nel comune di [12051](cap) ? 
+- chi [ambulatori](object_type:ambulatorio) sono nel comune di [10040](cap) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano nel comune di [10139](cap) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci nel comune di [13836](cap) ? 
+- chi [ambulatori](object_type:ambulatorio) elenco nel comune di [10035](cap) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami nel comune di [10048](cap) ? 
+- chi [lavora](object_type:medico) sono nel comune di [10020](cap) ? 
+- chi [lavora](object_type:medico) lavorano nel comune di [10048](cap) ? 
+- chi [lavora](object_type:medico) conosci nel comune di [12100](cap) ? 
+- chi [lavora](object_type:medico) elenco nel comune di [12020](cap) ? 
+- chi [lavora](object_type:medico) elencami nel comune di [10060](cap) ? 
+- cerco i [medici](object_type:medico) sono nel comune di [10070](cap) ? 
+- cerco i [medici](object_type:medico) sono nel comune di [15070](cap) ? 
+- cerco i [medici](object_type:medico) sono nel comune di [10060](cap) ? 
+- cerco i [medici](object_type:medico) lavorano nel comune di [28075](cap) ? 
+- cerco i [medici](object_type:medico) conosci nel comune di [15020](cap) ? 
+- cerco i [medici](object_type:medico) elenco nel comune di [28011](cap) ? 
+- cerco i [medici](object_type:medico) elencami nel comune di [15033](cap) ? 
+- cerco i [dottore](object_type:medico) sono nel comune di [15057](cap) ? 
+- cerco i [dottore](object_type:medico) lavorano nel comune di [13100](cap) ? 
+- cerco i [dottore](object_type:medico) conosci nel comune di [28069](cap) ? 
+- cerco i [dottore](object_type:medico) elenco nel comune di [10040](cap) ? 
+- cerco i [dottore](object_type:medico) elencami nel comune di [13862](cap) ? 
+- cerco i [dottoresse](object_type:medico) sono nel comune di [28068](cap) ? 
+- cerco i [dottoresse](object_type:medico) lavorano nel comune di [10025](cap) ? 
+- cerco i [dottoresse](object_type:medico) conosci nel comune di [10082](cap) ? 
+- cerco i [dottoresse](object_type:medico) elenco nel comune di [10023](cap) ? 
+- cerco i [dottoresse](object_type:medico) elencami nel comune di [10040](cap) ? 
+- cerco i [dottoresse](object_type:medico) elencami nel comune di [28041](cap) ? 
+- cerco i [dottoressa](object_type:medico) sono nel comune di [10135](cap) ? 
+- cerco i [dottoressa](object_type:medico) lavorano nel comune di [10135](cap) ? 
+- cerco i [dottoressa](object_type:medico) conosci nel comune di [12073](cap) ? 
+- cerco i [dottoressa](object_type:medico) conosci nel comune di [15067](cap) ? 
+- cerco i [dottoressa](object_type:medico) elenco nel comune di [10084](cap) ? 
+- cerco i [dottoressa](object_type:medico) elencami nel comune di [10043](cap) ? 
+- cerco i [dottori](object_type:medico) sono nel comune di [13011](cap) ? 
+- cerco i [dottori](object_type:medico) lavorano nel comune di [10125](cap) ? 
+- cerco i [dottori](object_type:medico) conosci nel comune di [13019](cap) ? 
+- cerco i [dottori](object_type:medico) elenco nel comune di [12037](cap) ? 
+- cerco i [dottori](object_type:medico) elencami nel comune di [14100](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono nel comune di [10145](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano nel comune di [10137](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano nel comune di [28065](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano nel comune di [15121](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) conosci nel comune di [13836](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco nel comune di [10080](cap) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami nel comune di [12038](cap) ? 
+- cerco i [lavora](object_type:medico) sono nel comune di [0](cap) ? 
+- cerco i [lavora](object_type:medico) lavorano nel comune di [10087](cap) ? 
+- cerco i [lavora](object_type:medico) conosci nel comune di [12024](cap) ? 
+- cerco i [lavora](object_type:medico) elenco nel comune di [13900](cap) ? 
+- cerco i [lavora](object_type:medico) elencami nel comune di [10154](cap) ? 
+- cerco le [medici](object_type:medico) sono nel comune di [10040](cap) ? 
+- cerco le [medici](object_type:medico) lavorano nel comune di [13019](cap) ? 
+- cerco le [medici](object_type:medico) lavorano nel comune di [28012](cap) ? 
+- cerco le [medici](object_type:medico) conosci nel comune di [10137](cap) ? 
+- cerco le [medici](object_type:medico) conosci nel comune di [13017](cap) ? 
+- cerco le [medici](object_type:medico) elenco nel comune di [10022](cap) ? 
+- cerco le [medici](object_type:medico) elenco nel comune di [10070](cap) ? 
+- cerco le [medici](object_type:medico) elencami nel comune di [12045](cap) ? 
+- cerco le [dottore](object_type:medico) sono nel comune di [13040](cap) ? 
+- cerco le [dottore](object_type:medico) lavorano nel comune di [10067](cap) ? 
+- cerco le [dottore](object_type:medico) conosci nel comune di [10092](cap) ? 
+- cerco le [dottore](object_type:medico) elenco nel comune di [10014](cap) ? 
+- cerco le [dottore](object_type:medico) elencami nel comune di [28024](cap) ? 
+- cerco le [dottoresse](object_type:medico) sono nel comune di [10124](cap) ? 
+- cerco le [dottoresse](object_type:medico) lavorano nel comune di [10088](cap) ? 
+- cerco le [dottoresse](object_type:medico) lavorano nel comune di [15061](cap) ? 
+- cerco le [dottoresse](object_type:medico) conosci nel comune di [12045](cap) ? 
+- cerco le [dottoresse](object_type:medico) elenco nel comune di [10064](cap) ? 
+- cerco le [dottoresse](object_type:medico) elencami nel comune di [12042](cap) ? 
+- cerco le [dottoresse](object_type:medico) elencami nel comune di [10154](cap) ? 
+- cerco le [dottoressa](object_type:medico) sono nel comune di [10036](cap) ? 
+- cerco le [dottoressa](object_type:medico) sono nel comune di [10149](cap) ? 
+- cerco le [dottoressa](object_type:medico) lavorano nel comune di [28883](cap) ? 
+- cerco le [dottoressa](object_type:medico) conosci nel comune di [13835](cap) ? 
+- cerco le [dottoressa](object_type:medico) elenco nel comune di [28069](cap) ? 
+- cerco le [dottoressa](object_type:medico) elencami nel comune di [10056](cap) ? 
+- cerco le [dottori](object_type:medico) sono nel comune di [10090](cap) ? 
+- cerco le [dottori](object_type:medico) lavorano nel comune di [10090](cap) ? 
+- cerco le [dottori](object_type:medico) conosci nel comune di [10152](cap) ? 
+- cerco le [dottori](object_type:medico) elenco nel comune di [10095](cap) ? 
+- cerco le [dottori](object_type:medico) elencami nel comune di [28010](cap) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono nel comune di [15062](cap) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano nel comune di [12010](cap) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci nel comune di [12012](cap) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elenco nel comune di [10147](cap) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami nel comune di [10136](cap) ? 
+- cerco le [lavora](object_type:medico) sono nel comune di [28021](cap) ? 
+- cerco le [lavora](object_type:medico) lavorano nel comune di [10040](cap) ? 
+- cerco le [lavora](object_type:medico) conosci nel comune di [28852](cap) ? 
+- cerco le [lavora](object_type:medico) elenco nel comune di [15073](cap) ? 
+- cerco le [lavora](object_type:medico) elencami nel comune di [28040](cap) ? 
+- cerco le [lavora](object_type:medico) elencami nel comune di [10151](cap) ? 
+- quali [medici](object_type:medico) sono nel comune di [TERNENGO](denom_comune) ? 
+- quali [medici](object_type:medico) lavorano nel comune di [Pontecurone](denom_comune) ? 
+- quali [medici](object_type:medico) lavorano nel comune di [PREDOSA](denom_comune) ? 
+- quali [medici](object_type:medico) conosci nel comune di [Isola d asti](denom_comune) ? 
+- quali [medici](object_type:medico) elenco nel comune di [COSTANZANA](denom_comune) ? 
+- quali [medici](object_type:medico) elencami nel comune di [settimo vittone](denom_comune) ? 
+- quali [dottore](object_type:medico) sono nel comune di [frassinello monferrato](denom_comune) ? 
+- quali [dottore](object_type:medico) lavorano nel comune di [LANZO TORINESE](denom_comune) ? 
+- quali [dottore](object_type:medico) conosci nel comune di [RIVOLI](denom_comune) ? 
+- quali [dottore](object_type:medico) elenco nel comune di [MONALE](denom_comune) ? 
+- quali [dottore](object_type:medico) elencami nel comune di [Pila](denom_comune) ? 
+- quali [dottoresse](object_type:medico) sono nel comune di [Peveragno](denom_comune) ? 
+- quali [dottoresse](object_type:medico) lavorano nel comune di [Rosignano monferrato](denom_comune) ? 
+- quali [dottoresse](object_type:medico) conosci nel comune di [Sostegno](denom_comune) ? 
+- quali [dottoresse](object_type:medico) elenco nel comune di [SAN COLOMBANO BELMONTE](denom_comune) ? 
+- quali [dottoresse](object_type:medico) elencami nel comune di [Castellazzo bormida](denom_comune) ? 
+- quali [dottoressa](object_type:medico) sono nel comune di [sinio](denom_comune) ? 
+- quali [dottoressa](object_type:medico) lavorano nel comune di [LIGNANA](denom_comune) ? 
+- quali [dottoressa](object_type:medico) conosci nel comune di [castagnole piemonte](denom_comune) ? 
+- quali [dottoressa](object_type:medico) elenco nel comune di [Treville](denom_comune) ? 
+- quali [dottoressa](object_type:medico) elencami nel comune di [MEZZENILE](denom_comune) ? 
+- quali [dottori](object_type:medico) sono nel comune di [CIGLIANO](denom_comune) ? 
+- quali [dottori](object_type:medico) lavorano nel comune di [fiorano canavese](denom_comune) ? 
+- quali [dottori](object_type:medico) conosci nel comune di [gottasecca](denom_comune) ? 
+- quali [dottori](object_type:medico) elenco nel comune di [rivarossa](denom_comune) ? 
+- quali [dottori](object_type:medico) elenco nel comune di [coniolo](denom_comune) ? 
+- quali [dottori](object_type:medico) elencami nel comune di [PRAROSTINO](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) sono nel comune di [OCCHIEPPO INFERIORE](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) sono nel comune di [Bardonecchia](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) sono nel comune di [PIEDIMULERA](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) sono nel comune di [Dusino san michele](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano nel comune di [VILLADOSSOLA](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci nel comune di [cressa](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco nel comune di [Caresana](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami nel comune di [carezzano](denom_comune) ? 
+- quali [lavora](object_type:medico) sono nel comune di [MALESCO](denom_comune) ? 
+- quali [lavora](object_type:medico) lavorano nel comune di [Campiglia cervo](denom_comune) ? 
+- quali [lavora](object_type:medico) lavorano nel comune di [MONASTERO DI VASCO](denom_comune) ? 
+- quali [lavora](object_type:medico) conosci nel comune di [piverone](denom_comune) ? 
+- quali [lavora](object_type:medico) elenco nel comune di [frassino](denom_comune) ? 
+- quali [lavora](object_type:medico) elencami nel comune di [castellamonte](denom_comune) ? 
+- chi [medici](object_type:medico) sono nel comune di [PERTUSIO](denom_comune) ? 
+- chi [medici](object_type:medico) sono nel comune di [visone](denom_comune) ? 
+- chi [medici](object_type:medico) lavorano nel comune di [Venaria reale](denom_comune) ? 
+- chi [medici](object_type:medico) lavorano nel comune di [VILLAREGGIA](denom_comune) ? 
+- chi [medici](object_type:medico) conosci nel comune di [Pocapaglia](denom_comune) ? 
+- chi [medici](object_type:medico) elenco nel comune di [PIEVE VERGONTE](denom_comune) ? 
+- chi [medici](object_type:medico) elencami nel comune di [Vigliano biellese](denom_comune) ? 
+- chi [dottore](object_type:medico) sono nel comune di [Rassa](denom_comune) ? 
+- chi [dottore](object_type:medico) sono nel comune di [Dernice](denom_comune) ? 
+- chi [dottore](object_type:medico) lavorano nel comune di [Villastellone](denom_comune) ? 
+- chi [dottore](object_type:medico) conosci nel comune di [Fontaneto d agogna](denom_comune) ? 
+- chi [dottore](object_type:medico) elenco nel comune di [ORTA SAN GIULIO](denom_comune) ? 
+- chi [dottore](object_type:medico) elencami nel comune di [VIGNONE](denom_comune) ? 
+- chi [dottoresse](object_type:medico) sono nel comune di [CAVOUR](denom_comune) ? 
+- chi [dottoresse](object_type:medico) sono nel comune di [Arona](denom_comune) ? 
+- chi [dottoresse](object_type:medico) lavorano nel comune di [Mombaldone](denom_comune) ? 
+- chi [dottoresse](object_type:medico) conosci nel comune di [SARDIGLIANO](denom_comune) ? 
+- chi [dottoresse](object_type:medico) elenco nel comune di [ROCCA DE  BALDI](denom_comune) ? 
+- chi [dottoresse](object_type:medico) elencami nel comune di [LIMONE PIEMONTE](denom_comune) ? 
+- chi [dottoressa](object_type:medico) sono nel comune di [Premosello-chiovenda](denom_comune) ? 
+- chi [dottoressa](object_type:medico) lavorano nel comune di [san secondo di pinerolo](denom_comune) ? 
+- chi [dottoressa](object_type:medico) conosci nel comune di [PIASCO](denom_comune) ? 
+- chi [dottoressa](object_type:medico) elenco nel comune di [Buronzo](denom_comune) ? 
+- chi [dottoressa](object_type:medico) elencami nel comune di [castelletto merli](denom_comune) ? 
+- chi [dottori](object_type:medico) sono nel comune di [falmenta](denom_comune) ? 
+- chi [dottori](object_type:medico) lavorano nel comune di [Noasca](denom_comune) ? 
+- chi [dottori](object_type:medico) conosci nel comune di [monastero di vasco](denom_comune) ? 
+- chi [dottori](object_type:medico) elenco nel comune di [genola](denom_comune) ? 
+- chi [dottori](object_type:medico) elencami nel comune di [baldissero torinese](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) sono nel comune di [Campiglione fenile](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano nel comune di [bozzole](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci nel comune di [PISANO](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) elenco nel comune di [traversella](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami nel comune di [Scagnello](denom_comune) ? 
+- chi [lavora](object_type:medico) sono nel comune di [san martino canavese](denom_comune) ? 
+- chi [lavora](object_type:medico) lavorano nel comune di [rittana](denom_comune) ? 
+- chi [lavora](object_type:medico) lavorano nel comune di [Cavaglietto](denom_comune) ? 
+- chi [lavora](object_type:medico) conosci nel comune di [Sanfre](denom_comune) ? 
+- chi [lavora](object_type:medico) elenco nel comune di [Alessandria](denom_comune) ? 
+- chi [lavora](object_type:medico) elencami nel comune di [grignasco](denom_comune) ? 
+- chi [lavora](object_type:medico) elencami nel comune di [Valmacca](denom_comune) ? 
+- cerco i [medici](object_type:medico) sono nel comune di [canischio](denom_comune) ? 
+- cerco i [medici](object_type:medico) lavorano nel comune di [Nucetto](denom_comune) ? 
+- cerco i [medici](object_type:medico) conosci nel comune di [Tarantasca](denom_comune) ? 
+- cerco i [medici](object_type:medico) elenco nel comune di [LUGNACCO](denom_comune) ? 
+- cerco i [medici](object_type:medico) elencami nel comune di [CERRETO GRUE](denom_comune) ? 
+- cerco i [medici](object_type:medico) elencami nel comune di [ISASCA](denom_comune) ? 
+- cerco i [medici](object_type:medico) elencami nel comune di [SALICETO](denom_comune) ? 
+- cerco i [medici](object_type:medico) elencami nel comune di [Montaldo bormida](denom_comune) ? 
+- cerco i [dottore](object_type:medico) sono nel comune di [CASTAGNETO PO](denom_comune) ? 
+- cerco i [dottore](object_type:medico) lavorano nel comune di [san didero](denom_comune) ? 
+- cerco i [dottore](object_type:medico) conosci nel comune di [Romano canavese](denom_comune) ? 
+- cerco i [dottore](object_type:medico) elenco nel comune di [tarantasca](denom_comune) ? 
+- cerco i [dottore](object_type:medico) elencami nel comune di [scalenghe](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) sono nel comune di [San giorio di susa](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) lavorano nel comune di [Veglio](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) conosci nel comune di [Lequio tanaro](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) conosci nel comune di [Murisengo](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) elenco nel comune di [andrate](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) elencami nel comune di [Bruzolo](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) sono nel comune di [PRAROSTINO](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) sono nel comune di [San nazzaro sesia](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) lavorano nel comune di [San giusto canavese](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) conosci nel comune di [GOZZANO](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) conosci nel comune di [Ponzano monferrato](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) elenco nel comune di [Caprauna](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) elencami nel comune di [dogliani](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) elencami nel comune di [Venaus](denom_comune) ? 
+- cerco i [dottori](object_type:medico) sono nel comune di [PINO TORINESE](denom_comune) ? 
+- cerco i [dottori](object_type:medico) lavorano nel comune di [San raffaele cimena](denom_comune) ? 
+- cerco i [dottori](object_type:medico) conosci nel comune di [vigone](denom_comune) ? 
+- cerco i [dottori](object_type:medico) elenco nel comune di [bergamasco](denom_comune) ? 
+- cerco i [dottori](object_type:medico) elencami nel comune di [ovada](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono nel comune di [bra](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono nel comune di [LESA](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano nel comune di [Oncino](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano nel comune di [Govone](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) conosci nel comune di [orta san giulio](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco nel comune di [LAMPORO](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami nel comune di [RACCONIGI](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami nel comune di [ORSARA BORMIDA](denom_comune) ? 
+- cerco i [lavora](object_type:medico) sono nel comune di [Pila](denom_comune) ? 
+- cerco i [lavora](object_type:medico) lavorano nel comune di [Valduggia](denom_comune) ? 
+- cerco i [lavora](object_type:medico) conosci nel comune di [Nichelino](denom_comune) ? 
+- cerco i [lavora](object_type:medico) elenco nel comune di [torre canavese](denom_comune) ? 
+- cerco i [lavora](object_type:medico) elencami nel comune di [Mosso](denom_comune) ? 
+- cerco i [lavora](object_type:medico) elencami nel comune di [Voltaggio](denom_comune) ? 
+- cerco le [medici](object_type:medico) sono nel comune di [CIGLIANO](denom_comune) ? 
+- cerco le [medici](object_type:medico) lavorano nel comune di [Casalgrasso](denom_comune) ? 
+- cerco le [medici](object_type:medico) conosci nel comune di [chieri](denom_comune) ? 
+- cerco le [medici](object_type:medico) elenco nel comune di [cervere](denom_comune) ? 
+- cerco le [medici](object_type:medico) elenco nel comune di [Volpiano](denom_comune) ? 
+- cerco le [medici](object_type:medico) elenco nel comune di [Valgrana](denom_comune) ? 
+- cerco le [medici](object_type:medico) elencami nel comune di [Cessole](denom_comune) ? 
+- cerco le [dottore](object_type:medico) sono nel comune di [VALLO TORINESE](denom_comune) ? 
+- cerco le [dottore](object_type:medico) lavorano nel comune di [Pinerolo](denom_comune) ? 
+- cerco le [dottore](object_type:medico) conosci nel comune di [Frugarolo](denom_comune) ? 
+- cerco le [dottore](object_type:medico) elenco nel comune di [Nole](denom_comune) ? 
+- cerco le [dottore](object_type:medico) elencami nel comune di [Pralungo](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) sono nel comune di [borgovercelli](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) lavorano nel comune di [Piova  massaia](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) conosci nel comune di [Sali vercellese](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) elenco nel comune di [san cristoforo](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) elencami nel comune di [SUNO](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) sono nel comune di [Moncestino](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) lavorano nel comune di [Lagnasco](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) conosci nel comune di [PRIERO](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) elenco nel comune di [OMEGNA](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) elenco nel comune di [casalvolone](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) elencami nel comune di [LEMIE](denom_comune) ? 
+- cerco le [dottori](object_type:medico) sono nel comune di [SOMMARIVA DEL BOSCO](denom_comune) ? 
+- cerco le [dottori](object_type:medico) sono nel comune di [Oleggio](denom_comune) ? 
+- cerco le [dottori](object_type:medico) lavorano nel comune di [VIGUZZOLO](denom_comune) ? 
+- cerco le [dottori](object_type:medico) conosci nel comune di [COSSOGNO](denom_comune) ? 
+- cerco le [dottori](object_type:medico) conosci nel comune di [castello di annone](denom_comune) ? 
+- cerco le [dottori](object_type:medico) elenco nel comune di [Trana](denom_comune) ? 
+- cerco le [dottori](object_type:medico) elencami nel comune di [QUARANTI](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono nel comune di [BENEVELLO](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano nel comune di [Revello](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano nel comune di [Prali](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci nel comune di [Druogno](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elenco nel comune di [frabosa soprana](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami nel comune di [Genola](denom_comune) ? 
+- cerco le [lavora](object_type:medico) sono nel comune di [Bruno](denom_comune) ? 
+- cerco le [lavora](object_type:medico) lavorano nel comune di [MONCALIERI](denom_comune) ? 
+- cerco le [lavora](object_type:medico) conosci nel comune di [comignago](denom_comune) ? 
+- cerco le [lavora](object_type:medico) elenco nel comune di [Rimella](denom_comune) ? 
+- cerco le [lavora](object_type:medico) elenco nel comune di [Rocca ciglie](denom_comune) ? 
+- cerco le [lavora](object_type:medico) elenco nel comune di [Francavilla bisio](denom_comune) ? 
+- cerco le [lavora](object_type:medico) elencami nel comune di [VIARIGI](denom_comune) ? 
+- quali [medici](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottore](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [dottoressa](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [dottori](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) è nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) sono nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) sono nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco nel distretto [0](desc_distretto) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- quali [lavora](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [medici](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [dottore](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottoressa](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [dottori](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) è nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) sono nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) elenco nel distretto [0](desc_distretto) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- chi [lavora](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [medici](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [dottore](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [dottoressa](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [dottori](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) è nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco i [lavora](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [medici](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [dottore](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [dottoresse](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [dottoressa](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [dottori](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) è nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) è nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) sono nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) lavorano nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) conosci nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) elenco nel distretto [0](desc_distretto) ? 
+- cerco le [lavora](object_type:medico) elencami nel distretto [0](desc_distretto) ? 
+- quali [medici](object_type:medico) è all' indirizzo [CORSO PAOLO FERRARIS](indirizzo) ? 
+- quali [medici](object_type:medico) è all' via [VIA INDIPENDENZA](indirizzo) ? 
+- quali [medici](object_type:medico) è all' via [Palazzo borgatta](indirizzo) ? 
+- quali [medici](object_type:medico) sono all' indirizzo [STRADA CESOLE](indirizzo) ? 
+- quali [medici](object_type:medico) sono all' via [frazione s. giovanni via centrale](indirizzo) ? 
+- quali [medici](object_type:medico) sono all' via [Via gorini giovan battista c/o municipio](indirizzo) ? 
+- quali [medici](object_type:medico) lavorano all' indirizzo [corso 100 cannoni](indirizzo) ? 
+- quali [medici](object_type:medico) lavorano all' via [VIA XLII MARTIRI (LOC. FERIOLO)](indirizzo) ? 
+- quali [medici](object_type:medico) lavorano all' via [via paleocapa](indirizzo) ? 
+- quali [medici](object_type:medico) conosci all' indirizzo [frazione motta - via don sonaglia](indirizzo) ? 
+- quali [medici](object_type:medico) conosci all' via [via della villa](indirizzo) ? 
+- quali [medici](object_type:medico) elenco all' indirizzo [VAI STAZIONE](indirizzo) ? 
+- quali [medici](object_type:medico) elenco all' via [FRAZ.TERRANOVA  VIA MAESTRA](indirizzo) ? 
+- quali [medici](object_type:medico) elencami all' indirizzo [via perazzi costantino](indirizzo) ? 
+- quali [medici](object_type:medico) elencami all' via [Via c.alberto  presso distretto sanitario](indirizzo) ? 
+- quali [dottore](object_type:medico) è all' indirizzo [VIA PELIZZA](indirizzo) ? 
+- quali [dottore](object_type:medico) è all' via [Comunale](indirizzo) ? 
+- quali [dottore](object_type:medico) sono all' indirizzo [VIA UNITA  D ITALIA  D ITALIA](indirizzo) ? 
+- quali [dottore](object_type:medico) sono all' via [VIA CHIESA VECCHIA](indirizzo) ? 
+- quali [dottore](object_type:medico) lavorano all' indirizzo [Fraz. ponzone](indirizzo) ? 
+- quali [dottore](object_type:medico) lavorano all' via [via valentino carrera](indirizzo) ? 
+- quali [dottore](object_type:medico) conosci all' indirizzo [VIA PALAZZO COMUNALE](indirizzo) ? 
+- quali [dottore](object_type:medico) conosci all' via [Corso gen. volpini battista  (loc. piano-molini d isola)](indirizzo) ? 
+- quali [dottore](object_type:medico) elenco all' indirizzo [CORSO D AZEGLIO MASSIMO](indirizzo) ? 
+- quali [dottore](object_type:medico) elenco all' via [via a. nielli](indirizzo) ? 
+- quali [dottore](object_type:medico) elencami all' indirizzo [V. xi sett. 2001](indirizzo) ? 
+- quali [dottore](object_type:medico) elencami all' via [VIA G. QUILICO](indirizzo) ? 
+- quali [dottore](object_type:medico) elencami all' via [Via piero gobetti](indirizzo) ? 
+- quali [dottoresse](object_type:medico) è all' indirizzo [Piazza guglielmo marconi](indirizzo) ? 
+- quali [dottoresse](object_type:medico) è all' via [Viale beltramo luigi](indirizzo) ? 
+- quali [dottoresse](object_type:medico) sono all' indirizzo [via s. giacomo](indirizzo) ? 
+- quali [dottoresse](object_type:medico) sono all' via [Via marconi c/o municipio](indirizzo) ? 
+- quali [dottoresse](object_type:medico) lavorano all' indirizzo [v.le mazzini](indirizzo) ? 
+- quali [dottoresse](object_type:medico) lavorano all' via [f.ne mappano strada cuorgnãˆ](indirizzo) ? 
+- quali [dottoresse](object_type:medico) conosci all' indirizzo [via a. porro](indirizzo) ? 
+- quali [dottoresse](object_type:medico) conosci all' via [VIA REGINETTA FRANCIOLI](indirizzo) ? 
+- quali [dottoresse](object_type:medico) elenco all' indirizzo [VIA ROMA C/O AMBULATORIO COMUNALE](indirizzo) ? 
+- quali [dottoresse](object_type:medico) elenco all' via [CORSO LECCE](indirizzo) ? 
+- quali [dottoresse](object_type:medico) elencami all' indirizzo [via nigra](indirizzo) ? 
+- quali [dottoresse](object_type:medico) elencami all' via [Ex ospedale](indirizzo) ? 
+- quali [dottoressa](object_type:medico) è all' indirizzo [VIA CRISTALLIERA](indirizzo) ? 
+- quali [dottoressa](object_type:medico) è all' via [VIA TERRAZZE](indirizzo) ? 
+- quali [dottoressa](object_type:medico) sono all' indirizzo [Via de nicola](indirizzo) ? 
+- quali [dottoressa](object_type:medico) sono all' via [C/o palestra comunale](indirizzo) ? 
+- quali [dottoressa](object_type:medico) lavorano all' indirizzo [VICOLO PERETTO](indirizzo) ? 
+- quali [dottoressa](object_type:medico) lavorano all' via [via caneto - scala b 1â°piano](indirizzo) ? 
+- quali [dottoressa](object_type:medico) conosci all' indirizzo [Via v. lancia](indirizzo) ? 
+- quali [dottoressa](object_type:medico) conosci all' via [corso iv novembre](indirizzo) ? 
+- quali [dottoressa](object_type:medico) elenco all' indirizzo [VIA GROSSI](indirizzo) ? 
+- quali [dottoressa](object_type:medico) elenco all' via [REGIONE ALLE NOSERE](indirizzo) ? 
+- quali [dottoressa](object_type:medico) elencami all' indirizzo [Piazza roma](indirizzo) ? 
+- quali [dottoressa](object_type:medico) elencami all' via [PIAZZA QUAGLINO](indirizzo) ? 
+- quali [dottori](object_type:medico) è all' indirizzo [Via maestri del commercio](indirizzo) ? 
+- quali [dottori](object_type:medico) è all' indirizzo [VIA CASTELLO - PRESSO CASTELLO - AMBULATORIO COMUNALE](indirizzo) ? 
+- quali [dottori](object_type:medico) è all' via [VIA GASPARE GORRESIO](indirizzo) ? 
+- quali [dottori](object_type:medico) sono all' indirizzo [CORSO ROLANDI](indirizzo) ? 
+- quali [dottori](object_type:medico) sono all' via [via cibrario](indirizzo) ? 
+- quali [dottori](object_type:medico) lavorano all' indirizzo [Via opera pia](indirizzo) ? 
+- quali [dottori](object_type:medico) lavorano all' via [VIA BOVONE   MANDROGNE](indirizzo) ? 
+- quali [dottori](object_type:medico) conosci all' indirizzo [piazza paolo lucchini](indirizzo) ? 
+- quali [dottori](object_type:medico) conosci all' via [Via chiesa della salute](indirizzo) ? 
+- quali [dottori](object_type:medico) elenco all' indirizzo [via de gasperi alcide (loc. novaretto)](indirizzo) ? 
+- quali [dottori](object_type:medico) elenco all' via [VIA PONTE CHIUSELLA](indirizzo) ? 
+- quali [dottori](object_type:medico) elencami all' indirizzo [CORSO PALERMO](indirizzo) ? 
+- quali [dottori](object_type:medico) elencami all' via [ambulatorio comunale - via chiesa](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) è all' indirizzo [via roberto d azeglio](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) è all' via [VIA CARBONE](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) sono all' indirizzo [Via bondesan silvio](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) sono all' via [via ortigara](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano all' indirizzo [Largo orbassano](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano all' via [Via f. cigna](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci all' indirizzo [Corso duca degli abruzzi](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) conosci all' via [via bianchetti](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco all' indirizzo [piazza s. pietro](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) elenco all' via [via gen. dalla chiesa](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami all' indirizzo [Vi a molino](indirizzo) ? 
+- quali [ambulatori](object_type:ambulatorio) elencami all' via [via castelnuovo](indirizzo) ? 
+- quali [lavora](object_type:medico) è all' indirizzo [Via serra](indirizzo) ? 
+- quali [lavora](object_type:medico) è all' via [VIA BARACCA](indirizzo) ? 
+- quali [lavora](object_type:medico) sono all' indirizzo [Via lupo](indirizzo) ? 
+- quali [lavora](object_type:medico) sono all' via [corso turati](indirizzo) ? 
+- quali [lavora](object_type:medico) lavorano all' indirizzo [CORSO D AZEGLIO MASSIMO](indirizzo) ? 
+- quali [lavora](object_type:medico) lavorano all' via [Corso iv novembre](indirizzo) ? 
+- quali [lavora](object_type:medico) conosci all' indirizzo [Via vittorio emanuele iii](indirizzo) ? 
+- quali [lavora](object_type:medico) conosci all' via [Piazza unione europea](indirizzo) ? 
+- quali [lavora](object_type:medico) elenco all' indirizzo [VIA BUONARROTI MICHELANGELO](indirizzo) ? 
+- quali [lavora](object_type:medico) elenco all' via [VIA ROBERTO D AZEGLIO](indirizzo) ? 
+- quali [lavora](object_type:medico) elencami all' indirizzo [VIA CENNA](indirizzo) ? 
+- quali [lavora](object_type:medico) elencami all' via [Comunale](indirizzo) ? 
+- chi [medici](object_type:medico) è all' indirizzo [VIA MONTALDO ROERO (LOC. BORGONUOVO)](indirizzo) ? 
+- chi [medici](object_type:medico) è all' via [viale consolata](indirizzo) ? 
+- chi [medici](object_type:medico) sono all' indirizzo [via gramsci antonio](indirizzo) ? 
+- chi [medici](object_type:medico) sono all' via [via roccaforte](indirizzo) ? 
+- chi [medici](object_type:medico) lavorano all' indirizzo [Via monferrato](indirizzo) ? 
+- chi [medici](object_type:medico) lavorano all' via [via dabormida](indirizzo) ? 
+- chi [medici](object_type:medico) conosci all' indirizzo [corso della repubblica](indirizzo) ? 
+- chi [medici](object_type:medico) conosci all' via [Via galimberti](indirizzo) ? 
+- chi [medici](object_type:medico) conosci all' via [C/o opera pia via borgo d ale](indirizzo) ? 
+- chi [medici](object_type:medico) elenco all' indirizzo [AMB.COMUNALE](indirizzo) ? 
+- chi [medici](object_type:medico) elenco all' via [Piazza amedeo peyron](indirizzo) ? 
+- chi [medici](object_type:medico) elencami all' indirizzo [AMBULATORIO](indirizzo) ? 
+- chi [medici](object_type:medico) elencami all' via [via verdi (loc. san quirico)](indirizzo) ? 
+- chi [dottore](object_type:medico) è all' indirizzo [LARGO GIUSTI GIUSEPPE](indirizzo) ? 
+- chi [dottore](object_type:medico) è all' via [PIAZZA BERRUTI GIOVANNI](indirizzo) ? 
+- chi [dottore](object_type:medico) sono all' indirizzo [via perosi -torrion quartara](indirizzo) ? 
+- chi [dottore](object_type:medico) sono all' indirizzo [via bertone bruno (loc. ramate)](indirizzo) ? 
+- chi [dottore](object_type:medico) sono all' via [via educ](indirizzo) ? 
+- chi [dottore](object_type:medico) sono all' via [VIA CHIOSO](indirizzo) ? 
+- chi [dottore](object_type:medico) lavorano all' indirizzo [Torre balfredo via frandina](indirizzo) ? 
+- chi [dottore](object_type:medico) lavorano all' via [via cesare battisti](indirizzo) ? 
+- chi [dottore](object_type:medico) conosci all' indirizzo [via crotta pietro](indirizzo) ? 
+- chi [dottore](object_type:medico) conosci all' indirizzo [VIA DEI RIVALBA](indirizzo) ? 
+- chi [dottore](object_type:medico) conosci all' via [borgata capoluogo](indirizzo) ? 
+- chi [dottore](object_type:medico) conosci all' via [VIA VITTORIO EMANUELE III](indirizzo) ? 
+- chi [dottore](object_type:medico) elenco all' indirizzo [VIA DORIA](indirizzo) ? 
+- chi [dottore](object_type:medico) elenco all' via [VIA MATTEOTTI  FRAZ. CAMERIANO](indirizzo) ? 
+- chi [dottore](object_type:medico) elencami all' indirizzo [VIA NICOMEDE BIANCHI](indirizzo) ? 
+- chi [dottore](object_type:medico) elencami all' via [Via  orti](indirizzo) ? 
+- chi [dottore](object_type:medico) elencami all' via [Piazza madonna delle grazie](indirizzo) ? 
+- chi [dottore](object_type:medico) elencami all' via [Via serra](indirizzo) ? 
+- chi [dottoresse](object_type:medico) è all' indirizzo [piazza rissone lino](indirizzo) ? 
+- chi [dottoresse](object_type:medico) è all' via [STRADA MONGINA](indirizzo) ? 
+- chi [dottoresse](object_type:medico) sono all' indirizzo [VIA NETRO](indirizzo) ? 
+- chi [dottoresse](object_type:medico) sono all' via [Via biella  - vaglio](indirizzo) ? 
+- chi [dottoresse](object_type:medico) lavorano all' indirizzo [via besso francesco](indirizzo) ? 
+- chi [dottoresse](object_type:medico) lavorano all' indirizzo [VIA GRASSO GIOVANNI MONSIGNORE](indirizzo) ? 
+- chi [dottoresse](object_type:medico) lavorano all' via [via hugues luigi](indirizzo) ? 
+- chi [dottoresse](object_type:medico) conosci all' indirizzo [Piazza castello](indirizzo) ? 
+- chi [dottoresse](object_type:medico) conosci all' via [VIA MACCHIERALDO](indirizzo) ? 
+- chi [dottoresse](object_type:medico) elenco all' indirizzo [VIA VALENTINO CARRERA](indirizzo) ? 
+- chi [dottoresse](object_type:medico) elenco all' via [via ferraris galileo](indirizzo) ? 
+- chi [dottoresse](object_type:medico) elencami all' indirizzo [via riva](indirizzo) ? 
+- chi [dottoresse](object_type:medico) elencami all' indirizzo [C.so piave](indirizzo) ? 
+- chi [dottoresse](object_type:medico) elencami all' via [Piazza giovanni xxiii papa](indirizzo) ? 
+- chi [dottoresse](object_type:medico) elencami all' via [corso giachino pinin](indirizzo) ? 
+- chi [dottoressa](object_type:medico) è all' indirizzo [via guastalla](indirizzo) ? 
+- chi [dottoressa](object_type:medico) è all' via [via dei rivalba](indirizzo) ? 
+- chi [dottoressa](object_type:medico) sono all' indirizzo [VIA CARLO SUINO](indirizzo) ? 
+- chi [dottoressa](object_type:medico) sono all' via [piazza rissone lino](indirizzo) ? 
+- chi [dottoressa](object_type:medico) lavorano all' indirizzo [VIA TORINO BELTRAMA](indirizzo) ? 
+- chi [dottoressa](object_type:medico) lavorano all' via [via monte pertica](indirizzo) ? 
+- chi [dottoressa](object_type:medico) conosci all' indirizzo [FRAZIONE MEZZAVILLA](indirizzo) ? 
+- chi [dottoressa](object_type:medico) conosci all' indirizzo [via gallaretto carlo tenente](indirizzo) ? 
+- chi [dottoressa](object_type:medico) conosci all' via [Via perfumo -fr. spinetta marengo](indirizzo) ? 
+- chi [dottoressa](object_type:medico) elenco all' indirizzo [quart. bellavista - p.zza 1 maggio](indirizzo) ? 
+- chi [dottoressa](object_type:medico) elenco all' via [FRAZ.TERRANOVA  VIA MAESTRA](indirizzo) ? 
+- chi [dottoressa](object_type:medico) elenco all' via [PIAZZALE MADONNINA (LOC. LEINI )](indirizzo) ? 
+- chi [dottoressa](object_type:medico) elencami all' indirizzo [via beccaria](indirizzo) ? 
+- chi [dottoressa](object_type:medico) elencami all' via [VIA DON CERRUTI FRANCESCO](indirizzo) ? 
+- chi [dottori](object_type:medico) è all' indirizzo [via san pancrazio](indirizzo) ? 
+- chi [dottori](object_type:medico) è all' via [via giuseppe mazzini](indirizzo) ? 
+- chi [dottori](object_type:medico) sono all' indirizzo [VIA ALA](indirizzo) ? 
+- chi [dottori](object_type:medico) sono all' indirizzo [VIA DELL ASILO](indirizzo) ? 
+- chi [dottori](object_type:medico) sono all' via [Piazza chiarletti](indirizzo) ? 
+- chi [dottori](object_type:medico) lavorano all' indirizzo [Corso italia  (ingresso da piazza rovere)](indirizzo) ? 
+- chi [dottori](object_type:medico) lavorano all' indirizzo [Presso municipio](indirizzo) ? 
+- chi [dottori](object_type:medico) lavorano all' via [Piazza damiano amedeo](indirizzo) ? 
+- chi [dottori](object_type:medico) lavorano all' via [Via d. guidobono](indirizzo) ? 
+- chi [dottori](object_type:medico) lavorano all' via [Via giovenale ancina](indirizzo) ? 
+- chi [dottori](object_type:medico) conosci all' indirizzo [VIA MAZZINI - ALZATE DI MOMO](indirizzo) ? 
+- chi [dottori](object_type:medico) conosci all' via [Via luigi einaudi](indirizzo) ? 
+- chi [dottori](object_type:medico) elenco all' indirizzo [VIA ROMA (LOC. STRONA)](indirizzo) ? 
+- chi [dottori](object_type:medico) elenco all' via [AMBULATORIO DISTRETTUALE](indirizzo) ? 
+- chi [dottori](object_type:medico) elencami all' indirizzo [VIA GAMINELLA](indirizzo) ? 
+- chi [dottori](object_type:medico) elencami all' via [via muriaglio](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) è all' indirizzo [c/o scuole elementari](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) è all' via [VIA BONATTO](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) sono all' indirizzo [VIA CADUTI PER LA PATRIA](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) sono all' via [VIA TRIESTE](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) sono all' via [via umbero i](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano all' indirizzo [piazza caduti di tutte le guerre](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano all' via [Via vibo](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci all' indirizzo [via figini domenico](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) conosci all' via [P.za roma 7](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) elenco all' indirizzo [BORGO REVEL - VIA DELL ASILO](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) elenco all' via [via liberazione cond. le vele](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami all' indirizzo [Corso gen. volpini battista  (loc. piano-molini d isola)](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami all' indirizzo [P.ZA DELLA VITTORIA](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami all' indirizzo [VIA A.GRAMSCI -C/O POLIAMBULATORIO DI OLEGGIO](indirizzo) ? 
+- chi [ambulatori](object_type:ambulatorio) elencami all' via [Stradale mathi](indirizzo) ? 
+- chi [lavora](object_type:medico) è all' indirizzo [Piazza boetto armandoo](indirizzo) ? 
+- chi [lavora](object_type:medico) è all' via [via don caustico](indirizzo) ? 
+- chi [lavora](object_type:medico) sono all' indirizzo [VIA PIAVE (LOC. SCANDELUZZA)](indirizzo) ? 
+- chi [lavora](object_type:medico) sono all' via [PIAZZA DURIO (LOC. CELLIO)](indirizzo) ? 
+- chi [lavora](object_type:medico) lavorano all' indirizzo [via antica dogana ( sotto farmacia )](indirizzo) ? 
+- chi [lavora](object_type:medico) lavorano all' via [localita  sulpiano](indirizzo) ? 
+- chi [lavora](object_type:medico) conosci all' indirizzo [Via del campo](indirizzo) ? 
+- chi [lavora](object_type:medico) conosci all' via [VIA ARTISTI](indirizzo) ? 
+- chi [lavora](object_type:medico) elenco all' indirizzo [VIA TERRAS](indirizzo) ? 
+- chi [lavora](object_type:medico) elenco all' via [frazione bassura](indirizzo) ? 
+- chi [lavora](object_type:medico) elencami all' indirizzo [VIA COLOMBO CRISTOFORO](indirizzo) ? 
+- chi [lavora](object_type:medico) elencami all' via [corso torino](indirizzo) ? 
+- chi [lavora](object_type:medico) elencami all' via [via rigola luigi](indirizzo) ? 
+- cerco i [medici](object_type:medico) è all' indirizzo [fraz. dagnente via f. cavallotti](indirizzo) ? 
+- cerco i [medici](object_type:medico) è all' via [via robassomero](indirizzo) ? 
+- cerco i [medici](object_type:medico) sono all' indirizzo [Via fratelli barberis (interno cortile)](indirizzo) ? 
+- cerco i [medici](object_type:medico) sono all' via [VIA SARDI](indirizzo) ? 
+- cerco i [medici](object_type:medico) lavorano all' indirizzo [via san giovanni bosco](indirizzo) ? 
+- cerco i [medici](object_type:medico) lavorano all' indirizzo [via abegg augusto](indirizzo) ? 
+- cerco i [medici](object_type:medico) lavorano all' via [Via gorizia](indirizzo) ? 
+- cerco i [medici](object_type:medico) conosci all' indirizzo [VIA MURATORI - LUMELLOGNO](indirizzo) ? 
+- cerco i [medici](object_type:medico) conosci all' via [VIA A. PORRO](indirizzo) ? 
+- cerco i [medici](object_type:medico) elenco all' indirizzo [VIA SEGURANA](indirizzo) ? 
+- cerco i [medici](object_type:medico) elenco all' via [VIA PALLANZENO](indirizzo) ? 
+- cerco i [medici](object_type:medico) elenco all' via [VIA ORBASSANO (LOC. BORGARETTO)](indirizzo) ? 
+- cerco i [medici](object_type:medico) elencami all' indirizzo [Via boeri angelo](indirizzo) ? 
+- cerco i [medici](object_type:medico) elencami all' via [PIAZZA DELLA CHIESA](indirizzo) ? 
+- cerco i [dottore](object_type:medico) è all' indirizzo [Via mulino](indirizzo) ? 
+- cerco i [dottore](object_type:medico) è all' via [Via veneto](indirizzo) ? 
+- cerco i [dottore](object_type:medico) sono all' indirizzo [Via mentigazzi](indirizzo) ? 
+- cerco i [dottore](object_type:medico) sono all' via [Via taccone domenico](indirizzo) ? 
+- cerco i [dottore](object_type:medico) lavorano all' indirizzo [frazione casalbagliano](indirizzo) ? 
+- cerco i [dottore](object_type:medico) lavorano all' via [via fratelli rosselli](indirizzo) ? 
+- cerco i [dottore](object_type:medico) conosci all' indirizzo [Via piana del salto](indirizzo) ? 
+- cerco i [dottore](object_type:medico) conosci all' via [Via zuffi canonico](indirizzo) ? 
+- cerco i [dottore](object_type:medico) elenco all' indirizzo [via gippa](indirizzo) ? 
+- cerco i [dottore](object_type:medico) elenco all' indirizzo [corso della repubblica](indirizzo) ? 
+- cerco i [dottore](object_type:medico) elenco all' via [VIA ALDO MORO](indirizzo) ? 
+- cerco i [dottore](object_type:medico) elencami all' indirizzo [VIA FORNACE](indirizzo) ? 
+- cerco i [dottore](object_type:medico) elencami all' via [Ambulatorio comunale via della chiesa](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) è all' indirizzo [Quart. bellavista - p.zza 1 maggio](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) è all' via [via luigi einaudi](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) sono all' indirizzo [via don l. murialdo](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) sono all' via [Strada vauda](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) lavorano all' indirizzo [Via carrera](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) lavorano all' via [via negri ada](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) conosci all' indirizzo [via caraglio](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) conosci all' via [via galimberti](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) elenco all' indirizzo [Piazza repubblica](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) elenco all' via [Via turco antonio (loc. vasco)](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) elencami all' indirizzo [Via caldana](indirizzo) ? 
+- cerco i [dottoresse](object_type:medico) elencami all' via [viale dante](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) è all' indirizzo [Via xxv luglio](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) è all' via [Str. madonnina -fr castagnone](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) sono all' indirizzo [p.le areonautica](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) sono all' via [Strada statale 24](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) sono all' via [loc. fagnola](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) lavorano all' indirizzo [C/O COMUNE](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) lavorano all' via [VIA MANTEGNA](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) conosci all' indirizzo [c/o ambulatorio comunale - via chiesa](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) conosci all' indirizzo [corso taranto](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) conosci all' via [Via birago](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) elenco all' indirizzo [Via della torre](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) elenco all' via [C/O MUNICIPIO](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) elencami all' indirizzo [VIA CREVACUORE](indirizzo) ? 
+- cerco i [dottoressa](object_type:medico) elencami all' via [Via ala](indirizzo) ? 
+- cerco i [dottori](object_type:medico) è all' indirizzo [Via tampellini](indirizzo) ? 
+- cerco i [dottori](object_type:medico) è all' indirizzo [VIA M.SABOTINO](indirizzo) ? 
+- cerco i [dottori](object_type:medico) è all' via [fraz.vallegiolitti- via romagnoli](indirizzo) ? 
+- cerco i [dottori](object_type:medico) sono all' indirizzo [Corso italia c/o anfas](indirizzo) ? 
+- cerco i [dottori](object_type:medico) sono all' via [Piazza giovanni astengo](indirizzo) ? 
+- cerco i [dottori](object_type:medico) lavorano all' indirizzo [piazza gino viano](indirizzo) ? 
+- cerco i [dottori](object_type:medico) lavorano all' via [Via mazzini giuseppe (loc. vecchio)](indirizzo) ? 
+- cerco i [dottori](object_type:medico) lavorano all' via [Via ponsati vincenzo](indirizzo) ? 
+- cerco i [dottori](object_type:medico) conosci all' indirizzo [FRAZ. BENNE - VIA BURETTA](indirizzo) ? 
+- cerco i [dottori](object_type:medico) conosci all' via [corso alcide de gasperi](indirizzo) ? 
+- cerco i [dottori](object_type:medico) elenco all' indirizzo [FR. MONTEVALENZA](indirizzo) ? 
+- cerco i [dottori](object_type:medico) elenco all' via [VIA CACCIAPIATTI GIOVANNI CARDINALE](indirizzo) ? 
+- cerco i [dottori](object_type:medico) elencami all' indirizzo [Via umberto iâ°](indirizzo) ? 
+- cerco i [dottori](object_type:medico) elencami all' via [PIAZZA CAMISOLA](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) è all' indirizzo [VIA PAOLO BRACCINI](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) è all' via [Via antonio gramsci](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono all' indirizzo [Via cappellaro](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono all' via [VIA MIDANA](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono all' via [PIAZZA XX SETTEMBRE](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano all' indirizzo [Via marsala](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano all' via [VIA CAVALLOTTI](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano all' via [Via garneri](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) conosci all' indirizzo [VIA ROSAZZA FEDERICO](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) conosci all' via [Fr. bettole-via chiesa](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco all' indirizzo [Via alciati](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elenco all' via [Via armando diaz](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami all' indirizzo [Via marcone](indirizzo) ? 
+- cerco i [ambulatori](object_type:ambulatorio) elencami all' via [CORSO BELGIO](indirizzo) ? 
+- cerco i [lavora](object_type:medico) è all' indirizzo [VIA CANE GUIDO (LOC. VALLE TALLORIA)](indirizzo) ? 
+- cerco i [lavora](object_type:medico) è all' via [VIA GIPPA](indirizzo) ? 
+- cerco i [lavora](object_type:medico) sono all' indirizzo [VIA ALDO MORO](indirizzo) ? 
+- cerco i [lavora](object_type:medico) sono all' via [via villanis francesco](indirizzo) ? 
+- cerco i [lavora](object_type:medico) lavorano all' indirizzo [Viale milite ignoto](indirizzo) ? 
+- cerco i [lavora](object_type:medico) lavorano all' via [Via aronco](indirizzo) ? 
+- cerco i [lavora](object_type:medico) lavorano all' via [Via craveri](indirizzo) ? 
+- cerco i [lavora](object_type:medico) conosci all' indirizzo [Via ley](indirizzo) ? 
+- cerco i [lavora](object_type:medico) conosci all' via [Via breme](indirizzo) ? 
+- cerco i [lavora](object_type:medico) elenco all' indirizzo [Via roma c/o ambulatorio comunale](indirizzo) ? 
+- cerco i [lavora](object_type:medico) elenco all' via [VIA TERRAZZE](indirizzo) ? 
+- cerco i [lavora](object_type:medico) elencami all' indirizzo [CORSO GIACOMO MATTEOTTI](indirizzo) ? 
+- cerco i [lavora](object_type:medico) elencami all' via [Via vigliani](indirizzo) ? 
+- cerco le [medici](object_type:medico) è all' indirizzo [CORSO MARENCO 3  PIANO](indirizzo) ? 
+- cerco le [medici](object_type:medico) è all' via [vialo mungis](indirizzo) ? 
+- cerco le [medici](object_type:medico) sono all' indirizzo [VIA BRA](indirizzo) ? 
+- cerco le [medici](object_type:medico) sono all' via [PIAZZA MONTEREGALE](indirizzo) ? 
+- cerco le [medici](object_type:medico) sono all' via [fraz. torrione via v. emanuele ii](indirizzo) ? 
+- cerco le [medici](object_type:medico) lavorano all' indirizzo [via a. costa](indirizzo) ? 
+- cerco le [medici](object_type:medico) lavorano all' via [Via cardinale fossati m.](indirizzo) ? 
+- cerco le [medici](object_type:medico) conosci all' indirizzo [P.ZA DE MOSSO -COSSILA S.G.](indirizzo) ? 
+- cerco le [medici](object_type:medico) conosci all' via [via maina carlo](indirizzo) ? 
+- cerco le [medici](object_type:medico) elenco all' indirizzo [via gatti capitano (loc. centro)](indirizzo) ? 
+- cerco le [medici](object_type:medico) elenco all' via [Via colombo](indirizzo) ? 
+- cerco le [medici](object_type:medico) elencami all' indirizzo [loc. cuzzego di beura cardezza](indirizzo) ? 
+- cerco le [medici](object_type:medico) elencami all' via [VIA FRATELLI VITRANI](indirizzo) ? 
+- cerco le [dottore](object_type:medico) è all' indirizzo [via baldichieri](indirizzo) ? 
+- cerco le [dottore](object_type:medico) è all' via [P.za giovanni balbo](indirizzo) ? 
+- cerco le [dottore](object_type:medico) sono all' indirizzo [via fontana buona](indirizzo) ? 
+- cerco le [dottore](object_type:medico) sono all' indirizzo [Via asilo](indirizzo) ? 
+- cerco le [dottore](object_type:medico) sono all' via [VIA CAVOUR CAMILLO BENSO](indirizzo) ? 
+- cerco le [dottore](object_type:medico) lavorano all' indirizzo [via caudana](indirizzo) ? 
+- cerco le [dottore](object_type:medico) lavorano all' indirizzo [VIA GIPPA](indirizzo) ? 
+- cerco le [dottore](object_type:medico) lavorano all' via [VIA LOSSANI MARIO](indirizzo) ? 
+- cerco le [dottore](object_type:medico) conosci all' indirizzo [VIA GHELLA ADOLFO](indirizzo) ? 
+- cerco le [dottore](object_type:medico) conosci all' via [via segurana](indirizzo) ? 
+- cerco le [dottore](object_type:medico) elenco all' indirizzo [VIA PERFUMO  - FR. SPINETTA MARENGO](indirizzo) ? 
+- cerco le [dottore](object_type:medico) elenco all' via [Via don cabrio](indirizzo) ? 
+- cerco le [dottore](object_type:medico) elencami all' indirizzo [Via carlo alberto](indirizzo) ? 
+- cerco le [dottore](object_type:medico) elencami all' via [VIA PIO VII](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) è all' indirizzo [VIA ROSSINI](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) è all' via [VIA REZZA MEDICO](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) sono all' indirizzo [VIA ODESCALCHI](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) sono all' indirizzo [Via del pilone](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) sono all' via [piazza parrocchiale (loc. sant antonino)](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) lavorano all' indirizzo [Via appino](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) lavorano all' via [loc. bannio p.zza municipale](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) lavorano all' via [corso giacomo puccini](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) conosci all' indirizzo [piazza cavour camillo](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) conosci all' via [Piazza ottorino respighi](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) elenco all' indirizzo [Via alba (loc. borgo)](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) elenco all' via [VIA PARINI](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) elencami all' indirizzo [via cugiano](indirizzo) ? 
+- cerco le [dottoresse](object_type:medico) elencami all' via [VIA CAVALIERI DI VITTORIO VENETO](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) è all' indirizzo [VIA A. SAN LORENZO](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) è all' via [VIA S. FR. D ASSISI](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) sono all' indirizzo [via turati](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) sono all' via [FRAZIONE MAPPANO - VIA CARDUCCI](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) lavorano all' indirizzo [VIA MAZZINI](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) lavorano all' via [Viale roma palazzina e - casa della salute](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) conosci all' indirizzo [VIA GUIDO RENI](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) conosci all' via [amb. comunale fraz. maggiate](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) conosci all' via [PIAZZA DELLO SPORT](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) elenco all' indirizzo [CORSO SARACCO](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) elenco all' indirizzo [via mortaisti - div. ravenna 2](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) elenco all' via [via volontari della liberta](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) elencami all' indirizzo [PIAZZA MONTEREGALE](indirizzo) ? 
+- cerco le [dottoressa](object_type:medico) elencami all' via [LOC.ANTROGNA](indirizzo) ? 
+- cerco le [dottori](object_type:medico) è all' indirizzo [CONTRADA PIAN RE MAGI (LOC. VIGGIONA)](indirizzo) ? 
+- cerco le [dottori](object_type:medico) è all' via [Strada cesole](indirizzo) ? 
+- cerco le [dottori](object_type:medico) sono all' indirizzo [via barberis fratelli](indirizzo) ? 
+- cerco le [dottori](object_type:medico) sono all' indirizzo [VIA LEINI](indirizzo) ? 
+- cerco le [dottori](object_type:medico) sono all' via [Poliambulatorio asl - via roma](indirizzo) ? 
+- cerco le [dottori](object_type:medico) lavorano all' indirizzo [fr. garella](indirizzo) ? 
+- cerco le [dottori](object_type:medico) lavorano all' via [via s.paolo](indirizzo) ? 
+- cerco le [dottori](object_type:medico) conosci all' indirizzo [Ospedale s. biagio ex](indirizzo) ? 
+- cerco le [dottori](object_type:medico) conosci all' indirizzo [VIA BENVENUTO S.GIORGIO](indirizzo) ? 
+- cerco le [dottori](object_type:medico) conosci all' via [VIA MILLE](indirizzo) ? 
+- cerco le [dottori](object_type:medico) elenco all' indirizzo [Piazza spinola](indirizzo) ? 
+- cerco le [dottori](object_type:medico) elenco all' via [via montezemolo](indirizzo) ? 
+- cerco le [dottori](object_type:medico) elencami all' indirizzo [CORSO UMBERTO IÂ° - C/O COMUNE](indirizzo) ? 
+- cerco le [dottori](object_type:medico) elencami all' via [via karl marx](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) è all' indirizzo [Vicolo fornaciai](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) è all' via [VIA VALLINO](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) è all' via [fraz. bornate sesia - via monte castello](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono all' indirizzo [via chiesa](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono all' via [Via don masera](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano all' indirizzo [VIA VITTORIO EMANUELE III](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano all' via [via bignone](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci all' indirizzo [Via macchieraldo](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci all' indirizzo [P.zza g. puccini (ex scuole)- baraggia di suno](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci all' via [Via rosazza 42 -](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) conosci all' via [via mazze](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elenco all' indirizzo [VIA L. CHIALA](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elenco all' via [VIA LAMARMORA](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami all' indirizzo [Piazza giuseppe garibaldi](indirizzo) ? 
+- cerco le [ambulatori](object_type:ambulatorio) elencami all' via [via ravenna](indirizzo) ? 
+- cerco le [lavora](object_type:medico) è all' indirizzo [PIAZZA RAVEDONI](indirizzo) ? 
+- cerco le [lavora](object_type:medico) è all' indirizzo [viale savorgnan d osoppo volchi](indirizzo) ? 
+- cerco le [lavora](object_type:medico) è all' indirizzo [c/o amb. comunale via casana](indirizzo) ? 
+- cerco le [lavora](object_type:medico) è all' via [Via san sebastiano](indirizzo) ? 
+- cerco le [lavora](object_type:medico) sono all' indirizzo [fraz mosezzo via cassini](indirizzo) ? 
+- cerco le [lavora](object_type:medico) sono all' via [Via amedeo di savoia duca d aosta](indirizzo) ? 
+- cerco le [lavora](object_type:medico) lavorano all' indirizzo [VIA DON CERRUTI FRANCESCO](indirizzo) ? 
+- cerco le [lavora](object_type:medico) lavorano all' via [frazione sant  antonino - via comotto](indirizzo) ? 
+- cerco le [lavora](object_type:medico) conosci all' indirizzo [VIA ROSSANO](indirizzo) ? 
+- cerco le [lavora](object_type:medico) conosci all' via [VIA CAVALLOTTO CARLO (LOC. PIANA)](indirizzo) ? 
+- cerco le [lavora](object_type:medico) elenco all' indirizzo [VIA ALERAMO](indirizzo) ? 
+- cerco le [lavora](object_type:medico) elenco all' indirizzo [Via hugues luigi](indirizzo) ? 
+- cerco le [lavora](object_type:medico) elenco all' via [Via solferino](indirizzo) ? 
+- cerco le [lavora](object_type:medico) elencami all' indirizzo [pz volontari della liberta](indirizzo) ? 
+- cerco le [lavora](object_type:medico) elencami all' via [via s.donato](indirizzo) ? 
+- cerco le [lavora](object_type:medico) elencami all' via [Via roma (loc. strona)](indirizzo) ? 
+- quali [medici](object_type:medico) si trova nell'ambulatorio 
+- quali [dottore](object_type:medico) lavorano nell'ambulatorio 
+- quali [dottore](object_type:medico) elenco nell'ambulatorio 
+- quali [dottoresse](object_type:medico) elencami nell'ambulatorio 
+- quali [dottoressa](object_type:medico) elenco nell'ambulatorio 
+- quali [dottori](object_type:medico) sono nell'ambulatorio 
+- quali [dottori](object_type:medico) elenco nell'ambulatorio 
+- quali [ambulatori](object_type:ambulatorio) elencami nell'ambulatorio 
+- chi [medici](object_type:medico) elenco nell'ambulatorio 
+- chi [dottore](object_type:medico) si trova nell'ambulatorio 
+- chi [dottoresse](object_type:medico) lavorano nell'ambulatorio 
+- chi [dottoressa](object_type:medico) elencami nell'ambulatorio 
+- chi [dottori](object_type:medico) lavorano nell'ambulatorio 
+- chi [ambulatori](object_type:ambulatorio) sono nell'ambulatorio 
+- chi [lavora](object_type:medico) conosci nell'ambulatorio 
+- cerco i [medici](object_type:medico) elencami nell'ambulatorio 
+- cerco i [dottore](object_type:medico) conosci nell'ambulatorio 
+- cerco i [dottoresse](object_type:medico) sono nell'ambulatorio 
+- cerco i [dottoressa](object_type:medico) sono nell'ambulatorio 
+- cerco i [dottori](object_type:medico) lavorano nell'ambulatorio 
+- cerco i [ambulatori](object_type:ambulatorio) elenco nell'ambulatorio 
+- cerco i [lavora](object_type:medico) si trova nell'ambulatorio 
+- cerco i [lavora](object_type:medico) elenco nell'ambulatorio 
+- cerco le [medici](object_type:medico) sono nell'ambulatorio 
+- cerco le [dottore](object_type:medico) sono nell'ambulatorio 
+- cerco le [dottore](object_type:medico) elencami nell'ambulatorio 
+- cerco le [dottoresse](object_type:medico) elenco nell'ambulatorio 
+- cerco le [dottoressa](object_type:medico) lavorano nell'ambulatorio 
+- cerco le [dottori](object_type:medico) conosci nell'ambulatorio 
+- cerco le [ambulatori](object_type:ambulatorio) si trova nell'ambulatorio 
+- cerco le [lavora](object_type:medico) sono nell'ambulatorio 
+- quali [medici](object_type:medico) che conosci attivita 
+- quali [medici](object_type:medico) che elencami attività 
+- quali [dottore](object_type:medico) che elenco attività 
+- quali [dottoresse](object_type:medico) che fanno attività 
+- quali [dottoresse](object_type:medico) che elencami attivita 
+- quali [dottoressa](object_type:medico) che lavorano attività 
+- quali [dottoressa](object_type:medico) che elenco attivita 
+- quali [dottori](object_type:medico) che fanno attivita 
+- quali [ambulatori](object_type:ambulatorio) che lavorano attivita 
+- quali [ambulatori](object_type:ambulatorio) che conosci attività 
+- quali [lavora](object_type:medico) che lavorano attività 
+- quali [lavora](object_type:medico) che conosci attivita 
+- chi [medici](object_type:medico) che fanno attività 
+- chi [medici](object_type:medico) che elenco attivita 
+- chi [dottore](object_type:medico) che lavorano attivita 
+- chi [dottore](object_type:medico) che conosci attività 
+- chi [dottoresse](object_type:medico) che elenco attività 
+- chi [dottoressa](object_type:medico) che fanno attivita 
+- chi [dottori](object_type:medico) che conosci attivita 
+- chi [dottori](object_type:medico) che elencami attività 
+- chi [ambulatori](object_type:ambulatorio) che lavorano attività 
+- chi [ambulatori](object_type:ambulatorio) che elenco attività 
+- chi [ambulatori](object_type:ambulatorio) che elencami attivita 
+- chi [lavora](object_type:medico) che fanno attività 
+- cerco i [medici](object_type:medico) che lavorano attivita 
+- cerco i [medici](object_type:medico) che elenco attività 
+- cerco i [dottore](object_type:medico) che lavorano attività 
+- cerco i [dottore](object_type:medico) che conosci attivita 
+- cerco i [dottoresse](object_type:medico) che fanno attivita 
+- cerco i [dottoresse](object_type:medico) che elencami attività 
+- cerco i [dottoressa](object_type:medico) che elenco attività 
+- cerco i [dottoressa](object_type:medico) che elencami attivita 
+- cerco i [dottori](object_type:medico) che conosci attività 
+- cerco i [ambulatori](object_type:ambulatorio) che fanno attivita 
+- cerco i [lavora](object_type:medico) che elenco attivita 
+- cerco le [medici](object_type:medico) che elenco attività 
+- cerco le [dottore](object_type:medico) che conosci attivita 
+- cerco le [dottore](object_type:medico) che elencami attivita 
+- cerco le [dottoresse](object_type:medico) che lavorano attività 
+- cerco le [dottoresse](object_type:medico) che conosci attività 
+- cerco le [dottoressa](object_type:medico) che lavorano attivita 
+- cerco le [dottoressa](object_type:medico) che elencami attività 
+- cerco le [dottori](object_type:medico) che fanno attività 
+- cerco le [ambulatori](object_type:ambulatorio) che fanno attivita 
+- cerco le [lavora](object_type:medico) che elenco attivita 
+- quali [medici](object_type:medico) operano fino alle [13:50](ora_fine) ? 
+- quali [medici](object_type:medico) lavorano fino alle [21:00](ora_fine) ? 
+- quali [medici](object_type:medico) sono aperti fino alle [16:35](ora_fine) ? 
+- quali [dottore](object_type:medico) operano fino alle [09:25](ora_fine) ? 
+- quali [dottore](object_type:medico) lavorano fino alle [10:00](ora_fine) ? 
+- quali [dottore](object_type:medico) sono aperti fino alle [09:25](ora_fine) ? 
+- quali [dottoresse](object_type:medico) operano fino alle [19:15](ora_fine) ? 
+- quali [dottoresse](object_type:medico) lavorano fino alle [19:30](ora_fine) ? 
+- quali [dottoresse](object_type:medico) lavorano fino alle [17:55](ora_fine) ? 
+- quali [dottoresse](object_type:medico) sono aperti fino alle [18:30](ora_fine) ? 
+- quali [dottoresse](object_type:medico) sono aperti fino alle [14:00](ora_fine) ? 
+- quali [dottoressa](object_type:medico) operano fino alle [14:45](ora_fine) ? 
+- quali [dottoressa](object_type:medico) lavorano fino alle [08:30](ora_fine) ? 
+- quali [dottoressa](object_type:medico) lavorano fino alle [15:15](ora_fine) ? 
+- quali [dottoressa](object_type:medico) sono aperti fino alle [09:30](ora_fine) ? 
+- quali [dottori](object_type:medico) operano fino alle [10:40](ora_fine) ? 
+- quali [dottori](object_type:medico) lavorano fino alle [10:30](ora_fine) ? 
+- quali [dottori](object_type:medico) sono aperti fino alle [11:30](ora_fine) ? 
+- quali [ambulatori](object_type:ambulatorio) operano fino alle [08:30](ora_fine) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano fino alle [12:45](ora_fine) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano fino alle [20:30](ora_fine) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano fino alle [12:20](ora_fine) ? 
+- quali [ambulatori](object_type:ambulatorio) sono aperti fino alle [08:00](ora_fine) ? 
+- quali [lavora](object_type:medico) operano fino alle [17:55](ora_fine) ? 
+- quali [lavora](object_type:medico) lavorano fino alle [18:00](ora_fine) ? 
+- quali [lavora](object_type:medico) sono aperti fino alle [16:00](ora_fine) ? 
+- chi [medici](object_type:medico) operano fino alle [12:15](ora_fine) ? 
+- chi [medici](object_type:medico) lavorano fino alle [11:30](ora_fine) ? 
+- chi [medici](object_type:medico) sono aperti fino alle [15:45](ora_fine) ? 
+- chi [dottore](object_type:medico) operano fino alle [16:35](ora_fine) ? 
+- chi [dottore](object_type:medico) lavorano fino alle [08:30](ora_fine) ? 
+- chi [dottore](object_type:medico) sono aperti fino alle [10:20](ora_fine) ? 
+- chi [dottoresse](object_type:medico) operano fino alle [12:30](ora_fine) ? 
+- chi [dottoresse](object_type:medico) lavorano fino alle [19:45](ora_fine) ? 
+- chi [dottoresse](object_type:medico) sono aperti fino alle [09:00](ora_fine) ? 
+- chi [dottoressa](object_type:medico) operano fino alle [09:30](ora_fine) ? 
+- chi [dottoressa](object_type:medico) lavorano fino alle [11:45](ora_fine) ? 
+- chi [dottoressa](object_type:medico) sono aperti fino alle [18:50](ora_fine) ? 
+- chi [dottori](object_type:medico) operano fino alle [16:15](ora_fine) ? 
+- chi [dottori](object_type:medico) lavorano fino alle [10:00](ora_fine) ? 
+- chi [dottori](object_type:medico) sono aperti fino alle [17:55](ora_fine) ? 
+- chi [dottori](object_type:medico) sono aperti fino alle [15:20](ora_fine) ? 
+- chi [ambulatori](object_type:ambulatorio) operano fino alle [11:40](ora_fine) ? 
+- chi [ambulatori](object_type:ambulatorio) operano fino alle [14:20](ora_fine) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano fino alle [09:30](ora_fine) ? 
+- chi [ambulatori](object_type:ambulatorio) sono aperti fino alle [12:15](ora_fine) ? 
+- chi [lavora](object_type:medico) operano fino alle [17:45](ora_fine) ? 
+- chi [lavora](object_type:medico) operano fino alle [10:40](ora_fine) ? 
+- chi [lavora](object_type:medico) operano fino alle [15:20](ora_fine) ? 
+- chi [lavora](object_type:medico) lavorano fino alle [12:10](ora_fine) ? 
+- chi [lavora](object_type:medico) sono aperti fino alle [18:30](ora_fine) ? 
+- cerco i [medici](object_type:medico) operano fino alle [17:15](ora_fine) ? 
+- cerco i [medici](object_type:medico) lavorano fino alle [17:15](ora_fine) ? 
+- cerco i [medici](object_type:medico) sono aperti fino alle [11:30](ora_fine) ? 
+- cerco i [medici](object_type:medico) sono aperti fino alle [09:00](ora_fine) ? 
+- cerco i [medici](object_type:medico) sono aperti fino alle [09:45](ora_fine) ? 
+- cerco i [dottore](object_type:medico) operano fino alle [15:30](ora_fine) ? 
+- cerco i [dottore](object_type:medico) lavorano fino alle [20:30](ora_fine) ? 
+- cerco i [dottore](object_type:medico) sono aperti fino alle [19:45](ora_fine) ? 
+- cerco i [dottoresse](object_type:medico) operano fino alle [10:00](ora_fine) ? 
+- cerco i [dottoresse](object_type:medico) lavorano fino alle [22:00](ora_fine) ? 
+- cerco i [dottoresse](object_type:medico) sono aperti fino alle [20:15](ora_fine) ? 
+- cerco i [dottoressa](object_type:medico) operano fino alle [20:00](ora_fine) ? 
+- cerco i [dottoressa](object_type:medico) lavorano fino alle [17:55](ora_fine) ? 
+- cerco i [dottoressa](object_type:medico) sono aperti fino alle [18:10](ora_fine) ? 
+- cerco i [dottoressa](object_type:medico) sono aperti fino alle [10:40](ora_fine) ? 
+- cerco i [dottori](object_type:medico) operano fino alle [14:00](ora_fine) ? 
+- cerco i [dottori](object_type:medico) operano fino alle [13:45](ora_fine) ? 
+- cerco i [dottori](object_type:medico) lavorano fino alle [15:20](ora_fine) ? 
+- cerco i [dottori](object_type:medico) sono aperti fino alle [19:15](ora_fine) ? 
+- cerco i [dottori](object_type:medico) sono aperti fino alle [20:30](ora_fine) ? 
+- cerco i [ambulatori](object_type:ambulatorio) operano fino alle [13:00](ora_fine) ? 
+- cerco i [ambulatori](object_type:ambulatorio) operano fino alle [15:00](ora_fine) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano fino alle [18:45](ora_fine) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono aperti fino alle [13:30](ora_fine) ? 
+- cerco i [lavora](object_type:medico) operano fino alle [11:45](ora_fine) ? 
+- cerco i [lavora](object_type:medico) lavorano fino alle [12:15](ora_fine) ? 
+- cerco i [lavora](object_type:medico) sono aperti fino alle [17:30](ora_fine) ? 
+- cerco le [medici](object_type:medico) operano fino alle [08:45](ora_fine) ? 
+- cerco le [medici](object_type:medico) lavorano fino alle [10:40](ora_fine) ? 
+- cerco le [medici](object_type:medico) sono aperti fino alle [11:00](ora_fine) ? 
+- cerco le [medici](object_type:medico) sono aperti fino alle [21:00](ora_fine) ? 
+- cerco le [medici](object_type:medico) sono aperti fino alle [18:50](ora_fine) ? 
+- cerco le [dottore](object_type:medico) operano fino alle [15:00](ora_fine) ? 
+- cerco le [dottore](object_type:medico) lavorano fino alle [18:50](ora_fine) ? 
+- cerco le [dottore](object_type:medico) sono aperti fino alle [18:45](ora_fine) ? 
+- cerco le [dottoresse](object_type:medico) operano fino alle [17:30](ora_fine) ? 
+- cerco le [dottoresse](object_type:medico) lavorano fino alle [16:30](ora_fine) ? 
+- cerco le [dottoresse](object_type:medico) sono aperti fino alle [11:03](ora_fine) ? 
+- cerco le [dottoressa](object_type:medico) operano fino alle [19:00](ora_fine) ? 
+- cerco le [dottoressa](object_type:medico) lavorano fino alle [09:45](ora_fine) ? 
+- cerco le [dottoressa](object_type:medico) sono aperti fino alle [12:30](ora_fine) ? 
+- cerco le [dottori](object_type:medico) operano fino alle [10:20](ora_fine) ? 
+- cerco le [dottori](object_type:medico) lavorano fino alle [14:00](ora_fine) ? 
+- cerco le [dottori](object_type:medico) sono aperti fino alle [09:45](ora_fine) ? 
+- cerco le [ambulatori](object_type:ambulatorio) operano fino alle [16:15](ora_fine) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano fino alle [17:30](ora_fine) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono aperti fino alle [10:40](ora_fine) ? 
+- cerco le [lavora](object_type:medico) operano fino alle [11:15](ora_fine) ? 
+- cerco le [lavora](object_type:medico) lavorano fino alle [21:30](ora_fine) ? 
+- cerco le [lavora](object_type:medico) sono aperti fino alle [15:15](ora_fine) ? 
+- quali [medici](object_type:medico) aprono alle [14:45](ora_inizio) ? 
+- quali [medici](object_type:medico) aprono alle [15:10](ora_inizio) ? 
+- quali [medici](object_type:medico) lavorano alle [11:30](ora_inizio) ? 
+- quali [medici](object_type:medico) lavorano alle [15:45](ora_inizio) ? 
+- quali [medici](object_type:medico) lavorano alle [11:15](ora_inizio) ? 
+- quali [medici](object_type:medico) sono aperti alle [12:50](ora_inizio) ? 
+- quali [dottore](object_type:medico) aprono alle [13:30](ora_inizio) ? 
+- quali [dottore](object_type:medico) lavorano alle [16:10](ora_inizio) ? 
+- quali [dottore](object_type:medico) sono aperti alle [18:30](ora_inizio) ? 
+- quali [dottore](object_type:medico) sono aperti alle [13:45](ora_inizio) ? 
+- quali [dottoresse](object_type:medico) aprono alle [16:10](ora_inizio) ? 
+- quali [dottoresse](object_type:medico) lavorano alle [13:20](ora_inizio) ? 
+- quali [dottoresse](object_type:medico) sono aperti alle [09:45](ora_inizio) ? 
+- quali [dottoressa](object_type:medico) aprono alle [12:00](ora_inizio) ? 
+- quali [dottoressa](object_type:medico) aprono alle [15:05](ora_inizio) ? 
+- quali [dottoressa](object_type:medico) lavorano alle [18:05](ora_inizio) ? 
+- quali [dottoressa](object_type:medico) sono aperti alle [16:15](ora_inizio) ? 
+- quali [dottoressa](object_type:medico) sono aperti alle [10:45](ora_inizio) ? 
+- quali [dottori](object_type:medico) aprono alle [12:20](ora_inizio) ? 
+- quali [dottori](object_type:medico) lavorano alle [09:45](ora_inizio) ? 
+- quali [dottori](object_type:medico) sono aperti alle [11:10](ora_inizio) ? 
+- quali [ambulatori](object_type:ambulatorio) aprono alle [16:00](ora_inizio) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano alle [16:45](ora_inizio) ? 
+- quali [ambulatori](object_type:ambulatorio) sono aperti alle [12:30](ora_inizio) ? 
+- quali [ambulatori](object_type:ambulatorio) sono aperti alle [18:45](ora_inizio) ? 
+- quali [lavora](object_type:medico) aprono alle [10:45](ora_inizio) ? 
+- quali [lavora](object_type:medico) lavorano alle [17:50](ora_inizio) ? 
+- quali [lavora](object_type:medico) sono aperti alle [00:00](ora_inizio) ? 
+- chi [medici](object_type:medico) aprono alle [15:05](ora_inizio) ? 
+- chi [medici](object_type:medico) lavorano alle [08:40](ora_inizio) ? 
+- chi [medici](object_type:medico) lavorano alle [19:30](ora_inizio) ? 
+- chi [medici](object_type:medico) sono aperti alle [17:50](ora_inizio) ? 
+- chi [dottore](object_type:medico) aprono alle [17:50](ora_inizio) ? 
+- chi [dottore](object_type:medico) lavorano alle [18:30](ora_inizio) ? 
+- chi [dottore](object_type:medico) sono aperti alle [15:45](ora_inizio) ? 
+- chi [dottoresse](object_type:medico) aprono alle [09:00](ora_inizio) ? 
+- chi [dottoresse](object_type:medico) lavorano alle [14:15](ora_inizio) ? 
+- chi [dottoresse](object_type:medico) sono aperti alle [13:00](ora_inizio) ? 
+- chi [dottoressa](object_type:medico) aprono alle [12:20](ora_inizio) ? 
+- chi [dottoressa](object_type:medico) lavorano alle [10:20](ora_inizio) ? 
+- chi [dottoressa](object_type:medico) sono aperti alle [08:45](ora_inizio) ? 
+- chi [dottori](object_type:medico) aprono alle [08:00](ora_inizio) ? 
+- chi [dottori](object_type:medico) aprono alle [08:30](ora_inizio) ? 
+- chi [dottori](object_type:medico) lavorano alle [17:50](ora_inizio) ? 
+- chi [dottori](object_type:medico) sono aperti alle [07:15](ora_inizio) ? 
+- chi [ambulatori](object_type:ambulatorio) aprono alle [20:00](ora_inizio) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano alle [15:45](ora_inizio) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano alle [15:15](ora_inizio) ? 
+- chi [ambulatori](object_type:ambulatorio) sono aperti alle [10:00](ora_inizio) ? 
+- chi [lavora](object_type:medico) aprono alle [08:10](ora_inizio) ? 
+- chi [lavora](object_type:medico) lavorano alle [19:00](ora_inizio) ? 
+- chi [lavora](object_type:medico) sono aperti alle [08:30](ora_inizio) ? 
+- chi [lavora](object_type:medico) sono aperti alle [13:45](ora_inizio) ? 
+- chi [lavora](object_type:medico) sono aperti alle [09:10](ora_inizio) ? 
+- chi [lavora](object_type:medico) sono aperti alle [09:25](ora_inizio) ? 
+- cerco i [medici](object_type:medico) aprono alle [08:10](ora_inizio) ? 
+- cerco i [medici](object_type:medico) lavorano alle [10:30](ora_inizio) ? 
+- cerco i [medici](object_type:medico) sono aperti alle [14:00](ora_inizio) ? 
+- cerco i [dottore](object_type:medico) aprono alle [12:15](ora_inizio) ? 
+- cerco i [dottore](object_type:medico) lavorano alle [12:00](ora_inizio) ? 
+- cerco i [dottore](object_type:medico) sono aperti alle [12:50](ora_inizio) ? 
+- cerco i [dottoresse](object_type:medico) aprono alle [11:10](ora_inizio) ? 
+- cerco i [dottoresse](object_type:medico) lavorano alle [16:00](ora_inizio) ? 
+- cerco i [dottoresse](object_type:medico) lavorano alle [09:25](ora_inizio) ? 
+- cerco i [dottoresse](object_type:medico) sono aperti alle [08:10](ora_inizio) ? 
+- cerco i [dottoressa](object_type:medico) aprono alle [13:20](ora_inizio) ? 
+- cerco i [dottoressa](object_type:medico) lavorano alle [10:00](ora_inizio) ? 
+- cerco i [dottoressa](object_type:medico) sono aperti alle [09:25](ora_inizio) ? 
+- cerco i [dottori](object_type:medico) aprono alle [16:50](ora_inizio) ? 
+- cerco i [dottori](object_type:medico) lavorano alle [17:45](ora_inizio) ? 
+- cerco i [dottori](object_type:medico) sono aperti alle [07:00](ora_inizio) ? 
+- cerco i [ambulatori](object_type:ambulatorio) aprono alle [17:45](ora_inizio) ? 
+- cerco i [ambulatori](object_type:ambulatorio) lavorano alle [11:45](ora_inizio) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono aperti alle [15:30](ora_inizio) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono aperti alle [08:15](ora_inizio) ? 
+- cerco i [lavora](object_type:medico) aprono alle [11:00](ora_inizio) ? 
+- cerco i [lavora](object_type:medico) aprono alle [14:15](ora_inizio) ? 
+- cerco i [lavora](object_type:medico) lavorano alle [18:45](ora_inizio) ? 
+- cerco i [lavora](object_type:medico) sono aperti alle [19:30](ora_inizio) ? 
+- cerco le [medici](object_type:medico) aprono alle [09:15](ora_inizio) ? 
+- cerco le [medici](object_type:medico) lavorano alle [13:45](ora_inizio) ? 
+- cerco le [medici](object_type:medico) sono aperti alle [13:15](ora_inizio) ? 
+- cerco le [dottore](object_type:medico) aprono alle [10:20](ora_inizio) ? 
+- cerco le [dottore](object_type:medico) lavorano alle [08:00](ora_inizio) ? 
+- cerco le [dottore](object_type:medico) lavorano alle [09:00](ora_inizio) ? 
+- cerco le [dottore](object_type:medico) sono aperti alle [11:45](ora_inizio) ? 
+- cerco le [dottoresse](object_type:medico) aprono alle [15:10](ora_inizio) ? 
+- cerco le [dottoresse](object_type:medico) lavorano alle [09:30](ora_inizio) ? 
+- cerco le [dottoresse](object_type:medico) sono aperti alle [18:00](ora_inizio) ? 
+- cerco le [dottoressa](object_type:medico) aprono alle [12:45](ora_inizio) ? 
+- cerco le [dottoressa](object_type:medico) lavorano alle [17:20](ora_inizio) ? 
+- cerco le [dottoressa](object_type:medico) sono aperti alle [10:30](ora_inizio) ? 
+- cerco le [dottori](object_type:medico) aprono alle [15:30](ora_inizio) ? 
+- cerco le [dottori](object_type:medico) lavorano alle [07:45](ora_inizio) ? 
+- cerco le [dottori](object_type:medico) sono aperti alle [13:15](ora_inizio) ? 
+- cerco le [ambulatori](object_type:ambulatorio) aprono alle [19:30](ora_inizio) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano alle [17:00](ora_inizio) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono aperti alle [08:10](ora_inizio) ? 
+- cerco le [lavora](object_type:medico) aprono alle [11:15](ora_inizio) ? 
+- cerco le [lavora](object_type:medico) lavorano alle [15:00](ora_inizio) ? 
+- cerco le [lavora](object_type:medico) sono aperti alle [15:15](ora_inizio) ? 
+- quali [medici](object_type:medico) è aperto il [Martedi](giorno) ? 
+- quali [medici](object_type:medico) lavorano il [VENERDI](giorno) ? 
+- quali [medici](object_type:medico) sono aperti il [lunedi](giorno) ? 
+- quali [dottore](object_type:medico) è aperto il [venerdi](giorno) ? 
+- quali [dottore](object_type:medico) lavorano il [martedi](giorno) ? 
+- quali [dottore](object_type:medico) lavorano il [mercoledi](giorno) ? 
+- quali [dottore](object_type:medico) sono aperti il [martedi](giorno) ? 
+- quali [dottoresse](object_type:medico) operano il [LUNEDI](giorno) ? 
+- quali [dottoresse](object_type:medico) è aperto il [sabato](giorno) ? 
+- quali [dottoresse](object_type:medico) sono aperti il [VENERDI](giorno) ? 
+- quali [dottoressa](object_type:medico) operano il [GIOVEDI](giorno) ? 
+- quali [dottoressa](object_type:medico) è aperto il [Mercoledi](giorno) ? 
+- quali [dottoressa](object_type:medico) lavorano il [Lunedi](giorno) ? 
+- quali [dottoressa](object_type:medico) sono aperti il [Sabato](giorno) ? 
+- quali [dottori](object_type:medico) operano il [venerdi](giorno) ? 
+- quali [dottori](object_type:medico) operano il [sabato](giorno) ? 
+- quali [dottori](object_type:medico) è aperto il [Giovedi](giorno) ? 
+- quali [dottori](object_type:medico) sono aperti il [lunedi](giorno) ? 
+- quali [ambulatori](object_type:ambulatorio) operano il [Martedi](giorno) ? 
+- quali [ambulatori](object_type:ambulatorio) è aperto il [lunedi](giorno) ? 
+- quali [ambulatori](object_type:ambulatorio) lavorano il [Giovedi](giorno) ? 
+- quali [ambulatori](object_type:ambulatorio) sono aperti il [mercoledi](giorno) ? 
+- chi [medici](object_type:medico) operano il [venerdi](giorno) ? 
+- chi [medici](object_type:medico) operano il [martedi](giorno) ? 
+- chi [medici](object_type:medico) operano il [sabato](giorno) ? 
+- chi [medici](object_type:medico) è aperto il [MERCOLEDI](giorno) ? 
+- chi [medici](object_type:medico) lavorano il [lunedi](giorno) ? 
+- chi [dottore](object_type:medico) lavorano il [venerdi](giorno) ? 
+- chi [dottore](object_type:medico) sono aperti il [MERCOLEDI](giorno) ? 
+- chi [dottoresse](object_type:medico) operano il [Mercoledi](giorno) ? 
+- chi [dottoresse](object_type:medico) è aperto il [Venerdi](giorno) ? 
+- chi [dottoresse](object_type:medico) lavorano il [MARTEDI](giorno) ? 
+- chi [dottoresse](object_type:medico) sono aperti il [Lunedi](giorno) ? 
+- chi [dottoressa](object_type:medico) operano il [Lunedi](giorno) ? 
+- chi [dottoressa](object_type:medico) è aperto il [MARTEDI](giorno) ? 
+- chi [dottoressa](object_type:medico) è aperto il [sabato](giorno) ? 
+- chi [dottoressa](object_type:medico) lavorano il [Giovedi](giorno) ? 
+- chi [dottoressa](object_type:medico) sono aperti il [Giovedi](giorno) ? 
+- chi [dottori](object_type:medico) operano il [GIOVEDI](giorno) ? 
+- chi [dottori](object_type:medico) è aperto il [Lunedi](giorno) ? 
+- chi [dottori](object_type:medico) è aperto il [Mercoledi](giorno) ? 
+- chi [dottori](object_type:medico) sono aperti il [sabato](giorno) ? 
+- chi [ambulatori](object_type:ambulatorio) è aperto il [GIOVEDI](giorno) ? 
+- chi [ambulatori](object_type:ambulatorio) lavorano il [MERCOLEDI](giorno) ? 
+- chi [ambulatori](object_type:ambulatorio) sono aperti il [venerdi](giorno) ? 
+- cerco i [medici](object_type:medico) operano il [Mercoledi](giorno) ? 
+- cerco i [medici](object_type:medico) è aperto il [SABATO](giorno) ? 
+- cerco i [medici](object_type:medico) lavorano il [giovedi](giorno) ? 
+- cerco i [medici](object_type:medico) sono aperti il [Mercoledi](giorno) ? 
+- cerco i [dottore](object_type:medico) operano il [Sabato](giorno) ? 
+- cerco i [dottore](object_type:medico) lavorano il [lunedi](giorno) ? 
+- cerco i [dottore](object_type:medico) lavorano il [mercoledi](giorno) ? 
+- cerco i [dottore](object_type:medico) sono aperti il [GIOVEDI](giorno) ? 
+- cerco i [dottoresse](object_type:medico) operano il [MARTEDI](giorno) ? 
+- cerco i [dottoresse](object_type:medico) è aperto il [MERCOLEDI](giorno) ? 
+- cerco i [dottoresse](object_type:medico) sono aperti il [SABATO](giorno) ? 
+- cerco i [dottoressa](object_type:medico) operano il [Mercoledi](giorno) ? 
+- cerco i [dottoressa](object_type:medico) è aperto il [giovedi](giorno) ? 
+- cerco i [dottoressa](object_type:medico) è aperto il [VENERDI](giorno) ? 
+- cerco i [dottoressa](object_type:medico) sono aperti il [Martedi](giorno) ? 
+- cerco i [dottori](object_type:medico) operano il [lunedi](giorno) ? 
+- cerco i [dottori](object_type:medico) è aperto il [Giovedi](giorno) ? 
+- cerco i [dottori](object_type:medico) è aperto il [MARTEDI](giorno) ? 
+- cerco i [dottori](object_type:medico) lavorano il [venerdi](giorno) ? 
+- cerco i [dottori](object_type:medico) lavorano il [sabato](giorno) ? 
+- cerco i [ambulatori](object_type:ambulatorio) operano il [venerdi](giorno) ? 
+- cerco i [ambulatori](object_type:ambulatorio) è aperto il [LUNEDI](giorno) ? 
+- cerco le [medici](object_type:medico) operano il [GIOVEDI](giorno) ? 
+- cerco le [medici](object_type:medico) è aperto il [martedi](giorno) ? 
+- cerco le [medici](object_type:medico) lavorano il [mercoledi](giorno) ? 
+- cerco le [medici](object_type:medico) sono aperti il [VENERDI](giorno) ? 
+- cerco le [dottore](object_type:medico) operano il [MARTEDI](giorno) ? 
+- cerco le [dottore](object_type:medico) è aperto il [LUNEDI](giorno) ? 
+- cerco le [dottore](object_type:medico) sono aperti il [Sabato](giorno) ? 
+- cerco le [dottoresse](object_type:medico) è aperto il [LUNEDI](giorno) ? 
+- cerco le [dottoresse](object_type:medico) lavorano il [Giovedi](giorno) ? 
+- cerco le [dottoresse](object_type:medico) lavorano il [Venerdi](giorno) ? 
+- cerco le [dottoresse](object_type:medico) sono aperti il [Mercoledi](giorno) ? 
+- cerco le [dottoressa](object_type:medico) operano il [venerdi](giorno) ? 
+- cerco le [dottoressa](object_type:medico) è aperto il [Sabato](giorno) ? 
+- cerco le [dottoressa](object_type:medico) lavorano il [martedi](giorno) ? 
+- cerco le [dottoressa](object_type:medico) sono aperti il [lunedi](giorno) ? 
+- cerco le [dottori](object_type:medico) è aperto il [Venerdi](giorno) ? 
+- cerco le [dottori](object_type:medico) lavorano il [MERCOLEDI](giorno) ? 
+- cerco le [dottori](object_type:medico) sono aperti il [Martedi](giorno) ? 
+- cerco le [ambulatori](object_type:ambulatorio) operano il [lunedi](giorno) ? 
+- cerco le [ambulatori](object_type:ambulatorio) operano il [SABATO](giorno) ? 
+- cerco le [ambulatori](object_type:ambulatorio) è aperto il [mercoledi](giorno) ? 
+- cerco le [ambulatori](object_type:ambulatorio) lavorano il [martedi](giorno) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono aperti il [GIOVEDI](giorno) ? 
+- quali [medici](object_type:medico) sono a [Poirino](denom_comune) ? 
+- quali [dottore](object_type:medico) sono a [BOLZANO NOVARESE](denom_comune) ? 
+- quali [dottoresse](object_type:medico) sono a [castello di annone](denom_comune) ? 
+- quali [dottoressa](object_type:medico) sono a [Serralunga di crea](denom_comune) ? 
+- quali [dottori](object_type:medico) sono a [Quaranti](denom_comune) ? 
+- quali [ambulatori](object_type:ambulatorio) sono a [SAUZE D OULX](denom_comune) ? 
+- chi [medici](object_type:medico) sono a [SALUZZO](denom_comune) ? 
+- chi [medici](object_type:medico) sono a [ottiglio](denom_comune) ? 
+- chi [dottore](object_type:medico) sono a [Magliano alpi](denom_comune) ? 
+- chi [dottoresse](object_type:medico) sono a [san secondo di pinerolo](denom_comune) ? 
+- chi [dottoressa](object_type:medico) sono a [MONTECHIARO D ASTI](denom_comune) ? 
+- chi [dottoressa](object_type:medico) sono a [Rocchetta ligure](denom_comune) ? 
+- chi [dottori](object_type:medico) sono a [Piedimulera](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) sono a [marene](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) sono a [Lugnacco](denom_comune) ? 
+- chi [ambulatori](object_type:ambulatorio) sono a [Viale d asti](denom_comune) ? 
+- cerco i [medici](object_type:medico) sono a [pettenasco](denom_comune) ? 
+- cerco i [dottore](object_type:medico) sono a [COASSOLO TORINESE](denom_comune) ? 
+- cerco i [dottoresse](object_type:medico) sono a [Pamparato](denom_comune) ? 
+- cerco i [dottoressa](object_type:medico) sono a [sardigliano](denom_comune) ? 
+- cerco i [dottori](object_type:medico) sono a [PRIOLA](denom_comune) ? 
+- cerco i [dottori](object_type:medico) sono a [SESTRIERE](denom_comune) ? 
+- cerco i [ambulatori](object_type:ambulatorio) sono a [Verbania](denom_comune) ? 
+- cerco le [medici](object_type:medico) sono a [Postua](denom_comune) ? 
+- cerco le [dottore](object_type:medico) sono a [serralunga d alba](denom_comune) ? 
+- cerco le [dottoresse](object_type:medico) sono a [SANT AMBROGIO DI TORINO](denom_comune) ? 
+- cerco le [dottoressa](object_type:medico) sono a [CASAL CERMELLI](denom_comune) ? 
+- cerco le [dottori](object_type:medico) sono a [Vaie](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono a [Rocchetta palafea](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono a [Divignano](denom_comune) ? 
+- cerco le [ambulatori](object_type:ambulatorio) sono a [SAN MARTINO ALFIERI](denom_comune) ? 
+- elencami [medici](object_type:medico) a [Murazzano](denom_comune) 
+- elencami [dottore](object_type:medico) a [PINO D ASTI](denom_comune) 
+- elencami [dottoresse](object_type:medico) a [rivalta di torino](denom_comune) 
+- elencami [dottoressa](object_type:medico) a [palazzo canavese](denom_comune) 
+- elencami [dottori](object_type:medico) a [MONCRIVELLO](denom_comune) 
+- elencami [ambulatori](object_type:ambulatorio a [NOVALESA](denom_comune) 
+- mostrami [medici](object_type:medico) a [QUINCINETTO](denom_comune) 
+- mostrami [medici](object_type:medico) a [BAIRO](denom_comune) 
+- mostrami [dottore](object_type:medico) a [SAN MAURIZIO D OPAGLIO](denom_comune) 
+- mostrami [dottoresse](object_type:medico) a [VOGOGNA](denom_comune) 
+- mostrami [dottoressa](object_type:medico) a [SERRAVALLE SCRIVIA](denom_comune) 
+- mostrami [dottori](object_type:medico) a [ghiffa](denom_comune) 
+- mostrami [ambulatori](object_type:ambulatorio a [BUTTIGLIERA ALTA](denom_comune) 
+- dimmi [medici](object_type:medico) a [sala biellese](denom_comune) 
+- dimmi [dottore](object_type:medico) a [Chivasso](denom_comune) 
+- dimmi [dottore](object_type:medico) a [marsaglia](denom_comune) 
+- dimmi [dottoresse](object_type:medico) a [Susa](denom_comune) 
+- dimmi [dottoressa](object_type:medico) a [Mombello di torino](denom_comune) 
+- dimmi [dottori](object_type:medico) a [Mazze](denom_comune) 
+- dimmi [dottori](object_type:medico) a [moncalvo](denom_comune) 
+- dimmi [ambulatori](object_type:ambulatorio a [tortona](denom_comune) 
+- elencami [medici](object_type:medico) a [0](desc_distretto) 
+- elencami [dottore](object_type:medico) a [0](desc_distretto) 
+- elencami [dottoresse](object_type:medico) a [0](desc_distretto) 
+- elencami [dottoressa](object_type:medico) a [0](desc_distretto) 
+- elencami [dottori](object_type:medico) a [0](desc_distretto) 
+- elencami [ambulatori](object_type:ambulatorio a [0](desc_distretto) 
+- elencami [ambulatori](object_type:ambulatorio a [0](desc_distretto) 
+- mostrami [medici](object_type:medico) a [0](desc_distretto) 
+- mostrami [dottore](object_type:medico) a [0](desc_distretto) 
+- mostrami [dottoresse](object_type:medico) a [0](desc_distretto) 
+- mostrami [dottoresse](object_type:medico) a [0](desc_distretto) 
+- mostrami [dottoressa](object_type:medico) a [0](desc_distretto) 
+- mostrami [dottori](object_type:medico) a [0](desc_distretto) 
+- mostrami [ambulatori](object_type:ambulatorio a [0](desc_distretto) 
+- dimmi [medici](object_type:medico) a [0](desc_distretto) 
+- dimmi [dottore](object_type:medico) a [0](desc_distretto) 
+- dimmi [dottoresse](object_type:medico) a [0](desc_distretto) 
+- dimmi [dottoressa](object_type:medico) a [0](desc_distretto) 
+- dimmi [dottoressa](object_type:medico) a [0](desc_distretto) 
+- dimmi [dottori](object_type:medico) a [0](desc_distretto) 
+- dimmi [ambulatori](object_type:ambulatorio a [0](desc_distretto) 
+- dimmi [ambulatori](object_type:ambulatorio a [0](desc_distretto) 
+- elencami [medici](object_type:medico) in [Via caduti](indirizzo) 
+- elencami [medici](object_type:medico) in [fr. montevalenza](indirizzo) 
+- elencami [dottore](object_type:medico) in [via oberdan guglielmo](indirizzo) 
+- elencami [dottore](object_type:medico) in [PRESSO AMBULATORIO COMUNALE](indirizzo) 
+- elencami [dottoresse](object_type:medico) in [via bonatto](indirizzo) 
+- elencami [dottoressa](object_type:medico) in [Via giordano](indirizzo) 
+- elencami [dottori](object_type:medico) in [AMB.PUBBLICO](indirizzo) 
+- elencami [ambulatori](object_type:ambulatorio in [VIA SAN PANCRAZIO](indirizzo) 
+- mostrami [medici](object_type:medico) in [via caccia](indirizzo) 
+- mostrami [dottore](object_type:medico) in [VIA CONSOLATA](indirizzo) 
+- mostrami [dottoresse](object_type:medico) in [Via lepetit](indirizzo) 
+- mostrami [dottoressa](object_type:medico) in [via lovera](indirizzo) 
+- mostrami [dottori](object_type:medico) in [piazza ambrosoli giorgio](indirizzo) 
+- mostrami [dottori](object_type:medico) in [Fr.gaminella](indirizzo) 
+- mostrami [ambulatori](object_type:ambulatorio in [piazza velino](indirizzo) 
+- mostrami [ambulatori](object_type:ambulatorio in [corso gen. volpini battista (loc. piano-molini d isola)](indirizzo) 
+- dimmi [medici](object_type:medico) in [Via sauro](indirizzo) 
+- dimmi [medici](object_type:medico) in [Via b. garibaldi](indirizzo) 
+- dimmi [medici](object_type:medico) in [p.za martiri della liberta](indirizzo) 
+- dimmi [dottore](object_type:medico) in [Corso alessandria](indirizzo) 
+- dimmi [dottoresse](object_type:medico) in [Via monte bianco](indirizzo) 
+- dimmi [dottoressa](object_type:medico) in [VIA STATALE (LOC. CINZANO)](indirizzo) 
+- dimmi [dottoressa](object_type:medico) in [Via s. rita](indirizzo) 
+- dimmi [dottori](object_type:medico) in [Via lamarmora](indirizzo) 
+- dimmi [ambulatori](object_type:ambulatorio in [Viale kennedy](indirizzo) 
+- elencami [medici](object_type:medico) a [PAVONE CANAVESE](denom_comune) 
+- elencami [dottore](object_type:medico) a [Bagnasco](denom_comune) 
+- elencami [dottore](object_type:medico) a [PECCO](denom_comune) 
+- elencami [dottoresse](object_type:medico) a [INVERSO PINASCA](denom_comune) 
+- elencami [dottoressa](object_type:medico) a [canelli](denom_comune) 
+- elencami [dottoressa](object_type:medico) a [CASTELLETTO STURA](denom_comune) 
+- elencami [dottoressa](object_type:medico) a [antrona schieranco](denom_comune) 
+- elencami [dottori](object_type:medico) a [Colazza](denom_comune) 
+- elencami [ambulatori](object_type:ambulatorio a [Grugliasco](denom_comune) 
+- mostrami [medici](object_type:medico) a [PALLANZENO](denom_comune) 
+- mostrami [dottore](object_type:medico) a [gattinara](denom_comune) 
+- mostrami [dottoresse](object_type:medico) a [montezemolo](denom_comune) 
+- mostrami [dottoressa](object_type:medico) a [CASTIGLIONE FALLETTO](denom_comune) 
+- mostrami [dottori](object_type:medico) a [SAN BENIGNO CANAVESE](denom_comune) 
+- mostrami [ambulatori](object_type:ambulatorio a [Mombasiglio](denom_comune) 
+- dimmi [medici](object_type:medico) a [VISCHE](denom_comune) 
+- dimmi [medici](object_type:medico) a [venasca](denom_comune) 
+- dimmi [dottore](object_type:medico) a [Casale monferrato](denom_comune) 
+- dimmi [dottoresse](object_type:medico) a [montechiaro d acqui](denom_comune) 
+- dimmi [dottoressa](object_type:medico) a [Ponti](denom_comune) 
+- dimmi [dottori](object_type:medico) a [meana di susa](denom_comune) 
+- dimmi [ambulatori](object_type:ambulatorio a [pareto](denom_comune) 
+- elencami [medici](object_type:medico) aperti di [Mercoledi](giorno) 
+- elencami [medici](object_type:medico) aperti il [LUNEDI](giorno) 
+- elencami [dottore](object_type:medico) aperti di [VENERDI](giorno) 
+- elencami [dottore](object_type:medico) aperti il [MERCOLEDI](giorno) 
+- elencami [dottoresse](object_type:medico) aperti di [SABATO](giorno) 
+- elencami [dottoresse](object_type:medico) aperti il [Giovedi](giorno) 
+- elencami [dottoressa](object_type:medico) aperti di [LUNEDI](giorno) 
+- elencami [dottoressa](object_type:medico) aperti il [Sabato](giorno) 
+- elencami [dottori](object_type:medico) aperti di [Martedi](giorno) 
+- elencami [dottori](object_type:medico) aperti il [Sabato](giorno) 
+- elencami [ambulatori](object_type:ambulatorio aperti di [GIOVEDI](giorno) 
+- elencami [ambulatori](object_type:ambulatorio aperti il [giovedi](giorno) 
+- elencami [ambulatori](object_type:ambulatorio aperti il [Martedi](giorno) 
+- mostrami [medici](object_type:medico) aperti di [LUNEDI](giorno) 
+- mostrami [medici](object_type:medico) aperti il [venerdi](giorno) 
+- mostrami [dottore](object_type:medico) aperti di [giovedi](giorno) 
+- mostrami [dottore](object_type:medico) aperti il [MERCOLEDI](giorno) 
+- mostrami [dottoresse](object_type:medico) aperti di [VENERDI](giorno) 
+- mostrami [dottoresse](object_type:medico) aperti il [Martedi](giorno) 
+- mostrami [dottoresse](object_type:medico) aperti il [SABATO](giorno) 
+- mostrami [dottoressa](object_type:medico) aperti di [Mercoledi](giorno) 
+- mostrami [dottori](object_type:medico) aperti di [sabato](giorno) 
+- mostrami [dottori](object_type:medico) aperti il [giovedi](giorno) 
+- mostrami [ambulatori](object_type:ambulatorio aperti di [martedi](giorno) 
+- mostrami [ambulatori](object_type:ambulatorio aperti il [Lunedi](giorno) 
+- dimmi [medici](object_type:medico) aperti di [venerdi](giorno) 
+- dimmi [medici](object_type:medico) aperti il [GIOVEDI](giorno) 
+- dimmi [dottore](object_type:medico) aperti di [SABATO](giorno) 
+- dimmi [dottore](object_type:medico) aperti il [venerdi](giorno) 
+- dimmi [dottoresse](object_type:medico) aperti di [Martedi](giorno) 
+- dimmi [dottoresse](object_type:medico) aperti il [LUNEDI](giorno) 
+- dimmi [dottoresse](object_type:medico) aperti il [sabato](giorno) 
+- dimmi [dottoressa](object_type:medico) aperti di [GIOVEDI](giorno) 
+- dimmi [dottoressa](object_type:medico) aperti il [martedi](giorno) 
+- dimmi [dottori](object_type:medico) aperti di [lunedi](giorno) 
+- dimmi [dottori](object_type:medico) aperti il [MERCOLEDI](giorno) 
+- dimmi [ambulatori](object_type:ambulatorio aperti di [Venerdi](giorno) 
+- elencami [medici](object_type:medico) in [10132](cap) 
+- elencami [dottore](object_type:medico) in [10040](cap) 
+- elencami [dottoresse](object_type:medico) in [10153](cap) 
+- elencami [dottoressa](object_type:medico) in [10051](cap) 
+- elencami [dottori](object_type:medico) in [13010](cap) 
+- elencami [ambulatori](object_type:ambulatorio in [28100](cap) 
+- mostrami [medici](object_type:medico) in [28040](cap) 
+- mostrami [dottore](object_type:medico) in [10071](cap) 
+- mostrami [dottore](object_type:medico) in [10151](cap) 
+- mostrami [dottoresse](object_type:medico) in [10071](cap) 
+- mostrami [dottoressa](object_type:medico) in [10152](cap) 
+- mostrami [dottori](object_type:medico) in [13100](cap) 
+- mostrami [ambulatori](object_type:ambulatorio in [28865](cap) 
+- mostrami [ambulatori](object_type:ambulatorio in [12070](cap) 
+- dimmi [medici](object_type:medico) in [28100](cap) 
+- dimmi [dottore](object_type:medico) in [10042](cap) 
+- dimmi [dottore](object_type:medico) in [10040](cap) 
+- dimmi [dottore](object_type:medico) in [10046](cap) 
+- dimmi [dottoresse](object_type:medico) in [12050](cap) 
+- dimmi [dottoressa](object_type:medico) in [12038](cap) 
+- dimmi [dottori](object_type:medico) in [10034](cap) 
+- dimmi [ambulatori](object_type:ambulatorio in [28010](cap) 
+- dimmi [ambulatori](object_type:ambulatorio in [10137](cap) 
+- elencami [medici](object_type:medico) che lavorano dalle [15:10](ora_inizio) 
+- elencami [medici](object_type:medico) che lavorano alle [08:10](ora_inizio) 
+- elencami [medici](object_type:medico) che fanno dalle [18:45](ora_inizio) 
+- elencami [medici](object_type:medico) che fanno alle [09:00](ora_inizio) 
+- elencami [medici](object_type:medico) che aprono dalle [17:20](ora_inizio) 
+- elencami [medici](object_type:medico) che aprono alle [15:15](ora_inizio) 
+- elencami [medici](object_type:medico) che iniziano dalle [08:15](ora_inizio) 
+- elencami [medici](object_type:medico) che iniziano alle [17:00](ora_inizio) 
+- elencami [dottore](object_type:medico) che lavorano dalle [11:10](ora_inizio) 
+- elencami [dottore](object_type:medico) che lavorano dalle [11:15](ora_inizio) 
+- elencami [dottore](object_type:medico) che lavorano dalle [00:00](ora_inizio) 
+- elencami [dottore](object_type:medico) che lavorano alle [17:30](ora_inizio) 
+- elencami [dottore](object_type:medico) che lavorano alle [18:00](ora_inizio) 
+- elencami [dottore](object_type:medico) che fanno dalle [19:00](ora_inizio) 
+- elencami [dottore](object_type:medico) che fanno alle [16:00](ora_inizio) 
+- elencami [dottore](object_type:medico) che aprono dalle [12:00](ora_inizio) 
+- elencami [dottore](object_type:medico) che aprono alle [09:30](ora_inizio) 
+- elencami [dottore](object_type:medico) che aprono alle [18:20](ora_inizio) 
+- elencami [dottore](object_type:medico) che iniziano dalle [16:20](ora_inizio) 
+- elencami [dottore](object_type:medico) che iniziano alle [08:45](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che lavorano dalle [15:30](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che lavorano dalle [16:20](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che lavorano dalle [08:10](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che lavorano alle [18:00](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che fanno dalle [15:30](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che fanno alle [10:30](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che aprono dalle [15:15](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che aprono alle [16:20](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che iniziano dalle [10:20](ora_inizio) 
+- elencami [dottoresse](object_type:medico) che iniziano alle [10:00](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che lavorano dalle [10:20](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che lavorano alle [17:15](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che fanno dalle [20:00](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che fanno alle [12:00](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che aprono dalle [18:15](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che aprono alle [16:45](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che iniziano dalle [12:00](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che iniziano dalle [11:20](ora_inizio) 
+- elencami [dottoressa](object_type:medico) che iniziano alle [08:30](ora_inizio) 
+- elencami [dottori](object_type:medico) che lavorano dalle [11:00](ora_inizio) 
+- elencami [dottori](object_type:medico) che lavorano alle [15:00](ora_inizio) 
+- elencami [dottori](object_type:medico) che fanno dalle [09:25](ora_inizio) 
+- elencami [dottori](object_type:medico) che fanno alle [16:10](ora_inizio) 
+- elencami [dottori](object_type:medico) che aprono dalle [08:40](ora_inizio) 
+- elencami [dottori](object_type:medico) che aprono alle [09:45](ora_inizio) 
+- elencami [dottori](object_type:medico) che iniziano dalle [15:05](ora_inizio) 
+- elencami [dottori](object_type:medico) che iniziano alle [08:45](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che lavorano dalle [11:20](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che lavorano alle [07:15](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che fanno dalle [15:10](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che fanno dalle [12:50](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che fanno alle [10:15](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che aprono dalle [18:50](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che aprono alle [17:15](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che iniziano dalle [08:00](ora_inizio) 
+- elencami [ambulatori](object_type:ambulatorio che iniziano alle [10:15](ora_inizio) 
+- mostrami [medici](object_type:medico) che lavorano dalle [07:30](ora_inizio) 
+- mostrami [medici](object_type:medico) che lavorano alle [09:30](ora_inizio) 
+- mostrami [medici](object_type:medico) che fanno dalle [15:30](ora_inizio) 
+- mostrami [medici](object_type:medico) che fanno dalle [16:20](ora_inizio) 
+- mostrami [medici](object_type:medico) che fanno alle [12:15](ora_inizio) 
+- mostrami [medici](object_type:medico) che aprono dalle [11:00](ora_inizio) 
+- mostrami [medici](object_type:medico) che aprono alle [12:00](ora_inizio) 
+- mostrami [medici](object_type:medico) che iniziano dalle [12:45](ora_inizio) 
+- mostrami [medici](object_type:medico) che iniziano alle [07:30](ora_inizio) 
+- mostrami [dottore](object_type:medico) che lavorano dalle [15:30](ora_inizio) 
+- mostrami [dottore](object_type:medico) che lavorano alle [12:15](ora_inizio) 
+- mostrami [dottore](object_type:medico) che fanno dalle [08:30](ora_inizio) 
+- mostrami [dottore](object_type:medico) che fanno alle [18:20](ora_inizio) 
+- mostrami [dottore](object_type:medico) che aprono dalle [16:15](ora_inizio) 
+- mostrami [dottore](object_type:medico) che aprono alle [17:30](ora_inizio) 
+- mostrami [dottore](object_type:medico) che iniziano dalle [07:30](ora_inizio) 
+- mostrami [dottore](object_type:medico) che iniziano dalle [07:15](ora_inizio) 
+- mostrami [dottore](object_type:medico) che iniziano alle [11:30](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che lavorano dalle [18:05](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che lavorano alle [16:30](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che fanno dalle [12:00](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che fanno alle [13:20](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che aprono dalle [08:30](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che aprono alle [11:00](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che iniziano dalle [18:00](ora_inizio) 
+- mostrami [dottoresse](object_type:medico) che iniziano alle [15:15](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che lavorano dalle [16:20](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che lavorano alle [11:45](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che fanno dalle [16:30](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che fanno alle [10:00](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che fanno alle [14:30](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che fanno alle [09:40](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che aprono dalle [16:10](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che aprono alle [16:00](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che iniziano dalle [20:00](ora_inizio) 
+- mostrami [dottoressa](object_type:medico) che iniziano alle [18:15](ora_inizio) 
+- mostrami [dottori](object_type:medico) che lavorano dalle [09:00](ora_inizio) 
+- mostrami [dottori](object_type:medico) che lavorano alle [09:15](ora_inizio) 
+- mostrami [dottori](object_type:medico) che lavorano alle [15:15](ora_inizio) 
+- mostrami [dottori](object_type:medico) che fanno dalle [16:15](ora_inizio) 
+- mostrami [dottori](object_type:medico) che fanno alle [08:30](ora_inizio) 
+- mostrami [dottori](object_type:medico) che aprono dalle [15:00](ora_inizio) 
+- mostrami [dottori](object_type:medico) che aprono dalle [09:25](ora_inizio) 
+- mostrami [dottori](object_type:medico) che aprono alle [10:00](ora_inizio) 
+- mostrami [dottori](object_type:medico) che aprono alle [13:20](ora_inizio) 
+- mostrami [dottori](object_type:medico) che iniziano dalle [07:00](ora_inizio) 
+- mostrami [dottori](object_type:medico) che iniziano alle [08:15](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che lavorano dalle [10:30](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che lavorano alle [12:00](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che fanno dalle [09:10](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che fanno alle [18:45](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che aprono dalle [08:30](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che aprono alle [16:15](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che iniziano dalle [16:15](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che iniziano alle [16:00](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che iniziano alle [08:00](ora_inizio) 
+- mostrami [ambulatori](object_type:ambulatorio che iniziano alle [07:00](ora_inizio) 
+- dimmi [medici](object_type:medico) che lavorano dalle [16:20](ora_inizio) 
+- dimmi [medici](object_type:medico) che lavorano alle [19:30](ora_inizio) 
+- dimmi [medici](object_type:medico) che fanno dalle [17:50](ora_inizio) 
+- dimmi [medici](object_type:medico) che fanno alle [12:00](ora_inizio) 
+- dimmi [medici](object_type:medico) che aprono dalle [11:30](ora_inizio) 
+- dimmi [medici](object_type:medico) che aprono alle [17:20](ora_inizio) 
+- dimmi [medici](object_type:medico) che iniziano dalle [15:15](ora_inizio) 
+- dimmi [medici](object_type:medico) che iniziano alle [11:20](ora_inizio) 
+- dimmi [dottore](object_type:medico) che lavorano dalle [08:45](ora_inizio) 
+- dimmi [dottore](object_type:medico) che lavorano alle [09:30](ora_inizio) 
+- dimmi [dottore](object_type:medico) che fanno dalle [16:20](ora_inizio) 
+- dimmi [dottore](object_type:medico) che fanno alle [11:20](ora_inizio) 
+- dimmi [dottore](object_type:medico) che aprono dalle [17:50](ora_inizio) 
+- dimmi [dottore](object_type:medico) che aprono alle [09:15](ora_inizio) 
+- dimmi [dottore](object_type:medico) che iniziano dalle [15:10](ora_inizio) 
+- dimmi [dottore](object_type:medico) che iniziano alle [11:10](ora_inizio) 
+- dimmi [dottore](object_type:medico) che iniziano alle [09:10](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che lavorano dalle [08:30](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che lavorano dalle [10:45](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che lavorano alle [11:10](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che fanno dalle [17:15](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che fanno dalle [09:40](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che fanno alle [14:15](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che aprono dalle [15:30](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che aprono dalle [17:45](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che aprono alle [13:15](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che iniziano dalle [12:00](ora_inizio) 
+- dimmi [dottoresse](object_type:medico) che iniziano alle [08:30](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che lavorano dalle [11:10](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che lavorano alle [20:00](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che fanno dalle [20:00](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che fanno alle [08:00](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che aprono dalle [17:15](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che aprono alle [18:05](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che iniziano dalle [09:25](ora_inizio) 
+- dimmi [dottoressa](object_type:medico) che iniziano alle [15:10](ora_inizio) 
+- dimmi [dottori](object_type:medico) che lavorano dalle [15:15](ora_inizio) 
+- dimmi [dottori](object_type:medico) che lavorano alle [08:15](ora_inizio) 
+- dimmi [dottori](object_type:medico) che fanno dalle [18:00](ora_inizio) 
+- dimmi [dottori](object_type:medico) che fanno alle [09:30](ora_inizio) 
+- dimmi [dottori](object_type:medico) che aprono dalle [15:10](ora_inizio) 
+- dimmi [dottori](object_type:medico) che aprono dalle [00:00](ora_inizio) 
+- dimmi [dottori](object_type:medico) che aprono alle [17:30](ora_inizio) 
+- dimmi [dottori](object_type:medico) che aprono alle [10:30](ora_inizio) 
+- dimmi [dottori](object_type:medico) che aprono alle [17:15](ora_inizio) 
+- dimmi [dottori](object_type:medico) che aprono alle [12:15](ora_inizio) 
+- dimmi [dottori](object_type:medico) che iniziano dalle [07:15](ora_inizio) 
+- dimmi [dottori](object_type:medico) che iniziano alle [12:45](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che lavorano dalle [13:15](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che lavorano alle [12:45](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che fanno dalle [12:20](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che fanno alle [17:50](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che aprono dalle [18:20](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che aprono alle [10:00](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che iniziano dalle [09:45](ora_inizio) 
+- dimmi [ambulatori](object_type:ambulatorio che iniziano alle [15:45](ora_inizio) 
+- elencami [medici](object_type:medico) che lavorano alle [13:30](ora_fine) 
+- elencami [medici](object_type:medico) che lavorano fino alle [12:00](ora_fine) 
+- elencami [medici](object_type:medico) che fanno alle [09:00](ora_fine) 
+- elencami [medici](object_type:medico) che fanno fino alle [18:45](ora_fine) 
+- elencami [medici](object_type:medico) che chiudono alle [16:30](ora_fine) 
+- elencami [medici](object_type:medico) che chiudono alle [18:30](ora_fine) 
+- elencami [medici](object_type:medico) che chiudono alle [14:30](ora_fine) 
+- elencami [medici](object_type:medico) che chiudono fino alle [11:45](ora_fine) 
+- elencami [medici](object_type:medico) che restano aperti alle [18:15](ora_fine) 
+- elencami [medici](object_type:medico) che restano aperti fino alle [12:10](ora_fine) 
+- elencami [dottore](object_type:medico) che lavorano alle [14:30](ora_fine) 
+- elencami [dottore](object_type:medico) che lavorano fino alle [20:00](ora_fine) 
+- elencami [dottore](object_type:medico) che lavorano fino alle [10:00](ora_fine) 
+- elencami [dottore](object_type:medico) che fanno alle [13:50](ora_fine) 
+- elencami [dottore](object_type:medico) che fanno fino alle [17:30](ora_fine) 
+- elencami [dottore](object_type:medico) che chiudono alle [09:00](ora_fine) 
+- elencami [dottore](object_type:medico) che chiudono fino alle [19:30](ora_fine) 
+- elencami [dottore](object_type:medico) che chiudono fino alle [14:00](ora_fine) 
+- elencami [dottore](object_type:medico) che chiudono fino alle [15:15](ora_fine) 
+- elencami [dottore](object_type:medico) che chiudono fino alle [16:35](ora_fine) 
+- elencami [dottore](object_type:medico) che chiudono fino alle [15:05](ora_fine) 
+- elencami [dottore](object_type:medico) che restano aperti alle [12:45](ora_fine) 
+- elencami [dottore](object_type:medico) che restano aperti fino alle [13:15](ora_fine) 
+- elencami [dottoresse](object_type:medico) che lavorano alle [16:30](ora_fine) 
+- elencami [dottoresse](object_type:medico) che lavorano fino alle [15:00](ora_fine) 
+- elencami [dottoresse](object_type:medico) che fanno alle [10:40](ora_fine) 
+- elencami [dottoresse](object_type:medico) che fanno fino alle [14:15](ora_fine) 
+- elencami [dottoresse](object_type:medico) che chiudono alle [18:45](ora_fine) 
+- elencami [dottoresse](object_type:medico) che chiudono alle [17:15](ora_fine) 
+- elencami [dottoresse](object_type:medico) che chiudono fino alle [16:10](ora_fine) 
+- elencami [dottoresse](object_type:medico) che chiudono fino alle [21:00](ora_fine) 
+- elencami [dottoresse](object_type:medico) che restano aperti alle [12:15](ora_fine) 
+- elencami [dottoresse](object_type:medico) che restano aperti fino alle [14:15](ora_fine) 
+- elencami [dottoressa](object_type:medico) che lavorano alle [09:15](ora_fine) 
+- elencami [dottoressa](object_type:medico) che lavorano fino alle [09:00](ora_fine) 
+- elencami [dottoressa](object_type:medico) che fanno alle [14:15](ora_fine) 
+- elencami [dottoressa](object_type:medico) che fanno fino alle [15:00](ora_fine) 
+- elencami [dottoressa](object_type:medico) che fanno fino alle [00:00](ora_fine) 
+- elencami [dottoressa](object_type:medico) che fanno fino alle [11:40](ora_fine) 
+- elencami [dottoressa](object_type:medico) che chiudono alle [19:30](ora_fine) 
+- elencami [dottoressa](object_type:medico) che chiudono fino alle [19:00](ora_fine) 
+- elencami [dottoressa](object_type:medico) che restano aperti alle [10:30](ora_fine) 
+- elencami [dottoressa](object_type:medico) che restano aperti fino alle [18:00](ora_fine) 
+- elencami [dottoressa](object_type:medico) che restano aperti fino alle [16:35](ora_fine) 
+- elencami [dottori](object_type:medico) che lavorano alle [18:00](ora_fine) 
+- elencami [dottori](object_type:medico) che lavorano fino alle [11:03](ora_fine) 
+- elencami [dottori](object_type:medico) che fanno alle [14:30](ora_fine) 
+- elencami [dottori](object_type:medico) che fanno fino alle [10:30](ora_fine) 
+- elencami [dottori](object_type:medico) che chiudono alle [12:15](ora_fine) 
+- elencami [dottori](object_type:medico) che chiudono fino alle [08:30](ora_fine) 
+- elencami [dottori](object_type:medico) che chiudono fino alle [09:15](ora_fine) 
+- elencami [dottori](object_type:medico) che chiudono fino alle [09:25](ora_fine) 
+- elencami [dottori](object_type:medico) che chiudono fino alle [22:00](ora_fine) 
+- elencami [dottori](object_type:medico) che restano aperti alle [16:35](ora_fine) 
+- elencami [dottori](object_type:medico) che restano aperti fino alle [14:20](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che lavorano alle [18:10](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che lavorano fino alle [12:15](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che fanno alle [18:10](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che fanno fino alle [16:10](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che chiudono alle [18:50](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che chiudono fino alle [09:00](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che restano aperti alle [20:15](ora_fine) 
+- elencami [ambulatori](object_type:ambulatorio che restano aperti fino alle [15:05](ora_fine) 
+- mostrami [medici](object_type:medico) che lavorano alle [10:40](ora_fine) 
+- mostrami [medici](object_type:medico) che lavorano fino alle [10:20](ora_fine) 
+- mostrami [medici](object_type:medico) che fanno alle [09:45](ora_fine) 
+- mostrami [medici](object_type:medico) che fanno fino alle [00:00](ora_fine) 
+- mostrami [medici](object_type:medico) che chiudono alle [18:10](ora_fine) 
+- mostrami [medici](object_type:medico) che chiudono alle [14:15](ora_fine) 
+- mostrami [medici](object_type:medico) che chiudono fino alle [08:45](ora_fine) 
+- mostrami [medici](object_type:medico) che restano aperti alle [09:25](ora_fine) 
+- mostrami [medici](object_type:medico) che restano aperti fino alle [21:00](ora_fine) 
+- mostrami [medici](object_type:medico) che restano aperti fino alle [22:00](ora_fine) 
+- mostrami [dottore](object_type:medico) che lavorano alle [09:30](ora_fine) 
+- mostrami [dottore](object_type:medico) che lavorano alle [09:45](ora_fine) 
+- mostrami [dottore](object_type:medico) che lavorano alle [11:03](ora_fine) 
+- mostrami [dottore](object_type:medico) che lavorano fino alle [17:30](ora_fine) 
+- mostrami [dottore](object_type:medico) che fanno alle [11:45](ora_fine) 
+- mostrami [dottore](object_type:medico) che fanno alle [12:20](ora_fine) 
+- mostrami [dottore](object_type:medico) che fanno fino alle [20:30](ora_fine) 
+- mostrami [dottore](object_type:medico) che chiudono alle [10:45](ora_fine) 
+- mostrami [dottore](object_type:medico) che chiudono fino alle [13:15](ora_fine) 
+- mostrami [dottore](object_type:medico) che restano aperti alle [18:50](ora_fine) 
+- mostrami [dottore](object_type:medico) che restano aperti fino alle [19:20](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che lavorano alle [10:45](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che lavorano fino alle [15:45](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che fanno alle [13:00](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che fanno fino alle [09:15](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che fanno fino alle [17:15](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che chiudono alle [09:15](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che chiudono fino alle [16:15](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che restano aperti alle [10:00](ora_fine) 
+- mostrami [dottoresse](object_type:medico) che restano aperti fino alle [11:00](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che lavorano alle [19:00](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che lavorano fino alle [18:15](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che fanno alle [15:05](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che fanno fino alle [13:15](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che chiudono alle [09:00](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che chiudono fino alle [13:50](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che restano aperti alle [11:45](ora_fine) 
+- mostrami [dottoressa](object_type:medico) che restano aperti fino alle [15:20](ora_fine) 
+- mostrami [dottori](object_type:medico) che lavorano alle [09:25](ora_fine) 
+- mostrami [dottori](object_type:medico) che lavorano fino alle [14:00](ora_fine) 
+- mostrami [dottori](object_type:medico) che fanno alle [13:15](ora_fine) 
+- mostrami [dottori](object_type:medico) che fanno fino alle [14:45](ora_fine) 
+- mostrami [dottori](object_type:medico) che chiudono alle [18:00](ora_fine) 
+- mostrami [dottori](object_type:medico) che chiudono fino alle [19:30](ora_fine) 
+- mostrami [dottori](object_type:medico) che restano aperti alle [10:15](ora_fine) 
+- mostrami [dottori](object_type:medico) che restano aperti fino alle [16:45](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che lavorano alle [16:45](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che lavorano alle [14:15](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che lavorano fino alle [17:45](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che fanno alle [19:00](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che fanno alle [10:00](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che fanno fino alle [12:15](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che chiudono alle [16:30](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che chiudono fino alle [12:00](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che restano aperti alle [10:20](ora_fine) 
+- mostrami [ambulatori](object_type:ambulatorio che restano aperti fino alle [16:30](ora_fine) 
+- dimmi [medici](object_type:medico) che lavorano alle [12:30](ora_fine) 
+- dimmi [medici](object_type:medico) che lavorano fino alle [15:00](ora_fine) 
+- dimmi [medici](object_type:medico) che fanno alle [00:00](ora_fine) 
+- dimmi [medici](object_type:medico) che fanno alle [10:20](ora_fine) 
+- dimmi [medici](object_type:medico) che fanno fino alle [17:00](ora_fine) 
+- dimmi [medici](object_type:medico) che fanno fino alle [14:15](ora_fine) 
+- dimmi [medici](object_type:medico) che chiudono alle [19:20](ora_fine) 
+- dimmi [medici](object_type:medico) che chiudono fino alle [12:30](ora_fine) 
+- dimmi [medici](object_type:medico) che restano aperti alle [10:00](ora_fine) 
+- dimmi [medici](object_type:medico) che restano aperti fino alle [13:15](ora_fine) 
+- dimmi [dottore](object_type:medico) che lavorano alle [09:25](ora_fine) 
+- dimmi [dottore](object_type:medico) che lavorano fino alle [10:20](ora_fine) 
+- dimmi [dottore](object_type:medico) che fanno alle [14:15](ora_fine) 
+- dimmi [dottore](object_type:medico) che fanno fino alle [13:15](ora_fine) 
+- dimmi [dottore](object_type:medico) che chiudono alle [13:30](ora_fine) 
+- dimmi [dottore](object_type:medico) che chiudono fino alle [18:50](ora_fine) 
+- dimmi [dottore](object_type:medico) che restano aperti alle [19:20](ora_fine) 
+- dimmi [dottore](object_type:medico) che restano aperti fino alle [11:03](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che lavorano alle [17:45](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che lavorano alle [18:50](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che lavorano fino alle [18:30](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che fanno alle [09:00](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che fanno fino alle [15:15](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che chiudono alle [16:30](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che chiudono alle [20:15](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che chiudono fino alle [10:30](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che chiudono fino alle [18:45](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che restano aperti alle [11:15](ora_fine) 
+- dimmi [dottoresse](object_type:medico) che restano aperti fino alle [12:15](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che lavorano alle [15:00](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che lavorano alle [13:45](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che lavorano fino alle [10:00](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che lavorano fino alle [12:45](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che fanno alle [10:45](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che fanno fino alle [17:55](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che chiudono alle [12:00](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che chiudono fino alle [17:00](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che restano aperti alle [17:55](ora_fine) 
+- dimmi [dottoressa](object_type:medico) che restano aperti fino alle [12:00](ora_fine) 
+- dimmi [dottori](object_type:medico) che lavorano alle [10:20](ora_fine) 
+- dimmi [dottori](object_type:medico) che lavorano fino alle [17:55](ora_fine) 
+- dimmi [dottori](object_type:medico) che fanno alle [17:15](ora_fine) 
+- dimmi [dottori](object_type:medico) che fanno alle [17:55](ora_fine) 
+- dimmi [dottori](object_type:medico) che fanno fino alle [14:45](ora_fine) 
+- dimmi [dottori](object_type:medico) che chiudono alle [16:45](ora_fine) 
+- dimmi [dottori](object_type:medico) che chiudono fino alle [21:30](ora_fine) 
+- dimmi [dottori](object_type:medico) che restano aperti alle [09:15](ora_fine) 
+- dimmi [dottori](object_type:medico) che restano aperti fino alle [10:20](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che lavorano alle [09:45](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che lavorano fino alle [13:30](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che fanno alle [16:10](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che fanno fino alle [18:00](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che chiudono alle [09:30](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che chiudono fino alle [16:35](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che restano aperti alle [12:15](ora_fine) 
+- dimmi [ambulatori](object_type:ambulatorio che restano aperti fino alle [09:30](ora_fine) 
+- Qual'e l' [orari](object_type:orario) di [agosta](cognome) ? 
+- Qual'e l' [orari](object_type:orario) del [Garzino demo](cognome) ? 
+- Qual'e l' [orario](object_type) di [DELLA SELVA](cognome) ? 
+- Qual'e l' [orario](object_type) del [Priotti](cognome) ? 
+- Qual'e l' [orario](object_type) del [Bisio](cognome) ? 
+- Qual'e gli [orari](object_type:orario) di [Sempio](cognome) ? 
+- Qual'e gli [orari](object_type:orario) di [Giardina](cognome) ? 
+- Qual'e gli [orari](object_type:orario) del [Troncale](cognome) ? 
+- Qual'e gli [orario](object_type) di [Pietrandrea](cognome) ? 
+- Qual'e gli [orario](object_type) del [ZOPPI](cognome) ? 
+- dimmi l' [orari](object_type:orario) di [airaudi](cognome) ? 
+- dimmi l' [orari](object_type:orario) del [Mutti](cognome) ? 
+- dimmi l' [orario](object_type) di [Croveri](cognome) ? 
+- dimmi l' [orario](object_type) del [Beccaria](cognome) ? 
+- dimmi gli [orari](object_type:orario) di [gabetti](cognome) ? 
+- dimmi gli [orari](object_type:orario) del [marnetto](cognome) ? 
+- dimmi gli [orario](object_type) di [Pascal](cognome) ? 
+- dimmi gli [orario](object_type) di [MAO](cognome) ? 
+- dimmi gli [orario](object_type) del [DEPRATI](cognome) ? 
+- vorrei sapere l' [orari](object_type:orario) di [BRUNO](cognome) ? 
+- vorrei sapere l' [orari](object_type:orario) del [bergamino](cognome) ? 
+- vorrei sapere l' [orario](object_type) di [Borrelli](cognome) ? 
+- vorrei sapere l' [orario](object_type) del [beratto](cognome) ? 
+- vorrei sapere gli [orari](object_type:orario) di [Brugnatelli](cognome) ? 
+- vorrei sapere gli [orari](object_type:orario) di [BUA](cognome) ? 
+- vorrei sapere gli [orari](object_type:orario) del [ciancio](cognome) ? 
+- vorrei sapere gli [orario](object_type) di [Cavallari](cognome) ? 
+- vorrei sapere gli [orario](object_type) del [Bardone](cognome) ? 
+- cerco l' [orari](object_type:orario) di [Busca](cognome) ? 
+- cerco l' [orari](object_type:orario) del [Baccarini](cognome) ? 
+- cerco l' [orari](object_type:orario) del [favole](cognome) ? 
+- cerco l' [orario](object_type) di [Benincasa](cognome) ? 
+- cerco l' [orario](object_type) del [DOMENICI](cognome) ? 
+- cerco l' [orario](object_type) del [Mongiardini](cognome) ? 
+- cerco l' [orario](object_type) del [QUASSO](cognome) ? 
+- cerco gli [orari](object_type:orario) di [chiappero](cognome) ? 
+- cerco gli [orari](object_type:orario) del [Palermiti](cognome) ? 
+- cerco gli [orario](object_type) di [BERNASCONE](cognome) ? 
+- cerco gli [orario](object_type) di [Pistamiglio](cognome) ? 
+- cerco gli [orario](object_type) del [Surleti](cognome) ? 
+- Qual'e l' [orari](object_type:orario) di [valpreda](cognome) ? 
+- Qual'e l' [orari](object_type:orario) del [PERSICO](cognome) ? 
+- Qual'e l' [orario](object_type) di [sitzia](cognome) ? 
+- Qual'e l' [orario](object_type) del [Clara](cognome) ? 
+- Qual'e gli [orari](object_type:orario) di [GHIRARDO](cognome) ? 
+- Qual'e gli [orari](object_type:orario) del [Bellussi](cognome) ? 
+- Qual'e gli [orari](object_type:orario) del [Padulazzi](cognome) ? 
+- Qual'e gli [orario](object_type) di [rabbione](cognome) ? 
+- Qual'e gli [orario](object_type) del [scuzzarella](cognome) ? 
+- dimmi l' [orari](object_type:orario) di [Prevosti](cognome) ? 
+- dimmi l' [orari](object_type:orario) del [PEZZERA](cognome) ? 
+- dimmi l' [orario](object_type) di [Berger](cognome) ? 
+- dimmi l' [orario](object_type) del [Van cauwlaert](cognome) ? 
+- dimmi gli [orari](object_type:orario) di [ALBERTINO](cognome) ? 
+- dimmi gli [orari](object_type:orario) del [rolfo](cognome) ? 
+- dimmi gli [orario](object_type) di [Mercadante](cognome) ? 
+- dimmi gli [orario](object_type) del [SAVINO](cognome) ? 
+- vorrei sapere l' [orari](object_type:orario) di [OBERTA PAGET](cognome) ? 
+- vorrei sapere l' [orari](object_type:orario) del [pullara](cognome) ? 
+- vorrei sapere l' [orario](object_type) di [borgarello](cognome) ? 
+- vorrei sapere l' [orario](object_type) del [Pezzulo](cognome) ? 
+- vorrei sapere gli [orari](object_type:orario) di [Zicari](cognome) ? 
+- vorrei sapere gli [orari](object_type:orario) del [BISCALDI](cognome) ? 
+- vorrei sapere gli [orario](object_type) di [ZORZI](cognome) ? 
+- vorrei sapere gli [orario](object_type) del [Buccheri](cognome) ? 
+- cerco l' [orari](object_type:orario) di [VERNA](cognome) ? 
+- cerco l' [orari](object_type:orario) del [GAMBINO](cognome) ? 
+- cerco l' [orari](object_type:orario) del [Camillo](cognome) ? 
+- cerco l' [orario](object_type) di [Gardino](cognome) ? 
+- cerco l' [orario](object_type) del [Catella](cognome) ? 
+- cerco gli [orari](object_type:orario) di [Nuzzi](cognome) ? 
+- cerco gli [orari](object_type:orario) del [mozzo](cognome) ? 
+- cerco gli [orari](object_type:orario) del [PARISI](cognome) ? 
+- cerco gli [orari](object_type:orario) del [zagaria](cognome) ? 
+- cerco gli [orario](object_type) di [eglione](cognome) ? 
+- cerco gli [orario](object_type) del [Marconi](cognome) ? 
+- cerco gli [orario](object_type) del [Casalone](cognome) ? 
+
+## intent:ringraziamento
+- grazie grazie
+- grazie mille
+- grazie
+
+## intent:saluto
+- Hi
+- Ciao
+- Buongiorno
+- Buonasera
+- hey
+- Salve
+- Buongiorno
 
 ## synonym:1
 - primo
@@ -81,39 +7250,36 @@
 
 ## synonym:attivita
 - attività
-- attivita
 
 ## synonym:cap
-- cap
 - CAP
 
 ## synonym:ambulatorio
 - ambulatori
 
-## synonym:comune
+## synonym:denom_comune
 - città
 - studio
 - comune
 
-## synonym:email
+## synonym:indirizzo_email
 - email
 - e-mail
 
 ## synonym:indirizzo
-- indirizzo
 - indirizzi
 - via
 
 ## synonym:LAST
 - ultimo
 
-## synonym:civico
+## synonym:numero_civico
 - numero civico
+- civico
 
 ## synonym:telefono
 - numero
 - numeri
-- telefono
 - cellulare
 
 ## synonym:medico

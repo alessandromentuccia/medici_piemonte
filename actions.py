@@ -24,6 +24,8 @@ logger = logging.getLogger("rasa_sdk."+__name__)
 
 # superclasse
 class ActionPersona(ActionQueryKnowledgeBase):
+    
+    
     def safe_cast(self, val, to_type, default=''):
       try:
         return to_type(val)
@@ -37,24 +39,71 @@ class ActionPersona(ActionQueryKnowledgeBase):
         # overwrite the representation function of the hotel object
         # by default the representation function is just the name of the object
         knowledge_base.set_representation_function_of_object(
-            "doctor", lambda obj: obj["nome"] + " " + obj["cognome"] + " ( " + obj["comune"]  + " ) "
+            "medico", lambda obj: obj["nome"] + " " + obj["cognome"] + " ( " + obj["denom_comune"]  + " ) "
         )
 
         knowledge_base.set_entity_mapping(
-            'doctor', lambda entity: 'Doctor' if (entity == 'doctor') else entity
+            'medico', lambda entity: 'Medici' if (entity == 'medico') else entity
         )
 
-        knowledge_base.set_key_attribute_of_object('doctor','cognome')
+        #knowledge_base.set_entity_mapping(
+        #   'ambulatorio', lambda entity: 'Ambulatori' if (entity == 'ambulatorio') else entity
+        #)
+
+        knowledge_base.set_key_attribute_of_object('medico','cognome')
         # definition of function to field and value for query
 
         knowledge_base.set_attribute_operator(
-            lambda entity,attribute: 'contains' if (entity == 'doctor' and attribute in ('indirizzo, distretto, comune')) else '='
+            lambda entity,attribute: 'contains' if (entity == 'medico' and attribute in ('indirizzo, desc_distretto, denom_comune')) else '='
         )
+        
+        self._entities = {'medico': {'table': 'Medici',
+                               'discriminante': 'cognome',
+                               'param1': 'nome',
+                               'param2': 'cognome',
+                               'param3': 'denom_comune'},
+                    'ambulatorio': {'table': 'Ambulatori',
+                               'discriminante': 'denom_comune',
+                               'param1': 'indirizzo',
+                               'param2': 'numero_civico',
+                               'param3': 'denom_comune'},
+                    'orario':  {'table': 'Orari',
+                               'discriminante': 'giorno',
+                               'param1': 'ora_inizio',
+                               'param2': 'ora_fine',
+                               'param3': 'giorno'}}
 
        # knowledge_base.attribute_syn =[ {"telefono", "cellulare", "breve"}, {"direzione", "area_ufficio", "posizione_organizzativa"}];
         super().__init__(knowledge_base)
 
+    def get_entities(self, ent: Text):
+        return self._entities[ent]
+
+    def set_entita(self, entity: Text) -> None:
+        if entity in self._entities:
+            self.entita = entity
     
+    def reset_entities_parameter(self, object_type: Text) -> None:
+        # overwrite the representation function of the hotel object
+        # by default the representation function is just the name of the object
+
+        entita = self.get_entities(object_type)
+        
+        self.knowledge_base.set_representation_function_of_object(
+            object_type, lambda obj: obj[entita["param1"]] + " " + obj[entita["param2"]]  + " ( " + obj[entita["param3"]]  + " ) "
+        )
+
+        self.knowledge_base.set_entity_mapping(
+            object_type, lambda entity: entita["table"] if (entity == object_type) else entity
+        )
+
+        self.knowledge_base.set_key_attribute_of_object(object_type, entita["discriminante"])
+        # definition of function to field and value for query
+
+        self.knowledge_base.set_attribute_operator(
+            lambda entity,attribute: 'contains' if (entity == object_type and attribute in (entita["param1"], entita["param2"], entita["param3"])) else '='
+        )
+
     def utter_attribute_value(
         self,
         dispatcher: CollectingDispatcher,
@@ -147,12 +196,6 @@ class ActionPersona(ActionQueryKnowledgeBase):
 ## chi lavora nell'area big data nell'ufficio T11?
 ## quali sono gli analista nell'ufficio t11?
 
-## TODO
-## aggiungere sinonimi sono->lavora->è nella sede
-## chi risponde al breve 9455? <- prende unità organizzativa invece che numeor
-## gestire la relazione chi è nello stesso ufficio/direzione/ di pippo?
-## gestire il caso: dammi tutti i dettagli di .....
-## mettere elenco direzioni come entities su graph
 class ActionPersonaList(ActionPersona):
        
    
@@ -184,10 +227,12 @@ class ActionPersonaList(ActionPersona):
         last_object_type = tracker.get_slot(SLOT_LAST_OBJECT_TYPE)
         attribute = tracker.get_slot(SLOT_ATTRIBUTE)
 
+        self.reset_entities_parameter(object_type)
+
         new_request = object_type != last_object_type
 
         if not object_type:
-            self.knowledge_base.default_object_type = 'doctor'
+            self.knowledge_base.default_object_type = 'medico'
 
         logger.info('query objects attr:'+str(attribute) +' new_req:'+str(new_request))
         return self._query_objects_my(dispatcher, tracker)
@@ -271,7 +316,10 @@ class ActionAttributoPersona(ActionPersona):
         new_request = object_type != last_object_type
 
         if not object_type:
-            self.knowledge_base.default_object_type = 'doctor'
+            
+            self.knowledge_base.default_object_type = 'medico' #modificare sta cagata
+        
+        self.reset_entities_parameter(object_type)
 
         logger.info('query attribute attr:'+str(attribute) +' new_req:'+str(new_request))
         return self._query_attribute(dispatcher, tracker)

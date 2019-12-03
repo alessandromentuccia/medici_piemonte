@@ -21,15 +21,16 @@
 			"Orari.ora_fine": "ora_fine",
 			"Orari.ora_inizio": "ora_inizio",
 			"Orari.giorno": "giorno"
-                 }
+        }
 	},
 	{
 		"search_name" : "query_knowledge_attribute_of",
 		"search_entity" : "Medici",
-  		"search_type" : "query_knowledge_attribute_of",
+  		"search_type" : "query_knowledge_attribute_of_medico",
   		"params" : { 
 			"Medici.nome" : "nome",
-			"Medici.cognome" : "cognome" 
+			"Medici.cognome" : "cognome",
+			"Ambulatori.denom_comune": "denom_comune"
                  }
 	}
 ]
