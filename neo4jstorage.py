@@ -7,7 +7,10 @@ from neo4j.v1 import GraphDatabase
 logger = logging.getLogger("rasa_sdk."+__name__)
 
 class Neo4jKnowledgeBase(KnowledgeBase):
-    def __init__(self,  url, username, password):
+    relation_name = []
+    table_name = []
+
+    def __init__(self,  url, username, password, init_object):
         self.url = url
         self.username = username
         self.password = password
@@ -16,7 +19,108 @@ class Neo4jKnowledgeBase(KnowledgeBase):
         self.attribute_value_function = lambda object_type, attribute, value: "TOUPPER('"+value+"')"
         self.attribute_operator_function = lambda object_type, attribute: "="
         self.attribute_syn = [ {}]
+        self.key_attribute = lambda object: str(object)
+        self.dict_attr = {} #dizionario contenente la mappatura degli attributi con i nomi sul db
+        self.initial_object = init_object
+        self.relation_object = self.relation_mapping_function(init_object) #mi creo le relazioni fin dal principio
         super(Neo4jKnowledgeBase, self).__init__()
+
+    def insert_relation_name(self, rel_name : Text) -> None:
+        self.relation_name.append(rel_name)
+
+    def get_relation_name(self) -> List[Text]:
+        return self.relation_name
+
+    def insert_table_name(self, tab_name : Text) -> None:
+        self.table_name.append(tab_name)
+
+    def get_table_name(self,) -> List[Text]:
+        return self.table_name
+
+    """funzione che crea la mappa delle relazioni a partire da quella definita da principio"""
+    def relation_mapping_function(self, init_object : Text) -> Text:
+        s_entity = []
+        s_relation = []
+        s_result = []
+        q_relation = ""
+        logger.debug("initial object: " + init_object)
+        query = "match (n:"+ init_object +")-[relation]-(medium) where relation is NOT null RETURN DISTINCT type(relation) As relation, labels(medium) As medium"
+        result = self.query_db(query)
+        try: #try se ci sono relazioni, se non ci sono fallisce e except
+            for s in result:
+                if s['relation'] != None and s['relation'] not in s_relation:
+                    s_result.append([str(s['relation']),str(s['medium'][0])])
+                    s_entity.append(s['medium'][0])
+                    s_relation.append(s['relation'])
+                    print(str(s['relation']))
+            s_result = s_result.pop(0) #elimino una lista con
+            
+            logger.debug('fase 2')
+            
+            popentity = s_entity.pop(0)       
+            relations = ""
+            while popentity != "":
+                if relations == "":
+                    relations = "relation"
+                logger.debug("popentity: " + str(popentity))
+                subquery = "MATCH (n:"+ self.entity_mapping_function(popentity) +")-[relation]-(last) where relation is NOT null RETURN DISTINCT type(relation) As relation , labels(last) As last"     
+                subresult = self.query_db(subquery)
+                logger.debug('subquery')
+                
+                subsub = [] #lista degli elementi che dovranno popolare sResult 
+                for sub in subresult:
+                    if sub['relation'] != None and sub['last'][0] != None:
+                        if sub['relation'] not in s_relation:
+                            logger.debug('inizio del for: %s', str(sub['relation']) + ' -> ' + str(sub['last'][0]))
+                            subsub.append(s_result) #mi creo una riga in subsub 
+                            logger.debug('subsub: %s', subsub)
+                            s_relation.append(sub['relation'])
+                            s_entity.append(sub['last'][0])
+                            for rr in subsub:   #per ogni vecchia relazione, viene ampliata la sua relazione se ne è provvista
+                                logger.debug('rr: %s', rr)
+                                if rr[1] == popentity:
+                                    logger.debug('rr[1]: ' + str(rr[1])) 
+                                    rr.append(sub['relation'])  
+                                    rr.append(sub['last'][0])        
+                                    logger.debug('rel: ' + str(sub['relation']) + ', ent: ' + str(sub['last'][0]))
+                            logger.debug('subsub modificato: %s', subsub)
+                        else:
+                            logger.debug("la relazione e' gia stata inserita")
+                    else:
+                        logger.debug('La relazione o la tabella non sono state trovate')
+                
+                if s_entity != []: #se ci sono ancora tabelle nella lista delle tabelle da esplorare
+                    logger.debug('s_entity: %s', s_entity) 
+                    popentity = s_entity.pop(0) #estrarre nome entity e poi di seguito ricomincio ciclo while
+                    s_result = subsub #reinserisco il risultato aggiornato in s_result 
+                else: 
+                    logger.debug('sono finite le tabelle in relazione')
+                    popentity = ""
+            logger.debug('risultato query relazioni: %s', s_result)
+
+            #ciclo di costruzione della query
+            #q_relation += "("+ self.initial_object +")"
+            for s_res in s_result:
+                if s_res != None:
+                    rel = []
+                    tab = []
+                    for sr in range(len(s_res)):
+                        if sr%2 == 0:
+                            rel.append(s_res[sr])
+                            #self.insert_relation_name(s_res[sr])
+                            logger.debug("1: "+str(sr) + ", " + s_res[sr])
+                            q_relation += "-["+s_res[sr]+"]"
+                        elif sr%2 == 1:
+                            tab.append(s_res[sr])
+                            #self.insert_table_name(s_res[sr])
+                            logger.debug("2: "+str(sr) + ", " + s_res[sr])
+                            q_relation += "-("+s_res[sr]+")"
+                logger.debug("q_relation: " + q_relation)
+            self.relation_name = rel
+            self.table_name = tab
+        except:
+            logger.debug("nessuna relazione trovata")
+        return q_relation
 
     def set_entity_mapping(
         self, object_type: Text, entity_mapping_function: Callable
@@ -62,25 +166,44 @@ class Neo4jKnowledgeBase(KnowledgeBase):
         """
         self.key_attribute[object_type] = key_attribute
 
+    """funzione che crea un dictionary per il mapping tra attributi ed entity"""
+    def set_entity_attribute_mapping(self, object_type: Text,  attributi: List[Dict[Text,Text]]): 
+        logger.debug("inizio estrazione tabella dal db per attributi: %s", object_type)
+        if attributi:
+            for attributo in attributi: #per ogni attributo a cui associare la tabella
+                logger.debug("mappato attributo1: %s", attributo['name'])
+                self.dict_attr[attributo['name']] = self.get_object_type_by_attribute(attributo['name']) +"."+ attributo['name'] 
+                logger.debug("mappato attributo1: %s", self.dict_attr[attributo['name']])
+
+    def set_entity_ob_id_mapping(self, object_type: Text,  attributi: Text): 
+        logger.debug("inizio estrazione tabella dal db per attributi: %s", object_type)
+        if attributi:
+            for attributo in attributi: #per ogni attributo a cui associare la tabella
+                logger.debug("mappato attributo2: %s", attributo)
+                self.dict_attr[attributo] = self.get_object_type_by_attribute(attributo) +"."+ attributo
+                logger.debug("mappato attributo2: %s", self.dict_attr[attributo])
+
+    """funzione che restituisce il nome della tabella dell'attributo"""
+    def get_object_type_by_attribute(self, attribute) -> Text:
+        query = "MATCH (n) WHERE EXISTS(n."+ attribute +") RETURN DISTINCT LABELS(n) AS Entity"
+        oggetto = ""
+        result = self.query_db(query)   
+        for res in result:
+            if res['Entity'][0] != None and (res['Entity'][0] in self.relation_object or res['Entity'][0] in self.initial_object):
+                oggetto = res['Entity'][0]
+        return oggetto
+
+
     """Mi restituisce una lista con i nomi degli attributi di un entity"""
     """da generalizzare, in questo caso la query non è generalizzata"""
     def get_attributes_of_object(self, object_type: Text) -> List[Text]:
 
-        #query = "MATCH(n:"+self.entity_mapping_function(object_type) +")"+ """
-        #            WITH LABELS(n) AS labels , KEYS(n) AS keys
-        #            UNWIND labels AS label
-        #            UNWIND keys AS key
-        #            RETURN DISTINCT label, COLLECT(DISTINCT key) AS props
-        #            ORDER BY label"""
-
-        #"+self.entity_mapping_function(object_type) +"
-        query = "MATCH(n:Medici)-[rel1]-(m)-[rel2]-(o)"+ """ 
-                    WITH LABELS(n) AS labels , KEYS(n)+KEYS(m)+KEYS(o) AS keys
-                    UNWIND labels AS label
-                    UNWIND keys AS key
-                    RETURN DISTINCT label, COLLECT(DISTINCT key) AS props
-                    ORDER BY label"""
-
+        query = "MATCH ("+ self.initial_object +":"+ self.initial_object +")"+ self.relation_object +" WITH LABELS("+ self.initial_object +") AS labels , KEYS("+ self.initial_object +")"
+        _tab = self.get_table_name()
+        for rel in _tab:
+            query = query + "+KEYS(" + rel + ")"
+        query += " AS keys UNWIND labels AS label UNWIND keys AS key RETURN DISTINCT label, COLLECT(DISTINCT key) AS props ORDER BY label"
+        
         result = self.query_db(query)
         
         result_count = 0
@@ -89,163 +212,31 @@ class Neo4jKnowledgeBase(KnowledgeBase):
             result_count += 1
             attribute = ris["props"]
 
-        logger.info('Result Attribute of '+object_type+' '+str(attribute))
+        logger.info('Result Attribute of '+ str(self.entity_mapping_function(object_type)) +': '+str(attribute))
         return attribute
-
-    """restituisce la rete di relazioni di un entity"""
-    def get_association_of_object(self, object_type: Text) -> List[List[Text]]: #"+self.entity_mapping_function(object_type)+"
-         #"MATCH(n:Medici)-[rel1]-(m)-[rel2]-(o)"+ """
-                #    WITH LABELS(m)+LABELS(o) AS labels
-                #    UNWIND labels AS label
-                #    RETURN DISTINCT label"""
-
-        query = "MATCH (n:"+self.entity_mapping_function(object_type)+")-[first_rel]-(medium)" + """
-                 OPTIONAL MATCH (medium)-[second_rel]-(last) WHERE NOT medium = last AND NOT type(first_rel) = type(second_rel)
-                 RETURN DISTINCT type(first_rel) As first_rel, labels(medium) As medium, type(second_rel) As second_rel, labels(last) As last"""
-
-        result = self.query_db(query)
-
-        relation0 = []
-        table0 = [] #lista delle tabelle trovate
-        for res in result:
-            print(res)
-            if res['first_rel'] != None: 
-                logger.debug('prima verifica')
-                if res['second_rel'] != None and res['first_rel'] not in relation0: #elimino il caso per cui esistono relazioni parziali
-                    logger.debug('seconda verifica')
-                    relation0.append([res['first_rel'], res['second_rel']]) 
-                    logger.debug('relazioni listate')         #sul db ci stanno 2 relazioni per l'entity dichiarata
-                    r1 = str(res['medium'][0])
-                    r3 = str(res['last'][0])
-                    table0.append([r1, r3]) #accorgimento...sul db sono in una lista singola
-                    logger.debug('table listate')
-                    logger.debug(" sul db ci sono 2 relazioni in cascata per l'entity dichiarata: " + r1 + " ed " + r3)
-                elif not any(res['first_rel'] in x for x in relation0):
-                    logger.debug('else condition')
-                    relation0.append(res['first_rel'])
-                    r1= str(res['medium'][0])
-                    table0.append(r1)
-                    logger.debug(" sul db c'è 1 relazione per l'entity dichiarata: " + res['first_rel'] +", "+ r1)
-                else:
-                    logger.debug("non si hanno nuove relazioni")                
-            else:
-                logger.error('non ha trovato relazioni')
-
-        #associated_object = []
-        #for ris in result:
-        #    associated_object.append(ris['label'])
-
-        logger.info("Result Associated object of "+object_type+": %s", str(table0))
-        return table0
-
-    """restituisce, per ogni attributo, il nome dell'attributo in join col nome della tabelle, inoltre anche i valori associati"""
-    """da generalizzare"""
-    def get_entity_attribute(
-        self, object_type: Text, attributes: List[Dict[Text, Text]], assobject: List[Text]
-        ) -> List[Dict[Text, Text]]:
-        
-        logger.debug("inizio estrazione tabella dal db per attributi: %s", attributes)
-        entity = []
-        query = ""
-        plus_query = ""
-        query_initial = "OPTIONAL MATCH ("+self.entity_mapping_function(object_type) +":"+self.entity_mapping_function(object_type) +")"
-        if attributes:
-            for attribute in attributes: #per ogni attributo a cui associare la tabella
-                logger.debug("ciclo per l'attributo: " + attribute["name"])
-                if assobject:
-                    for ass in range(len(assobject)): #per ogni tabella in relazione con l'entity
-                        if type(assobject[ass]) is list:
-                            for asset in assobject[ass]:
-                                plus_query = plus_query + "-[]-("+ asset +")"
-                                logger.debug("1) sviluppo query per asset :" + asset)
-                        else:    
-                            plus_query = plus_query + "-[]-("+ assobject[ass] +")"
-                            logger.debug("2) sviluppo query per asset :" + assobject[ass])
-                        
-                        query += query_initial + plus_query
-                        logger.debug("query parziale per l'attributo " + attribute['name'] +": " + query)
-                        
-                        list_dict = {}
-                        logger.info("ATTRIBUTE: "+attribute["name"])  
-                        query += " RETURN DISTINCT CASE when "+ self.entity_mapping_function(object_type) +"."+ attribute["name"] +" is not NULL then  LABELS("+ self.entity_mapping_function(object_type) +") " 
-                        if "Ambulatori" in query:
-                            query += "when Ambulatori."+ attribute["name"] +" is not NULL then  LABELS(Ambulatori) " 
-                        if "Orari" in query:
-                            query += "when Orari."+ attribute["name"] +" is not NULL then  LABELS(Orari)" 
-                        query += " END As result"
-                        result = self.query_db(query)    
-                        for res in result:
-                            list_dict['name'] = (res['result'][0])+"."+attribute['name']
-                            list_dict['value'] = attribute['value']
-                            entity.append(list_dict)
-                        logger.debug("info attributi: " + entity[0]['name'])
-                        
-                        query = ""
-                        
-        return entity
 
     def get_objects(
         self, object_type: Text, attributes: List[Dict[Text, Text]],object_identifier: Text, limit: int = 5
     ) -> List[Dict[Text, Any]]:
         
-        plus_query = ""
-        plus = []
-        ass_object = self.get_association_of_object(object_type)
-        if ass_object:
-            for j in range(len(ass_object)): 
-                    if type(ass_object[j]) is list:
-                        ass_object00 = ass_object[j]
-                        for i in range(len(ass_object00)):
-                            plus_query =  plus_query + "-[]-("+ass_object00[i]+")"
-                        plus.append(plus_query)
-                    else:
-                        plus_query =  "-[]-("+ass_object[j]+")" 
-                        plus.append(plus_query)
+        #fase di associazione delle relazioni alla query
+        self.set_entity_attribute_mapping(object_type, attributes)
+        logger.debug("dict_attr: %s", self.dict_attr)
 
-        logger.info("query objects:"+str(attributes))
+        logger.debug("object_type: %s ", object_type)
+        #preparazione della fase match della query
+        query = "MATCH p = ("+ self.initial_object +")" + self.relation_object 
 
-        attr_plus_entity= self.get_entity_attribute(object_type, attributes, ass_object)
-        
-
-        logger.debug("ENTITY: %s", attr_plus_entity)
-        table = ""
-        plus_query_moment = ""
-        plus_flag = False
-        for line in plus:
-            for raw in attr_plus_entity:
-                if "." in raw['name']:
-                    element = raw['name'].split(".")
-                    table = element[0] 
-                    if table in line:
-                        plus_query_moment = line
-                        plus_flag = True
-                    else:
-                        plus_flag = False
-            if plus_flag == True:
-                plus_query = plus_query_moment
-
-                    
-        logger.debug("ENTITY: " + table)
-
-
-        query = "MATCH p = ("+self.entity_mapping_function(object_type) +":"+ self.entity_mapping_function(object_type) +")"+ plus_query
-
-        ## todo portare fuori questa definizione
-
+        #definire il where in caso ci fosse una condizione esplicitata
         if object_identifier or attributes:
-            query += ' WHERE '
+            logger.debug("attributes: %s ", attributes)
+            query += ' WHERE EXISTS('+ self.entity_mapping_function(object_type) +'.'+ self.get_key_attribute_of_object(object_type) +') AND '
             wherecond = []
+            logger.debug("query parziale 1: " + query)
         else:
             return None
-
-        if object_identifier:
-            logger.debug("object_identifier definito: " + object_identifier)
-            logger.debug("key_attribute_of_object definito: " + self.get_key_attribute_of_object(object_type)) 
-            wherecond.append(
-                " TOUPPER("+ self.entity_mapping_function(object_type) +"." + self.get_key_attribute_of_object(object_type) +
-                ") = TOUPPER('" + object_identifier +"') ")
-
-        # filter objects by attributes
+        
+        # fase di filtraggio degli oggetti in base agli attributi, preparazione query
         if attributes:
             for attribute in attributes:
                 synfound = False
@@ -255,27 +246,38 @@ class Neo4jKnowledgeBase(KnowledgeBase):
                         synwherecond = []
                         for syn in attribute_syn_list:
                             synwherecond.append(self.attribute_field_function(object_type,syn)+ 
-                            "("+table+"."+syn+") "+ self.attribute_operator_function(object_type,syn) +" "+
+                            "("+self.entity_mapping_function(object_type)+"."+syn+") "+ self.attribute_operator_function(object_type,syn) +" "+
                             self.attribute_value_function(object_type,syn,attribute["value"].replace("'","\\'"))
                             +" " )
                         wherecond.append("("+  " OR ".join(synwherecond) +")")
                         logger.info("ATTRIBUTE1: %s", wherecond)
                 if not synfound:
-                    wherecond.append(self.attribute_field_function(object_type,attribute["name"])+ 
-                    "("+table+"."+attribute["name"]+") "+ self.attribute_operator_function(object_type,attribute["name"]) +" "+
+                    logger.debug("list_dict: " + self.dict_attr[attribute["name"]])
+                    wherecond.append(self.attribute_field_function(object_type,attribute)+ 
+                    "("+self.dict_attr[attribute["name"]]+") "+ self.attribute_operator_function(object_type,attribute["name"]) +" "+
                     self.attribute_value_function(object_type,attribute["name"],attribute["value"].replace("'","\\'"))
                     +" " )
                     logger.info("ATTRIBUTE2: %s", wherecond)
+        else: #caso in cui si ha delle mention
+            if object_identifier:
+                self.set_entity_ob_id_mapping(self, object_identifier)
+                logger.debug("object_identifier definito: " + object_identifier)
+                logger.debug("key_attribute_of_object definito: " + self.get_key_attribute_of_object(object_type)) 
+                wherecond.append(
+                    "TOUPPER("+ self.entity_mapping_function(object_type) +"."+ self.get_key_attribute_of_object(object_type) +
+                    ") = TOUPPER('" + object_identifier +"') ")
+                logger.debug("query parziale 1,1: " + query) 
+
         
         query += " AND ".join(wherecond)
-
+        logger.debug("query parziale 2: " + query)
 
         query += ' RETURN nodes(p) As Result LIMIT 25'
 
+        #esecuzione della query
         result = self.query_db(query)
 
         objects = []
-
 
         for record in result:
             entity =  {}
@@ -283,6 +285,7 @@ class Neo4jKnowledgeBase(KnowledgeBase):
                 for k, v in rec.items():
                     entity[k] = str(v)
             objects.append(entity)
+
 
         print(objects)
 

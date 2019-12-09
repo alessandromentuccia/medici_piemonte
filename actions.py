@@ -25,7 +25,6 @@ logger = logging.getLogger("rasa_sdk."+__name__)
 # superclasse
 class ActionPersona(ActionQueryKnowledgeBase):
     
-    
     def safe_cast(self, val, to_type, default=''):
       try:
         return to_type(val)
@@ -33,8 +32,13 @@ class ActionPersona(ActionQueryKnowledgeBase):
         return default
 
     def __init__(self):
+
         # load knowledge base with data from the given file
-        knowledge_base = Neo4jKnowledgeBase("bolt://sdnet-convplat1.sdp.csi.it:7687", "neo4j", "test")  #sdnet-convplat1.sdp.csi.it:7687  #localhost:7687
+        knowledge_base = Neo4jKnowledgeBase("bolt://sdnet-convplat1.sdp.csi.it:7687", "neo4j", "test", "Medici")  #sdnet-convplat1.sdp.csi.it:7687  #localhost:7687
+
+        knowledge_base.set_entity_mapping(
+            'medico', lambda entity: 'Medici' if (entity == 'medico') else entity
+        )
 
         # overwrite the representation function of the hotel object
         # by default the representation function is just the name of the object
@@ -42,19 +46,11 @@ class ActionPersona(ActionQueryKnowledgeBase):
             "medico", lambda obj: obj["nome"] + " " + obj["cognome"] + " ( " + obj["denom_comune"]  + " ) "
         )
 
-        knowledge_base.set_entity_mapping(
-            'medico', lambda entity: 'Medici' if (entity == 'medico') else entity
-        )
-
-        #knowledge_base.set_entity_mapping(
-        #   'ambulatorio', lambda entity: 'Ambulatori' if (entity == 'ambulatorio') else entity
-        #)
-
         knowledge_base.set_key_attribute_of_object('medico','cognome')
         # definition of function to field and value for query
 
         knowledge_base.set_attribute_operator(
-            lambda entity,attribute: 'contains' if (entity == 'medico' and attribute in ('indirizzo, desc_distretto, denom_comune')) else '='
+            lambda entity,attribute: 'contains' if (entity == 'medico' and attribute in ('indirizzo', 'desc_distretto', 'denom_comune')) else '='
         )
         
         self._entities = {'medico': {'table': 'Medici',
@@ -73,20 +69,19 @@ class ActionPersona(ActionQueryKnowledgeBase):
                                'param2': 'ora_fine',
                                'param3': 'giorno'}}
 
+        
+        
        # knowledge_base.attribute_syn =[ {"telefono", "cellulare", "breve"}, {"direzione", "area_ufficio", "posizione_organizzativa"}];
         super().__init__(knowledge_base)
 
     def get_entities(self, ent: Text):
         return self._entities[ent]
-
-    def set_entita(self, entity: Text) -> None:
-        if entity in self._entities:
-            self.entita = entity
     
     def reset_entities_parameter(self, object_type: Text) -> None:
         # overwrite the representation function of the hotel object
         # by default the representation function is just the name of the object
-
+        
+        logger.debug("entità definita dopo reset: " + object_type)
         entita = self.get_entities(object_type)
         
         self.knowledge_base.set_representation_function_of_object(
@@ -98,11 +93,17 @@ class ActionPersona(ActionQueryKnowledgeBase):
         )
 
         self.knowledge_base.set_key_attribute_of_object(object_type, entita["discriminante"])
-        # definition of function to field and value for query
+        logger.debug("key attribute settata: " + entita["discriminante"])
 
+        # definition of function to field and value for query
         self.knowledge_base.set_attribute_operator(
             lambda entity,attribute: 'contains' if (entity == object_type and attribute in (entita["param1"], entita["param2"], entita["param3"])) else '='
         )
+        
+        #self.knowledge_base.set_attribute_value(
+        #    lambda entity,attribute, value: value if (entity == entita["table"] and attribute in (entita["param1"], entita["param2"], entita["param3"])) else "TOUPPER('"+value+"')"
+        #)
+
 
     def utter_attribute_value(
         self,
@@ -179,9 +180,12 @@ class ActionPersona(ActionQueryKnowledgeBase):
             repr_function = self.knowledge_base.get_representation_function_of_object(
                 object_type
             )
-
+            list_ob = []
             for i, obj in enumerate(objects, 1):
-                dispatcher.utter_message("{}: {}".format(i, repr_function(obj)))
+                if repr_function(obj) not in list_ob:
+                    dispatcher.utter_message("{}: {}".format(i, repr_function(obj)))
+                    logger.debug("stampo obj: " + str(repr_function(obj)))
+                    list_ob.append(repr_function(obj))
         else:
             dispatcher.utter_message(
                 "Mi spiace, non ho trovato nessun risultato."
@@ -227,12 +231,13 @@ class ActionPersonaList(ActionPersona):
         last_object_type = tracker.get_slot(SLOT_LAST_OBJECT_TYPE)
         attribute = tracker.get_slot(SLOT_ATTRIBUTE)
 
-        self.reset_entities_parameter(object_type)
-
         new_request = object_type != last_object_type
 
         if not object_type:
             self.knowledge_base.default_object_type = 'medico'
+
+        if new_request:
+            self.reset_entities_parameter(object_type)
 
         logger.info('query objects attr:'+str(attribute) +' new_req:'+str(new_request))
         return self._query_objects_my(dispatcher, tracker)
@@ -253,6 +258,7 @@ class ActionPersonaList(ActionPersona):
         Returns: list of slots
         """
         object_type = tracker.get_slot(SLOT_OBJECT_TYPE)
+
         object_attributes = self.knowledge_base.get_attributes_of_object(object_type)
 
         # get all set attribute slots of the object type to be able to filter the
@@ -260,7 +266,7 @@ class ActionPersonaList(ActionPersona):
         attributes = get_attribute_slots(tracker, object_attributes)
         # query the knowledge base
         objects = self.knowledge_base.get_objects(object_type, attributes,object_identifier=None)
-
+        
         self.utter_objects(dispatcher, object_type, objects, attributes)
 
         if not objects:
@@ -316,8 +322,18 @@ class ActionAttributoPersona(ActionPersona):
         new_request = object_type != last_object_type
 
         if not object_type:
-            
-            self.knowledge_base.default_object_type = 'medico' #modificare sta cagata
+            ob_type = self.knowledge_base.get_object_type_by_attribute(attribute)
+            logger.debug(ob_type)
+            for key, value in self._entities.items():
+                logger.debug(key)
+                logger.debug(value)
+                for k, v in value.items():
+                    if v == ob_type:
+                        logger.debug(key)
+                        object_type = key
+        logger.debug("object_type before deifnito in _query_attribute" + object_type)
+            #self.knowledge_base.default_object_type = 'medico' #modificare sta cagata
+        
         
         self.reset_entities_parameter(object_type)
 
@@ -355,13 +371,13 @@ class ActionAttributoPersona(ActionPersona):
 
         object_name = tracker.get_slot("cognome")
         if object_name:
-            logger.info("using cognome"+object_name)
+            logger.info("using cognome "+object_name)
             return object_name
 
         # check whether the user referred to the objet by its name
         object_name = tracker.get_slot(object_type)
         if object_name:
-            logger.info("using object type"+object_name)
+            logger.info("using object type "+object_name)
             return object_name
 
 
@@ -389,6 +405,18 @@ class ActionAttributoPersona(ActionPersona):
         """
         object_type = tracker.get_slot(SLOT_OBJECT_TYPE)
         attribute = tracker.get_slot(SLOT_ATTRIBUTE)
+        if not object_type:
+            #MATCH (n) WHERE EXISTS(n.telefono_primario) RETURN DISTINCT  LABELS(n) AS Entity
+            object_type = self.knowledge_base.get_object_type_by_attribute(attribute)
+            logger.debug(object_type)
+            for key, value in self._entities.items():
+                logger.debug(key)
+                logger.debug(value)
+                for k, v in value.items():
+                    if v == object_type:
+                        logger.debug(key)
+                        object_type = key
+            logger.debug("object_type preso con forza:" + str(object_type))
 
         object_name = self._get_object_name(
             tracker,
@@ -397,15 +425,14 @@ class ActionAttributoPersona(ActionPersona):
         )
 
 
-
         logger.info("_query_attribute [object_type]:"+str(object_type) + " [attribute]:"+str(attribute)+" [object_name]:"+str(object_name))
+
+        object_attributes = self.knowledge_base.get_attributes_of_object(object_type)
 
         if not object_name or not attribute:
             logger.info("object_name or attribute not available")
             dispatcher.utter_template("utter_ask_rephrase", tracker)
-            return [SlotSet(SLOT_MENTION, None)]
-
-        object_attributes = self.knowledge_base.get_attributes_of_object(object_type)
+            return [SlotSet(SLOT_MENTION, None)] + reset_attribute_slots(tracker, object_attributes)
 
         # get all set attribute slots of the object type to be able to filter the
         # list of objects
@@ -413,8 +440,10 @@ class ActionAttributoPersona(ActionPersona):
         # query the knowledge base
 
         objects = self.knowledge_base.get_objects(object_type,attributes,object_name)
-        key_attribute = self.knowledge_base.get_key_attribute_of_object(object_type)
-
+        logger.debug("object_type before get_key_attribute" + object_type)
+        self.key_attribute = self.knowledge_base.get_key_attribute_of_object(object_type)
+        logger.debug("key_attribute after get_key_attribute" + self.key_attribute)
+        
         if not objects or attribute not in objects[0]:
             logger.info("object not found or attribute not in objects[0]")
             dispatcher.utter_template("utter_ask_rephrase", tracker)
@@ -422,17 +451,20 @@ class ActionAttributoPersona(ActionPersona):
 
         if len(objects) >1 :
             dispatcher.utter_message("Ho trovato più di un risultato:")
-            
+        
+        list_value = []
         for object_of_interest in objects:
             value = object_of_interest[attribute]
-            repr_function = self.knowledge_base.get_representation_function_of_object(
-                object_type
-            )
-            object_representation = repr_function(object_of_interest)
-            key_attribute = self.knowledge_base.get_key_attribute_of_object(object_type)
-            object_identifier = object_of_interest[key_attribute]
-
-            self.utter_attribute_value(dispatcher, object_representation, attribute, value)
+            if value not in list_value:
+                repr_function = self.knowledge_base.get_representation_function_of_object(
+                    object_type
+                )
+                object_representation = repr_function(object_of_interest)
+                #key_attribute = "cognome"#self.knowledge_base.get_key_attribute_of_object(object_type)
+                object_identifier = object_of_interest[self.key_attribute]
+                
+                self.utter_attribute_value(dispatcher, object_representation, attribute, value)
+                list_value.append(value)
 
         slots = [
             SlotSet(SLOT_OBJECT_TYPE, object_type),
