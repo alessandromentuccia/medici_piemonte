@@ -107,12 +107,10 @@ class Neo4jKnowledgeBase(KnowledgeBase):
                     for sr in range(len(s_res)):
                         if sr%2 == 0:
                             rel.append(s_res[sr])
-                            #self.insert_relation_name(s_res[sr])
                             logger.debug("1: "+str(sr) + ", " + s_res[sr])
                             q_relation += "-["+s_res[sr]+"]"
                         elif sr%2 == 1:
                             tab.append(s_res[sr])
-                            #self.insert_table_name(s_res[sr])
                             logger.debug("2: "+str(sr) + ", " + s_res[sr])
                             q_relation += "-("+s_res[sr]+")"
                 logger.debug("q_relation: " + q_relation)
@@ -175,24 +173,24 @@ class Neo4jKnowledgeBase(KnowledgeBase):
                 self.dict_attr[attributo['name']] = self.get_object_type_by_attribute(attributo['name']) +"."+ attributo['name'] 
                 logger.debug("mappato attributo1: %s", self.dict_attr[attributo['name']])
 
-    def set_entity_ob_id_mapping(self, object_type: Text,  attributi: Text): 
-        logger.debug("inizio estrazione tabella dal db per attributi: %s", object_type)
-        if attributi:
-            for attributo in attributi: #per ogni attributo a cui associare la tabella
-                logger.debug("mappato attributo2: %s", attributo)
-                self.dict_attr[attributo] = self.get_object_type_by_attribute(attributo) +"."+ attributo
-                logger.debug("mappato attributo2: %s", self.dict_attr[attributo])
+    def set_entity_ob_id_mapping(self, attributo: Text): 
+        logger.debug("inizio estrazione tabella dal db per attributi")
+        if attributo:
+            #for attributo in attributi: #per ogni attributo a cui associare la tabella
+            logger.debug("mappato attributo2: %s", attributo)
+            self.dict_attr[attributo] = self.get_object_type_by_attribute(attributo) +"."+ attributo
+            logger.debug("mappato attributo2: %s", self.dict_attr[attributo])
 
     """funzione che restituisce il nome della tabella dell'attributo"""
     def get_object_type_by_attribute(self, attribute) -> Text:
         query = "MATCH (n) WHERE EXISTS(n."+ attribute +") RETURN DISTINCT LABELS(n) AS Entity"
         oggetto = ""
-        result = self.query_db(query)   
-        for res in result:
-            if res['Entity'][0] != None and (res['Entity'][0] in self.relation_object or res['Entity'][0] in self.initial_object):
-                oggetto = res['Entity'][0]
+        result = self.query_db(query) 
+        if result:  
+            for res in result:
+                if res['Entity'][0] != None and (res['Entity'][0] in self.relation_object or res['Entity'][0] in self.initial_object):
+                    oggetto = res['Entity'][0]
         return oggetto
-
 
     """Mi restituisce una lista con i nomi degli attributi di un entity"""
     """da generalizzare, in questo caso la query non è generalizzata"""
@@ -216,7 +214,7 @@ class Neo4jKnowledgeBase(KnowledgeBase):
         return attribute
 
     def get_objects(
-        self, object_type: Text, attributes: List[Dict[Text, Text]],object_identifier: Text, limit: int = 5
+        self, object_type: Text, attributes: List[Dict[Text, Text]],object_identifier: Text, last_object: Text, limit: int = 5
     ) -> List[Dict[Text, Any]]:
         
         #fase di associazione delle relazioni alla query
@@ -260,14 +258,18 @@ class Neo4jKnowledgeBase(KnowledgeBase):
                     logger.info("ATTRIBUTE2: %s", wherecond)
         else: #caso in cui si ha delle mention
             if object_identifier:
-                self.set_entity_ob_id_mapping(self, object_identifier)
+                self.set_entity_ob_id_mapping(last_object)
+                if last_object:
+                    tabella = self.dict_attr[last_object]
+                    logger.debug("tabella definito: " + tabella) 
+                else:
+                    tabella = self.entity_mapping_function(object_type) +"."+ self.get_key_attribute_of_object(object_type)
                 logger.debug("object_identifier definito: " + object_identifier)
                 logger.debug("key_attribute_of_object definito: " + self.get_key_attribute_of_object(object_type)) 
                 wherecond.append(
-                    "TOUPPER("+ self.entity_mapping_function(object_type) +"."+ self.get_key_attribute_of_object(object_type) +
+                    "TOUPPER("+ tabella +
                     ") = TOUPPER('" + object_identifier +"') ")
                 logger.debug("query parziale 1,1: " + query) 
-
         
         query += " AND ".join(wherecond)
         logger.debug("query parziale 2: " + query)
@@ -285,7 +287,6 @@ class Neo4jKnowledgeBase(KnowledgeBase):
                 for k, v in rec.items():
                     entity[k] = str(v)
             objects.append(entity)
-
 
         print(objects)
 

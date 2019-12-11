@@ -67,7 +67,8 @@ class ActionPersona(ActionQueryKnowledgeBase):
                                'discriminante': 'giorno',
                                'param1': 'ora_inizio',
                                'param2': 'ora_fine',
-                               'param3': 'giorno'}}
+                               'param3': 'giorno',
+                               'param4' :'indirizzo'}}
 
         
         
@@ -148,7 +149,7 @@ class ActionPersona(ActionQueryKnowledgeBase):
             object_type: the object type
             objects: the list of objects
         """
-        if not attributes or len(attributes)==0:
+        if (not attributes or len(attributes)==0) and not objects:
             dispatcher.utter_message(
                 "Non ho capito a chi fossi interessato, prova a spiegarmi diversamente cosa cerchi."
             )
@@ -180,12 +181,8 @@ class ActionPersona(ActionQueryKnowledgeBase):
             repr_function = self.knowledge_base.get_representation_function_of_object(
                 object_type
             )
-            list_ob = []
             for i, obj in enumerate(objects, 1):
-                if repr_function(obj) not in list_ob:
-                    dispatcher.utter_message("{}: {}".format(i, repr_function(obj)))
-                    logger.debug("stampo obj: " + str(repr_function(obj)))
-                    list_ob.append(repr_function(obj))
+                dispatcher.utter_message("{}: {}".format(i, repr_function(obj)))
         else:
             dispatcher.utter_message(
                 "Mi spiace, non ho trovato nessun risultato."
@@ -259,14 +256,46 @@ class ActionPersonaList(ActionPersona):
         """
         object_type = tracker.get_slot(SLOT_OBJECT_TYPE)
 
+        #listo tutti i nomi degli attributi di un object_type
         object_attributes = self.knowledge_base.get_attributes_of_object(object_type)
 
         # get all set attribute slots of the object type to be able to filter the
         # list of objects
         attributes = get_attribute_slots(tracker, object_attributes)
+        mention = tracker.get_slot(SLOT_MENTION)
+        last_object = tracker.get_slot(SLOT_LAST_OBJECT)
+        if not attributes and mention: 
+            #object_identifier = resolve_mention(tracker, self.knowledge_base.ordinal_mention_mapping)
+            listed_items = tracker.get_slot(SLOT_LISTED_OBJECTS)
+            last_object_type = tracker.get_slot(SLOT_LAST_OBJECT_TYPE)
+            current_object_type = tracker.get_slot(SLOT_OBJECT_TYPE)
+            ordinal_mention_mapping = self.knowledge_base.ordinal_mention_mapping
+            if listed_items and mention in ordinal_mention_mapping:
+                idx_function = ordinal_mention_mapping[mention]
+                object_identifier = idx_function(listed_items)
+                logger.debug("object_identifier: " + str(object_identifier))
+                if current_object_type != last_object_type:
+                    ent = self.get_entities(last_object_type)
+                    last_object = ent['discriminante']
+                    logger.debug("last_object: " + str(last_object))
+                else:
+                    last_object = None 
+        else:
+            object_identifier = None
+
         # query the knowledge base
-        objects = self.knowledge_base.get_objects(object_type, attributes,object_identifier=None)
+        ob = self.knowledge_base.get_objects(object_type, attributes,object_identifier, last_object)
+        repr_function = self.knowledge_base.get_representation_function_of_object(object_type)
         
+        list_ob = []
+        objects = []
+        if ob:
+            for obj in ob:
+                if repr_function(obj) not in list_ob:
+                    logger.debug("stampo obj: " + str(repr_function(obj)))
+                    list_ob.append(repr_function(obj))
+                    objects.append(obj)
+
         self.utter_objects(dispatcher, object_type, objects, attributes)
 
         if not objects:
@@ -321,7 +350,8 @@ class ActionAttributoPersona(ActionPersona):
 
         new_request = object_type != last_object_type
 
-        if not object_type:
+        #mi ricavo l'object type dall'attributo che viene richiesto
+        if not object_type or new_request: 
             ob_type = self.knowledge_base.get_object_type_by_attribute(attribute)
             logger.debug(ob_type)
             for key, value in self._entities.items():
@@ -331,9 +361,7 @@ class ActionAttributoPersona(ActionPersona):
                     if v == ob_type:
                         logger.debug(key)
                         object_type = key
-        logger.debug("object_type before deifnito in _query_attribute" + object_type)
-            #self.knowledge_base.default_object_type = 'medico' #modificare sta cagata
-        
+        logger.debug("object_type before definito in _query_attribute" + object_type)        
         
         self.reset_entities_parameter(object_type)
 
@@ -369,12 +397,12 @@ class ActionAttributoPersona(ActionPersona):
         if mention:
             return resolve_mention(tracker, ordinal_mention_mapping)
 
-        object_name = tracker.get_slot("cognome")
+        object_name = tracker.get_slot(self.knowledge_base.get_key_attribute_of_object(object_type))
         if object_name:
-            logger.info("using cognome "+object_name)
+            logger.info("using object_name "+object_name)
             return object_name
 
-        # check whether the user referred to the objet by its name
+        # check whether the user referred to the object by its name
         object_name = tracker.get_slot(object_type)
         if object_name:
             logger.info("using object type "+object_name)
@@ -439,7 +467,7 @@ class ActionAttributoPersona(ActionPersona):
         attributes = get_attribute_slots(tracker, object_attributes)
         # query the knowledge base
 
-        objects = self.knowledge_base.get_objects(object_type,attributes,object_name)
+        objects = self.knowledge_base.get_objects(object_type,attributes,object_name, None)
         logger.debug("object_type before get_key_attribute" + object_type)
         self.key_attribute = self.knowledge_base.get_key_attribute_of_object(object_type)
         logger.debug("key_attribute after get_key_attribute" + self.key_attribute)

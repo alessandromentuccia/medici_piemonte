@@ -1,90 +1,69 @@
 %YAML 1.1
 ---
 actions:
-- action_query_list
 - action_query_attribute
+- action_query_list
 - utter_ask_rephrase
 - utter_goodbye
 - utter_greet
 - utter_iamabot
-
-
 entities:
-- nome    #medico
-- cognome
-- codice_fiscale
-- desc_distretto
-- posti_disponibili
-- ambulatorio   #ambulatorio
-- denom_comune
-- indirizzo
-- numero_civico
-- cap 
-- descrizione
-- note
-- telefono
-- telefono_secondario
-- indirizzo_email
-- ora_inizio    #orario
-- ora_fine
-- giorno
+- ambulatorio
 - appunto_ricevimento
-- medico #entità medico
 - attribute
+- cap
+- codice_fiscale
+- cognome
+- denom_comune
+- desc_distretto
+- descrizione
+- giorno
+- indirizzo
+- indirizzo_email
+- medico
 - mention
+- nome
+- note
+- numero_civico
 - object_type
-
-
+- orario
+- ora_fine
+- ora_inizio
+- posti_disponibili
+- telefono_primario
+- telefono_secondario
 intents:
-- query_knowledge_list
 - query_knowledge_attribute_of
+- query_knowledge_list
 - greet
 - goodbye
 - bot_challenge
-
-
 slots:
-  cap:
-    type: unfeaturized
-  cognome:
-    type: unfeaturized
-  codice_fiscale:
-    type: unfeaturized
-  posti_disponibili:
-    type: unfeaturized
-  descrizione:
-    type: unfeaturized
-  note:
+  orario:
     type: unfeaturized
   ambulatorio:
-    type: unfeaturized
-  desc_distretto:
-    type: unfeaturized
-  denom_comune:
-    type: unfeaturized
-  indirizzo_email:
-    type: unfeaturized
-  indirizzo:
-    type: unfeaturized
-  nome:
-    type: unfeaturized
-  numero_civico:
-    type: unfeaturized
-  telefono:
-    type: unfeaturized
-  telefono_secondario:
-    type: unfeaturized
-  ora_inizio:
-    type: unfeaturized
-  ora_fine:
-    type: unfeaturized
-  giorno:
     type: unfeaturized
   appunto_ricevimento:
     type: unfeaturized
   attribute:
     type: unfeaturized
-  medico:
+  cap:
+    type: unfeaturized
+  codice_fiscale:
+    type: unfeaturized
+  cognome:
+    type: unfeaturized
+  denom_comune:
+    type: unfeaturized
+  desc_distretto:
+    type: unfeaturized
+  descrizione:
+    type: unfeaturized
+  giorno:
+    type: unfeaturized
+  indirizzo:
+    type: unfeaturized
+  indirizzo_email:
     type: unfeaturized
   knowledge_base_last_object:
     type: unfeaturized
@@ -94,27 +73,40 @@ slots:
     type: unfeaturized
   knowledge_base_object:
     type: unfeaturized
+  medico:
+    type: unfeaturized
   mention:
     type: unfeaturized
   name:
     type: unfeaturized
-  object_type:
-    #initial_value: "medico"
+  nome:
     type: unfeaturized
-
+  note:
+    type: unfeaturized
+  numero_civico:
+    type: unfeaturized
+  object_type:
+    type: unfeaturized
+  ora_fine:
+    type: unfeaturized
+  ora_inizio:
+    type: unfeaturized
+  posti_disponibili:
+    type: unfeaturized
+  telefono_primario:
+    type: unfeaturized
+  telefono_secondario:
+    type: unfeaturized
 
 templates:
   utter_ask_rephrase:
   - text: Scusa non capisco, puoi rifrasare?
   - text: Scusa, potresti riesprimere il concetto?
-
   utter_goodbye:
   - text: Alla prossima
   - text: Arrivederci
-
   utter_greet:
   - text: Ciao!
   - text: Buongiorno! Come posso aiutarti?
-
   utter_iamabot:
   - text: Si, sono un bot

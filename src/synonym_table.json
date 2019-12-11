@@ -1,0 +1,23 @@
+{
+    "dottore": "medico",
+    "dottoressa": "medico",
+    "dottori": "medico",
+    "dottoresse": "medico",
+    "medico": "medico",
+    "medici": "medico",
+    "pediatra": "medico",
+    "pediatri": "medico",
+    "pediatre": "medico",
+    "ambulatorio": "ambulatorio",
+    "ambulatori": "ambulatorio",
+    "centro": "ambulatorio",
+    "centri": "ambulatorio",
+    "ospedale": "ambulatorio",
+    "ospedali": "ambulatorio",
+    "clinica": "ambulatorio",
+    "cliniche": "ambulatorio",
+    "struttura": "ambulatorio",
+    "strutture": "ambulatorio",
+    "orario": "orario",
+    "orari": "orario"
+}
