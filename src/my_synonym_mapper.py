@@ -16,7 +16,7 @@ from rasa.nlu.constants import (
     MESSAGE_SPACY_FEATURES_NAMES,
     MESSAGE_VECTOR_FEATURE_NAMES,
 )
-import rasa.utils.io
+import rasa.utils.io 
 
 SYNONYM_TABLE_FILE = 'synonym_table.json'
 

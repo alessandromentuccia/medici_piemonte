@@ -7274,30 +7274,11 @@
 - ultimo
 - quest'ultimo
 
-## synonym:ambulatorio
-- ambulatori
-
 ## synonym:attivita
 - attività
 
 ## synonym:cap
 - CAP
-
-## synonym:giorno
-- giorni
-
-## synonym:medico
-- medici
-- dottore
-- dottoresse
-- dottoressa
-- dottori
-- lavora
-- dottor
-- dr
-
-## synonym:orario
-- orari
 
 ## synonym:posti_disponibili
 - posti disponibili

@@ -68,7 +68,10 @@ class ActionPersona(ActionQueryKnowledgeBase):
                                'param1': 'ora_inizio',
                                'param2': 'ora_fine',
                                'param3': 'giorno',
-                               'param4' :'indirizzo'}}
+                               'param4': 'indirizzo',
+                               'param5': 'denom_comune',
+                               'param6': 'nome',
+                               'param7': 'cognome'}}
 
         
         
@@ -85,9 +88,20 @@ class ActionPersona(ActionQueryKnowledgeBase):
         logger.debug("entità definita dopo reset: " + object_type)
         entita = self.get_entities(object_type)
         
-        self.knowledge_base.set_representation_function_of_object(
-            object_type, lambda obj: obj[entita["param1"]] + " " + obj[entita["param2"]]  + " ( " + obj[entita["param3"]]  + " ) "
-        )
+        if entita["table"] == "Medici": 
+            self.knowledge_base.set_representation_function_of_object(
+                object_type, lambda obj: "Dr. " + obj[entita["param1"]] + " " + obj[entita["param2"]]  + " ( " + obj[entita["param3"]]  + " ) "
+            )
+        elif entita["table"] == "Ambulatori": 
+            self.knowledge_base.set_representation_function_of_object(
+                object_type, lambda obj: "Ambulatorio " + obj[entita["param1"]] + " " + obj[entita["param2"]]  + " ( " + obj[entita["param3"]]  + " ) "
+            )
+        elif entita["table"] == "Orari":
+            self.knowledge_base.set_representation_function_of_object(
+                object_type, lambda obj: "Dalle " + obj[entita["param1"]] + " alle " + obj[entita["param2"]]  + " di " + obj[entita["param3"]]  + " a " + obj[entita["param5"]] + " ( " + obj[entita["param6"]] + " " + obj[entita["param7"]] +" ) "
+            )
+        else:
+            logger.error("l'entity non è in lista") 
 
         self.knowledge_base.set_entity_mapping(
             object_type, lambda entity: entita["table"] if (entity == object_type) else entity
@@ -230,11 +244,10 @@ class ActionPersonaList(ActionPersona):
 
         new_request = object_type != last_object_type
 
-        if not object_type:
-            self.knowledge_base.default_object_type = 'medico'
+        #if not object_type:
+        #    self.knowledge_base.default_object_type = 'medico'
 
-        if new_request:
-            self.reset_entities_parameter(object_type)
+        self.reset_entities_parameter(object_type)
 
         logger.info('query objects attr:'+str(attribute) +' new_req:'+str(new_request))
         return self._query_objects_my(dispatcher, tracker)
